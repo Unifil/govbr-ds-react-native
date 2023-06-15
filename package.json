@@ -4,10 +4,14 @@
     "packages/*"
   ],
   "scripts": {
-    "dev":  "turbo run dev --parallel",
-    "build": "turbo run build"
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=@govbr-ds-react-native/docs && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "turbo": "^1.10.3"
   }
 }
