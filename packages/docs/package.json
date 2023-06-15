@@ -10,6 +10,7 @@
     "web": "expo start --web",
     "dev": "start-storybook -p 7007",
     "build": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
     "storybook-watch": "sb-rn-watcher --config-path .ondevice",
     "storybook": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start",
@@ -17,9 +18,9 @@
     "storybook:android": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --android"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "~1.17.3",
     "@govbr-ds-react-native/react-native": "*",
     "@govbr-ds-react-native/tokens": "*",
+    "@react-native-async-storage/async-storage": "~1.17.3",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
@@ -47,6 +48,7 @@
     "@storybook/manager-webpack5": "^6.5.14",
     "@storybook/react": "^6.5.16",
     "@storybook/react-native": "^6.5.3",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@types/react": "~18.0.14",
     "babel-loader": "^8.3.0",
     "babel-plugin-react-docgen-typescript": "^1.5.1",
