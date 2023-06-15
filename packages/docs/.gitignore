@@ -1,6 +1,7 @@
 node_modules/
 .expo/
 dist/
+storybook-static
 npm-debug.*
 *.jks
 *.p8
