@@ -5,13 +5,9 @@
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo run build --filter=!docs && changeset publish"
+    "build": "turbo run build"
   },
-  "devDependencies": {
-    "@changesets/cli": "^2.26.1",
+  "devDependencies": { 
     "turbo": "^1.10.3"
   }
 }
