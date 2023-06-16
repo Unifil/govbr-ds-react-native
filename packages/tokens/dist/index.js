@@ -42,6 +42,7 @@ var colors = {
   gray800: "#202024",
   gray900: "#121214",
   blue: "#16316B",
+  blueLight: "#37639D",
   darkBlue: "#274A67"
 };
 
@@ -66,7 +67,7 @@ var space = {
 
 // src/radii.ts
 var radii = {
-  px: "16px",
+  px: "15px",
   xs: "64px",
   sm: "96px",
   md: "128px",

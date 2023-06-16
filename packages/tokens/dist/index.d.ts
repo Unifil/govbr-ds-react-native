@@ -10,6 +10,7 @@ declare const colors: {
     gray800: string;
     gray900: string;
     blue: string;
+    blueLight: string;
     darkBlue: string;
 };
 
@@ -31,13 +32,7 @@ declare const space: {
     80: string;
 };
 
-declare const radii: {
-    px: string;
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-};
+declare const radii: any;
 
 declare const fontSizes: {
     xxs: number;
