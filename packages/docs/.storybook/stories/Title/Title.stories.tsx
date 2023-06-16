@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { Title } from "@govbr-ds-react-native/react-native";
+import { Title } from "@unifil/react-native";
 
 const TitleMeta = {
   title: "Title",

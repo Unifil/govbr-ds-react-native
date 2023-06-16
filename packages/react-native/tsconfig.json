@@ -1,5 +1,5 @@
 { 
-  "extends": "@govbr-ds-react-native/ts-config/react.json",
+  "extends": "@unifil/ts-config/react.json",
   "include": ["src", "dist/index.d.ts"],
   "compilerOptions": {
     "strict": true
