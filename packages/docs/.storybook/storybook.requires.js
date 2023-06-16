@@ -46,11 +46,12 @@ if (parameters) {
 
 try {
   argsEnhancers.forEach((enhancer) => addArgsEnhancer(enhancer));
-} catch {}
+} catch { }
 
 const getStories = () => {
-  return { 
-    "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"), 
+  return {
+    "./.storybook/stories/Text/Text.stories.tsx": require("./stories/Text/Text.stories.tsx"),
+    "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"),
   };
 };
 

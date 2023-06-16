@@ -9,7 +9,9 @@ var colors = {
   gray600: "#323238",
   gray700: "#29292E",
   gray800: "#202024",
-  gray900: "#121214"
+  gray900: "#121214",
+  blue: "#16316B",
+  darkBlue: "#274A67"
 };
 
 // src/space.ts
@@ -42,26 +44,20 @@ var radii = {
 
 // src/font-sizes.ts
 var fontSizes = {
-  xxs: "10px",
-  xs: "12px",
-  sm: "14px",
-  md: "16px",
-  lg: "18px",
-  xl: "20px",
-  "2xl": "24px",
-  "4xl": "32px",
-  "5xl": "36px",
-  "6xl": "48px",
-  "7xl": "64px",
-  "8xl": "72px",
-  "9xl": "96px"
+  xxs: 10,
+  xs: 12,
+  sm: 14,
+  md: 16,
+  lg: 18,
+  xl: 20,
+  xll: 28
 };
 
 // src/font-weights.ts
 var fontWeights = {
   regular: "400",
   medium: "500",
-  bold: "700"
+  large: "700"
 };
 
 // src/line-heights.ts

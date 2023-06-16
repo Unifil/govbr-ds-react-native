@@ -9,5 +9,8 @@ export const colors = {
   gray600: '#323238',
   gray700: '#29292E',
   gray800: '#202024',
-  gray900: '#121214'
+  gray900: '#121214',
+
+  blue: '#16316B',
+  darkBlue: '#274A67',
 }
