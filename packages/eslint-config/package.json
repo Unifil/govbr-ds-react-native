@@ -1,5 +1,5 @@
 {
-  "name": "@govbr-ds-react-native/eslint-config",
+  "name": "@unifil/eslint-config",
   "private": true,
   "license": "ISC",
   "main": "index.js",
