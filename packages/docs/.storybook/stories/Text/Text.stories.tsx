@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { TextComponent } from "@govbr-ds-react-native/react-native";
-import { fontWeights, fontSizes, colors } from "@govbr-ds-react-native/tokens";
+import { TextComponent } from "@unifil/react-native";
+import { fontWeights, fontSizes, colors } from "@unifil/tokens";
 
 const TextMeta = {
   title: "Text",

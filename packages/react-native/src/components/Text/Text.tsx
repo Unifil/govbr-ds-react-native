@@ -6,7 +6,7 @@ import {
   fontSizes,
   lineHeights,
   colors,
-} from "@govbr-ds-react-native/tokens";
+} from "@unifil/tokens";
 
 export const TextComponent = (props: TextProps) => {
   return (

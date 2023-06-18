@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { CardNavigation } from "@govbr-ds-react-native/react-native";
-import { radii, fontSizes, colors } from "@govbr-ds-react-native/tokens";
+import { CardNavigation } from "@unifil/react-native";
+import { radii, fontSizes, colors } from "@unifil/tokens";
 
 const CardNavigationMeta = {
   title: "CardNavigation",
