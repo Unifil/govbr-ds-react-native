@@ -9,6 +9,9 @@ declare const colors: {
     gray700: string;
     gray800: string;
     gray900: string;
+    blue: string;
+    blueLight: string;
+    darkBlue: string;
 };
 
 declare const space: {
@@ -29,41 +32,20 @@ declare const space: {
     80: string;
 };
 
-declare const radii: {
-    px: string;
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-};
+declare const radii: any;
 
 declare const fontSizes: {
-    xxs: string;
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-    '2xl': string;
-    '4xl': string;
-    '5xl': string;
-    '6xl': string;
-    '7xl': string;
-    '8xl': string;
-    '9xl': string;
+    xxs: number;
+    xs: number;
+    sm: number;
+    md: number;
+    lg: number;
+    xl: number;
+    xll: number;
 };
 
-declare const fontWeights: {
-    regular: string;
-    medium: string;
-    bold: string;
-};
+declare const fontWeights: any;
 
-declare const lineHeights: {
-    shorter: string;
-    short: string;
-    base: string;
-    tall: string;
-};
+declare const lineHeights: any;
 
 export { colors, fontSizes, fontWeights, lineHeights, radii, space };

@@ -1,11 +1,11 @@
 import React from "react";
 import { View } from "react-native";
-import { Title } from "@govbr-ds-react-native/react-native";
+import { TextComponent } from "@govbr-ds-react-native/react-native";
 import { fontWeights, fontSizes, colors } from "@govbr-ds-react-native/tokens";
 
-const TitleMeta = {
-  title: "Title",
-  component: Title,
+const TextMeta = {
+  title: "Text",
+  component: TextComponent,
   argTypes: {
     onPress: { action: "pressed the button" },
   },
@@ -21,13 +21,13 @@ const TitleMeta = {
   ],
 };
 
-export default TitleMeta;
+export default TextMeta;
 
-export const Regular = {
+export const Small = {
   args: {
     text: "Hello world",
-    color: colors.blue,
-    size: fontSizes.xl,
+    color: colors.darkBlue,
+    size: fontSizes.xxs,
     weight: fontWeights.medium,
   },
 };
@@ -36,16 +36,16 @@ export const Medium = {
   args: {
     text: "Hello world",
     color: colors.blue,
-    size: fontSizes.xl,
-    weight: fontWeights.large,
+    size: fontSizes.xs,
+    weight: fontWeights.regular,
   },
 };
 
 export const Large = {
   args: {
     text: "Hello world",
-    color: colors.blue,
-    size: fontSizes.xll,
-    weight: fontWeights.large,
+    color: colors.darkBlue,
+    size: fontSizes.sm,
+    weight: fontWeights.medium,
   },
 };

@@ -1,5 +1,5 @@
-export const fontWeights = {
+export const fontWeights: any = {
   regular: '400',
   medium: '500',
-  bold: '700',
+  large: '700',
 }
