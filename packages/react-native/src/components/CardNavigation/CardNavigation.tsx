@@ -7,7 +7,7 @@ import {
   lineHeights,
   colors,
   radii,
-} from "@govbr-ds-react-native/tokens";
+} from "@unifil/tokens";
 
 export const CardNavigation = (props: CardProps) => {
   const [isPressed, setIsPressed] = useState(false);

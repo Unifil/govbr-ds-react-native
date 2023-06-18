@@ -6,7 +6,7 @@ import {
   fontSizes,
   lineHeights,
   colors,
-} from "@govbr-ds-react-native/tokens";
+} from "@unifil/tokens";
 
 export const Title = (props: TitleProps) => {
   return (

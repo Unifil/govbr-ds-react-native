@@ -14,3 +14,25 @@ Object.keys(_Title).forEach(function (key) {
     }
   });
 });
+var _Text = require("./components/Text/Text");
+Object.keys(_Text).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Text[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Text[key];
+    }
+  });
+});
+var _CardNavigation = require("./components/CardNavigation/CardNavigation");
+Object.keys(_CardNavigation).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CardNavigation[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _CardNavigation[key];
+    }
+  });
+});
