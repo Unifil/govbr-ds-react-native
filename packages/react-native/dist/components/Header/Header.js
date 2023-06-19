@@ -7,16 +7,14 @@ exports.Header = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
 var _Avatar = require("../Avatar/Avatar");
+var _tokens = require("@unifil/tokens");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-var Header = function Header(_ref) {
-  var onPress = _ref.onPress,
-    logo = _ref.logo,
-    icon = _ref.icon;
+var Header = function Header(props) {
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
-  }, onPress && /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {
-    onPress: onPress
-  }, icon), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, logo), /*#__PURE__*/_react["default"].createElement(_Avatar.Avatar, null));
+  }, props.onPress && /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableOpacity, {
+    onPress: props.onPress
+  }, props.icon), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, props.logo), /*#__PURE__*/_react["default"].createElement(_Avatar.Avatar, null));
 };
 exports.Header = Header;
 var styles = _reactNative.StyleSheet.create({
@@ -28,10 +26,6 @@ var styles = _reactNative.StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "white"
-  },
-  text: {
-    color: "#274A67",
-    fontSize: 24
+    backgroundColor: _tokens.colors.white
   }
 });

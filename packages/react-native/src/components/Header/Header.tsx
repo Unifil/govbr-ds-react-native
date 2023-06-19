@@ -1,13 +1,15 @@
 import React from "react";
-import { Text, StyleSheet, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, View, TouchableOpacity } from "react-native";
 import { Avatar } from "../Avatar/Avatar";
+import { colors } from "@unifil/tokens";
+import { HeaderProps } from "./Header.props";
 
-export const Header = ({ onPress, logo, icon }: any) => {
+export const Header = (props: HeaderProps) => {
   return (
     <View style={styles.container}>
-      {onPress && <TouchableOpacity onPress={onPress}>{icon}</TouchableOpacity>}
+      {props.onPress && <TouchableOpacity onPress={props.onPress}>{props.icon}</TouchableOpacity>}
 
-      <View>{logo}</View>
+      <View>{props.logo}</View>
 
       <Avatar></Avatar>
     </View>
@@ -23,10 +25,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "white",
-  },
-  text: {
-    color: "#274A67",
-    fontSize: 24,
+    backgroundColor: colors.white,
   },
 });

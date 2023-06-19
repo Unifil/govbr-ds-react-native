@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Avatar = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
+var _tokens = require("@unifil/tokens");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var Avatar = function Avatar() {
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
@@ -13,16 +14,16 @@ var Avatar = function Avatar() {
       width: 37,
       height: 37,
       borderRadius: 50,
-      backgroundColor: 'green',
+      backgroundColor: _tokens.colors.green,
       alignContent: 'center',
       alignItems: 'center',
       justifyContent: 'center'
     }
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
     style: {
-      color: 'white',
+      color: _tokens.colors.white,
       fontSize: 16,
-      fontWeight: 'bold'
+      fontWeight: _tokens.fontWeights.bold
     }
   }, "HS"));
 };

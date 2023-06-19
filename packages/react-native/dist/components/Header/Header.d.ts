@@ -1,3 +1,3 @@
-/// <reference types="react" />
-export declare const Header: ({ onPress, logo, icon }: any) => JSX.Element;
+import { HeaderProps } from "./Header.props";
+export declare const Header: (props: HeaderProps) => JSX.Element;
 //# sourceMappingURL=Header.d.ts.map

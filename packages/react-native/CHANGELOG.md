@@ -1,5 +1,11 @@
 # @unifil/react-native
 
+## 1.0.7
+
+### Patch Changes
+
+- Updates
+
 ## 1.0.6
 
 ### Patch Changes

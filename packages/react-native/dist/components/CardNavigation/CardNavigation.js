@@ -25,7 +25,9 @@ var CardNavigation = function CardNavigation(props) {
     style: [{
       borderRadius: props.borderRadius,
       height: props.height,
-      width: props.width
+      width: props.width,
+      marginTop: props.marginTop,
+      marginBottom: props.marginBottom
     }, styles.container],
     onPress: props.onPress,
     activeOpacity: 0.8,
@@ -49,18 +51,20 @@ var CardNavigation = function CardNavigation(props) {
       opacity: isPressed ? 1 : 0.5,
       fontSize: props.sizeText
     }]
-  }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, props.icon)));
+  }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, isPressed ? props.icon[0] : props.icon[1])));
 };
 exports.CardNavigation = CardNavigation;
 var styles = _reactNative.StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: _tokens.colors.white,
     paddingLeft: 30,
     paddingRight: 17,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: _tokens.radii.px,
     width: "100%",
+    marginTop: 6,
+    marginBottom: 6,
     height: 105,
     elevation: 10,
     shadowColor: "#00000040",
@@ -88,6 +92,7 @@ var styles = _reactNative.StyleSheet.create({
     color: _tokens.colors.blue,
     fontSize: _tokens.fontSizes.xs,
     fontWeight: _tokens.fontWeights.regular,
-    opacity: 0.5
+    opacity: 0.5,
+    maxWidth: 300
   }
 });

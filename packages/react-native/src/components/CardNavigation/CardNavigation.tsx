@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
-import { CardProps } from "./Interface";
+import { CardProps } from "./CardNavigation.props";
 import {
   fontWeights,
   fontSizes,
-  lineHeights,
   colors,
   radii,
 } from "@unifil/tokens";
@@ -20,6 +19,8 @@ export const CardNavigation = (props: CardProps) => {
             borderRadius: props.borderRadius,
             height: props.height,
             width: props.width,
+            marginTop: props.marginTop, 
+            marginBottom: props.marginBottom,
           },
           styles.container
         ]
@@ -52,7 +53,7 @@ export const CardNavigation = (props: CardProps) => {
               styles.text,
               {
                 color: isPressed ? colors.white : props.colorText,
-                opacity: isPressed ? 1 : 0.5,
+                opacity: isPressed ? 1: 0.5,
                 fontSize: props.sizeText,
               },
             ]}
@@ -60,7 +61,9 @@ export const CardNavigation = (props: CardProps) => {
             {props.text}
           </Text>
         </View>
-        <View>{props.icon}</View>
+        <View>
+          {isPressed ? props.icon[0] : props.icon[1]}
+        </View>
       </View>
     </TouchableHighlight>
   );
@@ -68,13 +71,15 @@ export const CardNavigation = (props: CardProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     paddingLeft: 30,
     paddingRight: 17,
     alignItems: "center",
     justifyContent: "center",
     borderRadius: radii.px,
     width: "100%",
+    marginTop: 6,
+    marginBottom: 6,
     height: 105,
     elevation: 10,
     shadowColor: "#00000040",
@@ -103,5 +108,6 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
     opacity: 0.5,
+    maxWidth: 300,
   },
 });

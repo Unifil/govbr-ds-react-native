@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text} from "react-native";
 import { Header } from "@unifil/react-native";
-import { fontWeights, fontSizes, colors } from "@unifil/tokens";
 
 const HeaderMeta = {
   title: "Header",
@@ -10,7 +9,7 @@ const HeaderMeta = {
     onPress: { action: "pressed the button" },
   },
   args: {
-    logo:  <Text>Teste</Text>,
+    logo:  <Text>Logo</Text>,
   },
   decorators: [
     (Story: any) => (

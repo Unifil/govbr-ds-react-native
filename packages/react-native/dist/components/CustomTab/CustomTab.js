@@ -6,22 +6,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.CustomTab = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
-var _excluded = ["state", "descriptors", "navigation"];
+var _tokens = require("@unifil/tokens");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-var CustomTab = function CustomTab(_ref) {
-  var state = _ref.state,
-    descriptors = _ref.descriptors,
-    navigation = _ref.navigation,
-    props = _objectWithoutProperties(_ref, _excluded);
+var CustomTab = function CustomTab(props) {
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.content
-  }, state.routes.map(function (route, index) {
-    var options = descriptors[route.key].options;
-    var isFocused = state.index === index;
+  }, props.state.routes.map(function (route, index) {
+    var options = props.descriptors[route.key].options;
+    var isFocused = props.state.index === index;
     var color = isFocused ? props.tabBarActiveTintColor : props.tabBarInactiveTintColor;
     if (!options.tabBarIcon) return null;
     var Icon = options.tabBarIcon({
@@ -29,19 +23,19 @@ var CustomTab = function CustomTab(_ref) {
       color: color
     });
     var onPress = function onPress() {
-      var event = navigation.emit({
+      var event = props.navigation.emit({
         type: "tabPress",
         target: route.key
       });
       if (!isFocused && !event.defaultPrevented) {
-        navigation.navigate({
+        props.navigation.navigate({
           name: route.name,
           merge: true
         });
       }
     };
     var onLongPress = function onLongPress() {
-      navigation.emit({
+      props.navigation.emit({
         type: "tabLongPress",
         target: route.key
       });
@@ -94,7 +88,7 @@ var styles = _reactNative.StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     bottom: 0,
-    backgroundColor: "white",
+    backgroundColor: _tokens.colors.white,
     flexDirection: "row",
     borderRadius: 15,
     gap: 8,
