@@ -15,7 +15,6 @@ var CustomTab = function CustomTab(_ref) {
     descriptors = _ref.descriptors,
     navigation = _ref.navigation,
     props = _objectWithoutProperties(_ref, _excluded);
-  console.log(props);
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
@@ -23,6 +22,12 @@ var CustomTab = function CustomTab(_ref) {
   }, state.routes.map(function (route, index) {
     var options = descriptors[route.key].options;
     var isFocused = state.index === index;
+    var color = isFocused ? props.tabBarActiveTintColor : props.tabBarInactiveTintColor;
+    if (!options.tabBarIcon) return null;
+    var Icon = options.tabBarIcon({
+      focused: isFocused,
+      color: color
+    });
     var onPress = function onPress() {
       var event = navigation.emit({
         type: "tabPress",
@@ -62,7 +67,7 @@ var CustomTab = function CustomTab(_ref) {
         padding: 8,
         borderRadius: 99
       }
-    }, isFocused ? options.tabBarIcon[0] : options.tabBarIcon[1]), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+    }, Icon), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
       style: {
         color: isFocused ? props.tabBarActiveTintColor : props.tabBarInactiveTintColor
       }

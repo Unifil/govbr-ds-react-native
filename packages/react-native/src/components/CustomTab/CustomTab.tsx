@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Foundation } from "@expo/vector-icons";
 
 export const CustomTab = ({
   state,
@@ -14,18 +13,24 @@ export const CustomTab = ({
   navigation,
   ...props
 }: any) => {
-  console.log(props);
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         {state.routes.map((route: any, index: any) => {
           const { options } = descriptors[route.key];
+          
           const isFocused = state.index === index;
+          const color = isFocused ? props.tabBarActiveTintColor : props.tabBarInactiveTintColor;
+
+          if(!options.tabBarIcon) return null;
+          const Icon = options.tabBarIcon({ focused: isFocused, color });
+          
           const onPress = () => {
             const event = navigation.emit({
               type: "tabPress",
               target: route.key,
             });
+
             if (!isFocused && !event.defaultPrevented) {
               navigation.navigate({
                 name: route.name,
@@ -39,6 +44,7 @@ export const CustomTab = ({
               target: route.key,
             });
           };
+
           return (
             <TouchableOpacity
               key={route.key}
@@ -51,9 +57,7 @@ export const CustomTab = ({
               style={styles.buttonTab}
             >
               <View style={{ alignItems: "center", padding: 4 }}>
-                <View style={{ padding: 8, borderRadius: 99 }}>
-                  {isFocused ? options.tabBarIcon[0] : options.tabBarIcon[1]}
-                </View>
+                <View style={{ padding: 8, borderRadius: 99 }}>{Icon}</View>
                 <Text
                   style={{
                     color: isFocused
