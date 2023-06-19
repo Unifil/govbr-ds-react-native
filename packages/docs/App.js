@@ -2,6 +2,8 @@
 import { InitialScreen } from './src'
 import { View } from 'react-native'
 
+import { CustomTab} from '@unifil/react-native'
+ 
 export const Container = styled.View`
   flex: 1;
   background-color: blue;
@@ -11,7 +13,7 @@ export const Container = styled.View`
 
 function App() {
   return (
- <View>
+ <View> 
   
  </View>
  
