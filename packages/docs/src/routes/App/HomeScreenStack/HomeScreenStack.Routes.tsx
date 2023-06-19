@@ -1,12 +1,9 @@
 import React, { ReactElement } from 'react'
 
-import { createStackNavigator } from '@react-navigation/stack'
-import { Home } from '../../../Home'
-import { Home2 } from '../../../Home2'
-import { Home3 } from '../../../Home3'
+import { createStackNavigator } from '@react-navigation/stack' 
  
 
-export const HomeScreen = (): ReactElement => {
+export const HomeScreenStack = (): ReactElement => {
   const Stack = createStackNavigator()
   return (
       <Stack.Navigator

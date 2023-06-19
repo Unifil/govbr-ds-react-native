@@ -1,23 +1,31 @@
-import React from 'react';
-import { Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
- 
- 
+import React from "react";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { Foundation } from "@expo/vector-icons";
 
-export const  CustomTab = ({ state, descriptors, navigation }:any) => {
+export const CustomTab = ({
+  state,
+  descriptors,
+  navigation,
+  ...props
+}: any) => {
+  console.log(props);
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        {state.routes.map((route:any, index:any) => {
+        {state.routes.map((route: any, index: any) => {
           const { options } = descriptors[route.key];
-
           const isFocused = state.index === index;
-
           const onPress = () => {
             const event = navigation.emit({
               type: "tabPress",
               target: route.key,
             });
-
             if (!isFocused && !event.defaultPrevented) {
               navigation.navigate({
                 name: route.name,
@@ -25,14 +33,12 @@ export const  CustomTab = ({ state, descriptors, navigation }:any) => {
               });
             }
           };
-
           const onLongPress = () => {
             navigation.emit({
               type: "tabLongPress",
               target: route.key,
             });
           };
-
           return (
             <TouchableOpacity
               key={route.key}
@@ -44,11 +50,17 @@ export const  CustomTab = ({ state, descriptors, navigation }:any) => {
               onLongPress={onLongPress}
               style={styles.buttonTab}
             >
-              <View style={{  alignItems: 'center', padding: 4}}>
-                <View style={{ padding:8, borderRadius: 99 }}>
-                    {route.icon}
+              <View style={{ alignItems: "center", padding: 4 }}>
+                <View style={{ padding: 8, borderRadius: 99 }}>
+                  {isFocused ? options.tabBarIcon[0] : options.tabBarIcon[1]}
                 </View>
-                <Text>
+                <Text
+                  style={{
+                    color: isFocused
+                      ? props.tabBarActiveTintColor
+                      : props.tabBarInactiveTintColor,
+                  }}
+                >
                   {route.name}
                 </Text>
               </View>
@@ -58,23 +70,23 @@ export const  CustomTab = ({ state, descriptors, navigation }:any) => {
       </View>
     </View>
   );
-}
+};
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
-    paddingVertical: 8, 
+    paddingVertical: 8,
     borderRadius: 14,
     width: "100%",
     height: 100,
     flexDirection: "row",
-    alignContent: "center", 
+    alignContent: "center",
     alignItems: "center",
     justifyContent: "space-between",
   },
   content: {
     marginBottom: Platform.OS === "ios" ? 38 : 24,
     width: "100%",
-    height: 84, 
+    height: 84,
     justifyContent: "space-around",
     alignItems: "center",
     bottom: 0,

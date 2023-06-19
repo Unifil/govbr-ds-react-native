@@ -6,11 +6,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.CustomTab = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
+var _excluded = ["state", "descriptors", "navigation"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 var CustomTab = function CustomTab(_ref) {
   var state = _ref.state,
     descriptors = _ref.descriptors,
-    navigation = _ref.navigation;
+    navigation = _ref.navigation,
+    props = _objectWithoutProperties(_ref, _excluded);
+  console.log(props);
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
     style: styles.container
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
@@ -49,7 +54,7 @@ var CustomTab = function CustomTab(_ref) {
       style: styles.buttonTab
     }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
       style: {
-        alignItems: 'center',
+        alignItems: "center",
         padding: 4
       }
     }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
@@ -57,7 +62,11 @@ var CustomTab = function CustomTab(_ref) {
         padding: 8,
         borderRadius: 99
       }
-    }, route.icon), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, null, route.name)));
+    }, isFocused ? options.tabBarIcon[0] : options.tabBarIcon[1]), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
+      style: {
+        color: isFocused ? props.tabBarActiveTintColor : props.tabBarInactiveTintColor
+      }
+    }, route.name)));
   })));
 };
 exports.CustomTab = CustomTab;
