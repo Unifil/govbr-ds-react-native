@@ -1,3 +1,3 @@
-/// <reference types="react" />
-export declare const CustomTab: ({ state, descriptors, navigation, ...props }: any) => JSX.Element;
+import { TabProps } from "./Interface";
+export declare const CustomTab: (props: TabProps) => JSX.Element;
 //# sourceMappingURL=CustomTab.d.ts.map

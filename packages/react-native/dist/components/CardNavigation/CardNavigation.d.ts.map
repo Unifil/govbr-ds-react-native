@@ -1,1 +1,1 @@
-{"version":3,"file":"CardNavigation.d.ts","sourceRoot":"","sources":["../../../src/components/CardNavigation/CardNavigation.tsx"],"names":[],"mappings":";AAEA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AASxC,eAAO,MAAM,cAAc,UAAW,SAAS,gBAuD9C,CAAC"}
+{"version":3,"file":"CardNavigation.d.ts","sourceRoot":"","sources":["../../../src/components/CardNavigation/CardNavigation.tsx"],"names":[],"mappings":"AAEA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAQxC,eAAO,MAAM,cAAc,UAAW,SAAS,gBAuD9C,CAAC"}

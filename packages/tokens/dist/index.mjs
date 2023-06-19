@@ -12,7 +12,8 @@ var colors = {
   gray900: "#121214",
   blue: "#16316B",
   blueLight: "#37639D",
-  darkBlue: "#274A67"
+  darkBlue: "#274A67",
+  green: "#168821"
 };
 
 // src/space.ts
@@ -58,6 +59,7 @@ var fontSizes = {
 var fontWeights = {
   regular: "400",
   medium: "500",
+  bold: "600",
   large: "700"
 };
 

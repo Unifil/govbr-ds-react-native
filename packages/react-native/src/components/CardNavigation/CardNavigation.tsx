@@ -4,7 +4,6 @@ import { CardProps } from "./Interface";
 import {
   fontWeights,
   fontSizes,
-  lineHeights,
   colors,
   radii,
 } from "@unifil/tokens";

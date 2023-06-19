@@ -6,40 +6,37 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { colors } from "@unifil/tokens";
+import { TabProps } from "./Interface";
 
-export const CustomTab = ({
-  state,
-  descriptors,
-  navigation,
-  ...props
-}: any) => {
+export const CustomTab = (props: TabProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        {state.routes.map((route: any, index: any) => {
-          const { options } = descriptors[route.key];
+        {props.state.routes.map((route: any, index: any) => {
+          const { options } = props.descriptors[route.key];
           
-          const isFocused = state.index === index;
+          const isFocused = props.state.index === index;
           const color = isFocused ? props.tabBarActiveTintColor : props.tabBarInactiveTintColor;
 
           if(!options.tabBarIcon) return null;
           const Icon = options.tabBarIcon({ focused: isFocused, color });
           
           const onPress = () => {
-            const event = navigation.emit({
+            const event = props.navigation.emit({
               type: "tabPress",
               target: route.key,
             });
 
             if (!isFocused && !event.defaultPrevented) {
-              navigation.navigate({
+              props.navigation.navigate({
                 name: route.name,
                 merge: true,
               });
             }
           };
           const onLongPress = () => {
-            navigation.emit({
+            props.navigation.emit({
               type: "tabLongPress",
               target: route.key,
             });
@@ -94,7 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     bottom: 0,
-    backgroundColor: "white",
+    backgroundColor: colors.white,
     flexDirection: "row",
     borderRadius: 15,
     gap: 8,

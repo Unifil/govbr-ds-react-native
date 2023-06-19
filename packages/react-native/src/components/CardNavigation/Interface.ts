@@ -1,13 +1,13 @@
 export interface CardProps {
-  title: string;
-  text: string;
-  colorTitle: string;
-  colorText: string
-  sizeTitle: number;
-  sizeText: number;
+  title?: string;
+  text?: string;
+  colorTitle?: string;
+  colorText?: string
+  sizeTitle?: number;
+  sizeText?: number;
   icon?: any;
-  borderRadius: number;
-  height: number;
-  width: string | number;
-  onPress: () => boolean;
+  borderRadius?: number;
+  height?: number;
+  width?: string | number;
+  onPress?: any;
 }

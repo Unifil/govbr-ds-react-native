@@ -1,17 +1,22 @@
 import React from 'react'
-import { Text, View,SafeAreaView } from 'react-native'
+import { SafeAreaView, Text, View } from 'react-native'
 import { CardNavigation, Header } from "@unifil/react-native";
 export function HomeScreen() {
   return (
-    <SafeAreaView>
-      <Header 
+      <SafeAreaView>
+        <Header 
         logo={<Text>Teste</Text>}
       /> 
-      <CardNavigation 
-        title="Teste"
-        text="Teste"
-        onPress={() => {}}
-      />
-    </SafeAreaView>
+        <View style={{ backgroundColor: 'white', padding: 30, height: '100%' }} >
+          <CardNavigation 
+            title="Instituto Capibaribe"
+            text="Analise o desempenho das suas turmas 
+            baseado na execução dos exercícios"
+            colorTitle='#274A67'
+            colorText='#16316B'
+            onPress={() => {}}
+          />
+        </View>
+      </SafeAreaView>
   )
 }

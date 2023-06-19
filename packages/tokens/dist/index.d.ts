@@ -12,6 +12,7 @@ declare const colors: {
     blue: string;
     blueLight: string;
     darkBlue: string;
+    green: string;
 };
 
 declare const space: {

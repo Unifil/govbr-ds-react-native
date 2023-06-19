@@ -1,22 +1,17 @@
-import styled from "styled-components/native";
-import { View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar, View } from "react-native";
 import { Routes } from "./src/routes/tabbar";
+import { LogBox } from "react-native";
 
-export const Container = styled.View`
-  flex: 1;
-  background-color: blue;
-  justify-content: center;
-  align-items: center;
-`;
+// Ignore all warnings
+LogBox.ignoreAllLogs(true);
 
 function App() {
   return (
-    <View style={{ flex: 1 }}>
-      <NavigationContainer>
-        <Routes />
-      </NavigationContainer>
-    </View>
+    <NavigationContainer>
+      <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
+      <Routes />
+    </NavigationContainer>
   );
 }
 
