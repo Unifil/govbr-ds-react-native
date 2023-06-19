@@ -9,5 +9,8 @@ export interface CardProps {
   borderRadius?: number;
   height?: number;
   width?: string | number;
+  marginTop?: number;
+  marginBottom?: number;
+  colorIcon?: string;
   onPress?: any;
 }

@@ -59,7 +59,7 @@ const CustomTabMeta = {
     },
   },
   decorators: [
-    (Story) => (
+    (Story: any) => (
       <View
         style={{
           alignItems: "center",
@@ -68,7 +68,6 @@ const CustomTabMeta = {
           flex: 1,
         }}
       >
-        {/* <Story /> */}
       </View>
     ),
   ],

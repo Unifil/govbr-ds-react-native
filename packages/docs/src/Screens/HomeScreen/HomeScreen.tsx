@@ -1,22 +1,22 @@
 import React from 'react'
-import { SafeAreaView, Text, View } from 'react-native'
-import { CardNavigation, Header } from "@unifil/react-native";
+import { SafeAreaView, Text } from 'react-native'
+import { CardNavigation, Header, Wrapper } from "@unifil/react-native";
+import ArrowIcon from '../../assets/svgs/arrowRight.svg';
 export function HomeScreen() {
   return (
-      <SafeAreaView>
+      <SafeAreaView style={{ backgroundColor: 'white', height: '100%' }}>
         <Header 
         logo={<Text>Teste</Text>}
       /> 
-        <View style={{ backgroundColor: 'white', padding: 30, height: '100%' }} >
+        <Wrapper style={{ padding: 30 }} >
           <CardNavigation 
             title="Instituto Capibaribe"
             text="Analise o desempenho das suas turmas 
             baseado na execução dos exercícios"
-            colorTitle='#274A67'
-            colorText='#16316B'
             onPress={() => {}}
+            icon={<ArrowIcon />}
           />
-        </View>
+        </Wrapper>
       </SafeAreaView>
   )
 }

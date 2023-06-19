@@ -1,25 +1,23 @@
 import React from "react";
 import { View, Text} from "react-native";
-import { Header } from "@unifil/react-native";
+import { Wrapper } from "@unifil/react-native";
 
-const HeaderMeta = {
-  title: "Header",
-  component: Header,
+const WrapperMeta = {
+  title: "Wrapper",
+  component: Wrapper,
   argTypes: {
     onPress: { action: "pressed the button" },
-  },
-  args: {
-    logo:  <Text>Teste</Text>,
   },
   decorators: [
     (Story: any) => (
       <View>
         <Story />
+        <Text>Wrapper Component</Text>
       </View>
     ),
   ],
 };
 
-export default HeaderMeta;
+export default WrapperMeta;
 
 export const Primary = {};

@@ -5,4 +5,4 @@ export interface TextProps {
     lineHeight?: any;
     weight?: any;
 }
-//# sourceMappingURL=Interface.d.ts.map
+//# sourceMappingURL=Text.props.d.ts.map

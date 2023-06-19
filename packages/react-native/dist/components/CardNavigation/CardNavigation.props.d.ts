@@ -9,6 +9,8 @@ export interface CardProps {
     borderRadius?: number;
     height?: number;
     width?: string | number;
+    marginTop?: number;
+    marginBottom?: number;
     onPress?: any;
 }
-//# sourceMappingURL=Interface.d.ts.map
+//# sourceMappingURL=CardNavigation.props.d.ts.map

@@ -5,4 +5,4 @@ export interface TabProps {
     tabBarActiveTintColor?: any;
     tabBarInactiveTintColor?: any;
 }
-//# sourceMappingURL=Interface.d.ts.map
+//# sourceMappingURL=CustomTab.props.d.ts.map

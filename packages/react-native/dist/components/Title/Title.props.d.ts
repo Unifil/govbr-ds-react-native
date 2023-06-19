@@ -5,4 +5,4 @@ export interface TitleProps {
     lineHeight?: any;
     weight?: any;
 }
-//# sourceMappingURL=Interface.d.ts.map
+//# sourceMappingURL=Title.props.d.ts.map

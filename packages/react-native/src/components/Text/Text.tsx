@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
-import { TextProps } from "./Interface";
+import { TextProps } from "./Text.props";
 import {
   fontWeights,
   fontSizes,

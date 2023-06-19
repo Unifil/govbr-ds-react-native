@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { CardNavigation } from "@unifil/react-native";
 import { radii, fontSizes, colors } from "@unifil/tokens";
 
@@ -12,6 +12,7 @@ const CardNavigationMeta = {
   args: {
     title: "Title card",
     text: "Description card",
+    icon: <Text>{">"}</Text>
   },
   decorators: [
     (Story: any) => (
@@ -35,6 +36,8 @@ export const Primary = {
     borderRadius: radii.px,
     height: 105,
     width: "100%",
-    icon: ">",
+    marginTop: 6,
+    marginBottom: 6,
+    colorIcon: colors.darkBlue
   },
 };

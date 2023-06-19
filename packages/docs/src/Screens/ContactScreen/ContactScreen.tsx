@@ -1,16 +1,18 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text } from 'react-native'
+import { Wrapper } from "@unifil/react-native";
 
 export function ContactScreen() {
   return (
-    <View 
+    <Wrapper 
       style={{ 
         backgroundColor: 'white', 
         height: '100%', 
         alignItems: 'center', 
         justifyContent: 'center' 
-      }} >
+      }}
+    >
       <Text>ContactScreen</Text>
-    </View>
+    </Wrapper>
   )
 }

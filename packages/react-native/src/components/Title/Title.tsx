@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
-import { TitleProps } from "./Interface";
+import { TitleProps } from "./Title.props";
 import {
   fontWeights,
   fontSizes,

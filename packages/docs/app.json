@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "OverviewStorybook",
-    "slug": "OverviewStorybook",
+    "name": "Storybook",
+    "slug": "Storybook",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

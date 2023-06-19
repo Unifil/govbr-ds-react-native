@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import { colors } from "@unifil/tokens";
-import { TabProps } from "./Interface";
+import { TabProps } from "./CustomTab.props";
 
 export const CustomTab = (props: TabProps) => {
   return (

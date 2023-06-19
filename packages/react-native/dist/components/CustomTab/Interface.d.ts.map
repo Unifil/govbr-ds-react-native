@@ -1,1 +1,0 @@
-{"version":3,"file":"Interface.d.ts","sourceRoot":"","sources":["../../../src/components/CustomTab/Interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,QAAQ;IACvB,KAAK,CAAC,EAAE,GAAG,CAAC;IACZ,WAAW,CAAC,EAAE,GAAG,CAAC;IAClB,UAAU,CAAC,EAAE,GAAG,CAAC;IACjB,qBAAqB,CAAC,EAAE,GAAG,CAAC;IAC5B,uBAAuB,CAAC,EAAE,GAAG,CAAC;CAC/B"}

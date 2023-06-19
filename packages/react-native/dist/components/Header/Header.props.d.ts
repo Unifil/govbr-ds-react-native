@@ -3,4 +3,4 @@ export interface HeaderProps {
     logo?: any;
     icon?: any;
 }
-//# sourceMappingURL=Interface.d.ts.map
+//# sourceMappingURL=Header.props.d.ts.map

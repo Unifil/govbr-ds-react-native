@@ -53,6 +53,7 @@ const getStories = () => {
     "./.storybook/stories/CardNavigation/CardNavigation.stories.tsx": require("./stories/CardNavigation/CardNavigation.stories.tsx"),
     "./.storybook/stories/Text/Text.stories.tsx": require("./stories/Text/Text.stories.tsx"),
     "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"),
+    "./.storybook/stories/Wrapper/Wrapper.stories.tsx": require("./stories/Wrapper/Wrapper.stories.tsx"),
   };
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, TouchableOpacity } from "react-native";
 import { Avatar } from "../Avatar/Avatar";
 import { colors } from "@unifil/tokens";
-import { HeaderProps } from "./Interface";
+import { HeaderProps } from "./Header.props";
 
 export const Header = (props: HeaderProps) => {
   return (

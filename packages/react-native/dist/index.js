@@ -69,3 +69,14 @@ Object.keys(_Avatar).forEach(function (key) {
     }
   });
 });
+var _Wrapper = require("./components/Wrapper/Wrapper");
+Object.keys(_Wrapper).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Wrapper[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Wrapper[key];
+    }
+  });
+});
