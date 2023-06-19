@@ -5,11 +5,17 @@ import { ContactScreen } from "../Screens/ContactScreen/ContactScreen";
 import { SettingsScreen } from "../Screens/SettingsScreen/SettingsScreen";
 import { CustomTab } from "@unifil/react-native";
 import { Text } from "react-native";
-import { Foundation } from "@expo/vector-icons";
+import { Foundation } from "@expo/vector-icons"; 
+
+import HomeIcon from './home.svg';
+import Activities from './activities.svg';
+import Report from './report.svg';
 
 const Tab = createBottomTabNavigator();
 
 export function Routes() {
+
+  
   return (
     <Tab.Navigator
       screenOptions={{
@@ -21,7 +27,7 @@ export function Routes() {
         <CustomTab
           {...props}
           tabBarActiveTintColor={"#274A67"}
-          tabBarInactiveTintColor={"#CCCCCC"}
+          tabBarInactiveTintColor={"#CCCCCC"}  
         />
       )}
     >
@@ -29,30 +35,27 @@ export function Routes() {
         name="Inicio"
         component={HomeScreen}
         options={{
-          tabBarIcon: [
-            <Foundation name={"home"} size={34} color={"#274A67"} />,
-            <Foundation name={"home"} size={34} color={"#cccccc"} />,
-          ],
+          tabBarIcon: ({ focused, color, size= 24 }) => {
+            return <HomeIcon fill={color} width={size} height={size} />;
+          }
         }}
       />
       <Tab.Screen
         name="Atividades"
         component={ContactScreen}
         options={{
-          tabBarIcon: [
-            <Foundation name={"home"} size={34} color={"#274A67"} />,
-            <Foundation name={"home"} size={34} color={"#cccccc"} />,
-          ],
+          tabBarIcon: ({ focused, color, size= 24  }) => {
+            return <Activities fill={color} width={size} height={size} />;
+          }
         }}
       />
       <Tab.Screen
         name="Relatorio"
         component={SettingsScreen}
         options={{
-          tabBarIcon: [
-            <Foundation name={"home"} size={34} color={"#274A67"} />,
-            <Foundation name={"home"} size={34} color={"#cccccc"} />,
-          ],
+          tabBarIcon: ({ focused, color, size= 24  }) => {
+            return <Report fill={color} width={size} height={size} />;
+          }
         }}
       />
     </Tab.Navigator>

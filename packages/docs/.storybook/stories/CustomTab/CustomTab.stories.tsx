@@ -11,9 +11,9 @@ const CustomTabMeta = {
   args: {
     state: {
       routes: [
-        { key: "first", name: "Inicio", icon: "oi" },
-        { key: "second", name: "Atividades", icon: "oi" },
-        { key: "third", name: "Relatorio", icon: "oi" },
+        { key: "first", name: "Inicio" },
+        { key: "second", name: "Atividades" },
+        { key: "third", name: "Relatorio" },
       ],
       index: 0,
     },
@@ -68,7 +68,7 @@ const CustomTabMeta = {
           flex: 1,
         }}
       >
-        <Story />
+        {/* <Story /> */}
       </View>
     ),
   ],
