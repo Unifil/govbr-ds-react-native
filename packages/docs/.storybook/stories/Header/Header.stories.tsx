@@ -9,7 +9,7 @@ const HeaderMeta = {
     onPress: { action: "pressed the button" },
   },
   args: {
-    logo:  <Text>Teste</Text>,
+    logo:  <Text>Logo</Text>,
   },
   decorators: [
     (Story: any) => (

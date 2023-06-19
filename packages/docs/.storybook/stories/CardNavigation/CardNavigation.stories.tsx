@@ -12,7 +12,7 @@ const CardNavigationMeta = {
   args: {
     title: "Title card",
     text: "Description card",
-    icon: <Text>{">"}</Text>
+    icon: <></>
   },
   decorators: [
     (Story: any) => (
@@ -38,6 +38,6 @@ export const Primary = {
     width: "100%",
     marginTop: 6,
     marginBottom: 6,
-    colorIcon: colors.darkBlue
+    colorIcon: colors.darkBlue,
   },
 };

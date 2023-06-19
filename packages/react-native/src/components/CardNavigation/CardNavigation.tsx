@@ -53,7 +53,7 @@ export const CardNavigation = (props: CardProps) => {
               styles.text,
               {
                 color: isPressed ? colors.white : props.colorText,
-                opacity: isPressed ? 1 : 0.5,
+                opacity: isPressed ? 1: 0.5,
                 fontSize: props.sizeText,
               },
             ]}
@@ -62,7 +62,7 @@ export const CardNavigation = (props: CardProps) => {
           </Text>
         </View>
         <View>
-          {props.icon}
+          {isPressed ? props.icon[0] : props.icon[1]}
         </View>
       </View>
     </TouchableHighlight>

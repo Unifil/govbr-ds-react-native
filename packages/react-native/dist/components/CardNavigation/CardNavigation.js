@@ -51,7 +51,7 @@ var CardNavigation = function CardNavigation(props) {
       opacity: isPressed ? 1 : 0.5,
       fontSize: props.sizeText
     }]
-  }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, props.icon)));
+  }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, isPressed ? props.icon[0] : props.icon[1])));
 };
 exports.CardNavigation = CardNavigation;
 var styles = _reactNative.StyleSheet.create({
