@@ -2,6 +2,9 @@
   "extends": "@unifil/ts-config/react.json",
   "include": ["src", "dist/index.d.ts"],
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationDir": "./dist"
   }
 }

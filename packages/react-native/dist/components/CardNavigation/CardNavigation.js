@@ -21,12 +21,12 @@ var CardNavigation = function CardNavigation(props) {
     _useState2 = _slicedToArray(_useState, 2),
     isPressed = _useState2[0],
     setIsPressed = _useState2[1];
-  return /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableHighlight, {
-    style: [styles.container, {
+  return /*#__PURE__*/_react["default"].createElement(_reactNative.TouchableHighlight, {
+    style: [{
       borderRadius: props.borderRadius,
       height: props.height,
       width: props.width
-    }],
+    }, styles.container],
     onPress: props.onPress,
     activeOpacity: 0.8,
     underlayColor: _tokens.colors.blueLight,
@@ -49,12 +49,12 @@ var CardNavigation = function CardNavigation(props) {
       opacity: isPressed ? 1 : 0.5,
       fontSize: props.sizeText
     }]
-  }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, props.icon))));
+  }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, props.icon)));
 };
 exports.CardNavigation = CardNavigation;
 var styles = _reactNative.StyleSheet.create({
   container: {
-    backgroundColor: _tokens.colors.white,
+    backgroundColor: "white",
     paddingLeft: 30,
     paddingRight: 17,
     alignItems: "center",
@@ -81,14 +81,12 @@ var styles = _reactNative.StyleSheet.create({
   title: {
     color: _tokens.colors.darkBlue,
     fontSize: _tokens.fontSizes.md,
-    lineHeight: _tokens.lineHeights.base,
     fontWeight: _tokens.fontWeights.medium,
     marginBottom: 6
   },
   text: {
     color: _tokens.colors.blue,
     fontSize: _tokens.fontSizes.xs,
-    lineHeight: _tokens.lineHeights.base,
     fontWeight: _tokens.fontWeights.regular,
     opacity: 0.5
   }

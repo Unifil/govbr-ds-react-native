@@ -1,5 +1,11 @@
 # @unifil/react-native
 
+## 1.0.5
+
+### Patch Changes
+
+- adjustment components
+
 ## 1.0.4
 
 ### Patch Changes

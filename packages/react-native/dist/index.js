@@ -36,3 +36,36 @@ Object.keys(_CardNavigation).forEach(function (key) {
     }
   });
 });
+var _CustomTab = require("./components/CustomTab/CustomTab");
+Object.keys(_CustomTab).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _CustomTab[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _CustomTab[key];
+    }
+  });
+});
+var _Header = require("./components/Header/Header");
+Object.keys(_Header).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Header[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Header[key];
+    }
+  });
+});
+var _Avatar = require("./components/Avatar/Avatar");
+Object.keys(_Avatar).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Avatar[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Avatar[key];
+    }
+  });
+});

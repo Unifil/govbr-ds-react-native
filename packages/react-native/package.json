@@ -1,6 +1,6 @@
 {
   "name": "@unifil/react-native",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
-    "dev": "tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx' --watch",
+    "dev": "rimraf dist && tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx' --watch",
     "lint": "eslint src/**/*.ts --fix"
   },
   "keywords": [],
