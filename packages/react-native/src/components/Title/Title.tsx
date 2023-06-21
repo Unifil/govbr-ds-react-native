@@ -1,38 +1,27 @@
 import React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, View } from "react-native";
 import { TitleProps } from "./Title.props";
-import {
-  fontWeights,
-  fontSizes,
-  lineHeights,
-  colors,
-} from "@unifil/tokens";
+import { colors, fontSizes, fontWeights, lineHeights } from "@unifil/tokens";
 
-export const Title = (props: TitleProps) => {
+export const Title = ({
+  color = colors.darkBlue,
+  size = fontSizes.xl,
+  weight = fontWeights.medium,
+  lineHeight = lineHeights.xll,
+  text,
+}: TitleProps) => {
   return (
     <View>
       <Text
-        style={[
-          styles.text,
-          {
-            color: props.color,
-            fontSize: props.size,
-            fontWeight: props.weight,
-            lineHeight: props.lineHeight,
-          },
-        ]}
+        style={{
+          color: color,
+          fontSize: size,
+          fontWeight: weight,
+          lineHeight: lineHeight,
+        }}
       >
-        {props.text}
+        {text}
       </Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  text: {
-    color: colors.darkBlue,
-    fontSize: fontSizes.xl,
-    fontWeight: fontWeights.medium,
-    lineHeight: lineHeights.shorter,
-  },
-});

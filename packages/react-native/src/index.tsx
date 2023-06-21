@@ -5,3 +5,4 @@ export * from "./components/CustomTab/CustomTab";
 export * from "./components/Header/Header";
 export * from "./components/Avatar/Avatar";
 export * from "./components/Wrapper/Wrapper";
+export * from "./components/CardSkills/CardSkills";

@@ -1,12 +1,8 @@
 import React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, View } from "react-native";
 import { TextProps } from "./Text.props";
-import {
-  fontWeights,
-  fontSizes,
-  lineHeights,
-  colors,
-} from "@unifil/tokens";
+
+import { styles } from "./Text.styles";
 
 export const TextComponent = (props: TextProps) => {
   return (
@@ -27,12 +23,3 @@ export const TextComponent = (props: TextProps) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  text: {
-    color: colors.blue,
-    fontSize: fontSizes.xs,
-    lineHeight: lineHeights.base,
-    fontWeight: fontWeights.regular,
-  },
-});
