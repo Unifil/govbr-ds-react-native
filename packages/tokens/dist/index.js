@@ -42,8 +42,9 @@ var colors = {
   gray800: "#202024",
   gray900: "#121214",
   blue: "#16316B",
-  blueLight: "#37639D",
+  lightBlue: "#37639D",
   darkBlue: "#274A67",
+  weakBlue: "#E3EBF8",
   green: "#168821"
 };
 
@@ -96,10 +97,12 @@ var fontWeights = {
 
 // src/line-heights.ts
 var lineHeights = {
-  shorter: "125%",
-  short: "140%",
-  base: "160%",
-  tall: "180%"
+  xs: 12,
+  sm: 14,
+  md: 16,
+  lg: 18,
+  xl: 20,
+  xll: 28
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

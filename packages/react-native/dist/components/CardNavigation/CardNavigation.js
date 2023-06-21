@@ -8,6 +8,7 @@ exports.CardNavigation = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _reactNative = require("react-native");
 var _tokens = require("@unifil/tokens");
+var _CardNavigation = require("./CardNavigation.styles");
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -28,10 +29,10 @@ var CardNavigation = function CardNavigation(props) {
       width: props.width,
       marginTop: props.marginTop,
       marginBottom: props.marginBottom
-    }, styles.container],
+    }, _CardNavigation.styles.container],
     onPress: props.onPress,
     activeOpacity: 0.8,
-    underlayColor: _tokens.colors.blueLight,
+    underlayColor: _tokens.colors.lightBlue,
     onShowUnderlay: function onShowUnderlay() {
       setIsPressed(true);
     },
@@ -39,14 +40,14 @@ var CardNavigation = function CardNavigation(props) {
       setIsPressed(false);
     }
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
-    style: [styles.containerContent]
+    style: [_CardNavigation.styles.containerContent]
   }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
-    style: [styles.title, {
+    style: [_CardNavigation.styles.title, {
       color: isPressed ? _tokens.colors.white : props.colorTitle,
       fontSize: props.sizeTitle
     }]
   }, props.title), /*#__PURE__*/_react["default"].createElement(_reactNative.Text, {
-    style: [styles.text, {
+    style: [_CardNavigation.styles.text, {
       color: isPressed ? _tokens.colors.white : props.colorText,
       opacity: isPressed ? 1 : 0.5,
       fontSize: props.sizeText
@@ -54,45 +55,3 @@ var CardNavigation = function CardNavigation(props) {
   }, props.text)), /*#__PURE__*/_react["default"].createElement(_reactNative.View, null, isPressed ? props.icon[0] : props.icon[1])));
 };
 exports.CardNavigation = CardNavigation;
-var styles = _reactNative.StyleSheet.create({
-  container: {
-    backgroundColor: _tokens.colors.white,
-    paddingLeft: 30,
-    paddingRight: 17,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: _tokens.radii.px,
-    width: "100%",
-    marginTop: 6,
-    marginBottom: 6,
-    height: 105,
-    elevation: 10,
-    shadowColor: "#00000040",
-    shadowOffset: {
-      width: 0,
-      height: 1
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 3
-  },
-  containerContent: {
-    flexDirection: "row",
-    alignContent: "center",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%"
-  },
-  title: {
-    color: _tokens.colors.darkBlue,
-    fontSize: _tokens.fontSizes.md,
-    fontWeight: _tokens.fontWeights.medium,
-    marginBottom: 6
-  },
-  text: {
-    color: _tokens.colors.blue,
-    fontSize: _tokens.fontSizes.xs,
-    fontWeight: _tokens.fontWeights.regular,
-    opacity: 0.5,
-    maxWidth: 300
-  }
-});

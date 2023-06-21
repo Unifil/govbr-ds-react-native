@@ -10,8 +10,9 @@ declare const colors: {
     gray800: string;
     gray900: string;
     blue: string;
-    blueLight: string;
+    lightBlue: string;
     darkBlue: string;
+    weakBlue: string;
     green: string;
 };
 
