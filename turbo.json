@@ -16,8 +16,7 @@
         "lint" : {
             "dependsOn": [
                 "^lint"
-            ],
-            "command": "eslint src/"
+            ]
         }
     }
 }
