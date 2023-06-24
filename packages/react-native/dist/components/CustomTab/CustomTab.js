@@ -24,7 +24,7 @@ var CustomTab = function CustomTab(props) {
     });
     var onPress = function onPress() {
       var event = props.navigation.emit({
-        type: "tabPress",
+        type: 'tabPress',
         target: route.key
       });
       if (!isFocused && !event.defaultPrevented) {
@@ -36,7 +36,7 @@ var CustomTab = function CustomTab(props) {
     };
     var onLongPress = function onLongPress() {
       props.navigation.emit({
-        type: "tabLongPress",
+        type: 'tabLongPress',
         target: route.key
       });
     };
@@ -53,7 +53,7 @@ var CustomTab = function CustomTab(props) {
       style: _CustomTab.styles.buttonTab
     }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
       style: {
-        alignItems: "center",
+        alignItems: 'center',
         padding: 4
       }
     }, /*#__PURE__*/_react["default"].createElement(_reactNative.View, {

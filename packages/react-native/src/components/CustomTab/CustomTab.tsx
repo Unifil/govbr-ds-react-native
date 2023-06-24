@@ -1,42 +1,44 @@
-import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
-import { TabProps } from "./CustomTab.props";
-import { styles } from "./CustomTab.styles";
+import React, { ReactElement } from 'react'
 
-export const CustomTab = (props: TabProps) => {
+import { Text, TouchableOpacity, View } from 'react-native'
+
+import { TabProps } from './CustomTab.props'
+import { styles } from './CustomTab.styles'
+
+export const CustomTab = (props: TabProps): ReactElement => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         {props.state.routes.map((route: any, index: any) => {
-          const { options } = props.descriptors[route.key];
+          const { options } = props.descriptors[route.key]
 
-          const isFocused = props.state.index === index;
+          const isFocused = props.state.index === index
           const color = isFocused
             ? props.tabBarActiveTintColor
-            : props.tabBarInactiveTintColor;
+            : props.tabBarInactiveTintColor
 
-          if (!options.tabBarIcon) return null;
-          const Icon = options.tabBarIcon({ focused: isFocused, color });
+          if (!options.tabBarIcon) return null
+          const Icon = options.tabBarIcon({ focused: isFocused, color })
 
-          const onPress = () => {
+          const onPress = (): void => {
             const event = props.navigation.emit({
-              type: "tabPress",
-              target: route.key,
-            });
+              type: 'tabPress',
+              target: route.key
+            })
 
             if (!isFocused && !event.defaultPrevented) {
               props.navigation.navigate({
                 name: route.name,
-                merge: true,
-              });
+                merge: true
+              })
             }
-          };
-          const onLongPress = () => {
+          }
+          const onLongPress = (): void => {
             props.navigation.emit({
-              type: "tabLongPress",
-              target: route.key,
-            });
-          };
+              type: 'tabLongPress',
+              target: route.key
+            })
+          }
 
           return (
             <TouchableOpacity
@@ -49,22 +51,22 @@ export const CustomTab = (props: TabProps) => {
               onLongPress={onLongPress}
               style={styles.buttonTab}
             >
-              <View style={{ alignItems: "center", padding: 4 }}>
+              <View style={{ alignItems: 'center', padding: 4 }}>
                 <View style={{ padding: 8, borderRadius: 99 }}>{Icon}</View>
                 <Text
                   style={{
                     color: isFocused
                       ? props.tabBarActiveTintColor
-                      : props.tabBarInactiveTintColor,
+                      : props.tabBarInactiveTintColor
                   }}
                 >
                   {route.name}
                 </Text>
               </View>
             </TouchableOpacity>
-          );
+          )
         })}
       </View>
     </View>
-  );
-};
+  )
+}

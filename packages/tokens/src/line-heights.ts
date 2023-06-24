@@ -4,5 +4,5 @@ export const lineHeights: any = {
   md: 16,
   lg: 18,
   xl: 20,
-  xll: 28,
+  xll: 28
 }

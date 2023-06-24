@@ -4,8 +4,10 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "husky install",
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
+    "lint" : "turbo run lint",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=!docs && changeset publish"
@@ -13,6 +15,24 @@
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
     "rimraf": "^5.0.1",
-    "turbo": "^1.10.3"
+    "turbo": "^1.10.3",
+    "husky": "^8.0.3",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.0.3"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [   
+      "turbo run lint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

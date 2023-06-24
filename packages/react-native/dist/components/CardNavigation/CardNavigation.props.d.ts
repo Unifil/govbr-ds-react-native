@@ -13,5 +13,6 @@ export interface CardProps {
     marginBottom?: number;
     colorIcon?: string;
     onPress?: any;
+    iconIsPressed?: any;
 }
 //# sourceMappingURL=CardNavigation.props.d.ts.map

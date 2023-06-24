@@ -1,27 +1,29 @@
-import React from "react";
-import { Text, View } from "react-native";
-import { TitleProps } from "./Title.props";
-import { colors, fontSizes, fontWeights, lineHeights } from "@unifil/tokens";
+import React, { ReactElement } from 'react'
+
+import { colors, fontSizes, fontWeights, lineHeights } from '@unifil/tokens'
+import { Text, View } from 'react-native'
+
+import { TitleProps } from './Title.props'
 
 export const Title = ({
   color = colors.darkBlue,
   size = fontSizes.xl,
   weight = fontWeights.medium,
   lineHeight = lineHeights.xll,
-  text,
-}: TitleProps) => {
+  text
+}: TitleProps): ReactElement => {
   return (
     <View>
       <Text
         style={{
-          color: color,
+          color,
           fontSize: size,
           fontWeight: weight,
-          lineHeight: lineHeight,
+          lineHeight
         }}
       >
         {text}
       </Text>
     </View>
-  );
-};
+  )
+}

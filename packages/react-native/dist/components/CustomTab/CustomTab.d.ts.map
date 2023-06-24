@@ -1,1 +1,1 @@
-{"version":3,"file":"CustomTab.d.ts","sourceRoot":"","sources":["../../../src/components/CustomTab/CustomTab.tsx"],"names":[],"mappings":"AASA,OAAO,EAAE,QAAQ,EAAE,MAAM,mBAAmB,CAAC;AAE7C,eAAO,MAAM,SAAS,UAAW,QAAQ,gBA8DxC,CAAC"}
+{"version":3,"file":"CustomTab.d.ts","sourceRoot":"","sources":["../../../src/components/CustomTab/CustomTab.tsx"],"names":[],"mappings":"AAAA,OAAc,EAAE,YAAY,EAAE,MAAM,OAAO,CAAA;AAI3C,OAAO,EAAE,QAAQ,EAAE,MAAM,mBAAmB,CAAA;AAG5C,eAAO,MAAM,SAAS,UAAW,QAAQ,KAAG,YAgE3C,CAAA"}

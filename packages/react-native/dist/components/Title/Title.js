@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Title = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _reactNative = require("react-native");
 var _tokens = require("@unifil/tokens");
+var _reactNative = require("react-native");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var Title = function Title(_ref) {
   var _ref$color = _ref.color,

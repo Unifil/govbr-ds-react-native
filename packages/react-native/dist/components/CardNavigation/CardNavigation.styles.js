@@ -4,23 +4,23 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.styles = void 0;
-var _reactNative = require("react-native");
 var _tokens = require("@unifil/tokens");
+var _reactNative = require("react-native");
 var styles = _reactNative.StyleSheet.create({
   container: {
     backgroundColor: _tokens.colors.white,
     paddingLeft: 30,
     paddingRight: 17,
     paddingVertical: 20,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: _tokens.radii.px,
-    width: "100%",
+    width: '100%',
     marginTop: 6,
     marginBottom: 6,
     minHeight: 105,
     elevation: 10,
-    shadowColor: "#00000040",
+    shadowColor: '#00000040',
     shadowOffset: {
       width: 0,
       height: 1
@@ -29,11 +29,11 @@ var styles = _reactNative.StyleSheet.create({
     shadowRadius: 3
   },
   containerContent: {
-    flexDirection: "row",
-    alignContent: "center",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%"
+    flexDirection: 'row',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%'
   },
   title: {
     color: _tokens.colors.darkBlue,

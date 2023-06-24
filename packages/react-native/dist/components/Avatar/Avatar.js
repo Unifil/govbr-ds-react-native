@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Avatar = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _reactNative = require("react-native");
 var _tokens = require("@unifil/tokens");
+var _reactNative = require("react-native");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var Avatar = function Avatar() {
   return /*#__PURE__*/_react["default"].createElement(_reactNative.View, {
