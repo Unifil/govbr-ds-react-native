@@ -5,7 +5,7 @@ import { Text, View } from 'react-native'
 import { TextProps } from './Text.props'
 import { styles } from './Text.styles'
 
-export const TextComponent = (props: TextProps): ReactElement => {
+export const TextComponent = (props: TextProps) => {
   return (
     <View>
       <Text
