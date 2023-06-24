@@ -21,7 +21,7 @@
     "@commitlint/config-conventional": "^17.0.3"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [   
+    "*.{ts,tsx}": [  
       "turbo run lint"
     ]
   },
