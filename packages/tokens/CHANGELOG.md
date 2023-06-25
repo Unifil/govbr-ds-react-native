@@ -1,5 +1,11 @@
 # @unifil/tokens
 
+## 1.0.10
+
+### Patch Changes
+
+- test
+
 ## 1.0.9
 
 ### Patch Changes
