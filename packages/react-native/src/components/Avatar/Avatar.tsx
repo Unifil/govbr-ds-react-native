@@ -1,29 +1,30 @@
-import React from "react";
-import {  View, Text } from "react-native";
-import {
-  fontWeights,
-  colors,
-} from "@unifil/tokens";
+import React, { ReactElement } from 'react'
 
-export const Avatar = () => {
+import { fontWeights, colors } from '@unifil/tokens'
+import { View, Text } from 'react-native'
+
+export const Avatar = (): ReactElement => {
   return (
-    <View style={{
-      width: 37,
+    <View
+      style={{
+        width: 37,
         height: 37,
         borderRadius: 50,
         backgroundColor: colors.green,
         alignContent: 'center',
         alignItems: 'center',
-        justifyContent: 'center',
-    }}> 
-        <Text
-          style={{
-            color: colors.white,
-            fontSize: 16,
-            fontWeight: fontWeights.bold,
-          }}
-    >HS</Text>
+        justifyContent: 'center'
+      }}
+    >
+      <Text
+        style={{
+          color: colors.white,
+          fontSize: 16,
+          fontWeight: fontWeights.normal
+        }}
+      >
+        HS
+      </Text>
     </View>
-  );
-};
- 
+  )
+}

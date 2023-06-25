@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { fontWeights, fontSizes, colors, radii } from "@unifil/tokens";
+import { fontWeights, fontSizes, colors, radii } from '@unifil/tokens'
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
@@ -7,46 +7,46 @@ export const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 17,
     paddingVertical: 20,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: radii.px,
-    width: "100%",
+    width: '100%',
     marginTop: 6,
     marginBottom: 6,
     minHeight: 105,
     elevation: 10,
-    shadowColor: "#00000040",
+    shadowColor: '#00000040',
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 1
     },
     shadowOpacity: 0.5,
-    shadowRadius: 3,
+    shadowRadius: 3
   },
   containerContent: {
-    flexDirection: "row",
-    alignContent: "center",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%",
+    flexDirection: 'row',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%'
   },
   title: {
     color: colors.darkBlue,
     fontSize: fontSizes.md,
     fontWeight: fontWeights.medium,
-    marginBottom: 6,
+    marginBottom: 6
   },
   text: {
     color: colors.darkBlue,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
     opacity: 0.5,
-    maxWidth: 300,
+    maxWidth: 300
   },
   textTag: {
     color: colors.darkBlue,
     fontSize: fontSizes.xxs,
-    fontWeight: fontWeights.medium,
+    fontWeight: fontWeights.medium
   },
   containerTag: {
     backgroundColor: colors.weakBlue,
@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 4,
     borderRadius: 20,
     marginBottom: 15,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+})

@@ -1,10 +1,12 @@
-import React from "react";
-import { View, TouchableOpacity } from "react-native";
-import { Avatar } from "../Avatar/Avatar";
-import { HeaderProps } from "./Header.props";
-import { styles } from "./Header.styles";
+import React, { ReactElement } from 'react'
 
-export const Header = (props: HeaderProps) => {
+import { View, TouchableOpacity } from 'react-native'
+
+import { HeaderProps } from './Header.props'
+import { styles } from './Header.styles'
+import { Avatar } from '../Avatar/Avatar'
+
+export const Header = (props: HeaderProps): ReactElement => {
   return (
     <View style={styles.container}>
       {props.onPress && (
@@ -12,10 +14,8 @@ export const Header = (props: HeaderProps) => {
           {props.icon}
         </TouchableOpacity>
       )}
-
       <View>{props.logo}</View>
-
       <Avatar></Avatar>
     </View>
-  );
-};
+  )
+}

@@ -1,5 +1,11 @@
 # @unifil/tokens
 
+## 1.0.9
+
+### Patch Changes
+
+- add lint
+
 ## 1.0.8
 
 ### Patch Changes

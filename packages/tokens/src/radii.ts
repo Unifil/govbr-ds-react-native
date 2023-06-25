@@ -1,7 +1,7 @@
-export const radii: any = {
-  px: '15px',
-  xs: '64px',
-  sm: '96px',
-  md: '128px',
-  lg: '256px'
+export const radii = {
+  px: 15,
+  xs: 64,
+  sm: 96,
+  md: 128,
+  lg: 256
 }
