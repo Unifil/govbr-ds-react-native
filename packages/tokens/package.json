@@ -28,5 +28,20 @@
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^5.35.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint src/**/*.ts --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

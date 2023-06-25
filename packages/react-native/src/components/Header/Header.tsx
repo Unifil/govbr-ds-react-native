@@ -14,9 +14,7 @@ export const Header = (props: HeaderProps): ReactElement => {
           {props.icon}
         </TouchableOpacity>
       )}
-
       <View>{props.logo}</View>
-
       <Avatar></Avatar>
     </View>
   )

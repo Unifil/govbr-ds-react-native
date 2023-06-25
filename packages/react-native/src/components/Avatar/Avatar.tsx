@@ -20,7 +20,7 @@ export const Avatar = (): ReactElement => {
         style={{
           color: colors.white,
           fontSize: 16,
-          fontWeight: fontWeights.bold
+          fontWeight: fontWeights.normal
         }}
       >
         HS

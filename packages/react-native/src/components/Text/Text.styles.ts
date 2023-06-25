@@ -11,6 +11,6 @@ export const styles = StyleSheet.create({
     color: colors.blue,
     fontSize: fontSizes.xs,
     lineHeight: lineHeights.xs,
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.bold
   }
 })

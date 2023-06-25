@@ -1,4 +1,4 @@
-export const lineHeights: any = {
+export const lineHeights = {
   xs: 12,
   sm: 14,
   md: 16,
