@@ -1,24 +1,22 @@
- import styled from 'styled-components/native' 
-import { InitialScreen } from './src'
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar, View } from "react-native";
+import { Routes } from "./src/routes/tabbar";
+import { LogBox } from "react-native";
 
-export const Container = styled.View`
-  flex: 1;
-  background-color: blue;
-  justify-content: center;
-  align-items: center;
-`
+// Ignore all warnings
+LogBox.ignoreAllLogs(true);
 
 function App() {
   return (
-   <InitialScreen />
- 
-  )
+    <NavigationContainer>
+      <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
+      <Routes />
+    </NavigationContainer>
+  );
 }
 
-let AppEntryPoint = App
+let AppEntryPoint = App;
 
- 
-  // AppEntryPoint = require('./.storybook').default
- 
+// AppEntryPoint = require('./.storybook').default
 
-export default AppEntryPoint
+export default AppEntryPoint;

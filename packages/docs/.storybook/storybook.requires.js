@@ -46,11 +46,15 @@ if (parameters) {
 
 try {
   argsEnhancers.forEach((enhancer) => addArgsEnhancer(enhancer));
-} catch {}
+} catch { }
 
 const getStories = () => {
-  return { 
-    "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"), 
+  return {
+    "./.storybook/stories/CardNavigation/CardNavigation.stories.tsx": require("./stories/CardNavigation/CardNavigation.stories.tsx"),
+    "./.storybook/stories/Text/Text.stories.tsx": require("./stories/Text/Text.stories.tsx"),
+    "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"),
+    "./.storybook/stories/Wrapper/Wrapper.stories.tsx": require("./stories/Wrapper/Wrapper.stories.tsx"),
+    "./.storybook/stories/CardSkills/CardSkills.stories.tsx": require("./stories/CardSkills/CardSkills.stories.tsx"),
   };
 };
 

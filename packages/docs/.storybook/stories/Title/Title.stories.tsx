@@ -1,6 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { Title } from "@govbr-ds-react-native/react-native";
+import { Title } from "@unifil/react-native";
+import { fontWeights, fontSizes, colors } from "@unifil/tokens";
 
 const TitleMeta = {
   title: "Title",
@@ -12,8 +13,8 @@ const TitleMeta = {
     text: "Hello world",
   },
   decorators: [
-    (Story) => (
-      <View style={{ alignItems: "center", justifyContent: "center" }}>
+    (Story: any) => (
+      <View>
         <Story />
       </View>
     ),
@@ -22,16 +23,29 @@ const TitleMeta = {
 
 export default TitleMeta;
 
-export const Primary = {
+export const Regular = {
   args: {
     text: "Hello world",
-    textColor: "#274A67", 
+    color: colors.blue,
+    size: fontSizes.xl,
+    weight: fontWeights.medium,
   },
 };
 
-export const Secondary = {
+export const Medium = {
   args: {
     text: "Hello world",
-    textColor: "#000", 
+    color: colors.blue,
+    size: fontSizes.xl,
+    weight: fontWeights.large,
+  },
+};
+
+export const Large = {
+  args: {
+    text: "Hello world",
+    color: colors.blue,
+    size: fontSizes.xll,
+    weight: fontWeights.large,
   },
 };

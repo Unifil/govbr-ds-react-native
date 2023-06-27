@@ -1,15 +1,16 @@
 {
-  "name": "@govbr-ds-react-native/react-native",
-  "version": "1.0.0",
+  "name": "@unifil/react-native",
+  "version": "1.0.10",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
-    "dev": "tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx' --watch",
-    "lint": "eslint src/**/*.ts --fix"
+    "clean": "rimraf dist",
+    "build": "npm run clean && sleep 5 &&  tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
+    "dev": "npm run clean && sleep 5 && tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx' --watch",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix"
   },
   "keywords": [],
   "author": "",
@@ -19,22 +20,46 @@
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
-    "@expo/webpack-config": "^18.0.1",
-    "@govbr-ds-react-native/tokens": "*", 
-    "@govbr-ds-react-native/ts-config" : "*",
     "@types/react": "~18.0.27",
     "@types/react-native": "~0.70.6",
-    "@types/styled-components-react-native": "^5.2.1",
-    "expo": "^48.0.19",
+    "@unifil/ts-config": "*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
     "react-native-web": "~0.18.10",
+    "rimraf": "^5.0.1",
     "tsup": "^6.7.0",
-    "typescript": "^4.9.4"
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.0.3",
+    "typescript": "^4.9.4",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.0"
   },
   "dependencies": {
+    "@unifil/tokens": "*",
     "@types/styled-components": "^5.1.26",
     "styled-components": "^5.3.6"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint 'src/**/*.{ts,tsx}' --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

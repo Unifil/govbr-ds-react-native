@@ -12,6 +12,9 @@
             "dependsOn": [
                 "^build"
             ]
+        },
+        "lint" : { 
+            "cache": false
         }
     }
 }
