@@ -83,7 +83,7 @@ export const CardActivities = (props: CardProps): ReactElement => {
                   }
                 ]}
               >
-              {props.textGroup}
+              {/* {props.textGroup} */}
               </Text>
           </View>
         </View>
