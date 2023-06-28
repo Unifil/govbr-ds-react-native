@@ -9,6 +9,7 @@ import {
 } from "@unifil/react-native";
 import { colors } from "@unifil/tokens";
 import ArrowIcon from "../../assets/svgs/arrowRight.svg";
+import Modalize from "../Modalize/Modalize";
 
 export function HomeScreen() {
   return (
@@ -38,6 +39,8 @@ export function HomeScreen() {
           onPress={() => {}}
           icon={[<ArrowIcon stroke={colors.white} />, <ArrowIcon />]}
         />
+
+        <Modalize/>
       </Wrapper>
     </SafeAreaView>
   );

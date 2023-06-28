@@ -18,21 +18,22 @@
     "storybook:android": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --android"
   },
   "dependencies": {
-    "@unifil/react-native": "*",
-    "@unifil/tokens": "*",
     "@react-native-async-storage/async-storage": "~1.17.3",
-    "expo": "~48.0.18",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
+    "@unifil/react-native": "*",
+    "@unifil/tokens": "*",
+    "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-gesture-handler": "~2.9.0",
+    "react-native-reanimated": "~2.14.4",
     "react-native-svg": "13.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "react-native-svg-transformer": "^1.0.0",
     "@react-native-async-storage/async-storage": "^1.18.1",
     "@react-native-community/datetimepicker": "^7.1.0",
     "@react-native-community/slider": "^4.4.2",
@@ -58,6 +59,7 @@
     "cross-env": "^7.0.3",
     "react-dom": "18.2.0",
     "react-native-safe-area-context": "^4.5.3",
+    "react-native-svg-transformer": "^1.0.0",
     "typescript": "^4.9.4"
   },
   "private": true
