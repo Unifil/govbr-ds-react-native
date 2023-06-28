@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import {
+  CardActivities,
   CardNavigation,
   CardSkills,
   Header,
@@ -9,6 +10,7 @@ import {
 } from "@unifil/react-native";
 import { colors } from "@unifil/tokens";
 import ArrowIcon from "../../assets/svgs/arrowRight.svg";
+import Check from "../../assets/svgs/check.svg";
 
 export function HomeScreen() {
   return (
@@ -30,13 +32,18 @@ export function HomeScreen() {
           onPress={() => {}}
           icon={[<ArrowIcon stroke={colors.white} />, <ArrowIcon />]}
         />
-        <CardSkills
-          title="Construir Fatos Básicos da Adição"
-          text="Construir fatos básicos da adição e utilizá-los em procedimentos 
-          de cálculo para resolver problemas."
-          tag="(EF01MA08)"
+        <CardActivities 
+          title="Soma e subtração de integrantes"
+          subtitle="(EF01MA06)"
+          textGroup="Recomendado para Grupo 1"
+          isChecked={true}
+          iconCheck={<Check />}
+          sizeText={10}
+          colorTitle={colors.darkBlue}
+          colorText={colors.gray}
+          colorGroup={colors.gray100}
+          colorTextGroup={colors.gray900}
           onPress={() => {}}
-          icon={[<ArrowIcon stroke={colors.white} />, <ArrowIcon />]}
         />
       </Wrapper>
     </SafeAreaView>
