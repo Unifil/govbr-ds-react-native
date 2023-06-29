@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState } from 'react'
 
-import { View, StyleSheet, Dimensions, Text, Pressable, TouchableOpacity } from 'react-native'
+import { View, Dimensions, Pressable, TouchableOpacity } from 'react-native'
 import { PanGestureHandler } from 'react-native-gesture-handler'
 import Animated, {
   useAnimatedGestureHandler,
@@ -9,11 +9,14 @@ import Animated, {
   withSpring
 } from 'react-native-reanimated'
 
+import { ModalizerProps } from './Modalize.props'
+import { styles } from './Modalize.styles'
+
 const { height } = Dimensions.get('window')
 
-export const Modalize = (): ReactElement => {
+export const Modalize = ({ isVisible, children }: ModalizerProps): ReactElement => {
   const translateY = useSharedValue(0)
-  const [isMove, setIsMove] = React.useState(false)
+  const [isMove, setIsMove] = useState(false)
   const opacity = useSharedValue(0.3)
 
   const gestureHandler = useAnimatedGestureHandler({
@@ -63,67 +66,32 @@ export const Modalize = (): ReactElement => {
   })
 
   return (
-    <Animated.View style={[styles.container, animatedContainerStyles]}>
-      <PanGestureHandler onGestureEvent={gestureHandler}>
-        <Animated.View style={[styles.content, animatedStyles]}>
-          <Pressable
-            onPress={() => {
-              setIsMove(false)
-            }}
-          >
-            <TouchableOpacity
-              onPressIn={() => {
-                setIsMove(true)
-              }}
-              style={{
-                height: 4,
-                width: 70,
-                backgroundColor: 'lightgrey',
-                borderRadius: 2,
-                alignSelf: 'center',
-                marginTop: 10
-              }}
-            ></TouchableOpacity>
-
-            <View
-              style={{
-                height: '100%',
-                width: '100%',
-                alignItems: 'center',
-                marginTop: 20
+    <>
+      {!isVisible ? (
+        <></>
+      ) : (
+        <Animated.View style={[styles.container, animatedContainerStyles]}>
+        <PanGestureHandler onGestureEvent={gestureHandler}>
+          <Animated.View style={[styles.containerContent, animatedStyles]}>
+            <Pressable
+              onPress={() => {
+                setIsMove(false)
               }}
             >
-              <Text>Atividade</Text>
-
-            </View>
-          </Pressable>
-        </Animated.View>
-      </PanGestureHandler>
-    </Animated.View>
+              <TouchableOpacity
+                onPressIn={() => {
+                  setIsMove(true)
+                }}
+                style={styles.buttonExpand}
+              />
+              <View style={styles.content}>
+              {children}
+              </View>
+            </Pressable>
+          </Animated.View>
+        </PanGestureHandler>
+      </Animated.View>
+      )}
+    </>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    position: 'absolute',
-    justifyContent: 'flex-end'
-  },
-  content: {
-    backgroundColor: 'white',
-    height: height * 0.6,
-    bottom: -200,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20
-  },
-  handle: {
-    height: 40,
-    width: '100%',
-    backgroundColor: 'lightgrey'
-  }
-})
