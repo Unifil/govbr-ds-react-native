@@ -55,6 +55,7 @@ const getStories = () => {
     "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"),
     "./.storybook/stories/Wrapper/Wrapper.stories.tsx": require("./stories/Wrapper/Wrapper.stories.tsx"),
     "./.storybook/stories/CardSkills/CardSkills.stories.tsx": require("./stories/CardSkills/CardSkills.stories.tsx"),
+    "./.storybook/stories/Button/Button.stories.tsx": require("./stories/Button/Button.stories.tsx"),
   };
 };
 

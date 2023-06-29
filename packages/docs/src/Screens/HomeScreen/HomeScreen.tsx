@@ -6,6 +6,7 @@ import {
   Header,
   Title,
   Wrapper,
+  Button
 } from "@unifil/react-native";
 import { colors } from "@unifil/tokens";
 import ArrowIcon from "../../assets/svgs/arrowRight.svg";
@@ -37,6 +38,11 @@ export function HomeScreen() {
           tag="(EF01MA08)"
           onPress={() => {}}
           icon={[<ArrowIcon stroke={colors.white} />, <ArrowIcon />]}
+        />
+        <Button 
+          type="primary" 
+          text="Button" 
+          onPress={() => console.log('Button')}
         />
       </Wrapper>
     </SafeAreaView>
