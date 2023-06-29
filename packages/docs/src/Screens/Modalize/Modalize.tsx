@@ -28,7 +28,7 @@ export default function Modalize( ) {
         
         translateY.value = ctx.startY + event.translationY;
 
-        const maxDragDistance = 200; // Ajuste este valor conforme o necessário
+        const maxDragDistance = 200;  
         const newOpacity = 1 - (event.translationY / maxDragDistance * .8);
         opacity.value = Math.max(0, Math.min(newOpacity, .3));
         console.log("opacity", opacity.value);
@@ -126,6 +126,6 @@ const styles = StyleSheet.create({
   handle: {
     height: 40,
     width: "100%",
-    backgroundColor: "lightgrey", // You may want to style this accordingly.
+    backgroundColor: "lightgrey",  
   },
 });
