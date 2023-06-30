@@ -8,8 +8,6 @@ import {
 
 import { Modalize } from "@unifil/react-native/modalize";
 
-
-
 import { colors } from '@unifil/tokens'
  
 // import { Modalize } from "@unifil/react-native/dist/components/Modalize";
