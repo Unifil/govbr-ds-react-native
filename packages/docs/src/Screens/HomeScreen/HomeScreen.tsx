@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text } from "react-native";
+import { Button, SafeAreaView, Text } from "react-native";
 import { 
   Header, 
   Wrapper,
-  Tabs
+  Tabs 
 } from "@unifil/react-native";
-import { colors } from '@unifil/tokens'
 
-import { Modalize } from "@unifil/react-native/dist/components/Modalize";
+import { Modalize } from "@unifil/react-native/modalize";
+
+
+
+import { colors } from '@unifil/tokens'
  
-import { View } from "react-native";  
-import { Button } from "react-native";
+// import { Modalize } from "@unifil/react-native/dist/components/Modalize";
+ 
+import { View } from "react-native";   
 
 export function HomeScreen() {
   const [modalize, setModalize] = useState(false);
@@ -28,13 +32,14 @@ export function HomeScreen() {
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
       <Header logo={<Text>LOGO</Text>} />
       <Wrapper >
-        <Tabs dataTab={data} >
+        <Tabs dataTab={data} titleTab={["ss"]}>
           <View
             style={{
               backgroundColor: colors.gray200,  
               height: '100%',
             }} 
           >   
+           <Button title="Abrir modalize" onPress={() => setModalize(true)} />
           </View>
           <View
             style={{
@@ -42,12 +47,16 @@ export function HomeScreen() {
               height: '100%',
             }}
           >
+             
           </View>
         </Tabs>
-        {/* <Button title="Abrir modalize" onPress={() => setModalize(true)} />
-        <Modalize isVisible={modalize} >
+
+        <Modalize isVisible={modalize} 
+          onClose={() => setModalize(false)}
+        
+        >
           <Text>Teste modalize</Text>
-        </Modalize> */}
+        </Modalize>
       </Wrapper>
     </SafeAreaView>
   );
