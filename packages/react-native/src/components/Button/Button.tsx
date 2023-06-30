@@ -11,24 +11,17 @@ export const Button = (props: ButtonProps): ReactElement => {
     switch (props.type) {
       case 'primary':
         return (
-          <TouchableOpacity
-              onPress={props.onPress}
-              style={[styles.primary]}
-            >
-            <Text style={[styles.textPrimary]} >
-              {props.text}
-            </Text>
+          <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
+            <Text style={[styles.textPrimary]}>{props.text}</Text>
           </TouchableOpacity>
         )
       case 'secondary':
         return (
           <TouchableOpacity style={[styles.secondary]} onPress={props.onPress}>
-            <Text style={[styles.textSecondary]} >
-              {props.text}
-            </Text>
+            <Text style={[styles.textSecondary]}>{props.text}</Text>
           </TouchableOpacity>
         )
-      case 'random':
+      case 'custom':
         return (
           <TouchableOpacity
             onPress={props.onPress}
@@ -61,7 +54,5 @@ export const Button = (props: ButtonProps): ReactElement => {
     }
   }
 
-  return (
-    <>{renderButton()}</>
-  )
+  return <>{renderButton()}</>
 }

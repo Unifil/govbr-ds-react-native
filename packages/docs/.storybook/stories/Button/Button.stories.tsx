@@ -46,10 +46,10 @@ export const Secondary = {
   },
 };
 
-export const Random = {
+export const Custom = {
   args: {
-    type: "random",
-    text: "Random",
+    type: "custom",
+    text: "Custom",
     height: 31,
     borderRadius: 19, 
     backgroundColor: colors.gray600,
