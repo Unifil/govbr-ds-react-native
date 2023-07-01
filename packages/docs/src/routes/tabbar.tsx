@@ -1,11 +1,9 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { HomeScreenStack } from "./App/Home/HomeScreenStack.Routes";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"; 
 import { HomeScreen } from "../Screens/HomeScreen/HomeScreen";
 import { ContactScreen } from "../Screens/ContactScreen/ContactScreen";
 import { SettingsScreen } from "../Screens/SettingsScreen/SettingsScreen";
 import { CustomTab } from "@unifil/react-native";
-import { Text } from "react-native";
-import { Foundation } from "@expo/vector-icons"; 
+ 
 
 import HomeIcon from './home.svg';
 import Activities from './activities.svg';

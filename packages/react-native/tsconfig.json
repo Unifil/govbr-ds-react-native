@@ -1,9 +1,9 @@
 {
   "extends": "@unifil/ts-config/react.json",
-  "include": ["src", "dist/index.d.ts" ],
+  "include": ["src", "dist/index.d.ts", "modalize", "index.tsx" ],
   "compilerOptions": {
     "strict": true,
-    "rootDir": "./src",
+    "rootDir": "./",
     "declaration": true,
     "declarationDir": "./dist"
   }
