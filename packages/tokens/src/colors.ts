@@ -13,6 +13,9 @@ export const colors = {
   gray800: '#202024',
   gray900: '#121214',
 
+  weakGray: '#F6F8F9',
+  lightGray: '#BDBDBD',
+  gray: '#828282',
   blue: '#16316B',
   lightBlue: '#37639D',
   darkBlue: '#274A67',
