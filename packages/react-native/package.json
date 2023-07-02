@@ -2,50 +2,63 @@
   "name": "@unifil/react-native",
   "version": "1.0.10",
   "description": "",
-  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
     "build": "npm run clean && sleep 5 &&  tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
-    "dev": "npm run clean && sleep 5 && tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx' --watch",
+    "dev": "npm run clean && sleep 5 && tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.jsx,.ts,.tsx' --watch",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./modalize": "./dist/modalize/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.21.5",
-    "@babel/preset-env": "^7.22.4",
-    "@babel/preset-react": "^7.22.3",
-    "@babel/preset-typescript": "^7.21.5",
+    "@babel/core": "^7.20.0",
+    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@babel/runtime": "^7.22.5",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/react": "~18.0.27",
     "@types/react-native": "~0.70.6",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@unifil/ts-config": "*",
+    "babel-loader": "^8.3.0",
+    "babel-plugin-react-docgen-typescript": "^1.5.1",
+    "babel-plugin-react-native-web": "^0.18.10",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
     "react-native-web": "~0.18.10",
     "rimraf": "^5.0.1",
     "tsup": "^6.7.0",
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.0.3",
-    "typescript": "^4.9.4",
-    "eslint": "^8.0.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^22.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.31.0"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@unifil/tokens": "*",
     "@types/styled-components": "^5.1.26",
+    "@unifil/tokens": "*",
     "styled-components": "^5.3.6"
+  },
+  "peerDependencies": {
+    "react-native-gesture-handler": "~2.9.0",
+    "react-native-reanimated": "^2.9.1"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -61,5 +74,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "resolutions": {
+    "react-native-reanimated": "^2.9.1"
   }
 }

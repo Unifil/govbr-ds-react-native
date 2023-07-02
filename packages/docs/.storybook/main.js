@@ -1,11 +1,11 @@
 module.exports = {
   stories: ['./stories/**/*.stories.?(ts|tsx|js|jsx)'],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials", 
-  ],
-  core: {
-    builder: "webpack5",
+  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {}
   },
-  framework: "@storybook/react",
+  docs: {
+    autodocs: true
+  }
 };
