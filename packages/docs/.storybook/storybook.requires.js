@@ -57,6 +57,7 @@ const getStories = () => {
     "./.storybook/stories/CardSkills/CardSkills.stories.tsx": require("./stories/CardSkills/CardSkills.stories.tsx"),
     "./.storybook/stories/CardActivities/CardActivities.stories.tsx": require("./stories/CardActivities/CardActivities.stories.tsx"),
     "./.storybook/stories/Button/Button.stories.tsx": require("./stories/Button/Button.stories.tsx"),
+    "./.storybook/stories/ButtonCreateList/ButtonCreateList.stories.tsx": require("./stories/ButtonCreateList/ButtonCreateList.stories.tsx"),
   };
 };
 
