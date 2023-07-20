@@ -3,10 +3,13 @@ import { Button, SafeAreaView, Text } from "react-native";
 import { 
   Header, 
   Wrapper,
-  Tabs 
+  Tabs,
+  ButtonIcon,
+  CardListActivities
 } from "@unifil/react-native";
 
 import { Modalize } from "@unifil/react-native/modalize";
+import Icon from '../../assets/svgs/filterIcon.svg'
 
 import { colors } from '@unifil/tokens'
  
@@ -33,11 +36,29 @@ export function HomeScreen() {
         <Tabs dataTab={data} titleTab={["ss"]}>
           <View
             style={{
-              backgroundColor: colors.gray200,  
+              backgroundColor: colors.weakGray,  
               height: '100%',
+              paddingHorizontal: 20
             }} 
-          >   
-           <Button title="Abrir modalize" onPress={() => setModalize(true)} />
+          >
+
+          {/* <CardListActivities 
+            title="Soma e subtração de integrantes"
+            subtitle=" - (EF01MA06)"
+            subtitleBold="Atividade 1"
+            textGroup="Recomendado para Grupo 1"
+            colorTitle={colors.darkBlue}
+            colorText={colors.gray300}
+            colorGroup={colors.gray100}
+            colorTextGroup={colors.gray800}
+            button={<ButtonIcon icon={<Icon />} onPress={() => console.log('Button card')} />}
+            onPress={() => console.log('Card de atividades')}
+          /> */}
+
+          {/* <ButtonIcon icon={<Icon />} /> */}
+
+          {/* <Button title="Abrir modalize" onPress={() => setModalize(true)} /> */}
+
           </View>
           <View
             style={{
@@ -49,12 +70,12 @@ export function HomeScreen() {
           </View>
         </Tabs>
 
-        <Modalize isVisible={modalize} 
+        {/* <Modalize isVisible={modalize} 
           onClose={() => setModalize(false)}
-        
         >
           <Text>Teste modalize</Text>
-        </Modalize>
+        </Modalize> */}
+
       </Wrapper>
     </SafeAreaView>
   );
