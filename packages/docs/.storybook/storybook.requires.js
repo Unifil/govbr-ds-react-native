@@ -52,6 +52,7 @@ const getStories = () => {
   return {
     "./.storybook/stories/CardNavigation/CardNavigation.stories.tsx": require("./stories/CardNavigation/CardNavigation.stories.tsx"),
     "./.storybook/stories/Text/Text.stories.tsx": require("./stories/Text/Text.stories.tsx"),
+    "./.storybook/stories/InputSearch/InputSearch.stories.tsx": require("./stories/InputSearch/InputSearch.stories.tsx"),
     "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"),
     "./.storybook/stories/Wrapper/Wrapper.stories.tsx": require("./stories/Wrapper/Wrapper.stories.tsx"),
     "./.storybook/stories/CardSkills/CardSkills.stories.tsx": require("./stories/CardSkills/CardSkills.stories.tsx"),
