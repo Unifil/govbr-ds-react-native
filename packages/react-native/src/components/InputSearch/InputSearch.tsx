@@ -30,8 +30,9 @@ export const InputSearch = (props: TextProps): ReactElement => {
         style={styles.input}
         placeholder={props.placeholder}
         placeholderTextColor={props.placeholderColor}
-        onChangeText={handleSearch}
-        value={searchText}
+        onChangeText={handleSearch ?? props.onChangeText}
+        value={searchText ?? props.value}
+        onSubmitEditing={props.onSubmitEditing}
       />
     </View>
   )
