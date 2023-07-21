@@ -1,26 +1,23 @@
 import React, { useState } from "react";
-import { Button, SafeAreaView, Text } from "react-native";
+import { Button, SafeAreaView, Text, View } from "react-native";
+import { colors } from '@unifil/tokens'
+import Icon from '../../assets/svgs/filterIcon.svg'
+import IconSearch from '../../assets/svgs/searchIcon.svg'
+import { Modalize } from "@unifil/react-native/modalize";
+// import { Modalize } from "@unifil/react-native/dist/components/Modalize";
 import { 
   Header, 
   Wrapper,
   Tabs,
   ButtonIcon,
   CardListActivities,
-  InputSearch
+  InputSearch,
+  ModalComponent
 } from "@unifil/react-native";
-
-import { Modalize } from "@unifil/react-native/modalize";
-import Icon from '../../assets/svgs/filterIcon.svg'
-import IconSearch from '../../assets/svgs/searchIcon.svg'
-
-import { colors } from '@unifil/tokens'
- 
-// import { Modalize } from "@unifil/react-native/dist/components/Modalize";
- 
-import { View } from "react-native";   
 
 export function HomeScreen() {
   const [modalize, setModalize] = useState(false);
+  const [showModal, setShowModal] = useState(false)
   const data: any = [
     {
       name: 'Todas',
@@ -39,16 +36,31 @@ export function HomeScreen() {
   return (
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
       <Header logo={<Text>LOGO</Text>} />
-      <Wrapper >
         <Tabs dataTab={data} titleTab={["ss"]}>
           <View
-            style={{
-              // backgroundColor: colors.weakGray,  
+            style={{ 
               backgroundColor: colors.white,  
               height: '100%',
               paddingHorizontal: 20
             }} 
           >
+
+          {showModal &&
+            <ModalComponent 
+              onTouchEnd={() => setShowModal(false)}
+              width='90%'
+              height={480}
+              borderRadius={12}
+              alignItems='center'
+              justifyContent='center'
+            >
+              <View>
+                <Text>
+                  Componente Modal
+                </Text>
+              </View>
+            </ModalComponent>
+          }
 
           <InputSearch 
             placeholder="Busque atividades na sua lista desejada..."
@@ -76,15 +88,10 @@ export function HomeScreen() {
 
           {/* <Button title="Abrir modalize" onPress={() => setModalize(true)} /> */}
 
+          <Button title="Abrir Modal" onPress={() => setShowModal(true)} />
+
           </View>
-          <View
-            style={{
-              backgroundColor: colors.gray500,
-              height: '100%',
-            }}
-          >
-             
-          </View>
+
         </Tabs>
 
         {/* <Modalize isVisible={modalize} 
@@ -92,8 +99,6 @@ export function HomeScreen() {
         >
           <Text>Teste modalize</Text>
         </Modalize> */}
-
-      </Wrapper>
     </SafeAreaView>
   );
 }

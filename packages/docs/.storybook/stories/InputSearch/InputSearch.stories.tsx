@@ -34,9 +34,5 @@ export const Default = {
     marginBottom: 5,
     marginLeft: 0,
     marginRight: 0
-    
-    // onChangeText: 
-    // onSubmitEditing: 
-    // value: 
   },
 };
