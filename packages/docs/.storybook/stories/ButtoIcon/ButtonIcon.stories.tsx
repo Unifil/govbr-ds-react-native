@@ -9,6 +9,9 @@ const ButtonIconMeta = {
   argTypes: {
     onPress: { action: "pressed the button" },
   },
+  args: {
+    icon: <></>,
+  },
   decorators: [
     (Story: any) => (
       <View>

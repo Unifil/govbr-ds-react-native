@@ -1,5 +1,6 @@
 export * from './src/components/Title/Title'
 export * from './src/components/Text/Text'
+export * from './src/components/InputSearch/InputSearch'
 export * from './src/components/CardNavigation/CardNavigation'
 export * from './src/components/CardListActivities/CardListActivities'
 export * from './src/components/ButtonCreateList/ButtonCreateList'

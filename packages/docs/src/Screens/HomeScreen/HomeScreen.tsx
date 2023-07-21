@@ -5,11 +5,13 @@ import {
   Wrapper,
   Tabs,
   ButtonIcon,
-  CardListActivities
+  CardListActivities,
+  InputSearch
 } from "@unifil/react-native";
 
 import { Modalize } from "@unifil/react-native/modalize";
 import Icon from '../../assets/svgs/filterIcon.svg'
+import IconSearch from '../../assets/svgs/searchIcon.svg'
 
 import { colors } from '@unifil/tokens'
  
@@ -29,6 +31,11 @@ export function HomeScreen() {
       count: 9
     }
   ]
+
+  const handleSearch = (searchText) => {
+    console.log('Value do input search:', searchText);
+  };
+
   return (
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
       <Header logo={<Text>LOGO</Text>} />
@@ -36,13 +43,23 @@ export function HomeScreen() {
         <Tabs dataTab={data} titleTab={["ss"]}>
           <View
             style={{
-              backgroundColor: colors.weakGray,  
+              // backgroundColor: colors.weakGray,  
+              backgroundColor: colors.white,  
               height: '100%',
               paddingHorizontal: 20
             }} 
           >
 
-          {/* <CardListActivities 
+          <InputSearch 
+            placeholder="Busque atividades na sua lista desejada..."
+            placeholderColor={colors.gray200}
+            icon={<IconSearch  />} 
+            marginBottom={20}
+            marginTop={20} 
+            onSearch={handleSearch}
+          />
+
+          <CardListActivities 
             title="Soma e subtração de integrantes"
             subtitle=" - (EF01MA06)"
             subtitleBold="Atividade 1"
@@ -53,7 +70,7 @@ export function HomeScreen() {
             colorTextGroup={colors.gray800}
             button={<ButtonIcon icon={<Icon />} onPress={() => console.log('Button card')} />}
             onPress={() => console.log('Card de atividades')}
-          /> */}
+          />
 
           {/* <ButtonIcon icon={<Icon />} /> */}
 
