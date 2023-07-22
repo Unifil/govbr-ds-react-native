@@ -1,4 +1,4 @@
-export interface TextProps {
+export interface ModalProps {
   onTouchEnd?: any
   children?: React.ReactNode
   height?: number

@@ -1,4 +1,4 @@
-export interface TextProps {
+export interface InputProps {
   placeholder?: string
   placeholderColor?: string
   onChangeText?: any

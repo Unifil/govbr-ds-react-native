@@ -2,10 +2,10 @@ import React, { ReactElement } from 'react'
 
 import { View, Modal } from 'react-native'
 
-import { TextProps } from './Modal.props'
+import { ModalProps } from './Modal.props'
 import { styles } from './Modal.styles'
 
-export const ModalComponent = (props: TextProps): ReactElement => {
+export const ModalComponent = (props: ModalProps): ReactElement => {
   return (
     <Modal transparent={true}>
       <View style={styles.containerScreen} onTouchEnd={props.onTouchEnd} >

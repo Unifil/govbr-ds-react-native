@@ -3,10 +3,10 @@ import React, { ReactElement, useState } from 'react'
 
 import { TextInput, View } from 'react-native'
 
-import { TextProps } from './InputSearch.props'
+import { InputProps } from './InputSearch.props'
 import { styles } from './InputSearch.styles'
 
-export const InputSearch = (props: TextProps): ReactElement => {
+export const InputSearch = (props: InputProps): ReactElement => {
   const [searchText, setSearchText] = useState('')
 
   const handleSearch = (text: string) => {
