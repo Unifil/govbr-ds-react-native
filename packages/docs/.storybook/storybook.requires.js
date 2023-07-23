@@ -61,6 +61,7 @@ const getStories = () => {
     "./.storybook/stories/Button/Button.stories.tsx": require("./stories/Button/Button.stories.tsx"),
     "./.storybook/stories/ButtonCreateList/ButtonCreateList.stories.tsx": require("./stories/ButtonCreateList/ButtonCreateList.stories.tsx"),
     "./.storybook/stories/ButtonIcon/ButtonIcon.stories.tsx": require("./stories/ButtonIcon/ButtonIcon.stories.tsx"),
+    "./.storybook/stories/FilterButton/FilterButton.stories.tsx": require("./stories/FilterButton/FilterButton.stories.tsx"),
   };
 };
 
