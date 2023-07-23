@@ -6,12 +6,15 @@ import { TabProps } from './CustomTab.props'
 import { styles } from './CustomTab.styles'
 
 export const CustomTab = (props: TabProps): ReactElement => {
+  if (!props.showCustomTab) {
+    return null as any
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         {props.state.routes.map((route: any, index: any) => {
           const { options } = props.descriptors[route.key]
-
           const isFocused = props.state.index === index
           const color = isFocused
             ? props.tabBarActiveTintColor
@@ -60,7 +63,7 @@ export const CustomTab = (props: TabProps): ReactElement => {
                       : props.tabBarInactiveTintColor
                   }}
                 >
-                  {route.name}
+                  {options.tabBarLabel}
                 </Text>
               </View>
             </TouchableOpacity>

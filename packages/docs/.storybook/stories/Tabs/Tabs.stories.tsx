@@ -19,7 +19,9 @@ const TabsMeta = {
         name: 'Realizadas',
         count: 9
       }
-    ]
+    ],
+    search: false,
+    iconLeft: <View />,
   },
   decorators: [
     (Story: any) => (

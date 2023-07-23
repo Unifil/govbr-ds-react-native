@@ -92,7 +92,7 @@ const ImageCropOverlay = () => {
           { useNativeDriver: false },
         )(nativeEvent)
       } else {
-        const { x, y } = getTargetCropFrameBounds(nativeEvent)
+        const { x, y } = getTargetCropFrameBounds(nativeEvent as any)
 
         if (isTop) {
           panY.current.setValue(-y)
@@ -161,8 +161,8 @@ const ImageCropOverlay = () => {
     >,
   ) => {
     isMovingSection()
-      ? checkCropBounds(nativeEvent)
-      : checkResizeBounds(nativeEvent)
+      ? checkCropBounds(nativeEvent as any) 
+      : checkResizeBounds(nativeEvent as any)
     setSelectedFrameSection('')
   }
 
@@ -245,7 +245,7 @@ const ImageCropOverlay = () => {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <PanGestureHandler
           onGestureEvent={onOverlayMove}
-          onHandlerStateChange={(e) => onHandlerStateChange(e)}
+          onHandlerStateChange={(e:any) => onHandlerStateChange(e)}
         >
           <Animated.View
             style={[
