@@ -53,7 +53,8 @@ export const styles = StyleSheet.create({
   containerButton: {
     width: '100%',
     alignItems: 'flex-end',
-    marginTop: 5
+    marginTop: 5,
+    zIndex: 9999
   },
   cardGroup: {
     paddingVertical: 5,

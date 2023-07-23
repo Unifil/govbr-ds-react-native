@@ -1,7 +1,13 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/docs",
+    "packages/eslint-config",
+    "packages/tokens",
+    "packages/ts-config",
+    "packages/react-native",
+    "packages/mobile-app",
+    "packages/expo-crop-image"
   ],
   "scripts": {
     "prepare": "husky install",

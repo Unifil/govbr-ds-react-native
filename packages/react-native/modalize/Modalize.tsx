@@ -49,20 +49,12 @@ export const Modalize = ({ isVisible, onClose, children }: any): ReactElement =>
         if (isMove) {
           translateY.value = withSpring(height)
           runOnJS(onClose)()
-
-          console.log('event.ss', event.translationY)
         }
       } else {
         if (isMove) {
           translateY.value = withSpring(0)
-          console.log('event.transfsdfsdfsdlationY', event.translationY)
         }
       }
-
-      console.log('event.translationY', translateY.value)
-      // if (isMove && event.translationY <= 0) {
-      //   runOnJS(onClose)()
-      // }
     }
   })
 
@@ -89,19 +81,22 @@ export const Modalize = ({ isVisible, onClose, children }: any): ReactElement =>
               <Pressable
                 onPress={() => {
                   setIsMove(false)
+                  console.log('sad')
                 }}
               >
                 <TouchableOpacity
                   onPressIn={() => {
                     setIsMove(true)
+                    console.log('onPressIn')
                   }}
                   style={{
-                    height: 4,
+                    height: 6,
                     width: 70,
                     backgroundColor: 'lightgrey',
                     borderRadius: 2,
                     alignSelf: 'center',
                     marginTop: 10
+
                   }}
                 ></TouchableOpacity>
 
@@ -133,11 +128,12 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     position: 'absolute',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    zIndex: 999
   },
   content: {
     backgroundColor: 'white',
-    height: height * 0.6,
+    height: height * 0.75,
     bottom: -200,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20

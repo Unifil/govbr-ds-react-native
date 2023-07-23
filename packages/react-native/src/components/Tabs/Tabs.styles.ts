@@ -4,7 +4,13 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  containerView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 36
   },
   containerTab: {
     flexDirection: 'row',

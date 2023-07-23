@@ -36,6 +36,7 @@ export const Tabs = (props: Props): ReactElement => {
   return (
     <View>
       <View style={styles.container} >
+        {!props.search ? <View style={styles.containerView} >
         {props?.dataTab?.map((item: any, index: number) => (
           <TouchableOpacity
             key={item.name}
@@ -46,11 +47,13 @@ export const Tabs = (props: Props): ReactElement => {
             onPress={() => handleTabPress(index)}
           >
             <View style={styles.containerTab}>
+
               <Text
                 style={[
                   styles.textTabs,
                   {
-                    color: activeTab === index ? colors.darkBlue : colors.gray200
+                    color: activeTab === index ? colors.darkBlue : colors.gray200,
+                    marginLeft: index === 0 ? props.marginTitleTab : 0
                   }
                 ]}
               >
@@ -73,6 +76,22 @@ export const Tabs = (props: Props): ReactElement => {
             </View>
           </TouchableOpacity>
         ))}
+        </View>
+          : <View
+          style={{
+            marginLeft: props.marginTitleTab,
+            width: '80%'
+          }}
+          >
+          {props.inputSearch}
+          </View>
+        }
+        <View style={{
+          marginRight: props.marginTitleTab
+        }}>
+
+      {props.iconLeft}
+    </View>
       </View>
       <FlatList
         data={[

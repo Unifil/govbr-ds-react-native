@@ -4,4 +4,5 @@ export interface TextProps {
   size?: number
   lineHeight?: any
   weight?: any
+  align?: any
 }

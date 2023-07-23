@@ -4,4 +4,5 @@ export interface TabProps {
   navigation?: any
   tabBarActiveTintColor?: any
   tabBarInactiveTintColor?: any
+  showCustomTab?: boolean
 }

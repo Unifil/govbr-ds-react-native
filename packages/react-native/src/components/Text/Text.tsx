@@ -15,7 +15,8 @@ export const TextComponent = (props: TextProps): ReactElement => {
             color: props.color,
             fontSize: props.size,
             lineHeight: props?.lineHeight,
-            fontWeight: props?.weight
+            fontWeight: props?.weight,
+            textAlign: props?.align
           }
         ]}
       >

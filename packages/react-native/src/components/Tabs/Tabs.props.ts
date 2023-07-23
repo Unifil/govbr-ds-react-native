@@ -6,8 +6,11 @@ import {
 
 export type Props = {
   children: React.ReactNode
-  titleTab: string[]
   dataTab: any[]
+  marginTitleTab?: number
+  iconLeft?: any
+  search?: boolean
+  inputSearch?: any
 }
 
 export type IItem = {
@@ -25,6 +28,5 @@ export interface IDynamicTabsScreenControllerReturn {
 }
 
 export interface IDynamicTabsProps {
-  titleTab: string[]
   children: React.ReactNode | undefined
 }
