@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import React, { Children, useEffect, useState } from "react";
 import { Button, SafeAreaView, Text, View } from "react-native";
 import { colors } from '@unifil/tokens'
 import Icon from '../../assets/svgs/filterIcon.svg'
@@ -20,7 +20,7 @@ export function HomeScreen() {
   const [modalize, setModalize] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  const data = [
+  const dataTabs = [
     {
       name: 'Todas',
       count: 4
@@ -33,35 +33,14 @@ export function HomeScreen() {
 
   const dataFilter: any = [
     {
-      key: 1,
       textFilter: 'Baseado em Exemplos',
-      children: 
-        <View>
-          <Text>
-            FILTRO A
-          </Text>
-        </View>
     },
     {
-      key: 2,
       textFilter: 'Conhecimento Prévio Ativo',
-      children:
-        <View>
-          <Text>
-            FILTRO B
-          </Text>
-        </View>
     },
     {
-      key: 3,
       textFilter: 'Recursos Visuais',
-      children: 
-        <View>
-          <Text>
-            FILTRO C
-          </Text>
-        </View>
-    }
+    },
   ];
 
   const handleSearch = (searchText) => {
@@ -88,7 +67,7 @@ export function HomeScreen() {
           </ModalComponent>
         }
 
-        {/* <Tabs dataTab={data} titleTab={["ss"]}>
+        {/* <Tabs dataTab={dataTabs} titleTab={["ss"]}>
           <View
           style={{ 
               backgroundColor: colors.white,  
@@ -98,59 +77,19 @@ export function HomeScreen() {
 
           <View style={{ paddingHorizontal: 20 }}>
 
-            <FilterButton 
-              titleFilter={["filter"]} 
-              dataFilter={dataFilter}
-            >
-              <Text>asdasdas</Text>
-              {/* <CardListActivities 
-              title="Soma e subtração de integrantes"
-              subtitle=" - (EF01MA06)"
-              subtitleBold="Atividade 1"
-              textGroup="Recomendado para Grupo 1"
-              colorTitle={colors.darkBlue}
-              colorText={colors.gray300}
-              colorGroup={colors.gray100}
-              colorTextGroup={colors.gray800}
-              button={<ButtonIcon icon={<Icon />} onPress={() => console.log('')} />}
-              onPress={() => console.log('')}
-            />
-            <CardListActivities 
-              title="Soma e subtração de integrantes"
-              subtitle=" - (EF01MA06)"
-              subtitleBold="Atividade 1"
-              textGroup="Recomendado para Grupo 1"
-              colorTitle={colors.darkBlue}
-              colorText={colors.gray300}
-              colorGroup={colors.gray100}
-              colorTextGroup={colors.gray800}
-              button={<ButtonIcon icon={<Icon />} onPress={() => console.log('')} />}
-              onPress={() => console.log('')}
-            />
-            <CardListActivities 
-              title="Soma e subtração de integrantes"
-              subtitle=" - (EF01MA06)"
-              subtitleBold="Atividade 1"
-              textGroup="Recomendado para Grupo 1"
-              colorTitle={colors.darkBlue}
-              colorText={colors.gray300}
-              colorGroup={colors.gray100}
-              colorTextGroup={colors.gray800}
-              button={<ButtonIcon icon={<Icon />} onPress={() => console.log('')} />}
-              onPress={() => console.log('')}
-            /> */}
+            <FilterButton dataFilter={dataFilter} >
             </FilterButton>
 
-            {/* <InputSearch 
+            <InputSearch 
               placeholder="Busque atividades na sua lista desejada..."
               placeholderColor={colors.gray200}
               icon={<IconSearch  />} 
               marginBottom={20}
               marginTop={20} 
               onSearch={handleSearch}
-            /> */}
+            />
 
-            {/* <CardListActivities 
+            <CardListActivities 
               title="Soma e subtração de integrantes"
               subtitle=" - (EF01MA06)"
               subtitleBold="Atividade 1"
@@ -161,7 +100,7 @@ export function HomeScreen() {
               colorTextGroup={colors.gray800}
               button={<ButtonIcon icon={<Icon />} onPress={() => console.log('Button card')} />}
               onPress={() => console.log('Card de atividades')}
-            /> */}
+            />
           </View>
 
           {/* <ButtonIcon icon={<Icon />} /> */}

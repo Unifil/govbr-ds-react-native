@@ -1,42 +1,23 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState } from 'react'
 
-import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView, Text, TouchableOpacity } from 'react-native'
 
-import { useDynamicFilterScreenController } from './FilterButton.controller'
-import { IItem, Props } from './FilterButton.props'
+import { FilterProps } from './FilterButton.props'
 import { styles } from './FilterButton.styles'
 
-export const FilterButton = (props: Props): ReactElement => {
-  const {
-    activeFilter,
-    handleFilterPress,
-    isIndex,
-    flatListRef,
-    children
-  } = useDynamicFilterScreenController(props)
+export const FilterButton = (props: FilterProps): ReactElement => {
+  const [activeFilter, setActiveFilter] = useState<number>(0)
 
-  const renderFilter = ({
-    item,
-    index
-  }: {
-    item: IItem
-    index: number
-  }): ReactElement => (
-    <View>
-      {item?.children[index]}
-    </View>
-  )
+  const handleFilterPress = (index: number): void => {
+    setActiveFilter(index)
+  }
 
   return (
-    <>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
       >
         {props?.dataFilter?.map((item: any, index: number) => (
-          <>
-          {/* {console.log('=======', item)} */}
-
           <TouchableOpacity
             key={index}
             style={[
@@ -49,25 +30,7 @@ export const FilterButton = (props: Props): ReactElement => {
               {item.textFilter}
             </Text>
           </TouchableOpacity>
-          </>
         ))}
       </ScrollView>
-      <FlatList
-        data={[
-          { key: '0001', children },
-          { key: '0002', children },
-          { key: '0003', children }
-        ]}
-        keyExtractor={(item: { key: string, children: React.ReactNode[] }) =>
-          item.key
-        }
-        renderItem={renderFilter}
-        showsHorizontalScrollIndicator={false}
-        ref={flatListRef}
-        pagingEnabled={true}
-        contentContainerStyle={styles.flatlist}
-        initialScrollIndex={isIndex}
-      />
-    </>
   )
 }
