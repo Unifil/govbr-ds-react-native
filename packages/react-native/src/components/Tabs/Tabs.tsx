@@ -6,6 +6,7 @@ import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import { useDynamicTabsScreenController } from './Tabs.controller'
 import { IItem, Props } from './Tabs.props'
 import { styles } from './Tabs.styles'
+import { FilterButton } from '../FilterButton/FilterButton'
 
 export const Tabs = (props: Props): ReactElement => {
   const {
@@ -84,6 +85,7 @@ export const Tabs = (props: Props): ReactElement => {
           }}
           >
           {props.inputSearch}
+
           </View>
         }
         <View style={{
@@ -91,8 +93,26 @@ export const Tabs = (props: Props): ReactElement => {
         }}>
 
       {props.iconLeft}
+
     </View>
+
       </View>
+      {props.search &&
+      <FilterButton
+            marginTop={20}
+             dataFilter={
+              [
+                {
+                  textFilter: 'Baseado em Exemplos'
+                },
+                {
+                  textFilter: 'Conhecimento Prévio Ativo'
+                }, {
+                  textFilter: 'Recursos'
+                }
+              ]
+             }
+          />}
       <FlatList
         data={[
           { key: '0001', children },
