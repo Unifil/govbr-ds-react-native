@@ -16,6 +16,9 @@ export const FilterButton = (props: FilterProps): ReactElement => {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
+        style={{
+          marginTop: props.marginTop
+        }}
       >
         {props?.dataFilter?.map((item: any, index: number) => (
           <TouchableOpacity
