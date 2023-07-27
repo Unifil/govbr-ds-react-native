@@ -3,6 +3,7 @@ import { Button, SafeAreaView, Text, View } from "react-native";
 import { colors } from '@unifil/tokens'
 import Icon from '../../assets/svgs/filterIcon.svg'
 import IconSearch from '../../assets/svgs/searchIcon.svg'
+import ArrowRight from '../../assets/svgs/arrowRight.svg'
 import { Modalize } from "@unifil/react-native/modalize";
 // import { Modalize } from "@unifil/react-native/dist/components/Modalize";
 import { 
@@ -12,7 +13,9 @@ import {
   ButtonIcon,
   CardListActivities,
   InputSearch,
-  ModalComponent
+  ModalComponent,
+  CardNavigation,
+  CardSchool
 } from "@unifil/react-native";
 
 export function HomeScreen() {
@@ -36,7 +39,7 @@ export function HomeScreen() {
   return (
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
       <Header logo={<Text>LOGO</Text>} />
-        <Tabs dataTab={data} titleTab={["ss"]}>
+        <Tabs dataTab={data}>
           <View
             style={{ 
               backgroundColor: colors.white,  
@@ -82,6 +85,29 @@ export function HomeScreen() {
             colorTextGroup={colors.gray800}
             button={<ButtonIcon icon={<Icon />} onPress={() => console.log('Button card')} />}
             onPress={() => console.log('Card de atividades')}
+          />
+
+          {/* <CardNavigation
+            title="Instituto Capibariabe"
+            text="Analise o desempenho das suas turmas baseado na execução dos exercícios"
+            colorTitle={colors.darkBlue}
+            colorText={colors.blue}
+            icon={<ArrowRight color='#274A67'/>}
+            iconIsPressed={<ArrowRight color='#fff'/>}
+            onPress={() => console.log('Card navigation')}
+          /> */}
+
+          <CardSchool
+            title="Instituto Capibariabe"
+            local="Recife - PE"
+            text="Analise o desempenho das suas turmas baseado na execução dos exercícios"
+            tag="13082175"
+            colorTitle={colors.darkBlue}
+            colorLocal={colors.darkBlue}
+            colorText={colors.blue}
+            icon={<ArrowRight color='#274A67'/>}
+            iconIsPressed={<ArrowRight color='#fff'/>}
+            onPress={() => console.log('Card school')}
           />
 
           {/* <ButtonIcon icon={<Icon />} /> */}
