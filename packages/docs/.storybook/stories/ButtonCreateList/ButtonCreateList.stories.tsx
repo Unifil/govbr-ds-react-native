@@ -37,19 +37,6 @@ export const Primary = {
   },
 };
 
-export const Secondary = {
-  args: {
-    type: "secondary",
-    text: "Secondary",
-    height: 45,
-    borderRadius: 10, 
-    backgroundColor: colors.graySecondary,
-    colorText: colors.darkBlue,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.xs
-  },
-};
-
 export const Custom = {
   args: {
     type: "custom",

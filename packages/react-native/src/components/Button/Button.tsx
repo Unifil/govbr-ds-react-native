@@ -11,48 +11,78 @@ export const Button = (props: ButtonProps): ReactElement => {
     switch (props.type) {
       case 'primary':
         return (
-          <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
-            <Text style={[styles.textPrimary]}>{props.text}</Text>
-          </TouchableOpacity>
+          <ButtonPrimary {...props} />
         )
       case 'secondary':
         return (
-          <TouchableOpacity style={[styles.secondary]} onPress={props.onPress}>
-            <Text style={[styles.textSecondary]}>{props.text}</Text>
-          </TouchableOpacity>
+          <ButtonSecondary {...props} />
+        )
+      case 'third':
+        return (
+          <ButtonThird {...props} />
         )
       case 'custom':
         return (
-          <TouchableOpacity
-            onPress={props.onPress}
-            style={[
-              styles.primary,
-              {
-                backgroundColor: props.backgroundColor,
-                width: props.width,
-                height: props.height,
-                borderRadius: props.borderRadius,
-                marginTop: props.marginTop,
-                marginBottom: props.marginBottom
-              }
-            ]}
-          >
-            <Text
-              style={[
-                styles.textPrimary,
-                {
-                  color: props.colorText,
-                  fontWeight: props.fontWeight,
-                  fontSize: props.fontSize
-                }
-              ]}
-            >
-              {props.text}
-            </Text>
-          </TouchableOpacity>
+          <ButtonCustom {...props} />
         )
     }
   }
 
   return <>{renderButton()}</>
+}
+
+const ButtonPrimary = (props: ButtonProps): ReactElement => {
+  return (
+    <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
+      <Text style={[styles.textPrimary]}>{props.text}</Text>
+    </TouchableOpacity>
+  )
+}
+
+const ButtonSecondary = (props: ButtonProps): ReactElement => {
+  return (
+    <TouchableOpacity style={[styles.secondary]} onPress={props.onPress}>
+      <Text style={[styles.textSecondary]}>{props.text}</Text>
+    </TouchableOpacity>
+  )
+}
+
+const ButtonThird = (props: ButtonProps): ReactElement => {
+  return (
+    <TouchableOpacity style={[styles.third]} onPress={props.onPress}>
+      <Text style={[styles.textPrimary]}>{props.text}</Text>
+    </TouchableOpacity>
+  )
+}
+
+const ButtonCustom = (props: ButtonProps): ReactElement => {
+  return (
+    <TouchableOpacity
+      onPress={props.onPress}
+        style={[
+          styles.primary,
+          {
+            backgroundColor: props.backgroundColor,
+            width: props.width,
+            height: props.height,
+            borderRadius: props.borderRadius,
+            marginTop: props.marginTop,
+            marginBottom: props.marginBottom
+          }
+        ]}
+    >
+      <Text
+        style={[
+          styles.textPrimary,
+          {
+            color: props.colorText,
+            fontWeight: props.fontWeight,
+            fontSize: props.fontSize
+          }
+        ]}
+      >
+        {props.text}
+      </Text>
+    </TouchableOpacity>
+  )
 }
