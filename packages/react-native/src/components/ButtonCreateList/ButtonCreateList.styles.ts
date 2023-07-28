@@ -13,17 +13,17 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 0,
-    marginBottom: 0
+    flexDirection: 'row'
   },
   secondary: {
-    backgroundColor: colors.graySecondary,
+    backgroundColor: colors.gray100,
     borderColor: colors.darkBlue,
     height: 45,
     width: '100%',
     borderRadius: 10,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection: 'row'
   },
   textPrimary: {
     color: colors.blue,
@@ -31,8 +31,26 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.xs
   },
   textSecondary: {
-    color: colors.darkBlue,
+    color: colors.gray300,
     fontWeight: fontWeights.bold,
     fontSize: fontSizes.xs
+  },
+  iconPrimary: {
+    backgroundColor: colors.darkBlue,
+    height: 15,
+    width: 15,
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 5
+  },
+  iconSecondary: {
+    backgroundColor: colors.gray300,
+    height: 15,
+    width: 15,
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 5
   }
 })

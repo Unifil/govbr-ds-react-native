@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 
 import { ButtonProps } from './ButtonCreateList.props'
 import { styles } from './ButtonCreateList.styles'
@@ -11,14 +11,37 @@ export const ButtonCreateList = (props: ButtonProps): ReactElement => {
     switch (props.type) {
       case 'primary':
         return (
-          <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
-            <Text style={[styles.textPrimary]}>{props.text}</Text>
-          </TouchableOpacity>
+          <>
+            {props?.disabled ? (
+              <View style={[styles.secondary]}>
+                <Text style={[styles.textSecondary]}>{props.text}</Text>
+                {props.icon &&
+                  <View style={[styles.iconSecondary]}>
+                    {props.icon}
+                  </View>
+                }
+              </View>
+            ) : (
+              <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
+                <Text style={[styles.textPrimary]}>{props.text}</Text>
+                {props.icon &&
+                  <View style={[styles.iconPrimary]}>
+                    {props.icon}
+                  </View>
+                }
+              </TouchableOpacity>
+            )}
+          </>
         )
       case 'secondary':
         return (
           <TouchableOpacity style={[styles.secondary]}>
             <Text style={[styles.textSecondary]}>{props.text}</Text>
+            {props.icon &&
+              <View style={[styles.iconSecondary]}>
+                {props.icon}
+              </View>
+            }
           </TouchableOpacity>
         )
       case 'custom':
@@ -49,6 +72,18 @@ export const ButtonCreateList = (props: ButtonProps): ReactElement => {
             >
               {props.text}
             </Text>
+            {props.icon &&
+              <View
+                style={[
+                  styles.iconPrimary,
+                  {
+                    backgroundColor: props.iconBackground
+                  }
+                ]}
+              >
+                {props.icon}
+              </View>
+            }
           </TouchableOpacity>
         )
     }

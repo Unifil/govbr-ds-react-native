@@ -1,25 +1,26 @@
 import React, { useState } from "react";
-import { Button, SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View } from "react-native";
 import { colors } from '@unifil/tokens'
 import Icon from '../../assets/svgs/filterIcon.svg'
 import IconSearch from '../../assets/svgs/searchIcon.svg'
 import ArrowRight from '../../assets/svgs/arrowRight.svg'
-import { Modalize } from "@unifil/react-native/modalize";
+// import { Modalize } from "@unifil/react-native/modalize";
 // import { Modalize } from "@unifil/react-native/dist/components/Modalize";
 import { 
   Header, 
-  Wrapper,
+  // Wrapper,
   Tabs,
   ButtonIcon,
   CardListActivities,
   InputSearch,
   ModalComponent,
-  CardNavigation,
-  CardSchool
+  // CardNavigation,
+  CardSchool,
+  ButtonCreateList
 } from "@unifil/react-native";
 
 export function HomeScreen() {
-  const [modalize, setModalize] = useState(false);
+  // const [modalize, setModalize] = useState(false);
   const [showModal, setShowModal] = useState(false)
   const data: any = [
     {
@@ -110,11 +111,18 @@ export function HomeScreen() {
             onPress={() => console.log('Card school')}
           />
 
+          <ButtonCreateList 
+            type="primary"
+            text="CRIAR MAIS LISTAS"
+            // disabled={true}
+            // icon={<Icon />}
+          />
+
           {/* <ButtonIcon icon={<Icon />} /> */}
 
           {/* <Button title="Abrir modalize" onPress={() => setModalize(true)} /> */}
 
-          <Button title="Abrir Modal" onPress={() => setShowModal(true)} />
+          {/* <Button title="Abrir Modal" onPress={() => setShowModal(true)} /> */}
 
           </View>
 
