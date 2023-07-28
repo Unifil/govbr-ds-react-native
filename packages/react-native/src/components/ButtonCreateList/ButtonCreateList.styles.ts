@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row'
   },
-  secondary: {
+  disabled: {
     backgroundColor: colors.gray100,
     borderColor: colors.darkBlue,
     height: 45,
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     fontWeight: fontWeights.bold,
     fontSize: fontSizes.xs
   },
-  textSecondary: {
+  textDisabled: {
     color: colors.gray300,
     fontWeight: fontWeights.bold,
     fontSize: fontSizes.xs
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     marginLeft: 5
   },
-  iconSecondary: {
+  iconDisabled: {
     backgroundColor: colors.gray300,
     height: 15,
     width: 15,

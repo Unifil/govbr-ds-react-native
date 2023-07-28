@@ -17,10 +17,14 @@ export const colors = {
   lightGray: '#BDBDBD',
   gray: '#828282',
   graySecondary: '#D9D9D9',
+
   blue: '#16316B',
   lightBlue: '#37639D',
   darkBlue: '#274A67',
   weakBlue: '#E3EBF8',
   weakBlueSecondary: '#C3D0E2',
-  green: '#168821'
+
+  green: '#168821',
+
+  lightRed: '#FF6B6B'
 }

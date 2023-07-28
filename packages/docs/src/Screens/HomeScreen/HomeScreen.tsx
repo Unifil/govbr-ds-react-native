@@ -4,6 +4,7 @@ import { colors } from '@unifil/tokens'
 import Icon from '../../assets/svgs/filterIcon.svg'
 import IconSearch from '../../assets/svgs/searchIcon.svg'
 import ArrowRight from '../../assets/svgs/arrowRight.svg'
+import IconAdd from '../../assets/svgs/iconAdd.svg'
 // import { Modalize } from "@unifil/react-native/modalize";
 // import { Modalize } from "@unifil/react-native/dist/components/Modalize";
 import { 
@@ -14,9 +15,10 @@ import {
   CardListActivities,
   InputSearch,
   ModalComponent,
-  // CardNavigation,
+  CardNavigation,
   CardSchool,
-  ButtonCreateList
+  ButtonCreateList,
+  Button
 } from "@unifil/react-native";
 
 export function HomeScreen() {
@@ -75,7 +77,7 @@ export function HomeScreen() {
             onSearch={handleSearch}
           />
 
-          <CardListActivities 
+          {/* <CardListActivities 
             title="Soma e subtração de integrantes"
             subtitle=" - (EF01MA06)"
             subtitleBold="Atividade 1"
@@ -86,7 +88,7 @@ export function HomeScreen() {
             colorTextGroup={colors.gray800}
             button={<ButtonIcon icon={<Icon />} onPress={() => console.log('Button card')} />}
             onPress={() => console.log('Card de atividades')}
-          />
+          /> */}
 
           {/* <CardNavigation
             title="Instituto Capibariabe"
@@ -111,11 +113,20 @@ export function HomeScreen() {
             onPress={() => console.log('Card school')}
           />
 
+          <View style={{ marginBottom: 20 }} />
+
           <ButtonCreateList 
             type="primary"
             text="CRIAR MAIS LISTAS"
+            icon={<IconAdd />}
             // disabled={true}
-            // icon={<Icon />}
+          />
+
+          <View style={{ marginBottom: 20 }} />
+
+          <Button
+            type="third"
+            text="Sim"
           />
 
           {/* <ButtonIcon icon={<Icon />} /> */}

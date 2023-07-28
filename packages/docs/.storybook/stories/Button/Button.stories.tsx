@@ -46,6 +46,19 @@ export const Secondary = {
   },
 };
 
+export const Third = {
+  args: {
+    type: "third",
+    text: "Third",
+    height: 31,
+    borderRadius: 19, 
+    backgroundColor: colors.darkBlue,
+    colorText: colors.white,
+    fontWeight: fontWeights.medium,
+    fontSize: fontSizes.xs
+  },
+};
+
 export const Custom = {
   args: {
     type: "custom",

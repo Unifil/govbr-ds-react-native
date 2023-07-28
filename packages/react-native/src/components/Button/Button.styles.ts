@@ -26,6 +26,16 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  third: {
+    backgroundColor: colors.lightRed,
+    height: 31,
+    width: '100%',
+    borderRadius: 19,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 0,
+    marginBottom: 0
+  },
   textPrimary: {
     color: colors.white,
     fontWeight: fontWeights.medium,
