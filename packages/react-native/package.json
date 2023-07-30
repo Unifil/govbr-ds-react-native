@@ -13,7 +13,8 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./modalize": "./dist/modalize/index.js"
+    "./modalize": "./dist/modalize/index.js",
+    "./cardSwipeable": "./dist/cardSwipeable/index.js"
   },
   "keywords": [],
   "author": "",

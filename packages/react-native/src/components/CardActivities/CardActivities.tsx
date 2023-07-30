@@ -29,18 +29,7 @@ export const CardActivities = (props: CardProps): ReactElement => {
     >
       <View style={[styles.containerContent]}>
         <View style={[styles.containerTitle]} >
-          <View
-            style={[
-              styles.checkbox,
-              {
-                backgroundColor: props.isChecked ? colors.green : colors.white,
-                borderColor: props.isChecked ? 'none' : colors.lightGray,
-                borderWidth: props.isChecked ? 0 : 1
-              }
-            ]}
-          >
-            {props.isChecked ? props.iconCheck : null}
-          </View>
+
             <View>
               <Text
                 style={[
