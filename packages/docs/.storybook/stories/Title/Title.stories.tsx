@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { Title } from "@unifil/react-native";
-import { fontWeights, fontSizes, colors } from "@unifil/tokens";
+import { fontWeights, fontSizes, colors, lineHeights } from "@unifil/tokens";
 
 const TitleMeta = {
   title: "Title",
@@ -23,29 +23,36 @@ const TitleMeta = {
 
 export default TitleMeta;
 
-export const Regular = {
+export const Primary = {
   args: {
+    type: "primary", 
     text: "Hello world",
-    color: colors.blue,
-    size: fontSizes.xl,
-    weight: fontWeights.medium,
+    color: colors.darkBlue,
+    fontSize: fontSizes.xl,
+    lineHeight: lineHeights.xll,
+    fontWeight: fontWeights.medium
   },
 };
 
-export const Medium = {
+export const Secondary = {
   args: {
+    type: "secondary", 
     text: "Hello world",
-    color: colors.blue,
-    size: fontSizes.xl,
-    weight: fontWeights.large,
+    color: colors.darkPurple,
+    fontSize: fontSizes.lg,
+    fontWeight: fontWeights.large,
+    textAlign: 'center'
   },
 };
 
-export const Large = {
+export const Custom = {
   args: {
+    type: "custom", 
     text: "Hello world",
-    color: colors.blue,
-    size: fontSizes.xll,
-    weight: fontWeights.large,
+    color: colors.black,
+    fontSize: fontSizes.xl,
+    lineHeight: lineHeights.xll,
+    fontWeight: fontWeights.medium,
+    textAlign: 'center'
   },
 };

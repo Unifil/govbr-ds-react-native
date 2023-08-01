@@ -4,4 +4,6 @@ export interface TitleProps {
   size?: number
   lineHeight?: any
   weight?: any
+  align?: any
+  type?: string
 }

@@ -52,7 +52,6 @@ export const BaseCard: any = (props: any) => {
             }),
             flexDirection: 'row',
             alignItems: 'center'
-
           },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },
           bottomDivider && { borderBottomWidth: StyleSheet.hairlineWidth },

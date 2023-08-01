@@ -33,6 +33,7 @@ ListItemSwipeableProps
 }: any) => {
   const translateX = React.useRef(new Animated.Value(0))
   const panX = React.useRef(0)
+  const [swipe, setSwipe] = React.useState('')
 
   const slideAnimation = React.useCallback(
     (toValue: number) => {
@@ -89,6 +90,7 @@ ListItemSwipeableProps
         onMoveShouldSetPanResponder: shouldSlide,
         onPanResponderGrant: (_event, { vx }) => {
           onSwipeBegin?.(vx > 0 ? 'left' : 'right')
+          setSwipe(vx > 0 ? 'left' : 'right')
         },
         onPanResponderMove: onMove,
         onPanResponderRelease: onRelease,
@@ -104,33 +106,39 @@ ListItemSwipeableProps
   return (
     <View style={styles.container}>
       <View style={styles.actions}>
-        <View
-          style={[
-            {
-              width: leftWidth,
-              zIndex: 1
-            },
-            leftStyle
-          ]}
-        >
-          {typeof leftContent === 'function'
-            ? leftContent(resetCallBack)
-            : leftContent}
-        </View>
+        {swipe === 'left' &&
+          <View
+            style={[
+              {
+                width: leftWidth,
+                zIndex: 1,
+                minWidth: 145
+              },
+              leftStyle
+            ]}
+          >
+            {typeof leftContent === 'function'
+              ? leftContent(resetCallBack)
+              : leftContent}
+          </View>
+        }
         <View style={styles.empty} />
-        <View
-          style={[
-            {
-              width: rightWidth,
-              zIndex: 1
-            },
-            rightStyle
-          ]}
-        >
-          {typeof rightContent === 'function'
-            ? rightContent(resetCallBack)
-            : rightContent}
-        </View>
+        {swipe === 'right' &&
+          <View
+            style={[
+              {
+                width: rightWidth,
+                zIndex: 1,
+                minWidth: 145
+              },
+              rightStyle
+            ]}
+          >
+            {typeof rightContent === 'function'
+              ? rightContent(resetCallBack)
+              : rightContent}
+          </View>
+        }
       </View>
       <Animated.View
         style={{
@@ -156,7 +164,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     top: 0,
-
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between'
