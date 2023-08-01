@@ -18,7 +18,7 @@ import Animated, {
 
 const { height } = Dimensions.get('window')
 
-export const Modalize = ({ isVisible, onClose, children }: any): ReactElement => {
+export const Modalize = ({ isVisible, onClose, children, bottom }: any): ReactElement => {
   const translateY = useSharedValue(0)
   const [isMove, setIsMove] = React.useState(false)
   const opacity = useSharedValue(0.3)
@@ -77,17 +77,22 @@ export const Modalize = ({ isVisible, onClose, children }: any): ReactElement =>
       {isVisible ? (
         <Animated.View style={[styles.container, animatedContainerStyles]}>
           <PanGestureHandler onGestureEvent={gestureHandler}>
-            <Animated.View style={[styles.content, animatedStyles]}>
+            <Animated.View style={[
+              styles.content,
+              animatedStyles,
+              {
+                bottom: !bottom ? -200 : bottom
+              }
+            ]}
+              >
               <Pressable
                 onPress={() => {
                   setIsMove(false)
-                  console.log('sad')
                 }}
               >
                 <TouchableOpacity
                   onPressIn={() => {
                     setIsMove(true)
-                    console.log('onPressIn')
                   }}
                   style={{
                     height: 6,

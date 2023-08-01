@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import React from 'react'
 
 import { PressableProps, StyleProp, ViewStyle } from 'react-native'
@@ -17,6 +18,12 @@ export interface CardAccordionProps extends ListItemProps {
   leftRotate?: boolean
 
   noIcon?: boolean
+
+  subtitle?: string
+
+  textCheckbox?: any
+
+  multipleSelection?: boolean
 
   animation?:
   | {
@@ -49,9 +56,9 @@ interface ListItemProps extends PressableProps {
 }
 
 export type RneFunctionComponent<T> = React.FunctionComponent<
-T & {
-  theme?: any
-  children?: React.ReactNode | undefined
-  backgroundColor?: any
-}
+  T & {
+    theme?: any
+    children?: React.ReactNode | undefined
+    backgroundColor?: any
+  }
 >
