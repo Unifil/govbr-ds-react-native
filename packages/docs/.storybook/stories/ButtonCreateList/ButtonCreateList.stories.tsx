@@ -29,11 +29,11 @@ export const Primary = {
     type: "primary",
     text: "Primary",
     height: 45,
-    borderRadius: 10, 
-    backgroundColor: colors.weakBlueSecondary,
-    colorText: colors.blue,
+    borderRadius: 50, 
+    backgroundColor: colors.blueSecondary,
+    colorText: colors.white,
     fontWeight: fontWeights.bold,
-    fontSize: fontSizes.xs
+    fontSize: fontSizes.md
   },
 };
 
@@ -42,12 +42,12 @@ export const Custom = {
     type: "custom",
     text: "Custom",
     height: 45,
-    borderRadius: 10, 
+    borderRadius: 50, 
     backgroundColor: colors.gray800,
     iconBackground: colors.white,
     colorText: colors.white,
     fontWeight: fontWeights.bold,
-    fontSize: fontSizes.xs,
+    fontSize: fontSizes.md,
     marginTop: 5,
     marginBottom: 5
   },

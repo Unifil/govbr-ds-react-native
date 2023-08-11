@@ -1,5 +1,7 @@
 export interface ButtonProps {
   onPress?: () => void
+  disabled?: boolean
+  icon?: any
   type?: string
   text?: string
   backgroundColor?: string

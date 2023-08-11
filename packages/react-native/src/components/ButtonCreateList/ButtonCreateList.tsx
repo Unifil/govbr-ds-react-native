@@ -38,12 +38,12 @@ export const ButtonCreateList = (props: ButtonProps): ReactElement => {
 const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
-      <Text style={[styles.textPrimary]}>{props.text}</Text>
       {props.icon &&
         <View style={[styles.iconPrimary]}>
           {props.icon}
         </View>
       }
+      <Text style={[styles.textPrimary]}>{props.text}</Text>
     </TouchableOpacity>
   )
 }
@@ -51,12 +51,12 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
 const ButtonDisabled = (props: ButtonProps): ReactElement => {
   return (
     <View style={[styles.disabled]}>
-      <Text style={[styles.textDisabled]}>{props.text}</Text>
-        {props.icon &&
+      {props.icon &&
         <View style={[styles.iconDisabled]}>
           {props.icon}
         </View>
       }
+      <Text style={[styles.textDisabled]}>{props.text}</Text>
     </View>
   )
 }
@@ -77,6 +77,18 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
           }
         ]}
     >
+      {props.icon &&
+        <View
+          style={[
+            styles.iconPrimary,
+            {
+              backgroundColor: props.iconBackground
+            }
+          ]}
+        >
+          {props.icon}
+        </View>
+      }
       <Text
         style={[
           styles.textPrimary,
@@ -89,18 +101,6 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
       >
         {props.text}
       </Text>
-        {props.icon &&
-        <View
-          style={[
-            styles.iconPrimary,
-            {
-              backgroundColor: props.iconBackground
-            }
-          ]}
-        >
-          {props.icon}
-        </View>
-        }
     </TouchableOpacity>
   )
 }

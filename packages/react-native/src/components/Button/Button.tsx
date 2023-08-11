@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 
 import { ButtonProps } from './Button.props'
 import { styles } from './Button.styles'
@@ -11,15 +11,21 @@ export const Button = (props: ButtonProps): ReactElement => {
     switch (props.type) {
       case 'primary':
         return (
-          <ButtonPrimary {...props} />
+          <>
+            {props?.disabled ? (
+              <ButtonDisabled {...props} />
+            ) : (
+              <ButtonPrimary {...props} />
+            )}
+          </>
         )
       case 'secondary':
         return (
           <ButtonSecondary {...props} />
         )
-      case 'third':
+      case 'disabled':
         return (
-          <ButtonThird {...props} />
+          <ButtonDisabled {...props} />
         )
       case 'custom':
         return (
@@ -35,6 +41,11 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
       <Text style={[styles.textPrimary]}>{props.text}</Text>
+      {props.icon &&
+        <View style={{ marginLeft: 8 }}>
+          {props.icon}
+        </View>
+      }
     </TouchableOpacity>
   )
 }
@@ -43,15 +54,25 @@ const ButtonSecondary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity style={[styles.secondary]} onPress={props.onPress}>
       <Text style={[styles.textSecondary]}>{props.text}</Text>
+      {props.icon &&
+        <View style={{ marginLeft: 8 }}>
+          {props.icon}
+        </View>
+      }
     </TouchableOpacity>
   )
 }
 
-const ButtonThird = (props: ButtonProps): ReactElement => {
+const ButtonDisabled = (props: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity style={[styles.third]} onPress={props.onPress}>
+    <View style={[styles.disabled]}>
       <Text style={[styles.textPrimary]}>{props.text}</Text>
-    </TouchableOpacity>
+      {props.icon &&
+        <View style={{ marginLeft: 8 }}>
+          {props.icon}
+        </View>
+      }
+    </View>
   )
 }
 
@@ -83,6 +104,11 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
       >
         {props.text}
       </Text>
+      {props.icon &&
+        <View style={{ marginLeft: 8 }}>
+          {props.icon}
+        </View>
+      }
     </TouchableOpacity>
   )
 }

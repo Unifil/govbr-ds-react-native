@@ -7,50 +7,54 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   primary: {
-    backgroundColor: colors.weakBlueSecondary,
+    backgroundColor: colors.blueSecondary,
     height: 45,
     width: '100%',
-    borderRadius: 10,
+    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row'
   },
   disabled: {
-    backgroundColor: colors.gray100,
+    backgroundColor: colors.blueSecondary,
+    opacity: 0.7,
     borderColor: colors.darkBlue,
     height: 45,
     width: '100%',
-    borderRadius: 10,
+    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row'
   },
   textPrimary: {
-    color: colors.blue,
+    color: colors.white,
     fontWeight: fontWeights.bold,
-    fontSize: fontSizes.xs
+    fontSize: fontSizes.md,
+    marginLeft: 5
   },
   textDisabled: {
-    color: colors.gray300,
+    color: colors.white,
     fontWeight: fontWeights.bold,
-    fontSize: fontSizes.xs
+    fontSize: fontSizes.md,
+    marginLeft: 5,
+    opacity: 0.8
   },
   iconPrimary: {
-    backgroundColor: colors.darkBlue,
+    backgroundColor: colors.white,
     height: 15,
     width: 15,
     borderRadius: 50,
     alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: 5
+    justifyContent: 'center'
   },
   iconDisabled: {
-    backgroundColor: colors.gray300,
+    backgroundColor: colors.white,
     height: 15,
     width: 15,
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 5
+    marginLeft: 5,
+    opacity: 0.8
   }
 })
