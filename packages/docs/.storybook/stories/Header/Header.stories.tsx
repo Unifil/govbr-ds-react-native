@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text} from "react-native";
+import { Text, View } from "react-native";
 import { Header } from "@unifil/react-native";
 
 const HeaderMeta = {
@@ -9,7 +9,10 @@ const HeaderMeta = {
     onPress: { action: "pressed the button" },
   },
   args: {
-    logo:  <Text>Logo</Text>,
+    title: 'Title header',
+    subtitle: 'Subtitle header',
+    divider: true,
+    icon: <Text>Voltar</Text>
   },
   decorators: [
     (Story: any) => (

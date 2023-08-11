@@ -8,7 +8,7 @@ import { CardAccordionProps, RneFunctionComponent } from './CardAccordion.props'
 import { styles } from './CardAccordion.styles'
 import { ListItemContent } from './components/ListContent/ListContent'
 import renderNode from './components/RenderNode/RenderNode'
-import IconCheck from '../../../assets/icons/check.svg'
+// import IconCheck from '../../../assets/icons/check.svg'
 import { BaseCard } from '../BaseCard/BaseCard'
 
 export const CardAccordion: RneFunctionComponent<
@@ -148,7 +148,7 @@ CardAccordionProps
                           }
                         ]}
                       >
-                        {checkboxStates[index] && <IconCheck />}
+                        {/* {checkboxStates[index] && <IconCheck />} */}
                       </View>
                       <Text
                         style={[

@@ -31,5 +31,6 @@ export const colors = {
   lightRed: '#FF6B6B',
   lightRedSecondary: '#FF6161F0',
 
+  dark: '#333',
   darkPurple: '#372D3B'
 }
