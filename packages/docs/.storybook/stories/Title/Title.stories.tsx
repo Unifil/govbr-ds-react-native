@@ -27,10 +27,9 @@ export const Primary = {
   args: {
     type: "primary", 
     text: "Hello world",
-    color: colors.darkBlue,
+    color: colors.dark,
     fontSize: fontSizes.xl,
-    lineHeight: lineHeights.xll,
-    fontWeight: fontWeights.medium
+    fontWeight: fontWeights.large
   },
 };
 
@@ -38,10 +37,9 @@ export const Secondary = {
   args: {
     type: "secondary", 
     text: "Hello world",
-    color: colors.darkPurple,
-    fontSize: fontSizes.lg,
-    fontWeight: fontWeights.large,
-    textAlign: 'center'
+    color: colors.dark,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.bold
   },
 };
 
