@@ -1,16 +1,18 @@
 import React from "react";
 import { View } from "react-native";
-import { Button } from "@unifil/react-native";
-import { fontWeights, fontSizes, colors } from "@unifil/tokens";
+import { Checkbox } from "@unifil/react-native";
 
-const ButtonMeta = {
-  title: "Button",
-  component: Button,
+const CheckboxMeta = {
+  title: "Checkbox",
+  component: Checkbox,
   argTypes: {
-    onPress: { action: "pressed the button" },
+    onPress: { action: "pressed the Checkbox" },
   },
   args: {
-    icon: <></>,
+    textCheckbox: ['Checkbox 1', 'Checkbox 2'],
+    multipleSelection: false,
+    flexDirection: "row",
+    icon: "√",
   },
   decorators: [
     (Story: any) => (
@@ -21,58 +23,6 @@ const ButtonMeta = {
   ],
 };
 
-export default ButtonMeta;
+export default CheckboxMeta;
 
-export const Primary = {
-  args: {
-    type: "primary",
-    text: "Primary",
-    height: 45,
-    borderRadius: 19, 
-    backgroundColor: colors.blueSecondary,
-    colorText: colors.white,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.md,
-  },
-};
-
-export const Secondary = {
-  args: {
-    type: "secondary",
-    text: "Secondary",
-    height: 45,
-    borderRadius: 19, 
-    backgroundColor: colors.blueSecondary,
-    colorText: colors.white,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.md
-  },
-};
-
-export const Disabled = {
-  args: {
-    type: "disabled",
-    text: "Disabled",
-    height: 45,
-    borderRadius: 19, 
-    backgroundColor: colors.blueSecondary,
-    colorText: colors.white,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.md
-  },
-};
-
-export const Custom = {
-  args: {
-    type: "custom",
-    text: "Custom",
-    height: 45,
-    borderRadius: 19, 
-    backgroundColor: colors.gray600,
-    colorText: colors.white,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.md,
-    marginTop: 5,
-    marginBottom: 5
-  },
-};
+export const Primary = {};

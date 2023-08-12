@@ -18,7 +18,7 @@ export const colors = {
   gray: '#828282',
   graySecondary: '#D9D9D9',
   grayThird: '#6C757D',
-  grayFourth: '#CED4DA',
+  grayFourth: '#CCCCCC',
 
   blue: '#16316B',
   blueSecondary: '#1351B4',
