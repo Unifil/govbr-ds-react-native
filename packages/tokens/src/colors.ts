@@ -21,6 +21,7 @@ export const colors = {
   grayFourth: '#CED4DA',
 
   blue: '#16316B',
+  blueSecondary: '#1351B4',
   lightBlue: '#37639D',
   darkBlue: '#274A67',
   weakBlue: '#E3EBF8',
@@ -31,5 +32,6 @@ export const colors = {
   lightRed: '#FF6B6B',
   lightRedSecondary: '#FF6161F0',
 
+  dark: '#333',
   darkPurple: '#372D3B'
 }

@@ -7,43 +7,47 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   primary: {
-    backgroundColor: colors.darkBlue,
-    height: 31,
+    backgroundColor: colors.blueSecondary,
+    height: 45,
     width: '100%',
-    borderRadius: 19,
+    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
     marginTop: 0,
     marginBottom: 0
   },
   secondary: {
     backgroundColor: colors.white,
-    borderColor: colors.darkBlue,
+    borderColor: colors.blueSecondary,
+    flexDirection: 'row',
     borderWidth: 1,
-    height: 31,
+    height: 45,
     width: '100%',
-    borderRadius: 19,
+    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center'
   },
-  third: {
-    backgroundColor: colors.lightRed,
-    height: 31,
+  disabled: {
+    backgroundColor: colors.blueSecondary,
+    opacity: 0.7,
+    height: 45,
     width: '100%',
-    borderRadius: 19,
+    borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
     marginTop: 0,
     marginBottom: 0
   },
   textPrimary: {
     color: colors.white,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md
   },
   textSecondary: {
-    color: colors.darkBlue,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs
+    color: colors.blueSecondary,
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md
   }
 })

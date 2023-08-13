@@ -23,29 +23,22 @@ const TextMeta = {
 
 export default TextMeta;
 
-export const Small = {
+export const Primary = {
   args: {
+    type: "primary",
     text: "Hello world",
-    color: colors.darkBlue,
-    size: fontSizes.xxs,
-    weight: fontWeights.medium,
+    color: colors.dark,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.regular
   },
 };
 
-export const Medium = {
+export const Custom = {
   args: {
+    type: "custom",
     text: "Hello world",
-    color: colors.blue,
-    size: fontSizes.xs,
-    weight: fontWeights.regular,
-  },
-};
-
-export const Large = {
-  args: {
-    text: "Hello world",
-    color: colors.darkBlue,
-    size: fontSizes.sm,
-    weight: fontWeights.medium,
+    color: colors.dark,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.regular
   },
 };
