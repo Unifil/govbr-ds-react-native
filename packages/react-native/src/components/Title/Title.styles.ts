@@ -8,16 +8,14 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   primary: {
-    color: colors.darkBlue,
+    color: colors.dark,
     fontSize: fontSizes.xl,
-    lineHeight: lineHeights.xll,
-    fontWeight: fontWeights.medium
+    fontWeight: fontWeights.large
   },
   secondary: {
-    color: colors.darkPurple,
-    fontSize: fontSizes.xl,
-    fontWeight: fontWeights.large,
-    textAlign: 'center'
+    color: colors.dark,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.bold
   },
   custom: {
     color: colors.black,

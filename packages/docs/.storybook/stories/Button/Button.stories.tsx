@@ -9,6 +9,9 @@ const ButtonMeta = {
   argTypes: {
     onPress: { action: "pressed the button" },
   },
+  args: {
+    icon: <></>,
+  },
   decorators: [
     (Story: any) => (
       <View>
@@ -24,12 +27,12 @@ export const Primary = {
   args: {
     type: "primary",
     text: "Primary",
-    height: 31,
+    height: 45,
     borderRadius: 19, 
-    backgroundColor: colors.darkBlue,
+    backgroundColor: colors.blueSecondary,
     colorText: colors.white,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md,
   },
 };
 
@@ -37,25 +40,25 @@ export const Secondary = {
   args: {
     type: "secondary",
     text: "Secondary",
-    height: 31,
+    height: 45,
     borderRadius: 19, 
-    backgroundColor: colors.darkBlue,
+    backgroundColor: colors.blueSecondary,
     colorText: colors.white,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md
   },
 };
 
-export const Third = {
+export const Disabled = {
   args: {
-    type: "third",
-    text: "Third",
-    height: 31,
+    type: "disabled",
+    text: "Disabled",
+    height: 45,
     borderRadius: 19, 
-    backgroundColor: colors.darkBlue,
+    backgroundColor: colors.blueSecondary,
     colorText: colors.white,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md
   },
 };
 
@@ -63,12 +66,12 @@ export const Custom = {
   args: {
     type: "custom",
     text: "Custom",
-    height: 31,
+    height: 45,
     borderRadius: 19, 
     backgroundColor: colors.gray600,
     colorText: colors.white,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs,
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md,
     marginTop: 5,
     marginBottom: 5
   },
