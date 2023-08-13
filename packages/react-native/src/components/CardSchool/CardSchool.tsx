@@ -56,19 +56,11 @@ export const CardSchool = (props: CardProps): ReactElement => {
           >
             {props.local}
           </Text>
-          <Text
-            style={[
-              styles.text,
-              {
-                color: isPressed ? colors.white : props.colorText,
-                opacity: isPressed ? 1 : 0.5
-              }
-            ]}
-          >
-            {props.text}
-          </Text>
+
         </View>
-        {<View>{isPressed ? props.icon : props.iconIsPressed}</View>}
+        {<View
+          style={[styles.icon]}
+        >{isPressed ? props.icon : props.iconIsPressed}</View>}
       </View>
     </TouchableHighlight>
   )

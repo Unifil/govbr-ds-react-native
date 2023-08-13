@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: radii.px,
+    borderRadius: radii.p,
     width: '100%',
     marginTop: 6,
     marginBottom: 6,
@@ -18,10 +18,13 @@ export const styles = StyleSheet.create({
     shadowColor: '#00000040',
     shadowOffset: {
       width: 0,
-      height: 1
+      height: 4
     },
-    shadowOpacity: 0.5,
-    shadowRadius: 3
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    borderWidth: 1,
+    borderColor: '#CCCCCC'
+
   },
   containerContent: {
     flexDirection: 'row',
@@ -31,14 +34,14 @@ export const styles = StyleSheet.create({
     width: '100%'
   },
   title: {
-    color: colors.darkBlue,
-    fontSize: fontSizes.md,
-    fontWeight: fontWeights.medium,
+    color: colors.gray600,
+    fontSize: fontSizes.xs,
+    fontWeight: fontWeights.large,
     marginBottom: 3
   },
   local: {
-    color: colors.darkBlue,
-    fontSize: fontSizes.xxs,
+    color: colors.gray600,
+    fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
     maxWidth: 300,
     marginBottom: 10
@@ -52,18 +55,21 @@ export const styles = StyleSheet.create({
   },
   textTag: {
     color: colors.darkBlue,
-    fontSize: fontSizes.xxs,
+    fontSize: fontSizes.sm,
     fontWeight: fontWeights.medium
   },
   containerTag: {
     backgroundColor: colors.weakBlue,
-    height: 20,
-    maxWidth: 80,
+    height: 24,
+    width: 152,
     paddingHorizontal: 6,
     paddingVertical: 4,
-    borderRadius: 20,
+    borderRadius: 4,
     marginBottom: 15,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  icon: {
+    top: 20
   }
 })
