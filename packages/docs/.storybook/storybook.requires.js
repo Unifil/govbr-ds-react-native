@@ -62,7 +62,7 @@ const getStories = () => {
     "./.storybook/stories/ButtonCreateList/ButtonCreateList.stories.tsx": require("./stories/ButtonCreateList/ButtonCreateList.stories.tsx"),
     "./.storybook/stories/ButtonIcon/ButtonIcon.stories.tsx": require("./stories/ButtonIcon/ButtonIcon.stories.tsx"),
     "./.storybook/stories/FilterButton/FilterButton.stories.tsx": require("./stories/FilterButton/FilterButton.stories.tsx"),
-    "./.storybook/stories/CardSchool/CardSchool.stories.tsx": require("./stories/CardSchool/CardSchool.stories.tsx"),
+    "./.storybook/stories/Card/Card.stories.tsx": require("./stories/Card/Card.stories.tsx"),
   };
 };
 

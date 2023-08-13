@@ -27,24 +27,25 @@ export const styles = StyleSheet.create({
 
   },
   containerContent: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    alignItems: 'flex-start',
     width: '100%'
   },
   title: {
     color: colors.gray600,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.large,
-    marginBottom: 3
+    marginBottom: 3,
+    fontFamily: 'Rawline-Black'
   },
   local: {
     color: colors.gray600,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
     maxWidth: 300,
-    marginBottom: 10
+    marginBottom: 10,
+    fontFamily: 'Rawline-Regular'
   },
   text: {
     color: colors.blue,
@@ -56,20 +57,27 @@ export const styles = StyleSheet.create({
   textTag: {
     color: colors.darkBlue,
     fontSize: fontSizes.sm,
-    fontWeight: fontWeights.medium
+    fontWeight: fontWeights.medium,
+    fontFamily: 'Rawline-Medium'
+  },
+  containerText: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    width: '100%',
+    justifyContent: 'space-between'
   },
   containerTag: {
     backgroundColor: colors.weakBlue,
     height: 24,
-    width: 152,
     paddingHorizontal: 6,
-    paddingVertical: 4,
     borderRadius: 4,
     marginBottom: 15,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    display: 'flex',
+    flex: 1
   },
   icon: {
-    top: 20
+    bottom: 0
   }
 })

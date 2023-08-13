@@ -3,10 +3,10 @@ import React, { ReactElement, useState } from 'react'
 import { colors } from '@unifil/tokens'
 import { Text, TouchableHighlight, View } from 'react-native'
 
-import { CardProps } from './CardSchool.props'
-import { styles } from './CardShcool.styles'
+import { CardProps } from './Card.props'
+import { styles } from './Card.styles'
 
-export const CardSchool = (props: CardProps): ReactElement => {
+export const Card = (props: CardProps): ReactElement => {
   const [isPressed, setIsPressed] = useState(false)
 
   return (
@@ -32,36 +32,42 @@ export const CardSchool = (props: CardProps): ReactElement => {
       }}
     >
       <View style={[styles.containerContent]}>
-        <View>
+
           <View style={[styles.containerTag]}>
             <Text style={[styles.textTag]}>{props.tag}</Text>
           </View>
-          <Text
-            style={[
-              styles.title,
-              {
-                color: isPressed ? colors.white : props.colorTitle
-              }
-            ]}
-          >
-            {props.title}
-          </Text>
-          <Text
-            style={[
-              styles.local,
-              {
-                color: isPressed ? colors.white : props.colorLocal
-              }
-            ]}
-          >
-            {props.local}
-          </Text>
 
+          <View style={[styles.containerText]}>
+            <View>
+              <Text
+                style={[
+                  styles.title,
+                  {
+                    color: isPressed ? colors.white : props.colorTitle
+                  }
+                ]}
+              >
+                {props.title}
+              </Text>
+              <Text
+                style={[
+                  styles.local,
+                  {
+                    color: isPressed ? colors.white : props.colorLocal
+                  }
+                ]}
+              >
+                {props.local}
+              </Text>
+            </View>
+            {
+              <View style={[styles.icon]}>
+                {isPressed ? props.icon : props.iconIsPressed}
+              </View>
+            }
+          </View>
         </View>
-        {<View
-          style={[styles.icon]}
-        >{isPressed ? props.icon : props.iconIsPressed}</View>}
-      </View>
+
     </TouchableHighlight>
   )
 }

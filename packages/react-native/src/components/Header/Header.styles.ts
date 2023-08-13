@@ -20,13 +20,15 @@ export const styles = StyleSheet.create({
     color: colors.dark,
     fontSize: fontSizes.xll,
     lineHeight: 31,
-    fontWeight: fontWeights.large
+    fontWeight: fontWeights.large,
+    fontFamily: 'Rawline-Black'
   },
   subtitle: {
     color: colors.dark,
     fontSize: fontSizes.sm,
     lineHeight: 21,
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
+    fontFamily: 'Rawline-Regular'
   },
   containerText: {
     flexDirection: 'column',
