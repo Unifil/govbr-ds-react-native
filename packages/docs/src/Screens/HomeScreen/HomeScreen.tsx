@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView, Text, View } from "react-native";
-import { colors } from '@unifil/tokens'
-import Icon from '../../assets/svgs/filterIcon.svg'
+import { colors } from '@unifil/tokens' 
 import IconSearch from '../../assets/svgs/searchIcon.svg'
 import ArrowRight from '../../assets/svgs/arrowRight.svg'
 import IconAdd from '../../assets/svgs/iconAdd.svg'
@@ -10,13 +9,10 @@ import IconAdd from '../../assets/svgs/iconAdd.svg'
 import { 
   Header, 
   // Wrapper,
-  Tabs,
-  ButtonIcon,
-  CardListActivities,
+  Tabs, 
   InputSearch,
-  ModalComponent,
-  CardNavigation,
-  CardSchool,
+  ModalComponent, 
+  Card,
   ButtonCreateList,
   Button
 } from "@unifil/react-native";
@@ -41,7 +37,7 @@ export function HomeScreen() {
 
   return (
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
-      <Header logo={<Text>LOGO</Text>} />
+ 
         <Tabs dataTab={data}>
           <View
             style={{ 
@@ -100,7 +96,7 @@ export function HomeScreen() {
             onPress={() => console.log('Card navigation')}
           /> */}
 
-          <CardSchool
+          <Card
             title="Instituto Capibariabe"
             local="Recife - PE"
             text="Analise o desempenho das suas turmas baseado na execução dos exercícios"

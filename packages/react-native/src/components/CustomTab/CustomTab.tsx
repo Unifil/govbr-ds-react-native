@@ -60,7 +60,8 @@ export const CustomTab = (props: TabProps): ReactElement => {
                   style={{
                     color: isFocused
                       ? props.tabBarActiveTintColor
-                      : props.tabBarInactiveTintColor
+                      : props.tabBarInactiveTintColor,
+                    fontFamily: 'Rawline-Black'
                   }}
                 >
                   {options.tabBarLabel}

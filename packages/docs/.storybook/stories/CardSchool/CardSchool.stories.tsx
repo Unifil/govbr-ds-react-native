@@ -1,11 +1,11 @@
 import React from "react";
 import { View } from "react-native";
-import { CardSchool } from "@unifil/react-native";
+import { Card } from "@unifil/react-native";
 import { radii, fontSizes, colors } from "@unifil/tokens";
 
-const CardSchoolMeta = {
-  title: "CardSchool",
-  component: CardSchool,
+const CardMeta = {
+  title: "Card",
+  component: Card,
   argTypes: {
     onPress: { action: "pressed the button" },
   },
@@ -24,7 +24,7 @@ const CardSchoolMeta = {
   ],
 };
 
-export default CardSchoolMeta;
+export default CardMeta;
 
 export const Primary = {
   args: {
