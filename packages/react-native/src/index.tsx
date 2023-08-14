@@ -1,6 +1,7 @@
 export * from './components/Title/Title'
 export * from './components/Text/Text'
 export * from './components/InputSearch/InputSearch'
+export * from './components/Input/Input'
 export * from './components/CardNavigation/CardNavigation'
 export * from './components/CustomTab/CustomTab'
 export * from './components/Header/Header'
