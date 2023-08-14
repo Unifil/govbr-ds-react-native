@@ -10,12 +10,14 @@ export const styles = StyleSheet.create({
   primary: {
     color: colors.dark,
     fontSize: fontSizes.xl,
-    fontWeight: fontWeights.large
+    fontWeight: fontWeights.large,
+    fontFamily: 'Rawline-Black'
   },
   secondary: {
     color: colors.dark,
     fontSize: fontSizes.sm,
-    fontWeight: fontWeights.bold
+    fontWeight: fontWeights.bold,
+    fontFamily: 'Rawline-Bold'
   },
   custom: {
     color: colors.black,
@@ -23,6 +25,7 @@ export const styles = StyleSheet.create({
     lineHeight: lineHeights.xll,
     fontWeight: fontWeights.medium,
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Rawline-Black'
   }
 })
