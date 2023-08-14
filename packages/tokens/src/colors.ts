@@ -13,7 +13,7 @@ export const colors = {
   gray800: '#202024',
   gray900: '#121214',
 
-  weakGray: '#F6F8F9',
+  weakGray: '#F8F8F8',
   lightGray: '#BDBDBD',
   gray: '#828282',
   graySecondary: '#D9D9D9',
@@ -26,11 +26,14 @@ export const colors = {
   darkBlue: '#274A67',
   weakBlue: '#E3EBF8',
   weakBlueSecondary: '#C3D0E2',
+  weakBlueThird: '#EDF5FF',
 
   green: '#168821',
 
   lightRed: '#FF6B6B',
   lightRedSecondary: '#FF6161F0',
+
+  orange: '#FF580A',
 
   dark: '#333',
   darkPurple: '#372D3B'

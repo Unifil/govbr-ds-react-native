@@ -8,7 +8,6 @@ import { CardAccordionProps, RneFunctionComponent } from './CardAccordion.props'
 import { styles } from './CardAccordion.styles'
 import { ListItemContent } from './components/ListContent/ListContent'
 import renderNode from './components/RenderNode/RenderNode'
-// import IconCheck from '../../../assets/icons/check.svg'
 import { BaseCard } from '../BaseCard/BaseCard'
 
 export const CardAccordion: RneFunctionComponent<
@@ -23,9 +22,9 @@ CardAccordionProps
   leftRotate = false,
   noRotation,
   noIcon,
-  subtitle,
   textCheckbox,
   multipleSelection,
+  iconCheckbox,
   animation = {
     duration: 350,
     type: 'timing'
@@ -36,6 +35,7 @@ CardAccordionProps
 
   const initialCheckboxState = textCheckbox?.map(() => false)
   const [checkboxStates, setCheckboxStates] = useState(initialCheckboxState)
+  const [selecteds, setSelecteds] = useState<any>([])
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-function-return-type
   const handleCheckboxChange = (index: any) => {
@@ -51,6 +51,14 @@ CardAccordionProps
       )
       return newCheckboxStates
     })
+
+    const item = textCheckbox[index]
+
+    setSelecteds((prevSelectedItems: any) =>
+      checkboxStates[index]
+        ? prevSelectedItems?.filter((selecteds: any) => selecteds !== item)
+        : [...prevSelectedItems, item]
+    )
   }
 
   const startAnimation = React.useCallback(() => {
@@ -85,21 +93,45 @@ CardAccordionProps
 
   return (
     <>
-      <BaseCard {...rest} style={{
-        shadowColor: colors.black,
-        shadowOffset: {
-          width: 0,
-          height: 1
-        },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
-        elevation: 3,
-        marginBottom: 10,
-        backgroundColor: backgroundColor || colors.white,
-        padding: 10,
-        borderRadius: 10
-      }}>
-        {React.isValidElement(content) ? content : <ListItemContent />}
+      <BaseCard
+        {...rest}
+        style={{
+          backgroundColor: colors.weakGray,
+          paddingHorizontal: 15,
+          height: 40,
+          justifyContent: 'center',
+          borderRadius: 4
+        }}
+      >
+        {selecteds.length === 0 ? (
+          React.isValidElement(content) ? content : <ListItemContent />
+        ) : (
+          <View style={styles.containerList}>
+            <View
+                style={[
+                  styles.containerTag,
+                  {
+                    maxWidth: selecteds.length === 2 ? '68%' : '100%'
+                  }
+                ]}
+              >
+                <Text style={styles.textTag}>
+                  {
+                  selecteds?.length >= 2
+                    ? `${selecteds?.[0]?.slice(0, 20)}
+                        ${selecteds?.[0]?.length > 20 ? '...' : ''}`
+                    : selecteds?.[0]
+                  }
+                </Text>
+              </View>
+              {selecteds?.length >= 2 &&
+                <View style={styles.containerTag}>
+                  <Text style={styles.textTag}>{selecteds?.[1]?.slice(0, 5)}...</Text>
+                </View>
+              }
+          </View>
+        )
+      }
         {!noIcon && (
           <Animated.View
             style={[iconAnimation, { marginLeft: 'auto' }]}
@@ -117,49 +149,55 @@ CardAccordionProps
               width: 0,
               height: 1
             },
-            shadowOpacity: 0.22,
-            shadowRadius: 2.22,
+            shadowOpacity: 0.1,
+            shadowRadius: 1.0,
             elevation: 3,
-            marginBottom: 10,
             backgroundColor: colors.white,
-            paddingVertical: 15,
-            paddingHorizontal: 20,
-            borderRadius: 10
+            position: 'absolute',
+            zIndex: 9999999,
+            borderTopWidth: 1,
+            borderRightWidth: 1,
+            borderLeftWidth: 1,
+            borderColor: colors.grayFourth,
+            width: '100%',
+            top: 80
           }}
         >
           <View>
-            <Text style={styles.subtitle}>
-              {subtitle}
-            </Text>
               {!children ? (
                 <>
                   {textCheckbox?.map((item: any, index: any) =>
                     <TouchableOpacity
                       onPress={() => handleCheckboxChange(index)}
-                      style={styles.containerCheckbox}
                       key={item}
+                      style={[
+                        styles.containerCheckbox,
+                        {
+                          backgroundColor: checkboxStates[index] ? colors.blueSecondary : colors.white
+                        }
+                      ]}
                     >
-                      <View
-                        style={[
-                          styles.checkbox,
-                          {
-                            backgroundColor: checkboxStates[index] ? colors.darkBlue : colors.white,
-                            borderWidth: checkboxStates[index] ? 0 : 2
-                          }
-                        ]}
-                      >
-                        {/* {checkboxStates[index] && <IconCheck />} */}
-                      </View>
                       <Text
                         style={[
                           styles.textCheckbox,
                           {
-                            color: checkboxStates[index] ? colors.darkBlue : colors.gray500
+                            color: checkboxStates[index] ? colors.white : colors.gray500
                           }
                         ]}
                       >
                         {item}
                       </Text>
+                      <View
+                        style={[
+                          styles.checkbox,
+                          {
+                            backgroundColor: checkboxStates[index] ? colors.white : colors.white,
+                            borderWidth: checkboxStates[index] ? 2 : 2
+                          }
+                        ]}
+                      >
+                        {checkboxStates[index] && iconCheckbox}
+                      </View>
                     </TouchableOpacity>
                   )}
                 </>

@@ -6,4 +6,5 @@ export interface TextProps {
   lineHeight?: any
   weight?: any
   align?: any
+  fontFamily?: string
 }

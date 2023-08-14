@@ -19,11 +19,11 @@ export interface CardAccordionProps extends ListItemProps {
 
   noIcon?: boolean
 
-  subtitle?: string
-
   textCheckbox?: any
 
   multipleSelection?: boolean
+
+  iconCheckbox?: any
 
   animation?:
   | {

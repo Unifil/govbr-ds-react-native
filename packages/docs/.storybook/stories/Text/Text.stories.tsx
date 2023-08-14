@@ -39,6 +39,7 @@ export const Custom = {
     text: "Hello world",
     color: colors.dark,
     fontSize: fontSizes.sm,
-    fontWeight: fontWeights.regular
+    fontWeight: fontWeights.regular,
+    fontFamily: 'Rawline-Regular'
   },
 };

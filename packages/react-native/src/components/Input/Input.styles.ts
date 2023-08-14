@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
     marginTop: 24
   },
   errorText: {
-    color: 'red',
+    color: colors.orange,
     fontSize: 14,
     marginTop: 5,
     fontFamily: 'Rawline-Regular'
