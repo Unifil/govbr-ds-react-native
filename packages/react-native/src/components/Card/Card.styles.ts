@@ -78,6 +78,6 @@ export const styles = StyleSheet.create({
     flex: 1
   },
   icon: {
-    bottom: 0
+    bottom: 20
   }
 })

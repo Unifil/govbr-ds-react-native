@@ -8,7 +8,7 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   primary: {
     backgroundColor: colors.blueSecondary,
-    height: 45,
+    height: 40,
     width: '100%',
     borderRadius: 50,
     alignItems: 'center',
@@ -19,10 +19,10 @@ export const styles = StyleSheet.create({
   },
   secondary: {
     backgroundColor: colors.white,
-    borderColor: colors.blueSecondary,
+    borderColor: colors.grayFourth,
     flexDirection: 'row',
-    borderWidth: 1,
-    height: 45,
+    borderWidth: 2,
+    height: 40,
     width: '100%',
     borderRadius: 50,
     alignItems: 'center',
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
   disabled: {
     backgroundColor: colors.blueSecondary,
     opacity: 0.7,
-    height: 45,
+    height: 40,
     width: '100%',
     borderRadius: 50,
     alignItems: 'center',

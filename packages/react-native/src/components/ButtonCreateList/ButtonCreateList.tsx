@@ -38,25 +38,53 @@ export const ButtonCreateList = (props: ButtonProps): ReactElement => {
 const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
-      {props.icon &&
+      {props.icon && props.iconLeft &&
         <View style={[styles.iconPrimary]}>
           {props.icon}
         </View>
       }
-      <Text style={[styles.textPrimary]}>{props.text}</Text>
+      <Text
+        style={[
+          styles.textPrimary,
+          {
+            marginLeft: props.iconLeft ? 5 : 0,
+            marginRight: props.iconRight ? 5 : 0
+          }
+        ]}
+      >
+        {props.text}
+      </Text>
+      {props.icon && props.iconRight &&
+        <View style={styles.iconPrimary}>
+          {props.icon}
+        </View>
+      }
     </TouchableOpacity>
   )
 }
 
 const ButtonDisabled = (props: ButtonProps): ReactElement => {
   return (
-    <View style={[styles.disabled]}>
-      {props.icon &&
-        <View style={[styles.iconDisabled]}>
+    <View style={styles.disabled}>
+      {props.icon && props.iconLeft &&
+        <View
+          style={[
+            styles.iconDisabled,
+            {
+              marginLeft: props.iconLeft ? 5 : 0,
+              marginRight: props.iconRight ? 5 : 0
+            }
+          ]}
+        >
           {props.icon}
         </View>
       }
-      <Text style={[styles.textDisabled]}>{props.text}</Text>
+      <Text style={styles.textDisabled}>{props.text}</Text>
+      {props.icon && props.iconRight &&
+        <View style={styles.iconPrimary}>
+          {props.icon}
+        </View>
+      }
     </View>
   )
 }
@@ -77,7 +105,7 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
           }
         ]}
     >
-      {props.icon &&
+      {props.icon && props.iconLeft &&
         <View
           style={[
             styles.iconPrimary,
@@ -95,12 +123,26 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
           {
             color: props.colorText,
             fontWeight: props.fontWeight,
-            fontSize: props.fontSize
+            fontSize: props.fontSize,
+            marginLeft: props.iconLeft ? 5 : 0,
+            marginRight: props.iconRight ? 5 : 0
           }
         ]}
       >
         {props.text}
       </Text>
+      {props.icon && props.iconRight &&
+        <View
+          style={[
+            styles.iconPrimary,
+            {
+              backgroundColor: props.iconBackground
+            }
+          ]}
+        >
+          {props.icon}
+        </View>
+      }
     </TouchableOpacity>
   )
 }
