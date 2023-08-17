@@ -63,6 +63,8 @@ const getStories = () => {
     "./.storybook/stories/ButtonIcon/ButtonIcon.stories.tsx": require("./stories/ButtonIcon/ButtonIcon.stories.tsx"),
     "./.storybook/stories/FilterButton/FilterButton.stories.tsx": require("./stories/FilterButton/FilterButton.stories.tsx"),
     "./.storybook/stories/Card/Card.stories.tsx": require("./stories/Card/Card.stories.tsx"),
+    "./.storybook/stories/Checkbox/Checkbox.stories.tsx": require("./stories/Checkbox/Checkbox.stories.tsx"),
+    "./.storybook/stories/Radio/Radio.stories.tsx": require("./stories/Radio/Radio.stories.tsx"),
   };
 };
 

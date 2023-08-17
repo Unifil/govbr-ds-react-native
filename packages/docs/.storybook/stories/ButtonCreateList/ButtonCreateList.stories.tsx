@@ -2,7 +2,6 @@ import React from "react";
 import { View } from "react-native";
 import { ButtonCreateList } from "@unifil/react-native";
 import { fontWeights, fontSizes, colors } from "@unifil/tokens";
-import { boolean } from "yup";
 
 const ButtonCreateListMeta = {
   title: "ButtonCreateList",
@@ -12,6 +11,8 @@ const ButtonCreateListMeta = {
   },
   args: {
     icon: <></>,
+    iconLeft: true,
+    iconRight: false
   },
   decorators: [
     (Story: any) => (
