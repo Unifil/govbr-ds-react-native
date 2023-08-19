@@ -25,6 +25,10 @@ CardAccordionProps
   textCheckbox,
   multipleSelection,
   iconCheckbox,
+  top,
+  bottom,
+  right,
+  left,
   animation = {
     duration: 350,
     type: 'timing'
@@ -160,7 +164,10 @@ CardAccordionProps
             borderLeftWidth: 1,
             borderColor: colors.grayFourth,
             width: '100%',
-            top: 80
+            top: top || 80,
+            right,
+            left,
+            bottom
           }}
         >
           <View>
