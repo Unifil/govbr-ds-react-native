@@ -25,6 +25,14 @@ export interface CardAccordionProps extends ListItemProps {
 
   iconCheckbox?: any
 
+  top?: number
+
+  left?: number
+
+  right?: number
+
+  bottom?: number
+
   animation?:
   | {
     type?: 'timing' | 'spring'

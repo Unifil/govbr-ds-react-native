@@ -22,7 +22,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 14,
-    marginLeft: 0
+    marginLeft: 0,
+    marginRight: 0
   },
   textRadio: {
     color: colors.dark,

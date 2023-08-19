@@ -39,7 +39,7 @@ export const Radio = (props: RadioProps): ReactElement => {
           style={[
             styles.containerRadio,
             {
-              marginLeft: props?.flexDirection === ('row' || 'column') ? 24 : 0
+              marginRight: props?.flexDirection === ('row' || 'column') ? 24 : 0
             }
           ]}
         >
