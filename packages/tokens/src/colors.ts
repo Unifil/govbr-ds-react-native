@@ -29,7 +29,9 @@ export const colors = {
   weakBlueThird: '#EDF5FF',
 
   green: '#168821',
+  lightGreen: '#E3F5E1',
 
+  weakRed: '#FFF3F2',
   lightRed: '#FF6B6B',
   lightRedSecondary: '#FF6161F0',
 
