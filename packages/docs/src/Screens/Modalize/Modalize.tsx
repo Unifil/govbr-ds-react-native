@@ -20,24 +20,20 @@ export default function Modalize( ) {
     onStart: (_, ctx: any) => {
       ctx.startY = translateY.value;
     },
-    onActive: (event, ctx) => {
-      console.log(event.translationY);
+    onActive: (event, ctx) => { 
       if (isMove) {
-        console.log("height", height);
-        console.log(" event.translationY",  event.translationY);
-        
+  
         translateY.value = ctx.startY + event.translationY;
 
         const maxDragDistance = 200;  
         const newOpacity = 1 - (event.translationY / maxDragDistance * .8);
         opacity.value = Math.max(0, Math.min(newOpacity, .3));
-        console.log("opacity", opacity.value);
+      
       } else {
         opacity.value = 0.3
       }
     },
-    onEnd: (event) => {
-      console.log(event.velocityY);
+    onEnd: (event) => { 
       if (event.translationY > 120) {
         if (isMove) {
           

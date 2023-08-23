@@ -64,7 +64,7 @@ export const isEditState = atom({
 export const editorOptionsState = atom<EditorOptions>({
   key: 'editorOptions',
   default: {
-    backgroundColor: '#000000',
+    backgroundColor: '#333333',
     overlayCropColor: '#33333355',
     gridOverlayColor: '#ffffff88',
     coverMarker: {
@@ -73,8 +73,8 @@ export const editorOptionsState = atom<EditorOptions>({
     },
     controlBar: {
       position: 'top',
-      height: 200,
-      backgroundColor: '#000000',
+      height: 100,
+      backgroundColor: '#fff',
       backButton: {
         iconName: 'arrow-back',
         text: 'Voltar',
@@ -85,7 +85,7 @@ export const editorOptionsState = atom<EditorOptions>({
       cropButton: {
         color: '#ffffff',
         iconName: 'crop',
-        text: 'Continuar',
+        text: 'Confirmar',
         borderColor: '#ffffff',
         textColor: '#ffffff',
       },
@@ -98,7 +98,7 @@ export const editorOptionsState = atom<EditorOptions>({
         color: '#000',
         textColor: '#888888',
         iconName: 'cancel',
-        text: 'Refazer',
+        text: 'Cancelar',
         borderColor: '#000000',
       },
     },

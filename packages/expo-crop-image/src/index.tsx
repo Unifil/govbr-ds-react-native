@@ -104,24 +104,30 @@ function ImageEditorCore(props: Omit<ImageEditorProps, 'isVisible'>) {
       }}
     >
       <StatusBar hidden={true} />
-      <ImageEditorView processingComponent={processingComponent} />
+      <ImageEditorView
+        processingComponent={processingComponent}
+        props={props}
+      />
     </EditorContext.Provider>
   )
 }
 
 type Props = {
   processingComponent?: ReactNode
+  props: any
 }
 
-export function ImageEditorView({ processingComponent }: Props) {
+export function ImageEditorView({ processingComponent, props }: Props) {
   const [ready] = useRecoilState(readyState)
   const [processing] = useRecoilState(processingState)
   const { backgroundColor, controlBar } = useRecoilValue(editorOptionsState)
 
+  const { headerPreviewImage } = props
   return (
     <>
       {ready && (
         <View style={[styles.container, { backgroundColor }]}>
+          {controlBar?.position === 'top' && headerPreviewImage}
           <EditingWindow />
           {controlBar?.position === 'top' && <ControlBar />}
         </View>
