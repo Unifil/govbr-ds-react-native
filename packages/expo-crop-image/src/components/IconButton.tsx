@@ -1,5 +1,4 @@
-import { TouchableOpacity, TouchableOpacityProps } from 'react-native'
-import { Icon } from './Icon'
+import { Text, TouchableOpacity, TouchableOpacityProps } from 'react-native'
 
 type IconButtonProps = {
   color: string
@@ -9,13 +8,33 @@ type IconButtonProps = {
 
 export function IconButton({
   text,
-  color,
   textColor,
+  color,
   ...buttonProps
 }: IconButtonProps) {
   return (
-    <TouchableOpacity {...buttonProps}>
-      <Icon text={text} color={color} textColor={textColor} />
+    <TouchableOpacity
+      {...buttonProps}
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: color,
+        height: 40,
+        borderRadius: 20,
+        margin: 10,
+        borderWidth: 1,
+        borderColor: '#CCCCCC',
+      }}
+    >
+      <Text
+        style={{
+          color: textColor,
+          fontSize: 16,
+          fontWeight: 'bold',
+        }}
+      >
+        {text}
+      </Text>
     </TouchableOpacity>
   )
 }

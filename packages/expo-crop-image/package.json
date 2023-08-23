@@ -51,7 +51,9 @@
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-gesture-handler": "~2.9.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "@unifil/react-native": "*",
+    "@unifil/tokens": "*"
   },
   "dependencies": {
     "recoil": "0.7.3"
