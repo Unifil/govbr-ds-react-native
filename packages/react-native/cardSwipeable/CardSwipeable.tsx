@@ -21,7 +21,6 @@ ListItemSwipeableProps
   children,
   leftStyle,
   rightStyle,
-  leftContent,
   rightContent,
   leftWidth = ScreenWidth / 3,
   rightWidth = ScreenWidth / 3,
@@ -29,6 +28,7 @@ ListItemSwipeableProps
   onSwipeBegin,
   onSwipeEnd,
   animation = { type: 'spring', duration: 200 },
+  reset = false,
   ...rest
 }: any) => {
   const translateX = React.useRef(new Animated.Value(0))
@@ -47,6 +47,12 @@ ListItemSwipeableProps
     [animation.duration, animation.type]
   )
 
+  React.useEffect(() => {
+    if (reset) {
+      slideAnimation(0)
+    }
+  }, [reset, slideAnimation])
+
   const resetCallBack = React.useCallback(() => {
     slideAnimation(0)
   }, [slideAnimation])
@@ -61,19 +67,16 @@ ListItemSwipeableProps
   const onRelease = React.useCallback(
     (_: unknown, { dx }: PanResponderGestureState) => {
       if (Math.abs(panX.current + dx) >= minSlideWidth) {
-        slideAnimation(panX.current + dx > 0 ? leftWidth : -rightWidth)
+        slideAnimation(-rightWidth)
       } else {
         slideAnimation(0)
       }
     },
-    [leftWidth, rightWidth, slideAnimation, minSlideWidth]
+    [rightWidth, slideAnimation, minSlideWidth]
   )
 
   const shouldSlide = React.useCallback(
     (_: unknown, { dx, dy, vx, vy }: PanResponderGestureState): boolean => {
-      if (dx > 0 && !leftContent && !panX.current) {
-        return false
-      }
       if (dx < 0 && !rightContent && !panX.current) {
         return false
       }
@@ -81,7 +84,7 @@ ListItemSwipeableProps
         Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5
       )
     },
-    [leftContent, rightContent]
+    [rightContent]
   )
 
   const _panResponder = React.useMemo(
@@ -97,6 +100,7 @@ ListItemSwipeableProps
         onPanResponderReject: onRelease,
         onPanResponderTerminate: onRelease,
         onPanResponderEnd: () => {
+          console.log('onPanResponderEnd')
           onSwipeEnd?.()
         }
       }),
@@ -106,22 +110,7 @@ ListItemSwipeableProps
   return (
     <View style={styles.container}>
       <View style={styles.actions}>
-        {swipe === 'left' &&
-          <View
-            style={[
-              {
-                width: leftWidth,
-                zIndex: 1,
-                minWidth: 145
-              },
-              leftStyle
-            ]}
-          >
-            {typeof leftContent === 'function'
-              ? leftContent(resetCallBack)
-              : leftContent}
-          </View>
-        }
+
         <View style={styles.empty} />
         {swipe === 'right' &&
           <View
