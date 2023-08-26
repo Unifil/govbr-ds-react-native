@@ -12,12 +12,10 @@ const TabsMeta = {
   args: {
     dataTab: [
       {
-        name: 'Todas',
-        count: 4
+        name: 'Tab 1',
       },
       {
-        name: 'Realizadas',
-        count: 9
+        name: 'Tab 2',
       }
     ],
     search: false,
