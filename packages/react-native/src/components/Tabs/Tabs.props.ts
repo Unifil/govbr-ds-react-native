@@ -7,10 +7,7 @@ import {
 export type Props = {
   children: React.ReactNode
   dataTab: any[]
-  marginTitleTab?: number
-  iconLeft?: any
-  search?: boolean
-  inputSearch?: any
+
 }
 
 export type IItem = {

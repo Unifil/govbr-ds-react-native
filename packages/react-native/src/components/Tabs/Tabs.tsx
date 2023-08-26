@@ -34,9 +34,8 @@ export const Tabs = (props: Props): ReactElement => {
     </View>
   )
   return (
-    <View>
-      <View style={styles.container} >
-        {!props.search ? <View style={styles.containerView} >
+    <>
+      <View style={styles.containerTabs} >
         {props?.dataTab?.map((item: any, index: number) => (
           <TouchableOpacity
             key={item.name}
@@ -46,60 +45,27 @@ export const Tabs = (props: Props): ReactElement => {
             ]}
             onPress={() => handleTabPress(index)}
           >
-            <View style={styles.containerTab}>
-
-              <Text
-                style={[
-                  styles.textTabs,
-                  {
-                    color: activeTab === index ? colors.darkBlue : colors.gray200,
-                    marginLeft: index === 0 ? props.marginTitleTab : 0
-                  }
-                ]}
-              >
-                {item.name}
-              </Text>
-              {item.count &&
-                <View
-                style={[
-                  styles.countTabs,
-                  {
-                    backgroundColor: activeTab === index ? colors.darkBlue : colors.gray200
-                  }
-                ]}
-              >
-                  <Text style={styles.textCount}>
-                    {item.count}
-                  </Text>
-                </View>}
-              {index === 0 ? <View style={styles.pipe} /> : '' || props?.dataTab?.length === index + 1 ? '' : <View style={styles.pipe} />}
+            <View style={styles.tab}>
+              {index !== activeTab && item?.icon}
+              {index === activeTab && item?.iconActive}
+                <Text
+                  style={[
+                    styles.textTabs,
+                    {
+                      color: activeTab === index ? colors.blueSecondary : colors.dark
+                    }
+                  ]}
+                >
+                  {item.name}
+                </Text>
             </View>
           </TouchableOpacity>
         ))}
-        </View>
-          : <View
-          style={{
-            marginLeft: props.marginTitleTab,
-            width: '80%'
-          }}
-          >
-          {props.inputSearch}
-
-          </View>
-        }
-        <View style={{
-          marginRight: props.marginTitleTab
-        }}>
-
-      {props.iconLeft}
-
-    </View>
-
       </View>
       <FlatList
         data={[
-          { key: '0001', children },
-          { key: '0002', children }
+          { key: '1', children },
+          { key: '2', children }
         ]}
         renderItem={renderTab}
         keyExtractor={(item: { key: string, children: React.ReactNode[] }) =>
@@ -119,6 +85,6 @@ export const Tabs = (props: Props): ReactElement => {
           index
         })}
       />
-    </View>
+    </>
   )
 }

@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
   },
   divider: {
     height: 1,
-    width: '90%',
+    width: '100%',
     backgroundColor: colors.graySecondary,
     borderRadius: 5,
     marginTop: 24,
