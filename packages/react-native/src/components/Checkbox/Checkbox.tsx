@@ -2,30 +2,13 @@
 import React, { ReactElement, useState } from 'react'
 
 import { colors } from '@unifil/tokens'
-import { Text, TouchableOpacity, View } from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 
 import { CheckboxProps } from './Checkbox.props'
 import { styles } from './Ckeckbox.styles'
 
 export const Checkbox = (props: CheckboxProps): ReactElement => {
-  const initialCheckboxState = props?.textCheckbox?.map(() => false)
-  const [checkboxStates, setCheckboxStates] = useState(initialCheckboxState)
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-function-return-type
-  const handleCheckboxChange = (index: any) => {
-    setCheckboxStates((prevCheckboxStates: any) => {
-      const newCheckboxStates = prevCheckboxStates.map((checkbox: any, i: any) =>
-        props?.multipleSelection
-          ? i === index
-            ? !checkbox
-            : checkbox
-          : i === index
-            ? !checkbox
-            : false
-      )
-      return newCheckboxStates
-    })
-  }
 
   return (
     <View
@@ -36,33 +19,30 @@ export const Checkbox = (props: CheckboxProps): ReactElement => {
         }
       ]}
     >
-      {props?.textCheckbox?.map((item: any, index: any) =>
+
         <TouchableOpacity
-          onPress={() => handleCheckboxChange(index)}
-          key={item}
           style={[
             styles.containerCheckbox,
             {
               marginLeft: props?.flexDirection === ('row' || 'column') ? 24 : 0
             }
           ]}
+          onPress={props.onPress}
         >
           <View
             style={[
               styles.checkbox,
               {
-                backgroundColor: checkboxStates[index] ? colors.white : colors.white,
-                borderWidth: checkboxStates[index] ? 2 : 2
+                backgroundColor: colors.white,
+                borderWidth: 2
               }
             ]}
             >
-              {checkboxStates[index] && props?.icon}
+              {props.checkboxStates && props?.icon}
           </View>
-            <Text style={styles.textCheckbox}>
-              {item}
-          </Text>
+
         </TouchableOpacity>
-      )}
+
     </View>
   )
 }

@@ -5,4 +5,5 @@ export interface TabProps {
   tabBarActiveTintColor?: any
   tabBarInactiveTintColor?: any
   showCustomTab?: boolean
+  overlay?: boolean
 }
