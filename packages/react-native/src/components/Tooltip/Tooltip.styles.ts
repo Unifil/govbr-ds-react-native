@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     height: '100%',
     width: '100%',
-    backgroundColor: '#00000057',
+    backgroundColor: 'transparent',
     zIndex: 1
   },
   containerTooltip: {
