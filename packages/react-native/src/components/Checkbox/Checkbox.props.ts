@@ -3,4 +3,7 @@ export interface CheckboxProps {
   multipleSelection?: boolean
   icon?: any
   flexDirection?: string
+  checkboxStates: any
+  setCheckboxStates: any
+  onPress?: any
 }

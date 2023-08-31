@@ -12,6 +12,7 @@ export const CustomTab = (props: TabProps): ReactElement => {
 
   return (
     <View style={styles.container}>
+      {props.overlay && <View style={styles.overlay} />}
       <View style={styles.content}>
         {props.state.routes.map((route: any, index: any) => {
           const { options } = props.descriptors[route.key]

@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    zIndex: 100
 
   },
   content: {
@@ -26,5 +27,13 @@ export const styles = StyleSheet.create({
   buttonTab: {
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  overlay: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    zIndex: 10
+
   }
 })

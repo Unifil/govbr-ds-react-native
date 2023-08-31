@@ -3,10 +3,10 @@ import React, { ReactElement, useState } from 'react'
 import { colors } from '@unifil/tokens'
 import { Text, TouchableOpacity, View } from 'react-native'
 
-import { CardProps } from './Card.props'
-import { styles } from './Card.styles'
+import { CardProps } from './CardUser.props'
+import { styles } from './CardUser.styles'
 
-export const Card = (props: CardProps): ReactElement => {
+export const CardUser = (props: CardProps): ReactElement => {
   const [isPressed, setIsPressed] = useState(false)
 
   return (
