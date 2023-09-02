@@ -1,21 +1,19 @@
 import React from "react";
 import { View } from "react-native";
-import { SelectDropdown } from "@unifil/react-native";
+import { InputSearchSelect } from "@unifil/react-native";
 
-const SelectDropdownMeta = {
-  title: "SelectDropdown",
-  component: SelectDropdown,
+const InputSearchSelectMeta = {
+  title: "InputSearchSelect",
+  component: InputSearchSelect,
   argTypes: {
     onPress: { action: "pressed the select" },
   },
   args: {
     placeholder: 'Select option',
-    options: ['Option 1', 'Option 2', 'Option 3'],
+    dataDropdown: ['Option 1', 'Option 2', 'Option 3'],
+    isExpanded: true,
     icon: <></>,
-    noRotation: false,
-    expandIcon: false,
-    leftRotate: false,
-    positionTop: 0,
+    positionTop: 50,
     positionBottom: 0,
     positionLeft: 0,
     positionRight: 0,
@@ -29,6 +27,6 @@ const SelectDropdownMeta = {
   ],
 };
 
-export default SelectDropdownMeta;
+export default InputSearchSelectMeta;
 
 export const Primary = {};
