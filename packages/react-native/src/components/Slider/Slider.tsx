@@ -8,15 +8,14 @@ import {
   Platform,
   SafeAreaView,
   I18nManager,
-  Dimensions,
-  Text
+  Dimensions
 } from 'react-native'
 
 import { Button } from '../Button/Button'
 
 const isAndroidRTL = I18nManager.isRTL && Platform.OS === 'android'
 const { width } = Dimensions.get('window')
-const Slider = ({
+export const Slider = ({
   data,
   renderItem,
   renderNextButton = () => {},
@@ -141,7 +140,6 @@ const Slider = ({
   )
 }
 
-export default Slider
 const styles = StyleSheet.create({
   flexOne: {
     flex: 1
