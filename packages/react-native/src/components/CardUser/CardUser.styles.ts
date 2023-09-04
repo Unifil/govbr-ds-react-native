@@ -4,24 +4,24 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
 
   containerContent: {
-    flexDirection: 'column',
-    alignContent: 'center',
-    alignItems: 'flex-start',
-    width: '100%'
+    flexDirection: 'row',
+    alignContent: 'center',   
+    justifyContent: 'space-between',
+    width: '100%',
+    alignItems: 'center',
   },
-  title: {
+  name: {
     color: colors.gray600,
-    fontSize: fontSizes.xs,
+    fontSize: fontSizes.md,
     fontWeight: fontWeights.large,
     marginBottom: 3,
     fontFamily: 'Rawline-Black'
   },
-  local: {
+  description: {
     color: colors.gray600,
-    fontSize: fontSizes.xs,
+    fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    maxWidth: 300,
-    marginBottom: 10,
+    maxWidth: 300, 
     fontFamily: 'Rawline-Regular'
   },
   text: {
@@ -38,10 +38,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Rawline-Medium'
   },
   containerText: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    width: '100%',
-    justifyContent: 'space-between'
+    flexDirection: 'row', 
   },
   containerTag: {
     backgroundColor: colors.weakBlue,
@@ -70,9 +67,11 @@ export const styles = StyleSheet.create({
     width: '100%',
     marginTop: 6,
     marginBottom: 6,
-    minHeight: 105
+    minHeight: 105,
+
   },
   container: {
+    height: 100,
     paddingLeft: 30,
     paddingRight: 17,
     paddingVertical: 20,
@@ -91,5 +90,8 @@ export const styles = StyleSheet.create({
     borderColor: '#CCCCCC',
     backgroundColor: colors.white
 
+  },
+  containerTextDescription: {  
+    justifyContent: 'space-between'
   }
 })
