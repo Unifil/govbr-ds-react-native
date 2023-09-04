@@ -76,8 +76,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "resolutions": {
-    "react-native-reanimated": "^2.9.1"
   }
 }

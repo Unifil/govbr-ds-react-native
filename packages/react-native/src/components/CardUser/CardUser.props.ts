@@ -1,9 +1,10 @@
 export interface CardProps {
-  title?: string
-  local?: string
+  name?: string
+  description?: string
   text?: string
+  disabled?: boolean
   tag?: string
-  colorTitle?: string
+  colorName?: string
   colorLocal?: string
   colorText?: string
   sizeTitle?: number
@@ -18,4 +19,5 @@ export interface CardProps {
   onPress?: any
   iconIsPressed?: any
   overlay?: boolean
+  leftComponent?: any
 }

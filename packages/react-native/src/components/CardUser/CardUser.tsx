@@ -22,38 +22,56 @@ export const CardUser = (props: CardProps): ReactElement => {
       ]}
       onPress={props.onPress}
       activeOpacity={0.8}
-      disabled={props.overlay}
+      disabled={props.overlay || props.disabled}
     >
       <View style={[styles.containere]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
         <View style={[styles.container]}>
+
+        
           <View style={[styles.containerContent]}>
-            {props?.tag && (
-              <View style={[styles.containerTag]}>
-                <Text style={[styles.textTag]}>{props.tag}</Text>
-              </View>
-            )}
+         
             <View style={[styles.containerText]}>
-              <View>
+            <View style={{
+              marginRight: 20,
+                    backgroundColor: '#168821',
+                    height: 50,
+                    width: 50,
+                    borderRadius: 25,
+                    justifyContent: 'center',
+                    alignItems: 'center'
+          }}>
+                <Text style={{
+                  fontSize: 20,
+                  fontFamily: 'Rawline-Black',
+                  color: 'white'
+
+                }}>
+                  {props?.name && props?.name.split(' ')[0][0] + props?.name.split(' ')[1][0] || ''}
+                </Text>
+          </View>
+              <View style={[
+                styles.containerTextDescription,
+              ]}>
                 <Text
                   style={[
-                    styles.title,
+                    styles.name,
                     {
-                      color: isPressed ? colors.white : props.colorTitle
+                      color: isPressed ? colors.white : props.colorName
                     }
                   ]}
                 >
-                  {props.title}
+                  {props.name}
                 </Text>
                 <Text
                   style={[
-                    styles.local,
+                    styles.description,
                     {
                       color: isPressed ? colors.white : props.colorLocal
                     }
                   ]}
                 >
-                  {props.local}
+                  {props.description}
                 </Text>
               </View>
               {
@@ -62,6 +80,9 @@ export const CardUser = (props: CardProps): ReactElement => {
                 </View>
               }
             </View>
+            <View>
+             {props?.leftComponent && props.leftComponent}
+             </View>
           </View>
         </View>
       </View>
