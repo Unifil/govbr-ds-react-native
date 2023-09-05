@@ -158,8 +158,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   container: {
-    justifyContent: 'center',
-    marginBottom: 10
+    justifyContent: 'center'
   },
   empty: {
     flex: 0

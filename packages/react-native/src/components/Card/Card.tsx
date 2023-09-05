@@ -7,6 +7,7 @@ import { CardProps } from './Card.props'
 import { styles } from './Card.styles'
 
 export const Card = (props: CardProps): ReactElement => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isPressed, setIsPressed] = useState(false)
 
   return (
@@ -24,7 +25,7 @@ export const Card = (props: CardProps): ReactElement => {
       activeOpacity={0.8}
       disabled={props.overlay}
     >
-      <View style={[styles.containere]}>
+      <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
         <View style={[styles.container]}>
           <View style={[styles.containerContent]}>
