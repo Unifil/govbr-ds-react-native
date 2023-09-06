@@ -6,9 +6,9 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import { CardProps } from './CardUser.props'
 import { styles } from './CardUser.styles'
 
-export const CardUser = (props: CardProps): ReactElement => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isPressed, setIsPressed] = useState(false)
+export const CardUser = (props: CardProps): ReactElement => { 
+  const [isPressed] = useState(false)
+ 
 
   return (
     <TouchableOpacity
