@@ -7,7 +7,9 @@ import { CardProps } from './Card.props'
 import { styles } from './Card.styles'
 
 export const Card = (props: CardProps): ReactElement => {
+ 
   const [isPressed] = useState(false)
+ 
 
   return (
     <TouchableOpacity
@@ -24,7 +26,7 @@ export const Card = (props: CardProps): ReactElement => {
       activeOpacity={0.8}
       disabled={props.overlay}
     >
-      <View style={[styles.containere]}>
+      <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
         <View style={[styles.container]}>
           <View style={[styles.containerContent]}>

@@ -5,10 +5,10 @@ export const styles = StyleSheet.create({
 
   containerContent: {
     flexDirection: 'row',
-    alignContent: 'center',   
+    alignContent: 'center',
     justifyContent: 'space-between',
     width: '100%',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   name: {
     color: colors.gray600,
@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
     color: colors.gray600,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    maxWidth: 300, 
+    maxWidth: 300,
     fontFamily: 'Rawline-Regular'
   },
   text: {
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Rawline-Medium'
   },
   containerText: {
-    flexDirection: 'row', 
+    flexDirection: 'row'
   },
   containerTag: {
     backgroundColor: colors.weakBlue,
@@ -67,7 +67,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     marginTop: 6,
     marginBottom: 6,
-    minHeight: 105,
+    minHeight: 105
 
   },
   container: {
@@ -91,7 +91,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white
 
   },
-  containerTextDescription: {  
+  containerTextDescription: {
     justifyContent: 'space-between'
   }
 })

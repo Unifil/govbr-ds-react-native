@@ -6,8 +6,9 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import { CardProps } from './CardUser.props'
 import { styles } from './CardUser.styles'
 
-export const CardUser = (props: CardProps): ReactElement => {
+export const CardUser = (props: CardProps): ReactElement => { 
   const [isPressed] = useState(false)
+ 
 
   return (
     <TouchableOpacity

@@ -1,8 +1,10 @@
 import { fontWeights, fontSizes, colors, radii } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
+ 
 import { normalize } from '../../utils/normalize'
 
+ 
 export const styles = StyleSheet.create({
   containerContent: {
     flexDirection: 'column',
@@ -67,8 +69,8 @@ export const styles = StyleSheet.create({
     zIndex: 10
   },
 
-  containere: {
-    width: '100%',
+  containerCard: {
+    width: '100%', 
     marginTop: normalize(6),
     marginBottom: normalize(6),
     minHeight: normalize(105)
@@ -76,7 +78,12 @@ export const styles = StyleSheet.create({
   container: {
     paddingLeft: normalize(30),
     paddingRight: normalize(17),
-    paddingVertical: normalize(20),
+    paddingVertical: normalize(20), 
+    minHeight: 105,
+    marginBottom: 16
+  },
+  container: {
+    padding: 16, 
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 10,
@@ -90,7 +97,7 @@ export const styles = StyleSheet.create({
     shadowRadius: 0,
     borderWidth: 1,
     borderColor: '#CCCCCC',
-    backgroundColor: colors.white
-
+    backgroundColor: colors.white,
+    maxWidth: '100%'
   }
 })
