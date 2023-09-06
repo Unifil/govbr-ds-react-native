@@ -1,6 +1,6 @@
 export interface CardProps {
   title?: string
-  local?: string
+  description?: string
   text?: string
   tag?: string
   colorTitle?: string

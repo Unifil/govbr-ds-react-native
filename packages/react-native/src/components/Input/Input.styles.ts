@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: 36,
     paddingLeft: 6,
-    color: colors.darkBlue,
+    color: colors.dark,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.medium
   },

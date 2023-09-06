@@ -17,11 +17,11 @@ export const styles = StyleSheet.create({
     marginBottom: normalize(3),
     fontFamily: 'Rawline-Black'
   },
-  local: {
+  description: {
     color: colors.gray600,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
-    maxWidth: normalize(300),
+    maxWidth: normalize(250),
     marginBottom: normalize(10),
     fontFamily: 'Rawline-Regular'
   },
@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   containerTag: {
-    backgroundColor: colors.weakBlue,
+    backgroundColor: colors.weakBlueThird,
     height: normalize(24),
     paddingHorizontal: normalize(6),
     borderRadius: normalize(4),
