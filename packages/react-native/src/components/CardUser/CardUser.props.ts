@@ -20,4 +20,5 @@ export interface CardProps {
   iconIsPressed?: any
   overlay?: boolean
   leftComponent?: any
+  sizeAvatar?: number
 }
