@@ -7,9 +7,7 @@ import { CardProps } from './Card.props'
 import { styles } from './Card.styles'
 
 export const Card = (props: CardProps): ReactElement => {
- 
   const [isPressed] = useState(false)
- 
 
   return (
     <TouchableOpacity

@@ -68,7 +68,6 @@ export const styles = StyleSheet.create({
     marginTop: 6,
     marginBottom: 6,
     minHeight: 105
-
   },
   container: {
     height: 100,
@@ -92,6 +91,6 @@ export const styles = StyleSheet.create({
 
   },
   containerTextDescription: {
-    justifyContent: 'space-between'
+    justifyContent: 'center'
   }
 })
