@@ -7,7 +7,7 @@ import { CardProps } from './CardUser.props'
 import { styles } from './CardUser.styles'
 
 export const CardUser = (props: CardProps): ReactElement => {
-  const [isPressed, setIsPressed] = useState(false)
+  const [isPressed] = useState(false)
 
   return (
     <TouchableOpacity
@@ -28,19 +28,18 @@ export const CardUser = (props: CardProps): ReactElement => {
         {props.overlay ? <View style={styles.overlay} /> : null}
         <View style={[styles.container]}>
 
-        
           <View style={[styles.containerContent]}>
-         
+
             <View style={[styles.containerText]}>
             <View style={{
               marginRight: 20,
-                    backgroundColor: '#168821',
-                    height: 50,
-                    width: 50,
-                    borderRadius: 25,
-                    justifyContent: 'center',
-                    alignItems: 'center'
-          }}>
+              backgroundColor: '#168821',
+              height: 50,
+              width: 50,
+              borderRadius: 25,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
                 <Text style={{
                   fontSize: 20,
                   fontFamily: 'Rawline-Black',
@@ -51,7 +50,7 @@ export const CardUser = (props: CardProps): ReactElement => {
                 </Text>
           </View>
               <View style={[
-                styles.containerTextDescription,
+                styles.containerTextDescription
               ]}>
                 <Text
                   style={[

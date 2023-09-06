@@ -10,7 +10,9 @@ export const InputSearchSelect = (props: InputSelectProps): ReactElement => {
   return (
     <>
       <TextInput
-          style={styles.inputSearch}
+          style={[styles.inputSearch, {
+            fontFamily: props.value.length >= 1 ? 'Rawline-Medium' : 'Rawline-Medium-Italic'
+          }]}
           value={props.value}
           onChangeText={props.onChangeText}
           placeholder={props.placeholder}

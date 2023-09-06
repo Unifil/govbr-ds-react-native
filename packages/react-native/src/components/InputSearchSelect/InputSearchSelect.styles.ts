@@ -10,8 +10,12 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 12,
-    fontFamily: 'Rawline-Medium-Italic'
+    padding: 12
+
+  },
+  placeholder: {
+    color: 'red'
+
   },
   optionDropdown: {
     width: '100%',

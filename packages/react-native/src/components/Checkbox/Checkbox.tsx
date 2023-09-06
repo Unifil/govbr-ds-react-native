@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 
 import { colors } from '@unifil/tokens'
 import { TouchableOpacity, View } from 'react-native'

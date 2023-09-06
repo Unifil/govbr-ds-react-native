@@ -1,8 +1,9 @@
 import { fontWeights, fontSizes, colors, radii } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
-export const styles = StyleSheet.create({
+import { normalize } from '../../utils/normalize'
 
+export const styles = StyleSheet.create({
   containerContent: {
     flexDirection: 'column',
     alignContent: 'center',
@@ -13,15 +14,15 @@ export const styles = StyleSheet.create({
     color: colors.gray600,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.large,
-    marginBottom: 3,
+    marginBottom: normalize(3),
     fontFamily: 'Rawline-Black'
   },
   local: {
     color: colors.gray600,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
-    maxWidth: 300,
-    marginBottom: 10,
+    maxWidth: normalize(300),
+    marginBottom: normalize(10),
     fontFamily: 'Rawline-Regular'
   },
   text: {
@@ -29,7 +30,7 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
     opacity: 0.5,
-    maxWidth: 300
+    maxWidth: normalize(300)
   },
   textTag: {
     color: colors.darkBlue,
@@ -45,17 +46,17 @@ export const styles = StyleSheet.create({
   },
   containerTag: {
     backgroundColor: colors.weakBlue,
-    height: 24,
-    paddingHorizontal: 6,
-    borderRadius: 4,
-    marginBottom: 15,
+    height: normalize(24),
+    paddingHorizontal: normalize(6),
+    borderRadius: normalize(4),
+    marginBottom: normalize(15),
     alignItems: 'center',
     justifyContent: 'center',
     display: 'flex',
     flex: 1
   },
   icon: {
-    bottom: 20
+    bottom: normalize(10)
   },
   overlay: {
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -68,21 +69,21 @@ export const styles = StyleSheet.create({
 
   containere: {
     width: '100%',
-    marginTop: 6,
-    marginBottom: 6,
-    minHeight: 105
+    marginTop: normalize(6),
+    marginBottom: normalize(6),
+    minHeight: normalize(105)
   },
   container: {
-    paddingLeft: 30,
-    paddingRight: 17,
-    paddingVertical: 20,
+    paddingLeft: normalize(30),
+    paddingRight: normalize(17),
+    paddingVertical: normalize(20),
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 10,
     shadowColor: '#00000040',
     shadowOffset: {
       width: 0,
-      height: 4
+      height: normalize(4)
     },
     shadowOpacity: 1,
     borderRadius: radii.p,
