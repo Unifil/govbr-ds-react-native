@@ -33,6 +33,7 @@ export const Tabs = (props: Props): ReactElement => {
       {item?.children[index]}
     </View>
   )
+
   return (
     <>
       <View style={styles.containerTabs} >

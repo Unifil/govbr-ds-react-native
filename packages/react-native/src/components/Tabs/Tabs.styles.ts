@@ -6,7 +6,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'center',
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
+    // borderWidth: 1,
+    // borderColor: 'red',
+    height: 74
   },
   tab: {
     alignItems: 'center',

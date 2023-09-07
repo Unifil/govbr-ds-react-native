@@ -22,7 +22,6 @@ export const useDynamicTabsScreenController = (
   const { width } = Dimensions.get('window')
 
   const handleTabPress = (index: number): void => {
-    setActiveTab(index)
     flatListRef?.current?.scrollToIndex({ index, animated: true })
     setIndex(index)
   }

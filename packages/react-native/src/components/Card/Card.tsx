@@ -47,13 +47,13 @@ export const Card = (props: CardProps): ReactElement => {
                 </Text>
                 <Text
                   style={[
-                    styles.local,
+                    styles.description,
                     {
                       color: isPressed ? colors.white : props.colorLocal
                     }
                   ]}
                 >
-                  {props.local}
+                  {props.description}
                 </Text>
               </View>
               {
