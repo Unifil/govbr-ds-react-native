@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 0,
     marginRight: 0
-
   },
   input: {
     flex: 1,
@@ -26,9 +25,6 @@ export const styles = StyleSheet.create({
     color: colors.dark,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.medium
-  },
-  icon: {
-    paddingLeft: 8
   },
   label: {
     color: colors.gray600,

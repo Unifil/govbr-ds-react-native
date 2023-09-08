@@ -50,23 +50,19 @@ try {
 
 const getStories = () => {
   return {
-    "./.storybook/stories/CardNavigation/CardNavigation.stories.tsx": require("./stories/CardNavigation/CardNavigation.stories.tsx"),
     "./.storybook/stories/Text/Text.stories.tsx": require("./stories/Text/Text.stories.tsx"),
     "./.storybook/stories/InputSearch/InputSearch.stories.tsx": require("./stories/InputSearch/InputSearch.stories.tsx"),
     "./.storybook/stories/Title/Title.stories.tsx": require("./stories/Title/Title.stories.tsx"),
     "./.storybook/stories/Wrapper/Wrapper.stories.tsx": require("./stories/Wrapper/Wrapper.stories.tsx"),
-    "./.storybook/stories/CardSkills/CardSkills.stories.tsx": require("./stories/CardSkills/CardSkills.stories.tsx"),
-    "./.storybook/stories/CardActivities/CardActivities.stories.tsx": require("./stories/CardActivities/CardActivities.stories.tsx"),
-    "./.storybook/stories/CardListActivities/CardListActivities.stories.tsx": require("./stories/CardListActivities/CardListActivities.stories.tsx"),
     "./.storybook/stories/Button/Button.stories.tsx": require("./stories/Button/Button.stories.tsx"),
     "./.storybook/stories/ButtonCreateList/ButtonCreateList.stories.tsx": require("./stories/ButtonCreateList/ButtonCreateList.stories.tsx"),
     "./.storybook/stories/ButtonIcon/ButtonIcon.stories.tsx": require("./stories/ButtonIcon/ButtonIcon.stories.tsx"),
-    "./.storybook/stories/FilterButton/FilterButton.stories.tsx": require("./stories/FilterButton/FilterButton.stories.tsx"),
     "./.storybook/stories/Card/Card.stories.tsx": require("./stories/Card/Card.stories.tsx"),
     "./.storybook/stories/Checkbox/Checkbox.stories.tsx": require("./stories/Checkbox/Checkbox.stories.tsx"),
     "./.storybook/stories/Radio/Radio.stories.tsx": require("./stories/Radio/Radio.stories.tsx"),
     "./.storybook/stories/Toast/Toast.stories.tsx": require("./stories/Toast/Toast.stories.tsx"),
     "./.storybook/stories/SelectDropdown/SelectDropdown.stories.tsx": require("./stories/SelectDropdown/SelectDropdown.stories.tsx"),
+    "./.storybook/stories/CardUser/CardUser.stories.tsx": require("./stories/CardUser/CardUser.stories.tsx"),
   };
 };
 

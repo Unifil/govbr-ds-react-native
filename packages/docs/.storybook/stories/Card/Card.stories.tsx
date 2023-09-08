@@ -1,18 +1,19 @@
 import React from "react";
 import { View } from "react-native";
-import { CardListActivities } from "@unifil/react-native";
+import { Card } from "@unifil/react-native";
 import { radii, fontSizes, colors } from "@unifil/tokens";
 
-const CardListActivitiesMeta = {
-  title: "CardListActivities",
-  component: CardListActivities,
+const CardMeta = {
+  title: "Card",
+  component: Card,
   argTypes: {
     onPress: { action: "pressed the button" },
   },
   args: {
     title: "Title card",
-    subtitle: "Description card",
-    textGroup: "Group",
+    text: "Description card",
+    local: "Description card",
+    icon: <></>,
   },
   decorators: [
     (Story: any) => (
@@ -23,16 +24,17 @@ const CardListActivitiesMeta = {
   ],
 };
 
-export default CardListActivitiesMeta;
+export default CardMeta;
 
 export const Primary = {
   args: {
-    title: "Soma e subtração de integrantes",
-    subtitle: " - (EF01MA06)",
-    subtitleBold: "Atividade 1",
-    textGroup: "Recomendado para Grupo 1",
+    title: "Title card",
+    text: "Name Local",
+    description: "Description card",
+    tag: "13082175",
     colorTitle: colors.darkBlue,
-    colorText: colors.gray300,
+    colorLocal: colors.darkBlue,
+    colorText: colors.blue,
     sizeTitle: fontSizes.md,
     sizeText: fontSizes.xs,
     borderRadius: radii.px,
@@ -40,9 +42,6 @@ export const Primary = {
     width: "100%",
     marginTop: 6,
     marginBottom: 6,
-    colorGroup: colors.gray100,
-    colorTextGroup: colors.gray800,
-    isChecked: false,
-    button: "Button"
+    colorIcon: colors.darkBlue,
   },
 };

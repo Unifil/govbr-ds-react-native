@@ -26,7 +26,7 @@ export const CardUser = (props: CardProps): ReactElement => {
     >
       <View
         style={[
-          styles.containere,
+          styles.containerCard,
           {
             height: props.height
           }
