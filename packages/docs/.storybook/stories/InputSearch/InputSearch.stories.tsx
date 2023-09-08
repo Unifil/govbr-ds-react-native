@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { InputSearch } from "@unifil/react-native";
-import { fontWeights, fontSizes, colors } from "@unifil/tokens";
+import { colors } from "@unifil/tokens";
 
 const InputSearchMeta = {
   title: "InputSearch",
@@ -12,6 +12,7 @@ const InputSearchMeta = {
   args: {
     onChangeText: {},
     value: {},
+    label: 'Label input',
     onSubmitEditing: {},
     icon: <></>,
   },
@@ -29,7 +30,8 @@ export default InputSearchMeta;
 export const Default = {
   args: {
     placeholder: "Busque atividades na sua lista desejada...",
-    placeholderColor: colors.gray200,
+    placeholderColor: colors.gray400,
+    label: 'Label input',
     marginTop: 5,
     marginBottom: 5,
     marginLeft: 0,

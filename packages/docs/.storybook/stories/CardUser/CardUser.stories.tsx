@@ -1,17 +1,18 @@
 import React from "react";
 import { View } from "react-native";
-import { CardNavigation } from "@unifil/react-native";
+import { CardUser } from "@unifil/react-native";
 import { radii, fontSizes, colors } from "@unifil/tokens";
 
-const CardNavigationMeta = {
-  title: "CardNavigation",
-  component: CardNavigation,
+const CardUserMeta = {
+  title: "CardUser",
+  component: CardUser,
   argTypes: {
     onPress: { action: "pressed the button" },
   },
   args: {
-    title: "Title card",
+    name: "Title card",
     text: "Description card",
+    local: "Description card",
     icon: <></>,
   },
   decorators: [
@@ -23,13 +24,16 @@ const CardNavigationMeta = {
   ],
 };
 
-export default CardNavigationMeta;
+export default CardUserMeta;
 
 export const Primary = {
   args: {
-    title: "Title card",
-    text: "Description card",
+    name: "Title card",
+    text: "Name Local",
+    description: "Description card",
+    tag: "13082175",
     colorTitle: colors.darkBlue,
+    colorLocal: colors.darkBlue,
     colorText: colors.blue,
     sizeTitle: fontSizes.md,
     sizeText: fontSizes.xs,

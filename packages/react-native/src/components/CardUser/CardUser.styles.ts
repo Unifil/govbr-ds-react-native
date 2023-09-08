@@ -2,7 +2,6 @@ import { fontWeights, fontSizes, colors, radii } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-
   containerContent: {
     flexDirection: 'row',
     alignContent: 'center',
@@ -62,8 +61,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 10
   },
-
-  containere: {
+  containerCard: {
     width: '100%',
     marginTop: 6,
     marginBottom: 6,

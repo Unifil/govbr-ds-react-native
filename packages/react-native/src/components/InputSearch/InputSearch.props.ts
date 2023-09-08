@@ -1,7 +1,8 @@
-export interface TextProps {
+export interface InputSearchProps {
   placeholder?: string
   placeholderColor?: string
   onChangeText?: any
+  label?: string
   value?: any
   onSubmitEditing?: any
   icon?: any
