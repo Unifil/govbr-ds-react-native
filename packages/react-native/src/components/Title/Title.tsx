@@ -60,7 +60,8 @@ const TitleCustom = (props: TitleProps): ReactElement => {
             fontSize: props.size,
             lineHeight: props?.lineHeight,
             fontWeight: props?.weight,
-            textAlign: props?.align
+            textAlign: props?.align,
+            fontFamily: props?.fontFamily || 'Rawline-Black'
           }
         ]}
       >

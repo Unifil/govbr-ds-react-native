@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 
 import { colors } from '@unifil/tokens'
 import { Text, TouchableOpacity, View } from 'react-native'
@@ -8,38 +8,38 @@ import { RadioProps } from './Radio.props'
 import { styles } from './Radio.styles'
 
 export const Radio = (props: RadioProps): ReactElement => {
-  const initialRadioState = props?.options?.map(() => false)
-  const [selected, setSelected] = useState(initialRadioState)
+  const { options, flexDirection, onChange, value } = props
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-function-return-type
-  const handleRadioChange = (index: any) => {
-    setSelected((prevRadioState: any) => {
-      const newSelected = prevRadioState.map((radio: any, i: any) =>
-        i === index
-          ? !radio
-          : false
-      )
-      return newSelected
-    })
+  // React to changes in the value prop and manage it with a state
+  const [localValue, setLocalValue] = useState(props.value || [])
+
+  const handleRadioChange = (index: number): void => {
+    const newSelected = localValue.map((_: any, i: any) => i === index)
+    setLocalValue(newSelected) // Update the local state
+    onChange && onChange(newSelected) // Notify the form
   }
+
+  useEffect(() => {
+    setLocalValue(props.value)
+  }, [props.value])
 
   return (
     <View
       style={[
         styles.container,
         {
-          flexDirection: props?.flexDirection === 'row' ? 'row' : 'column'
+          flexDirection: flexDirection === 'row' ? 'row' : 'column'
         }
       ]}
     >
-      {props?.options?.map((item: any, index: any) =>
+      {options?.map((item: any, index: any) =>
         <TouchableOpacity
           onPress={() => handleRadioChange(index)}
           key={item}
           style={[
             styles.containerRadio,
             {
-              marginRight: props?.flexDirection === ('row' || 'column') ? 24 : 0
+              marginRight: (flexDirection === 'row' || flexDirection === 'column') ? 24 : 0
             }
           ]}
         >
@@ -47,15 +47,15 @@ export const Radio = (props: RadioProps): ReactElement => {
             style={[
               styles.radio,
               {
-                backgroundColor: selected[index] ? colors.white : colors.white,
-                borderWidth: selected[index] ? 2 : 2
+                backgroundColor: value[index] ? colors.white : colors.white,
+                borderWidth: value[index] ? 2 : 2
               }
             ]}
-            >
-              {selected[index] && <View style={styles.radioSelected} />}
+          >
+            {value[index] && <View style={styles.radioSelected} />}
           </View>
-            <Text style={styles.textRadio}>
-              {item}
+          <Text style={styles.textRadio}>
+            {item}
           </Text>
         </TouchableOpacity>
       )}

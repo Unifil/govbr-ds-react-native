@@ -33,6 +33,7 @@ CardAccordionProps
     duration: 350,
     type: 'timing'
   },
+  onChange,
   ...rest
 }: any) => {
   const transition = React.useRef(new Animated.Value(0))
@@ -53,6 +54,7 @@ CardAccordionProps
             ? !checkbox
             : false
       )
+      onChange(newCheckboxStates)
       return newCheckboxStates
     })
 

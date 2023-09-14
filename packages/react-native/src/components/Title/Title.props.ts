@@ -6,4 +6,5 @@ export interface TitleProps {
   weight?: any
   align?: any
   type?: string
+  fontFamily?: string
 }

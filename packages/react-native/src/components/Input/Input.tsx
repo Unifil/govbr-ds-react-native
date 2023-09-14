@@ -11,24 +11,39 @@ export const Input = (props: TextProps): ReactElement => {
   const onChangeHandler = (text: string): void => {
     let newText = text.replace(/[^0-9]/g, '')
 
-    if (newText.length > 2) {
-      const day = newText.substring(0, 2)
-      if (parseInt(day) > 31) {
-        newText = '31' + newText.substring(2)
+    if (props.cpf) {
+      if (newText.length > 3) {
+        newText = newText.substring(0, 3) + '.' + newText.substring(3)
       }
-      newText = newText.substring(0, 2) + '/' + newText.substring(2)
-    }
-
-    if (newText.length > 5) {
-      const month = newText.substring(3, 5)
-      if (parseInt(month) > 12) {
-        newText = newText.substring(0, 3) + '12' + newText.substring(5)
+      if (newText.length > 7) {
+        newText = newText.substring(0, 7) + '.' + newText.substring(7)
       }
-      newText = newText.substring(0, 5) + '/' + newText.substring(5)
-    }
-
-    if (newText.length > 10) {
-      newText = newText.substring(0, 10)
+      if (newText.length > 11) {
+        newText = newText.substring(0, 11) + '-' + newText.substring(11)
+      }
+      if (newText.length > 14) {
+        newText = newText.substring(0, 14)
+      }
+    } else if (props.date) {
+      if (newText.length > 2) {
+        const day = newText.substring(0, 2)
+        if (parseInt(day) > 31) {
+          newText = '31' + newText.substring(2)
+        }
+        newText = newText.substring(0, 2) + '/' + newText.substring(2)
+      }
+      if (newText.length > 5) {
+        const month = newText.substring(3, 5)
+        if (parseInt(month) > 12) {
+          newText = newText.substring(0, 3) + '12' + newText.substring(5)
+        }
+        newText = newText.substring(0, 5) + '/' + newText.substring(5)
+      }
+      if (newText.length > 10) {
+        newText = newText.substring(0, 10)
+      }
+    } else {
+      newText = text
     }
 
     setFormattedValue(newText)
@@ -55,17 +70,21 @@ export const Input = (props: TextProps): ReactElement => {
             {
               fontFamily: props.value
                 ? 'Rawline-Medium'
-                : 'Rawline-Medium-Italic'
+                : 'Rawline-Medium-Italic',
+              height: props.height || 36
             }
           ]}
           placeholder={props.placeholder}
           placeholderTextColor={props.placeholderColor}
-          onChangeText={props.date ? onChangeHandler : props.onChangeText}
+          onChangeText={onChangeHandler}
           value={props.date ? formattedValue : props.value}
           onSubmitEditing={props.onSubmitEditing}
         />
       </View>
+      <View style={styles.containerText}>
+
       {props.error && <Text style={styles.errorText}>{props.error}</Text>}
+      </View>
     </>
   )
 }
