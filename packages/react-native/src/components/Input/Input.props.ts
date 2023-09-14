@@ -12,4 +12,6 @@ export interface TextProps {
   label?: string
   date?: boolean
   error?: string
+  cpf?: boolean
+  height?: number
 }

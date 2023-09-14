@@ -22,6 +22,7 @@ export const Toast = (props: ToastProps): ReactElement => {
         duration: 300,
         useNativeDriver: true
       }).start()
+      props.closeToast && props.closeToast(false)
     }, props.duration ?? 3000)
 
     return () => clearTimeout(timer)

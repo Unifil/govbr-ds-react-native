@@ -5,4 +5,5 @@ export interface ToastProps {
   duration?: number
   colorText?: string
   backgroundColor?: string
+  closeToast?: (status: boolean) => void
 }

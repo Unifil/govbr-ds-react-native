@@ -13,4 +13,5 @@ export interface ButtonProps {
   fontSize?: number
   marginTop?: number
   marginBottom?: number
+  isLoading?: boolean
 }

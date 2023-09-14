@@ -36,8 +36,14 @@ export const styles = StyleSheet.create({
   },
   errorText: {
     color: colors.orange,
-    fontSize: 14,
+    fontSize: 12,
     marginTop: 5,
-    fontFamily: 'Rawline-Regular'
+    fontFamily: 'Rawline-Regular',
+    textAlign: 'left'
+  },
+  containerText: {
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: '100%'
   }
 })
