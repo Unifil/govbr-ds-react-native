@@ -1,16 +1,18 @@
 import { colors, fontSizes, fontWeights } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
+import { normalize } from '../../utils/normalize'
+
 export const styles = StyleSheet.create({
   select: {
-    minHeight: 40,
+    minHeight: normalize(40),
     width: '100%',
     backgroundColor: colors.weakGray,
-    borderRadius: 4,
+    borderRadius: normalize(4),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 12
+    padding: normalize(12)
   },
   placeholder: {
     fontSize: fontSizes.sm,
@@ -20,8 +22,8 @@ export const styles = StyleSheet.create({
   },
   optionDropdown: {
     width: '100%',
-    height: 50,
-    paddingHorizontal: 16,
+    height: normalize(50),
+    paddingHorizontal: normalize(16),
     justifyContent: 'center',
     borderBottomWidth: 1,
     borderColor: colors.grayFourth
@@ -39,12 +41,12 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     position: 'absolute',
     zIndex: 9999999,
-    borderRadius: 4,
+    borderRadius: normalize(4),
     borderWidth: 1,
     borderColor: colors.grayFourth,
     width: '100%',
-    minHeight: 150,
-    maxHeight: 150,
+    minHeight: normalize(150),
+    maxHeight: normalize(150),
     top: 0,
     right: 0,
     left: 0,

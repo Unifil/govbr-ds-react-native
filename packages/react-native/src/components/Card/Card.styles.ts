@@ -22,7 +22,6 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.regular,
     maxWidth: normalize(250),
-    marginBottom: normalize(10),
     fontFamily: 'Rawline-Regular'
   },
   text: {
@@ -45,7 +44,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   containerTag: {
-    backgroundColor: colors.weakBlueThird,
+    backgroundColor: colors.weakBlueSecondary,
     height: normalize(24),
     paddingHorizontal: normalize(6),
     borderRadius: normalize(4),
@@ -66,7 +65,6 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 10
   },
-
   containerCard: {
     width: '100%',
     marginTop: normalize(6),
@@ -74,9 +72,8 @@ export const styles = StyleSheet.create({
     minHeight: normalize(105)
   },
   container: {
-    paddingLeft: normalize(30),
-    paddingRight: normalize(17),
-    paddingVertical: normalize(20),
+    paddingHorizontal: normalize(16),
+    paddingVertical: normalize(16),
     minHeight: 105,
     marginBottom: 16,
     padding: 16,

@@ -1,6 +1,8 @@
 import { colors } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
+import { normalize } from '../../utils/normalize'
+
 export const styles = StyleSheet.create({
   container: {
     width: '100%',
@@ -9,7 +11,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     zIndex: 100
-
   },
   content: {
     width: '100%',
@@ -21,8 +22,7 @@ export const styles = StyleSheet.create({
     elevation: 10,
     borderTopColor: '#e6e6e6',
     borderTopWidth: 1,
-    paddingBottom: 30
-
+    paddingBottom: normalize(15)
   },
   buttonTab: {
     justifyContent: 'center',
@@ -34,6 +34,5 @@ export const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: 'rgba(0,0,0,0.5)',
     zIndex: 10
-
   }
 })

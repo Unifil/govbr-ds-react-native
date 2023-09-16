@@ -24,6 +24,7 @@ export const useDynamicTabsScreenController = (
   const handleTabPress = (index: number): void => {
     flatListRef?.current?.scrollToIndex({ index, animated: true })
     setIndex(index)
+    setActiveTab(index)
   }
 
   const children = React.Children.toArray(props.children)

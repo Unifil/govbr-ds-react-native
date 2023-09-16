@@ -126,8 +126,9 @@ CardAccordionProps
                   selecteds?.length >= 2
                     ? `${selecteds?.[0]?.slice(0, 20)}
                         ${selecteds?.[0]?.length > 20 ? '...' : ''}`
-                    : selecteds?.[0]
+                    : selecteds?.[0]?.slice(0, 32)
                   }
+                  {selecteds?.[0]?.length > 32 ? '...' : ''}
                 </Text>
               </View>
               {selecteds?.length >= 2 &&
@@ -205,7 +206,15 @@ CardAccordionProps
                           }
                         ]}
                       >
-                        {checkboxStates[index] && iconCheckbox}
+                        {checkboxStates[index]}
+                        <View
+                          style={[
+                            styles.itemChecked,
+                            {
+                              backgroundColor: checkboxStates[index] ? colors.blueThird : colors.white
+                            }
+                          ]}
+                        />
                       </View>
                     </TouchableOpacity>
                   )}
