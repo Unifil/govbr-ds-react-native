@@ -23,8 +23,6 @@ export interface CardAccordionProps extends ListItemProps {
 
   multipleSelection?: boolean
 
-  iconCheckbox?: any
-
   top?: number
 
   left?: number

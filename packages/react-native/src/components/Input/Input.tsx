@@ -50,6 +50,20 @@ export const Input = (props: TextProps): ReactElement => {
     props.onChangeText && props.onChangeText(newText)
   }
 
+  const inputProps = {
+    ...props,
+    onChangeText: onChangeHandler,
+    style: [
+      styles.input,
+      {
+        fontFamily: props.value
+          ? 'Rawline-Medium'
+          : 'Rawline-Medium-Italic',
+        height: props.height || 36
+      }
+    ]
+  }
+
   return (
     <>
       {props.label && <Text style={[styles.label]}>{props.label}</Text>}
@@ -64,22 +78,7 @@ export const Input = (props: TextProps): ReactElement => {
           }
         ]}
       >
-        <TextInput
-          style={[
-            styles.input,
-            {
-              fontFamily: props.value
-                ? 'Rawline-Medium'
-                : 'Rawline-Medium-Italic',
-              height: props.height || 36
-            }
-          ]}
-          placeholder={props.placeholder}
-          placeholderTextColor={props.placeholderColor}
-          onChangeText={onChangeHandler}
-          value={props.date ? formattedValue : props.value}
-          onSubmitEditing={props.onSubmitEditing}
-        />
+        <TextInput {...inputProps} />
       </View>
       <View style={styles.containerText}>
 

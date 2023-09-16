@@ -1,26 +1,34 @@
 import { fontWeights, fontSizes, colors } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
+import { normalize } from '../../utils/normalize'
+
 export const styles = StyleSheet.create({
   checkbox: {
-    width: 24,
-    height: 24,
+    width: normalize(24),
+    height: normalize(24),
     backgroundColor: colors.white,
-    borderRadius: 4,
-    marginRight: 8,
+    borderRadius: normalize(50),
+    marginRight: normalize(8),
     borderColor: colors.grayFourth,
     borderWidth: 0,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  itemChecked: {
+    width: normalize(14),
+    height: normalize(14),
+    borderRadius: normalize(50),
+    backgroundColor: colors.blueThird
   },
   containerCheckbox: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: 14,
+    paddingVertical: normalize(14),
     backgroundColor: colors.white,
-    paddingHorizontal: 12,
+    paddingHorizontal: normalize(12),
     borderBottomWidth: 1,
     borderColor: colors.grayFourth
   },
@@ -31,17 +39,18 @@ export const styles = StyleSheet.create({
   },
   containerList: {
     flexDirection: 'row',
-    width: 290
+    width: normalize(290)
   },
   containerTag: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 4,
-    paddingHorizontal: 12,
-    borderRadius: 4,
-    marginRight: 8,
+    paddingVertical: normalize(4),
+    paddingHorizontal: normalize(12),
+    borderRadius: normalize(4),
+    marginRight: normalize(8),
+    height: normalize(25),
     maxWidth: '100%',
-    backgroundColor: colors.weakBlueThird,
+    backgroundColor: colors.weakBlueSecondary,
     shadowColor: '#1351B4',
     shadowOffset: {
       width: 0.1,

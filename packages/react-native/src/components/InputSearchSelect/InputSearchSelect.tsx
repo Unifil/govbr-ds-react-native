@@ -7,16 +7,19 @@ import { InputSelectProps } from './InputSearchSelect.props'
 import { styles } from './InputSearchSelect.styles'
 
 export const InputSearchSelect = (props: InputSelectProps): ReactElement => {
+  const inputProps = {
+    ...props,
+    style: [
+      styles.inputSearch,
+      {
+        fontFamily: props.value.length >= 1 ? 'Rawline-Medium' : 'Rawline-Medium-Italic'
+      }
+    ]
+  }
+
   return (
     <>
-      <TextInput
-          style={[styles.inputSearch, {
-            fontFamily: props.value.length >= 1 ? 'Rawline-Medium' : 'Rawline-Medium-Italic'
-          }]}
-          value={props.value}
-          onChangeText={props.onChangeText}
-          placeholder={props.placeholder}
-        />
+      <TextInput {...inputProps} />
         {props?.isExpanded &&
             <FlatList
             data={props?.dataDropdown}

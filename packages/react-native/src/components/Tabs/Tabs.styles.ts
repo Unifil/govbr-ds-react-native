@@ -7,8 +7,6 @@ export const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     paddingHorizontal: 16,
-    // borderWidth: 1,
-    // borderColor: 'red',
     height: 74
   },
   tab: {
