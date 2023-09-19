@@ -9,19 +9,21 @@ import { styles } from './Radio.styles'
 
 export const Radio = (props: RadioProps): ReactElement => {
   const { options, flexDirection, onChange, value } = props
+ 
+ 
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  // React to changes in the value prop and manage it with a state
-  const [localValue, setLocalValue] = useState(props.value || [])
 
   const handleRadioChange = (index: number): void => {
-    const newSelected = localValue.map((_: any, i: any) => i === index)
-    setLocalValue(newSelected) // Update the local state
-    onChange && onChange(newSelected) // Notify the form
+    setSelectedIndex(index);
+    onChange && onChange(index);
   }
-
+  
+  
   useEffect(() => {
-    setLocalValue(props.value)
-  }, [props.value])
+    setSelectedIndex(props.value);
+  }, [props.value]);
+  
 
   return (
     <View
@@ -47,12 +49,15 @@ export const Radio = (props: RadioProps): ReactElement => {
             style={[
               styles.radio,
               {
-                backgroundColor: value[index] ? colors.white : colors.white,
-                borderWidth: value[index] ? 2 : 2
+                backgroundColor: selectedIndex === index ? colors.white : colors.white,
+                borderWidth: selectedIndex === index ? 2 : 2
+                
+                
               }
             ]}
           >
-            {value[index] && <View style={styles.radioSelected} />}
+         {selectedIndex === index && <View style={styles.radioSelected} />}
+
           </View>
           <Text style={styles.textRadio}>
             {item}
