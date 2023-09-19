@@ -5,8 +5,7 @@
     "packages/eslint-config",
     "packages/tokens",
     "packages/ts-config",
-    "packages/react-native",
-    "packages/mobile-app" 
+    "packages/react-native"
   ],
   "scripts": {
     "prepare": "husky install",

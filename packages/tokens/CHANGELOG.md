@@ -1,5 +1,11 @@
 # @unifil/tokens
 
+## 1.1.0
+
+### Minor Changes
+
+- version
+
 ## 1.0.10
 
 ### Patch Changes

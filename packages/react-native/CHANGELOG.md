@@ -1,5 +1,16 @@
 # @unifil/react-native
 
+## 1.1.0
+
+### Minor Changes
+
+- version
+
+### Patch Changes
+
+- Updated dependencies
+  - @unifil/tokens@1.1.0
+
 ## 1.0.10
 
 ### Patch Changes
