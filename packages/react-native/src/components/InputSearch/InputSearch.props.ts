@@ -11,4 +11,6 @@ export interface InputSearchProps {
   marginLeft?: number
   marginRight?: number
   onSearch?: any
+  onFocus?: any
+  onBlur?: any
 }

@@ -5,6 +5,10 @@ import { PressableProps, StyleProp, ViewStyle } from 'react-native'
 
 export interface CardAccordionProps extends ListItemProps {
 
+  onChange?: (expanded: boolean) => void
+
+  value?: any
+
   isExpanded?: boolean
 
   icon?: any

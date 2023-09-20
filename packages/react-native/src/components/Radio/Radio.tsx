@@ -36,8 +36,8 @@ export const Radio = (props: RadioProps): ReactElement => {
     >
       {options?.map((item: any, index: any) =>
         <TouchableOpacity
-          onPress={() => handleRadioChange(index)}
           key={item}
+          onPress={() => handleRadioChange(index)}
           style={[
             styles.containerRadio,
             {
