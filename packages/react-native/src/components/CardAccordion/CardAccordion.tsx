@@ -54,7 +54,9 @@ CardAccordionProps
             ? !checkbox
             : false
       )
-      onChange(newCheckboxStates)
+      const selectedIndices = newCheckboxStates.map((state: boolean, idx: number) => state ? idx : -1).filter((idx:any) => idx !== -1);
+
+      onChange(selectedIndices);
       return newCheckboxStates
     })
 

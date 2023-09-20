@@ -14,4 +14,6 @@ export interface TextProps {
   error?: string
   cpf?: boolean
   height?: number
+  onFocus?: any
+  onBlur?: any
 }
