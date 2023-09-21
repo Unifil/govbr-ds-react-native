@@ -51,8 +51,7 @@ export const Radio = (props: RadioProps): ReactElement => {
               {
                 backgroundColor: selectedIndex === index ? colors.white : colors.white,
                 borderWidth: selectedIndex === index ? 2 : 2
-                
-                
+
               }
             ]}
           >

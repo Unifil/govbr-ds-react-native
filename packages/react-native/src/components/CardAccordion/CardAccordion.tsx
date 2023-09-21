@@ -34,13 +34,18 @@ CardAccordionProps
     type: 'timing'
   },
   onChange,
+  value,
   ...rest
 }: any) => {
   const transition = React.useRef(new Animated.Value(0))
 
-  const initialCheckboxState = textCheckbox?.map(() => false)
+  const initialCheckboxState = textCheckbox?.map((_:any, index:any) => value.includes(index))
+
   const [checkboxStates, setCheckboxStates] = useState(initialCheckboxState)
-  const [selecteds, setSelecteds] = useState<any>([])
+
+  const initialSelecteds = textCheckbox?.filter((_:any, index:any ) => value.includes(index)) || []
+
+  const [selecteds, setSelecteds] = useState<any>(initialSelecteds)
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-function-return-type
   const handleCheckboxChange = (index: any) => {
@@ -56,7 +61,7 @@ CardAccordionProps
       )
       const selectedIndices = newCheckboxStates.map((state: boolean, idx: number) => state ? idx : -1).filter((idx:any) => idx !== -1);
 
-      onChange(selectedIndices);
+      onChange(selectedIndices)
       return newCheckboxStates
     })
 
