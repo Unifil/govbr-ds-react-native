@@ -52,6 +52,7 @@ export const Card = (props: CardProps): ReactElement => {
                       color: isPressed ? colors.white : props.colorLocal
                     }
                   ]}
+                  numberOfLines={1}
                 >
                   {props.description}
                 </Text>
