@@ -24,7 +24,9 @@ export const styles = StyleSheet.create({
     paddingLeft: 6,
     color: colors.dark,
     fontSize: fontSizes.xs,
-    fontWeight: fontWeights.medium
+    fontWeight: fontWeights.medium,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   label: {
     color: colors.gray600,
