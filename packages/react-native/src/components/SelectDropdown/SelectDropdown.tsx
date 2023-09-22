@@ -1,7 +1,7 @@
 /* eslint-disable no-sequences */
 import React, { ReactElement, useEffect, useMemo, useRef, useState } from 'react'
 
-import { Text, Animated, TouchableOpacity } from 'react-native'
+import { Text, Animated, TouchableOpacity, FlatList } from 'react-native'
 
 import renderNode from './RenderNode/RenderNode'
 import { SelectProps } from './SelectDropdown.props'
@@ -61,7 +61,7 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
         )}
       </TouchableOpacity>
       {isExpanded &&
-        <Animated.ScrollView
+        <Animated.View
           style={[
             styles.dropdown,
             {
@@ -73,22 +73,24 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
             }
           ]}
         >
-          {props?.options?.map((item: any) =>
-            <TouchableOpacity
-              key={item.id}
-              style={styles.optionDropdown}
-              onPress={() => {
-                setSelected(item.code)
-                props.onChange(item.id)
-                setIsExpanded(false)
-              }}
-            >
-              <Text style={styles.textDropdown}>
-                {item.code}
-              </Text>
-            </TouchableOpacity>
-          )}
-        </Animated.ScrollView>
+          <FlatList
+            nestedScrollEnabled={true}
+            data={props?.options}
+            keyExtractor={(item: any) => item.id.toString()}
+            renderItem={({ item }: any) => (
+              <TouchableOpacity
+                style={styles.optionDropdown}
+                onPress={() => {
+                  setSelected(item.code)
+                  props.onChange(item.id)
+                  setIsExpanded(false)
+                }}
+              >
+                <Text style={styles.textDropdown}>{item.code}</Text>
+              </TouchableOpacity>
+            )}
+          />
+        </Animated.View>
       }
     </>
   )
