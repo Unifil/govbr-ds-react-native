@@ -16,7 +16,7 @@ const Screen = Dimensions.get('window')
 const ScreenWidth = Screen.width
 
 export const CardSwipeable: RneFunctionComponent<
-ListItemSwipeableProps
+  ListItemSwipeableProps
 > = ({
   children,
   leftStyle,
@@ -31,119 +31,118 @@ ListItemSwipeableProps
   reset = false,
   ...rest
 }: any) => {
-  const translateX = React.useRef(new Animated.Value(0))
-  const panX = React.useRef(0)
-  const [swipe, setSwipe] = React.useState('')
+    const translateX = React.useRef(new Animated.Value(0))
+    const panX = React.useRef(0)
+    const [swipe, setSwipe] = React.useState('')
 
-  const slideAnimation = React.useCallback(
-    (toValue: number) => {
-      panX.current = toValue;
-      (Animated as any)[animation.type || 'spring'](translateX.current, {
-        toValue,
-        useNativeDriver: true,
-        duration: animation.duration || 200
-      }).start()
-    },
-    [animation.duration, animation.type]
-  )
+    const slideAnimation = React.useCallback(
+      (toValue: number) => {
+        panX.current = toValue;
+        (Animated as any)[animation.type || 'spring'](translateX.current, {
+          toValue,
+          useNativeDriver: true,
+          duration: animation.duration || 200
+        }).start()
+      },
+      [animation.duration, animation.type]
+    )
 
-  React.useEffect(() => {
-    if (reset) {
-      slideAnimation(0)
-    }
-  }, [reset, slideAnimation])
-
-  const resetCallBack = React.useCallback(() => {
-    slideAnimation(0)
-  }, [slideAnimation])
-
-  const onMove = React.useCallback(
-    (_: unknown, { dx }: PanResponderGestureState) => {
-      translateX.current.setValue(panX.current + dx)
-    },
-    []
-  )
-
-  const onRelease = React.useCallback(
-    (_: unknown, { dx }: PanResponderGestureState) => {
-      if (Math.abs(panX.current + dx) >= minSlideWidth) {
-        slideAnimation(-rightWidth)
-      } else {
+    React.useEffect(() => {
+      if (reset) {
         slideAnimation(0)
       }
-    },
-    [rightWidth, slideAnimation, minSlideWidth]
-  )
+    }, [reset, slideAnimation])
 
-  const shouldSlide = React.useCallback(
-    (_: unknown, { dx, dy, vx, vy }: PanResponderGestureState): boolean => {
-      if (dx < 0 && !rightContent && !panX.current) {
-        return false
-      }
-      return (
-        Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5
-      )
-    },
-    [rightContent]
-  )
+    const resetCallBack = React.useCallback(() => {
+      slideAnimation(0)
+    }, [slideAnimation])
 
-  const _panResponder = React.useMemo(
-    () =>
-      PanResponder.create({
-        onMoveShouldSetPanResponder: shouldSlide,
-        onPanResponderGrant: (_event, { vx }) => {
-          onSwipeBegin?.(vx > 0 ? 'left' : 'right')
-          setSwipe(vx > 0 ? 'left' : 'right')
-        },
-        onPanResponderMove: onMove,
-        onPanResponderRelease: onRelease,
-        onPanResponderReject: onRelease,
-        onPanResponderTerminate: onRelease,
-        onPanResponderEnd: () => {
-          console.log('onPanResponderEnd')
-          onSwipeEnd?.()
+    const onMove = React.useCallback(
+      (_: unknown, { dx }: PanResponderGestureState) => {
+        translateX.current.setValue(panX.current + dx)
+      },
+      []
+    )
+
+    const onRelease = React.useCallback(
+      (_: unknown, { dx }: PanResponderGestureState) => {
+        if (Math.abs(panX.current + dx) >= minSlideWidth) {
+          slideAnimation(-rightWidth)
+        } else {
+          slideAnimation(0)
         }
-      }),
-    [onMove, onRelease, onSwipeBegin, onSwipeEnd, shouldSlide]
-  )
+      },
+      [rightWidth, slideAnimation, minSlideWidth]
+    )
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.actions}>
+    const shouldSlide = React.useCallback(
+      (_: unknown, { dx, dy, vx, vy }: PanResponderGestureState): boolean => {
+        if (dx < 0 && !rightContent && !panX.current) {
+          return false
+        }
+        return (
+          Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5
+        )
+      },
+      [rightContent]
+    )
 
-        <View style={styles.empty} />
-        {swipe === 'right' &&
-          <View
-            style={[
+    const _panResponder = React.useMemo(
+      () =>
+        PanResponder.create({
+          onMoveShouldSetPanResponder: shouldSlide,
+          onPanResponderGrant: (_event, { vx }) => {
+            onSwipeBegin?.(vx > 0 ? 'left' : 'right')
+            setSwipe(vx > 0 ? 'left' : 'right')
+          },
+          onPanResponderMove: onMove,
+          onPanResponderRelease: onRelease,
+          onPanResponderReject: onRelease,
+          onPanResponderTerminate: onRelease,
+          onPanResponderEnd: () => {
+            onSwipeEnd?.()
+          }
+        }),
+      [onMove, onRelease, onSwipeBegin, onSwipeEnd, shouldSlide]
+    )
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.actions}>
+
+          <View style={styles.empty} />
+          {swipe === 'right' &&
+            <View
+              style={[
+                {
+                  width: rightWidth,
+                  zIndex: 1,
+                  minWidth: 145
+                },
+                rightStyle
+              ]}
+            >
+              {typeof rightContent === 'function'
+                ? rightContent(resetCallBack)
+                : rightContent}
+            </View>
+          }
+        </View>
+        <Animated.View
+          style={{
+            transform: [
               {
-                width: rightWidth,
-                zIndex: 1,
-                minWidth: 145
-              },
-              rightStyle
-            ]}
-          >
-            {typeof rightContent === 'function'
-              ? rightContent(resetCallBack)
-              : rightContent}
-          </View>
-        }
+                translateX: translateX.current
+              }
+            ]
+          }}
+          {..._panResponder.panHandlers}
+        >
+          <BaseCard {...rest}>{children}</BaseCard>
+        </Animated.View>
       </View>
-      <Animated.View
-        style={{
-          transform: [
-            {
-              translateX: translateX.current
-            }
-          ]
-        }}
-        {..._panResponder.panHandlers}
-      >
-        <BaseCard {...rest}>{children}</BaseCard>
-      </Animated.View>
-    </View>
-  )
-}
+    )
+  }
 
 const styles = StyleSheet.create({
   actions: {

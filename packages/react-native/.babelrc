@@ -4,7 +4,6 @@
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  "plugins": [  "@babel/plugin-proposal-export-namespace-from",
-  "react-native-reanimated/plugin","@babel/plugin-transform-runtime","@babel/plugin-syntax-jsx"],
+  "plugins": [  "@babel/plugin-proposal-export-namespace-from", "@babel/plugin-transform-runtime","@babel/plugin-syntax-jsx"],
   "ignore": ["node_modules"]
 }
