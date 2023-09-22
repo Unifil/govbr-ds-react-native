@@ -23,8 +23,7 @@ export const Radio = (props: RadioProps): ReactElement => {
   useEffect(() => {
     setSelectedIndex(props.value);
   }, [props.value]);
-  
-
+   
   return (
     <View
       style={[

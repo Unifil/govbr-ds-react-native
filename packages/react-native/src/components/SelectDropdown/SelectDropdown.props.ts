@@ -9,4 +9,5 @@ export interface SelectProps {
   positionBottom?: number
   positionLeft?: number
   positionRight?: number
+  onChange: (value: string) => void
 }

@@ -20,34 +20,34 @@ export const InputSearchSelect = (props: InputSelectProps): ReactElement => {
   return (
     <>
       <TextInput {...inputProps} />
-        {props?.isExpanded &&
-            <FlatList
-            data={props?.dataDropdown}
-            keyExtractor={(index) => index.toString()}
-            style={[
-              styles.dropdown,
-              {
-                top: props?.positionTop,
-                right: props?.positionRight,
-                left: props?.positionLeft,
-                bottom: props?.positionBottom
-              }
-            ]}
-            renderItem={({ item }) => (
-                <TouchableOpacity
-                  key={item}
-                  style={styles.optionDropdown}
-                  onPress={() => {
-                    props?.onSelect(item)
-                  }}
-                >
-                  <Text style={styles.textDropdown} >
-                    {item}
-                  </Text>
-                </TouchableOpacity>
-            )}
-            />
-        }
+      {props?.isExpanded &&
+        <FlatList
+          data={props?.dataDropdown}
+          keyExtractor={(item) => item.valueOf.toString()}
+          style={[
+            styles.dropdown,
+            {
+              top: props?.positionTop,
+              right: props?.positionRight,
+              left: props?.positionLeft,
+              bottom: props?.positionBottom
+            }
+          ]}
+          renderItem={({ item }: any) => (
+            <TouchableOpacity
+              key={item.value}
+              style={styles.optionDropdown}
+              onPress={() => {
+                props?.onSelect(item.name, item.value)
+              }}
+            >
+              <Text style={styles.textDropdown} >
+                {item.name}
+              </Text>
+            </TouchableOpacity>
+          )}
+        />
+      }
     </>
   )
 }
