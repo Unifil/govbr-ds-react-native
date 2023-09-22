@@ -45,21 +45,21 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
 
   return (
     <>
-    <TouchableOpacity
-      onPress={() => setIsExpanded(!isExpanded ?? false)}
-      style={styles.select}
-    >
-       <Text style={selected ? styles.textDropdown : styles.placeholder}>
-         {selected || props?.placeholder}
-       </Text>
-       {props?.icon && (
+      <TouchableOpacity
+        onPress={() => setIsExpanded(!isExpanded ?? false)}
+        style={styles.select}
+      >
+        <Text style={selected ? styles.textDropdown : styles.placeholder}>
+          {selected || props?.placeholder}
+        </Text>
+        {props?.icon && (
           <Animated.View
             style={[iconAnimation, { marginLeft: 'auto' }]}
           >
             {renderNode(props?.icon, isExpanded ? props?.expandIcon ?? props?.icon : props?.icon)}
           </Animated.View>
-       )}
-    </TouchableOpacity>
+        )}
+      </TouchableOpacity>
       {isExpanded &&
         <Animated.ScrollView
           style={[
@@ -73,14 +73,18 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
             }
           ]}
         >
-          {props?.options?.map((item: string) =>
+          {props?.options?.map((item: any) =>
             <TouchableOpacity
-              key={item}
+              key={item.id}
               style={styles.optionDropdown}
-              onPress={() => (setSelected(item), setIsExpanded(false))}
+              onPress={() => {
+                setSelected(item.code)
+                props.onChange(item.id)
+                setIsExpanded(false)
+              }}
             >
-              <Text style={styles.textDropdown} >
-                {item}
+              <Text style={styles.textDropdown}>
+                {item.code}
               </Text>
             </TouchableOpacity>
           )}
