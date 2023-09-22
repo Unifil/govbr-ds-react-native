@@ -22,6 +22,7 @@ export const InputSearchSelect = (props: InputSelectProps): ReactElement => {
       <TextInput {...inputProps} />
       {props?.isExpanded &&
         <FlatList
+          nestedScrollEnabled={true}
           data={props?.dataDropdown}
           keyExtractor={(item) => item.valueOf.toString()}
           style={[

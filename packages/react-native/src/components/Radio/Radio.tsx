@@ -8,9 +8,9 @@ import { RadioProps } from './Radio.props'
 import { styles } from './Radio.styles'
 
 export const Radio = (props: RadioProps): ReactElement => {
-  const { options, flexDirection, onChange, value } = props
- 
- 
+  const { options, flexDirection, onChange } = props
+
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
 
@@ -18,12 +18,12 @@ export const Radio = (props: RadioProps): ReactElement => {
     setSelectedIndex(index);
     onChange && onChange(index);
   }
-  
-  
+
+
   useEffect(() => {
     setSelectedIndex(props.value);
   }, [props.value]);
-   
+
   return (
     <View
       style={[
@@ -54,7 +54,7 @@ export const Radio = (props: RadioProps): ReactElement => {
               }
             ]}
           >
-         {selectedIndex === index && <View style={styles.radioSelected} />}
+            {selectedIndex === index && <View style={styles.radioSelected} />}
 
           </View>
           <Text style={styles.textRadio}>
