@@ -1,5 +1,5 @@
 export interface SelectProps {
-  options?: string[]
+  options?: any
   placeholder?: string
   icon?: any
   noRotation?: boolean

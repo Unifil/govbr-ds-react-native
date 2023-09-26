@@ -1,5 +1,13 @@
 # @unifil/react-native
 
+## 1.1.3
+
+### Patch Changes
+
+- teste
+- Updated dependencies
+  - @unifil/tokens@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes

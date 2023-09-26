@@ -26,7 +26,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: normalize(16),
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderColor: colors.grayFourth
+    borderColor: colors.grayFourth,
+    zIndex: 100
   },
   dropdown: {
     opacity: 0,
@@ -45,8 +46,8 @@ export const styles = StyleSheet.create({
     width: '100%',
     minHeight: normalize(150),
     maxHeight: normalize(150),
-    position: 'absolute',
-    marginTop: normalize(53)
+    marginTop: normalize(5),
+    zIndex: 20
   },
   textDropdown: {
     fontSize: fontSizes.sm,
@@ -57,6 +58,6 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     position: 'relative',
-    zIndex: 99
+    zIndex: 10
   }
 })

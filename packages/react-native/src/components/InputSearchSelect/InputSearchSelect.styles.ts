@@ -5,7 +5,7 @@ import { normalize } from '../../utils/normalize'
 
 export const styles = StyleSheet.create({
   inputSearch: {
-    minHeight: 40,
+    height: 40,
     width: '100%',
     backgroundColor: colors.weakGray,
     borderRadius: 4,
@@ -35,8 +35,8 @@ export const styles = StyleSheet.create({
     shadowRadius: 1.0,
     elevation: 2,
     backgroundColor: colors.white,
-    position: 'absolute',
-    marginTop: normalize(52),
+
+    marginTop: normalize(5),
     borderRadius: 4,
     borderWidth: 1,
     borderColor: colors.grayFourth,
@@ -53,6 +53,6 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     position: 'relative',
-    zIndex: 999
+    zIndex: 30
   }
 })

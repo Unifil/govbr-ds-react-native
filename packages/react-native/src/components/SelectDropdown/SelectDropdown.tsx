@@ -44,7 +44,7 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
   )
 
   return (
-    <View style={styles.container}>
+    < >
       <TouchableOpacity
         onPress={() => setIsExpanded(!isExpanded ?? false)}
         style={styles.select}
@@ -61,33 +61,35 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
         )}
       </TouchableOpacity>
       {isExpanded &&
-        <Animated.View
-          style={[
-            styles.dropdown,
-            {
-              opacity: transition.current
-            }
-          ]}
-        >
-          <FlatList
-            nestedScrollEnabled={true}
-            data={props?.options}
-            keyExtractor={(item: any) => item.id.toString()}
-            renderItem={({ item }: any) => (
-              <TouchableOpacity
-                style={styles.optionDropdown}
-                onPress={() => {
-                  setSelected(item.code)
-                  props.onChange(item.id)
-                  setIsExpanded(false)
-                }}
-              >
-                <Text style={styles.textDropdown}>{item.code}</Text>
-              </TouchableOpacity>
-            )}
-          />
-        </Animated.View>
+        <View>
+          <Animated.View
+            style={[
+              styles.dropdown,
+              {
+                opacity: transition.current
+              }
+            ]}
+          >
+            <FlatList
+              nestedScrollEnabled={true}
+              data={props?.options}
+              keyExtractor={(item: any) => item.id.toString()}
+              renderItem={({ item }: any) => (
+                <TouchableOpacity
+                  style={styles.optionDropdown}
+                  onPress={() => {
+                    setSelected(item.code)
+                    props.onChange(item.id)
+                    setIsExpanded(false)
+                  }}
+                >
+                  <Text style={styles.textDropdown}>{item.code}</Text>
+                </TouchableOpacity>
+              )}
+            />
+          </Animated.View>
+        </View>
       }
-    </View>
+    </ >
   )
 }

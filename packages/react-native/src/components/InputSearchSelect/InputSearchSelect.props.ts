@@ -3,11 +3,13 @@ export interface InputSelectProps {
   value?: any
   isExpanded?: boolean
   onSelect?: any
-  dataDropdown?: string[]
+  dataDropdown?: any
   placeholder?: string
   icon?: any
   positionTop?: number
   positionBottom?: number
   positionLeft?: number
   positionRight?: number
+  onFocus?: any
+  onBlur?: any
 }
