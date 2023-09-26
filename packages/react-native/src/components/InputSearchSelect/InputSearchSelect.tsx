@@ -1,7 +1,7 @@
 /* eslint-disable no-sequences */
 import React, { ReactElement } from 'react'
 
-import { Text, TouchableOpacity, TextInput, FlatList } from 'react-native'
+import { Text, TouchableOpacity, TextInput, FlatList, View } from 'react-native'
 
 import { InputSelectProps } from './InputSearchSelect.props'
 import { styles } from './InputSearchSelect.styles'
@@ -18,7 +18,7 @@ export const InputSearchSelect = (props: InputSelectProps): ReactElement => {
   }
 
   return (
-    <>
+    <View style={styles.container}>
       <TextInput {...inputProps} />
       {props?.isExpanded &&
         <FlatList
@@ -49,6 +49,6 @@ export const InputSearchSelect = (props: InputSelectProps): ReactElement => {
           )}
         />
       }
-    </>
+    </View>
   )
 }

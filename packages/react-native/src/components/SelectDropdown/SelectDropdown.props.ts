@@ -5,9 +5,5 @@ export interface SelectProps {
   noRotation?: boolean
   expandIcon?: any
   leftRotate?: boolean
-  positionTop?: number
-  positionBottom?: number
-  positionLeft?: number
-  positionRight?: number
   onChange: (value: string) => void
 }

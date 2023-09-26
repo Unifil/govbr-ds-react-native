@@ -37,25 +37,26 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.1,
     shadowRadius: 1.0,
-    elevation: 3,
+    elevation: 2,
     backgroundColor: colors.white,
-    position: 'absolute',
-    zIndex: 9999999,
     borderRadius: normalize(4),
     borderWidth: 1,
     borderColor: colors.grayFourth,
     width: '100%',
     minHeight: normalize(150),
     maxHeight: normalize(150),
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0
+    position: 'absolute',
+    marginTop: normalize(53)
   },
   textDropdown: {
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.medium,
     color: colors.dark,
     fontFamily: 'Rawline-Medium'
+  },
+  container: {
+    width: '100%',
+    position: 'relative',
+    zIndex: 99
   }
 })

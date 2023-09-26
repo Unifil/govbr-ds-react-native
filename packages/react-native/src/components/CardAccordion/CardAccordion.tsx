@@ -8,6 +8,7 @@ import { CardAccordionProps, RneFunctionComponent } from './CardAccordion.props'
 import { styles } from './CardAccordion.styles'
 import { ListItemContent } from './components/ListContent/ListContent'
 import renderNode from './components/RenderNode/RenderNode'
+import { normalize } from '../../utils/normalize'
 import { BaseCard } from '../BaseCard/BaseCard'
 
 export const CardAccordion: RneFunctionComponent<
@@ -39,11 +40,11 @@ CardAccordionProps
 }: any) => {
   const transition = React.useRef(new Animated.Value(0))
 
-  const initialCheckboxState = textCheckbox?.map((_:any, index:any) => value.includes(index))
+  const initialCheckboxState = textCheckbox?.map((_: any, index: any) => value.includes(index))
 
   const [checkboxStates, setCheckboxStates] = useState(initialCheckboxState)
 
-  const initialSelecteds = textCheckbox?.filter((_:any, index:any ) => value.includes(index)) || []
+  const initialSelecteds = textCheckbox?.filter((_: any, index: any) => value.includes(index)) || []
 
   const [selecteds, setSelecteds] = useState<any>(initialSelecteds)
 
@@ -59,7 +60,7 @@ CardAccordionProps
             ? !checkbox
             : false
       )
-      const selectedIndices = newCheckboxStates.map((state: boolean, idx: number) => state ? idx : -1).filter((idx:any) => idx !== -1);
+      const selectedIndices = newCheckboxStates.map((state: boolean, idx: number) => state ? idx : -1).filter((idx: any) => idx !== -1)
 
       onChange(selectedIndices)
       return newCheckboxStates
@@ -105,7 +106,7 @@ CardAccordionProps
   )
 
   return (
-    <>
+    <View style={styles.container}>
       <BaseCard
         {...rest}
         style={{
@@ -168,16 +169,12 @@ CardAccordionProps
             elevation: 3,
             backgroundColor: colors.white,
             position: 'absolute',
-            zIndex: 9999999,
+            marginTop: normalize(48),
             borderTopWidth: 1,
             borderRightWidth: 1,
             borderLeftWidth: 1,
             borderColor: colors.grayFourth,
-            width: '100%',
-            top: top || 80,
-            right,
-            left,
-            bottom
+            width: '100%'
           }}
         >
           <View>
@@ -234,7 +231,7 @@ CardAccordionProps
           </View>
         </Animated.View>
       )}
-    </>
+    </View>
   )
 }
 
