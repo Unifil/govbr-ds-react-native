@@ -1,7 +1,7 @@
 /* eslint-disable no-sequences */
 import React, { ReactElement, useEffect, useMemo, useRef, useState } from 'react'
 
-import { Text, Animated, TouchableOpacity, FlatList } from 'react-native'
+import { Text, Animated, TouchableOpacity, FlatList, View } from 'react-native'
 
 import renderNode from './RenderNode/RenderNode'
 import { SelectProps } from './SelectDropdown.props'
@@ -44,7 +44,7 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
   )
 
   return (
-    <>
+    <View style={styles.container}>
       <TouchableOpacity
         onPress={() => setIsExpanded(!isExpanded ?? false)}
         style={styles.select}
@@ -65,11 +65,7 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
           style={[
             styles.dropdown,
             {
-              opacity: transition.current,
-              top: props?.positionTop,
-              right: props?.positionRight,
-              left: props?.positionLeft,
-              bottom: props?.positionBottom
+              opacity: transition.current
             }
           ]}
         >
@@ -92,6 +88,6 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
           />
         </Animated.View>
       }
-    </>
+    </View>
   )
 }

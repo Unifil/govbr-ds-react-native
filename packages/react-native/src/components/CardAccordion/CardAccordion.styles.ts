@@ -63,5 +63,10 @@ export const styles = StyleSheet.create({
     color: colors.blueSecondary,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.medium
+  },
+  container: {
+    width: '100%',
+    position: 'relative',
+    zIndex: 99
   }
 })
