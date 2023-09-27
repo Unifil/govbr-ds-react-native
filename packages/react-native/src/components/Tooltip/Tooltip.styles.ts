@@ -7,17 +7,21 @@ export const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     backgroundColor: 'transparent',
-    zIndex: 1
+    zIndex: 1,
+    borderWidth: 1,
+    borderColor: 'orange'
+
   },
   containerTooltip: {
     position: 'absolute',
     backgroundColor: colors.white,
     padding: 16,
     borderRadius: 8,
-    top: 100,
-    right: 100,
-    bottom: 300,
-    left: 100,
+    // top: 0,
+    // right: 0,
+    // bottom: 0,
+    // left: 0,
+    marginTop: 10,
     zIndex: 9999999,
     elevation: 1,
     shadowColor: 'rgba(0, 0, 0, 0.12)',
@@ -26,7 +30,9 @@ export const styles = StyleSheet.create({
       height: 4
     },
     shadowOpacity: 0.5,
-    shadowRadius: 3
+    shadowRadius: 3,
+    borderWidth: 1,
+    borderColor: 'red'
   },
   containerTitle: {
     justifyContent: 'space-between',
