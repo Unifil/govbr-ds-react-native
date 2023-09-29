@@ -67,15 +67,12 @@ export const styles = StyleSheet.create({
   },
   containerCard: {
     width: '100%',
-    marginTop: normalize(6),
-    marginBottom: normalize(6),
     minHeight: normalize(105)
   },
   container: {
     paddingHorizontal: normalize(16),
     paddingVertical: normalize(16),
     minHeight: 105,
-    marginBottom: 16,
     padding: 16,
     alignItems: 'center',
     justifyContent: 'center',

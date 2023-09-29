@@ -14,11 +14,8 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: 16,
     borderRadius: 8,
-    top: 100,
-    right: 100,
-    bottom: 300,
-    left: 100,
-    zIndex: 9999999,
+    marginTop: 10,
+    zIndex: 999999,
     elevation: 1,
     shadowColor: 'rgba(0, 0, 0, 0.12)',
     shadowOffset: {
