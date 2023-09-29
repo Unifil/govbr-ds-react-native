@@ -32,13 +32,13 @@ export const Tooltip = (props: TooltipProps): ReactElement => {
     <View style={styles.containerScreen}>
       <View
         style={[
-          styles.containerTooltip
-          // {
-          //   top: props?.top,
-          //   bottom: props?.bottom,
-          //   right: props?.right,
-          //   left: props?.left
-          // }
+          styles.containerTooltip,
+          {
+            top: props?.top,
+            bottom: props?.bottom,
+            right: props?.right,
+            left: props?.left
+          }
         ]}
       >
         {renderArrow()}
