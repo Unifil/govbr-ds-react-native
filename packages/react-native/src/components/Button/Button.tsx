@@ -50,7 +50,15 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
 
 const ButtonSecondary = (props: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity style={[styles.secondary]} onPress={props.onPress}>
+    <TouchableOpacity
+      onPress={props.onPress}
+      style={[
+        styles.secondary,
+        {
+          width: props?.width
+        }
+      ]}
+    >
       {!props.isLoading ? (
         <>
           <Text style={[styles.textSecondary]}>{props.text}</Text>
@@ -99,11 +107,14 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
       {!props.isLoading ? (
         <Text
           style={[
-            styles.textPrimary,
+            styles.textCustom,
             {
               color: props.colorText,
               fontWeight: props.fontWeight,
-              fontSize: props.fontSize
+              fontSize: props.fontSize,
+              fontFamily: props.fontFamily,
+              textAlign: props.textAlign,
+              textDecorationLine: props.textDecoration
             }
           ]}
         >

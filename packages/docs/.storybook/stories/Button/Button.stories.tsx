@@ -73,6 +73,9 @@ export const Custom = {
     fontWeight: fontWeights.bold,
     fontSize: fontSizes.md,
     marginTop: 5,
-    marginBottom: 5
+    marginBottom: 5,
+    textAlign: 'auto',
+    textDecorationLine: 'none',
+    fontFamily: 'Rawline-Regular'
   },
 };

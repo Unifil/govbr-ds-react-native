@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     color: colors.dark,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    fontFamily: 'Rawline-Regular'
+    fontFamily: 'Rawline-Regular',
+    textDecorationLine: 'none'
   }
 })

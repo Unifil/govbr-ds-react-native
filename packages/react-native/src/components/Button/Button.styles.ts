@@ -49,5 +49,13 @@ export const styles = StyleSheet.create({
     color: colors.blueSecondary,
     fontWeight: fontWeights.bold,
     fontSize: fontSizes.md
+  },
+  textCustom: {
+    color: colors.white,
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.md,
+    textDecorationLine: 'none',
+    textAlign: 'auto',
+    fontFamily: 'Rawline-Regular'
   }
 })

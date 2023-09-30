@@ -7,4 +7,5 @@ export interface TextProps {
   weight?: any
   align?: any
   fontFamily?: string
+  textDecoration?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
 }

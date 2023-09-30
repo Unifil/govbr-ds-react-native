@@ -44,7 +44,8 @@ const TextCustom = (props: TextProps): ReactElement => {
             fontSize: props.size,
             fontWeight: props.weight,
             textAlign: props.align,
-            fontFamily: props.fontFamily
+            fontFamily: props.fontFamily,
+            textDecorationLine: props?.textDecoration
           }
         ]}
       >
