@@ -18,12 +18,13 @@ const { width } = Dimensions.get('window')
 export const Slider = ({
   data,
   renderItem,
-  renderNextButton = () => {},
-  renderDoneButton = () => {},
-  renderPrevButton = () => {},
-  onSlideChange = () => {},
-  onSkip = () => {},
-  onDone = () => {},
+  renderNextButton = () => { },
+  renderDoneButton = () => { },
+  renderPrevButton = () => { },
+  onSlideToIndex = () => { },
+  onSlideChange = () => { },
+  onSkip = () => { },
+  onDone = () => { },
   renderPagination,
   activeDotStyle,
   dotStyle,
@@ -44,12 +45,15 @@ export const Slider = ({
   const flatListRef = React.useRef(null) as any
 
   const goToSlide = (pageNum: any, triggerOnSlideChange = false): any => {
+    console.log('goToSlide', pageNum)
     const prevNum = activeIndex
     setActiveIndex(pageNum)
     flatListRef.current?.scrollToOffset({
       offset: _rtlSafeIndex(pageNum) * dimensions.width
     })
     if (triggerOnSlideChange) {
+      onSlideToIndex && onSlideToIndex(pageNum)
+      console.log('sdfsdfsdfsdfsdfsd', pageNum)
       onSlideChange(pageNum, prevNum)
     }
   }
@@ -67,15 +71,15 @@ export const Slider = ({
       <View style={styles.paginationContainer}>
         <SafeAreaView>
           <View style={styles.paginationDots}>
-        { data.length === activeIndex + 1 ? (
-          <Button
-            text=' Ir para o app'
-            type='primary'
-            onPress={onDone}
-          />
+            {data.length === activeIndex + 1 ? (
+              <Button
+                text=' Ir para o app'
+                type='primary'
+                onPress={onDone}
+              />
 
-        ) : (
-          data.length > 1 &&
+            ) : (
+              data.length > 1 &&
               data.map((_: any, i: any) =>
                 dotClickEnabled ? (
                   <TouchableOpacity
@@ -96,7 +100,7 @@ export const Slider = ({
                   />
                 )
               )
-        )}
+            )}
           </View>
         </SafeAreaView>
       </View>
@@ -111,7 +115,9 @@ export const Slider = ({
     }
     const lastIndex = activeIndex
     setActiveIndex(newIndex)
+    onSlideToIndex && onSlideToIndex(newIndex)
     onSlideChange && onSlideChange(newIndex, lastIndex)
+    console.log('onSlideChssange', newIndex)
   }
 
   const _onLayout = (event: any): any => {

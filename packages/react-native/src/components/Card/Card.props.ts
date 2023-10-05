@@ -11,7 +11,7 @@ export interface CardProps {
   icon?: any
   borderRadius?: number
   height?: number
-  width?: string | number
+  width?: number
   marginTop?: number
   marginBottom?: number
   colorIcon?: string

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { SafeAreaView, Text, View } from "react-native";
-import { colors } from '@unifil/tokens' 
+import { colors } from '@unifil/tokens'
 import IconSearch from '../../assets/svgs/searchIcon.svg'
 import ArrowRight from '../../assets/svgs/arrowRight.svg'
 import IconAdd from '../../assets/svgs/iconAdd.svg'
 // import { Modalize } from "@unifil/react-native/modalize";
 // import { Modalize } from "@unifil/react-native/dist/components/Modalize";
-import { 
-  Header, 
+import {
+  Header,
   // Wrapper,
-  Tabs, 
+  Tabs,
   InputSearch,
-  ModalComponent, 
+  ModalComponent,
   Card,
   ButtonCreateList,
   Button
@@ -37,18 +37,18 @@ export function HomeScreen() {
 
   return (
     <SafeAreaView style={{ backgroundColor: "white", height: "100%" }}>
- 
-        <Tabs dataTab={data}>
-          <View
-            style={{ 
-              backgroundColor: colors.white,  
-              height: '100%',
-              paddingHorizontal: 20
-            }} 
-          >
+
+      <Tabs dataTab={data}>
+        <View
+          style={{
+            backgroundColor: colors.white,
+            height: '100%',
+            paddingHorizontal: 20
+          }}
+        >
 
           {showModal &&
-            <ModalComponent 
+            <ModalComponent
               onTouchEnd={() => setShowModal(false)}
               width='90%'
               height={480}
@@ -64,12 +64,12 @@ export function HomeScreen() {
             </ModalComponent>
           }
 
-          <InputSearch 
+          <InputSearch
             placeholder="Busque atividades na sua lista desejada..."
             placeholderColor={colors.gray200}
-            icon={<IconSearch  />} 
+            icon={<IconSearch />}
             marginBottom={20}
-            marginTop={20} 
+            marginTop={20}
             onSearch={handleSearch}
           />
 
@@ -96,26 +96,13 @@ export function HomeScreen() {
             onPress={() => console.log('Card navigation')}
           /> */}
 
-          <Card
-            title="Instituto Capibariabe"
-            local="Recife - PE"
-            text="Analise o desempenho das suas turmas baseado na execução dos exercícios"
-            tag="13082175"
-            colorTitle={colors.darkBlue}
-            colorLocal={colors.darkBlue}
-            colorText={colors.blue}
-            icon={<ArrowRight color='#274A67'/>}
-            iconIsPressed={<ArrowRight color='#fff'/>}
-            onPress={() => console.log('Card school')}
-          />
-
           <View style={{ marginBottom: 20 }} />
 
-          <ButtonCreateList 
+          <ButtonCreateList
             type="primary"
             text="CRIAR MAIS LISTAS"
             icon={<IconAdd />}
-            // disabled={true}
+          // disabled={true}
           />
 
           <View style={{ marginBottom: 20 }} />
@@ -131,11 +118,11 @@ export function HomeScreen() {
 
           {/* <Button title="Abrir Modal" onPress={() => setShowModal(true)} /> */}
 
-          </View>
+        </View>
 
-        </Tabs>
+      </Tabs>
 
-        {/* <Modalize isVisible={modalize} 
+      {/* <Modalize isVisible={modalize} 
           onClose={() => setModalize(false)}
         >
           <Text>Teste modalize</Text>

@@ -8,7 +8,7 @@ export interface ButtonProps {
   type?: string
   text?: string
   backgroundColor?: string
-  width?: number | string
+  width?: number
   height?: number
   borderRadius?: number
   colorText?: string
