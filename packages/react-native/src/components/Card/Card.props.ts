@@ -19,4 +19,5 @@ export interface CardProps {
   iconIsPressed?: any
   overlay?: boolean
   numberOfLines?: number
+  testID?: string
 }

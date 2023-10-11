@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 
 import { Text, TextInput, View } from 'react-native'
 
@@ -6,8 +6,6 @@ import { TextProps } from './Input.props'
 import { styles } from './Input.styles'
 
 export const Input = (props: TextProps): ReactElement => {
-  const [formattedValue, setFormattedValue] = useState('')
-
   const onChangeHandler = (text: string): void => {
     let newText = text.replace(/[^0-9]/g, '')
 
@@ -46,7 +44,6 @@ export const Input = (props: TextProps): ReactElement => {
       newText = text
     }
 
-    setFormattedValue(newText)
     props.onChangeText && props.onChangeText(newText)
   }
 
@@ -78,11 +75,11 @@ export const Input = (props: TextProps): ReactElement => {
           }
         ]}
       >
-        <TextInput {...inputProps} />
+        <TextInput {...inputProps} testID={props.testID} />
       </View>
       <View style={styles.containerText}>
 
-      {props.error && <Text style={styles.errorText}>{props.error}</Text>}
+        {props.error && <Text style={styles.errorText}>{props.error}</Text>}
       </View>
     </>
   )

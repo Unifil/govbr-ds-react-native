@@ -11,6 +11,7 @@ export const Card = (props: CardProps): ReactElement => {
 
   return (
     <TouchableOpacity
+      testID={props.testID}
       style={[
         {
           borderRadius: props.borderRadius,

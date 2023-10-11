@@ -26,7 +26,7 @@ export const TextComponent = (props: TextProps): ReactElement => {
 const TextPrimary = (props: TextProps): ReactElement => {
   return (
     <View>
-      <Text style={styles.primary}>
+      <Text style={styles.primary} testID={props.testID}>
         {props.text}
       </Text>
     </View>
@@ -35,8 +35,9 @@ const TextPrimary = (props: TextProps): ReactElement => {
 
 const TextCustom = (props: TextProps): ReactElement => {
   return (
-    <View>
+    <View >
       <Text
+        testID={props.testID}
         style={[
           styles.custom,
           {
