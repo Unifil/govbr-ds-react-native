@@ -33,7 +33,7 @@ export const Button = (props: ButtonProps): ReactElement => {
 
 const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
+    <TouchableOpacity onPress={props.onPress} style={[styles.primary]} testID={props.testID}>
       {!props.isLoading ? (
         <>
           <Text style={[styles.textPrimary]}>{props.text}</Text>
@@ -51,6 +51,7 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
 const ButtonSecondary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
+      testID={props.testID}
       onPress={props.onPress}
       style={[
         styles.secondary,
@@ -91,6 +92,7 @@ const ButtonDisabled = (props: ButtonProps): ReactElement => {
 const ButtonCustom = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
+      testID={props.testID}
       onPress={props.onPress}
       style={[
         styles.primary,

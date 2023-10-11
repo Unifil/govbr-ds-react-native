@@ -37,7 +37,7 @@ export const ButtonCreateList = (props: ButtonProps): ReactElement => {
 
 const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity onPress={props.onPress} style={[styles.primary]}>
+    <TouchableOpacity onPress={props.onPress} style={[styles.primary]} testID={props.testID}>
       {props.icon && props.iconLeft &&
         <View style={[styles.iconPrimary]}>
           {props.icon}
@@ -92,18 +92,19 @@ const ButtonDisabled = (props: ButtonProps): ReactElement => {
 const ButtonCustom = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
+      testID={props.testID}
       onPress={props.onPress}
-        style={[
-          styles.primary,
-          {
-            backgroundColor: props.backgroundColor,
-            width: props.width,
-            height: props.height,
-            borderRadius: props.borderRadius,
-            marginTop: props.marginTop,
-            marginBottom: props.marginBottom
-          }
-        ]}
+      style={[
+        styles.primary,
+        {
+          backgroundColor: props.backgroundColor,
+          width: props.width,
+          height: props.height,
+          borderRadius: props.borderRadius,
+          marginTop: props.marginTop,
+          marginBottom: props.marginBottom
+        }
+      ]}
     >
       {props.icon && props.iconLeft &&
         <View

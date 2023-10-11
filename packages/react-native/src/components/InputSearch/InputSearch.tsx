@@ -37,7 +37,7 @@ export const InputSearch = (props: InputSearchProps): ReactElement => {
         <Text style={[styles.label]}>{props.label}</Text>
       }
       <View {...viewProps}>
-        <TextInput {...inputProps} />
+        <TextInput {...inputProps} testID={props.testID} />
         <View style={styles.icon} >
           {props.icon}
         </View>

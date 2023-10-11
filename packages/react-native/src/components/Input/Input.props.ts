@@ -16,4 +16,5 @@ export interface TextProps {
   height?: number
   onFocus?: any
   onBlur?: any
+  testID?: string
 }

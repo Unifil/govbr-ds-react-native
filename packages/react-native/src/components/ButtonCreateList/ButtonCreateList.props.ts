@@ -16,4 +16,5 @@ export interface ButtonProps {
   fontSize?: number
   marginTop?: number
   marginBottom?: number
+  testID?: string
 }
