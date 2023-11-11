@@ -63,6 +63,7 @@ const getStories = () => {
     "./.storybook/stories/Toast/Toast.stories.tsx": require("./stories/Toast/Toast.stories.tsx"),
     "./.storybook/stories/SelectDropdown/SelectDropdown.stories.tsx": require("./stories/SelectDropdown/SelectDropdown.stories.tsx"),
     "./.storybook/stories/CardUser/CardUser.stories.tsx": require("./stories/CardUser/CardUser.stories.tsx"),
+    "./.storybook/stories/HeaderProfile/HeaderProfile.stories.tsx": require("./stories/HeaderProfile/HeaderProfile.stories.tsx"),
   };
 };
 

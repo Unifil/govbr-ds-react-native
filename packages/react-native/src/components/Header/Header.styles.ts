@@ -8,7 +8,14 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '100%',
     alignItems: 'center',
-    paddingHorizontal: normalize(16)
+    paddingHorizontal: normalize(16),
+    backgroundColor: colors.white,
+    top: 0
+  },
+  statusBar: {
+    top: -70,
+    height: 80,
+    backgroundColor: colors.weakBlueSecondary
   },
   content: {
     paddingLeft: normalize(10),
@@ -16,8 +23,10 @@ export const styles = StyleSheet.create({
     height: normalize(56),
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     backgroundColor: colors.white,
-    marginTop: normalize(10)
+    marginTop: normalize(20),
+    marginBottom: 0
   },
   title: {
     color: colors.dark,
@@ -47,5 +56,9 @@ export const styles = StyleSheet.create({
   },
   button: {
     marginTop: normalize(24)
+  },
+  boxHelp: {
+    minWidth: normalize(30),
+    alignItems: 'flex-end'
   }
 })
