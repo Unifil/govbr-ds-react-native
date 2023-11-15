@@ -31,17 +31,17 @@ export const styles = StyleSheet.create({
     opacity: 0.5,
     maxWidth: normalize(300)
   },
-  textTag: {
-    color: colors.darkBlue,
-    fontSize: fontSizes.sm,
-    fontWeight: fontWeights.medium,
-    fontFamily: 'Rawline-Medium'
-  },
   containerText: {
     flexDirection: 'row',
     alignItems: 'flex-end',
     width: '100%',
     justifyContent: 'space-between'
+  },
+  textTag: {
+    color: colors.darkBlue,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.medium,
+    fontFamily: 'Rawline-Medium'
   },
   containerTag: {
     backgroundColor: colors.weakBlueSecondary,
@@ -51,8 +51,7 @@ export const styles = StyleSheet.create({
     marginBottom: normalize(15),
     alignItems: 'center',
     justifyContent: 'center',
-    display: 'flex',
-    flex: 1
+    display: 'flex'
   },
   icon: {
     bottom: normalize(10)
@@ -67,13 +66,11 @@ export const styles = StyleSheet.create({
   },
   containerCard: {
     width: '100%',
-    minHeight: normalize(105)
+    marginBottom: 5
   },
   container: {
     paddingHorizontal: normalize(16),
     paddingVertical: normalize(16),
-    minHeight: 105,
-    padding: 16,
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 10,

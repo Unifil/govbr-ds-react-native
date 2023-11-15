@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '100%',
     alignItems: 'center',
-    paddingHorizontal: normalize(16),
+    paddingHorizontal: normalize(20),
     backgroundColor: colors.white,
     top: 0
   },
@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.weakBlueSecondary
   },
   content: {
-    paddingLeft: normalize(10),
     width: '100%',
     height: normalize(56),
     flexDirection: 'row',
@@ -60,5 +59,9 @@ export const styles = StyleSheet.create({
   boxHelp: {
     minWidth: normalize(30),
     alignItems: 'flex-end'
+  },
+  box: {
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 })

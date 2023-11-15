@@ -28,11 +28,12 @@ export const Header = (props: HeaderProps): ReactElement => {
             }
           ]}
         >
-        {props.onPress && (
-          <TouchableOpacity onPress={props.onPress}>
-            {props.icon}
-          </TouchableOpacity>
-        )}
+        <View style={styles.box}>
+          {props.onPress && (
+            <TouchableOpacity onPress={props.onPress}>
+              {props.icon}
+            </TouchableOpacity>
+          )}
           <View style={styles.containerText}>
             <Text style={styles.title}>
               {props.title}
@@ -41,6 +42,7 @@ export const Header = (props: HeaderProps): ReactElement => {
               {props.subtitle}
             </Text>
           </View>
+        </View>
           {props.onPress && (
             <View style={styles.boxHelp}>
               <TouchableOpacity onPress={props.onPressHelp}>

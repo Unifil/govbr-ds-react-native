@@ -27,7 +27,9 @@ export const Card = (props: CardProps): ReactElement => {
     >
       <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
-        <View style={[styles.container]}>
+        <View
+          style={styles.container}
+        >
           <View style={[styles.containerContent]}>
             {props?.tag && (
               <View style={[styles.containerTag]}>
