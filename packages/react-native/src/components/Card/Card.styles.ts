@@ -41,7 +41,8 @@ export const styles = StyleSheet.create({
     color: colors.darkBlue,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.medium,
-    fontFamily: 'Rawline-Medium'
+    fontFamily: 'Rawline-Medium',
+    textTransform: 'none'
   },
   containerTag: {
     backgroundColor: colors.weakBlueSecondary,

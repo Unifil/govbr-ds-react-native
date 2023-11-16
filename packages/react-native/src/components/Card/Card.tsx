@@ -33,7 +33,15 @@ export const Card = (props: CardProps): ReactElement => {
           <View style={[styles.containerContent]}>
             {props?.tag && (
               <View style={[styles.containerTag]}>
-                <Text style={[styles.textTag]}>{props.tag}</Text>
+                <Text
+                  style={[styles.textTag,
+                    {
+                      textTransform: props.textCapitalize ? 'capitalize' : 'none'
+                    }
+                  ]}
+                >
+                  {props.tag}
+                </Text>
               </View>
             )}
             <View style={[styles.containerText]}>
