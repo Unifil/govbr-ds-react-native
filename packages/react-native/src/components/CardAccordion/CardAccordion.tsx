@@ -12,7 +12,7 @@ import { normalize } from '../../utils/normalize'
 import { BaseCard } from '../BaseCard/BaseCard'
 
 export const CardAccordion: RneFunctionComponent<
-  CardAccordionProps
+CardAccordionProps
 > = ({
   children,
   isExpanded = false,
@@ -38,74 +38,74 @@ export const CardAccordion: RneFunctionComponent<
   value,
   ...rest
 }: any) => {
-    const transition = React.useRef(new Animated.Value(0))
+  const transition = React.useRef(new Animated.Value(0))
 
-    const initialCheckboxState = textCheckbox?.map((_: any, index: any) => value.includes(index))
+  const initialCheckboxState = textCheckbox?.map((_: any, index: any) => value.includes(index))
 
-    const [checkboxStates, setCheckboxStates] = useState(initialCheckboxState)
+  const [checkboxStates, setCheckboxStates] = useState(initialCheckboxState)
 
-    const initialSelecteds = textCheckbox?.filter((_: any, index: any) => value.includes(index)) || []
+  const initialSelecteds = textCheckbox?.filter((_: any, index: any) => value.includes(index)) || []
 
-    const [selecteds, setSelecteds] = useState<any>(initialSelecteds)
+  const [selecteds, setSelecteds] = useState<any>(initialSelecteds)
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-function-return-type
-    const handleCheckboxChange = (index: any) => {
-      setCheckboxStates((prevCheckboxStates: any) => {
-        const newCheckboxStates = prevCheckboxStates.map((checkbox: any, i: any) =>
-          multipleSelection
-            ? i === index
-              ? !checkbox
-              : checkbox
-            : i === index
-              ? !checkbox
-              : false
-        )
-        const selectedIndices = newCheckboxStates.map((state: boolean, idx: number) => state ? idx : -1).filter((idx: any) => idx !== -1)
-
-        onChange(selectedIndices)
-        return newCheckboxStates
-      })
-
-      const item = textCheckbox[index]
-
-      setSelecteds((prevSelectedItems: any) =>
-        checkboxStates[index]
-          ? prevSelectedItems?.filter((selecteds: any) => selecteds !== item)
-          : [...prevSelectedItems, item]
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-function-return-type
+  const handleCheckboxChange = (index: any) => {
+    setCheckboxStates((prevCheckboxStates: any) => {
+      const newCheckboxStates = prevCheckboxStates.map((checkbox: any, i: any) =>
+        multipleSelection
+          ? i === index
+            ? !checkbox
+            : checkbox
+          : i === index
+            ? !checkbox
+            : false
       )
-    }
+      const selectedIndices = newCheckboxStates.map((state: boolean, idx: number) => state ? idx : -1).filter((idx: any) => idx !== -1)
 
-    const startAnimation = React.useCallback(() => {
-      if (typeof animation !== 'boolean') {
-        (Animated as any)[animation.type || 'timing'](transition.current, {
-          toValue: Number(isExpanded),
-          useNativeDriver: true,
-          duration: animation.duration || 350
-        }).start()
-      }
-    }, [isExpanded, animation])
+      onChange(selectedIndices)
+      return newCheckboxStates
+    })
 
-    React.useEffect(() => {
-      startAnimation()
-    }, [isExpanded, startAnimation])
+    const item = textCheckbox[index]
 
-    const iconAnimation = React.useMemo(
-      () => ({
-        transform: [
-          {
-            rotate: noRotation
-              ? '0deg'
-              : transition.current.interpolate({
-                inputRange: [0, 1],
-                outputRange: ['0deg', leftRotate ? '180deg' : '-180deg']
-              })
-          }
-        ]
-      }),
-      [leftRotate, noRotation]
+    setSelecteds((prevSelectedItems: any) =>
+      checkboxStates[index]
+        ? prevSelectedItems?.filter((selecteds: any) => selecteds !== item)
+        : [...prevSelectedItems, item]
     )
+  }
 
-    return (
+  const startAnimation = React.useCallback(() => {
+    if (typeof animation !== 'boolean') {
+      (Animated as any)[animation.type || 'timing'](transition.current, {
+        toValue: Number(isExpanded),
+        useNativeDriver: true,
+        duration: animation.duration || 350
+      }).start()
+    }
+  }, [isExpanded, animation])
+
+  React.useEffect(() => {
+    startAnimation()
+  }, [isExpanded, startAnimation])
+
+  const iconAnimation = React.useMemo(
+    () => ({
+      transform: [
+        {
+          rotate: noRotation
+            ? '0deg'
+            : transition.current.interpolate({
+              inputRange: [0, 1],
+              outputRange: ['0deg', leftRotate ? '180deg' : '-180deg']
+            })
+        }
+      ]
+    }),
+    [leftRotate, noRotation]
+  )
+
+  return (
       <View style={styles.container}>
         <BaseCard
           {...rest}
@@ -233,7 +233,7 @@ export const CardAccordion: RneFunctionComponent<
           </Animated.View>
         )}
       </View>
-    )
-  }
+  )
+}
 
 CardAccordion.displayName = 'ListItem.Accordion'
