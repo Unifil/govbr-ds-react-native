@@ -50,6 +50,7 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.title,
                     {
+                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
                       color: isPressed ? colors.white : props.colorTitle
                     }
                   ]}
@@ -60,6 +61,7 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.description,
                     {
+                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
                       color: isPressed ? colors.white : props.colorLocal
                     }
                   ]}

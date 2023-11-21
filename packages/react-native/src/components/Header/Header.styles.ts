@@ -39,7 +39,8 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.sm,
     lineHeight: 21,
     fontWeight: fontWeights.regular,
-    fontFamily: 'Rawline-Regular'
+    fontFamily: 'Rawline-Regular',
+    maxWidth: 300
   },
   containerText: {
     flexDirection: 'column',
