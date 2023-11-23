@@ -43,7 +43,8 @@ export const styles = StyleSheet.create({
   },
   containerText: {
     flexDirection: 'column',
-    marginLeft: normalize(18)
+    marginLeft: normalize(18),
+    width: '80%'
   },
   divider: {
     height: 1,
