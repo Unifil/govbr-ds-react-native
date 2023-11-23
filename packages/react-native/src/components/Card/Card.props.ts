@@ -20,4 +20,5 @@ export interface CardProps {
   overlay?: boolean
   numberOfLines?: number
   testID?: string
+  textCapitalize?: boolean
 }

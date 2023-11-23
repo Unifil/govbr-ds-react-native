@@ -27,11 +27,21 @@ export const Card = (props: CardProps): ReactElement => {
     >
       <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
-        <View style={[styles.container]}>
+        <View
+          style={styles.container}
+        >
           <View style={[styles.containerContent]}>
             {props?.tag && (
               <View style={[styles.containerTag]}>
-                <Text style={[styles.textTag]}>{props.tag}</Text>
+                <Text
+                  style={[styles.textTag,
+                    {
+                      textTransform: props.textCapitalize ? 'capitalize' : 'none'
+                    }
+                  ]}
+                >
+                  {props.tag}
+                </Text>
               </View>
             )}
             <View style={[styles.containerText]}>
@@ -40,6 +50,7 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.title,
                     {
+                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
                       color: isPressed ? colors.white : props.colorTitle
                     }
                   ]}
@@ -50,6 +61,7 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.description,
                     {
+                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
                       color: isPressed ? colors.white : props.colorLocal
                     }
                   ]}

@@ -14,7 +14,8 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.md,
     fontWeight: fontWeights.large,
     marginBottom: 3,
-    fontFamily: 'Rawline-Black'
+    fontFamily: 'Rawline-Black',
+    textTransform: 'capitalize'
   },
   description: {
     color: colors.gray600,
