@@ -49,7 +49,6 @@ export const styles = StyleSheet.create({
     height: normalize(24),
     paddingHorizontal: normalize(6),
     borderRadius: normalize(4),
-    marginBottom: normalize(15),
     alignItems: 'center',
     justifyContent: 'center',
     display: 'flex'
@@ -87,5 +86,17 @@ export const styles = StyleSheet.create({
     borderColor: '#CCCCCC',
     backgroundColor: colors.white,
     maxWidth: '100%'
+  },
+  boxTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: normalize(15)
+  },
+  status: {
+    backgroundColor: 'red',
+    height: 8,
+    width: 8,
+    borderRadius: 50,
+    marginRight: normalize(7)
   }
 })

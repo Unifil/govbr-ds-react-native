@@ -26,11 +26,14 @@ export const colors = {
   weakBlueSecondary: '#EDF5FF',
 
   green: '#168821',
+  greenSecondary: '#154C21',
   lightGreen: '#E3F5E1',
 
   weakRed: '#FFF3F2',
 
   orange: '#FF580A',
+
+  red: '#E60000',
 
   dark: '#333'
 }

@@ -43,5 +43,7 @@ export const Primary = {
     marginTop: 6,
     marginBottom: 6,
     colorIcon: colors.darkBlue,
+    textCapitalize: false,
+    colorStatusGroup: colors.darkBlue
   },
 };
