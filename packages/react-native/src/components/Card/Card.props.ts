@@ -21,4 +21,5 @@ export interface CardProps {
   numberOfLines?: number
   testID?: string
   textCapitalize?: boolean
+  colorStatusGroup?: string
 }

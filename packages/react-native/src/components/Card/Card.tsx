@@ -31,19 +31,31 @@ export const Card = (props: CardProps): ReactElement => {
           style={styles.container}
         >
           <View style={[styles.containerContent]}>
-            {props?.tag && (
-              <View style={[styles.containerTag]}>
-                <Text
-                  style={[styles.textTag,
+            <View style={[styles.boxTag]}>
+              {props?.colorStatusGroup &&
+                <View
+                  style={[
+                    styles.status,
                     {
-                      textTransform: props.textCapitalize ? 'capitalize' : 'none'
+                      backgroundColor: props?.colorStatusGroup
                     }
                   ]}
-                >
-                  {props.tag}
-                </Text>
-              </View>
-            )}
+                />
+              }
+              {props?.tag && (
+                <View style={[styles.containerTag]}>
+                  <Text
+                    style={[styles.textTag,
+                      {
+                        textTransform: props.textCapitalize ? 'capitalize' : 'none'
+                      }
+                    ]}
+                  >
+                    {props.tag}
+                  </Text>
+                </View>
+              )}
+            </View>
             <View style={[styles.containerText]}>
               <View>
                 <Text
