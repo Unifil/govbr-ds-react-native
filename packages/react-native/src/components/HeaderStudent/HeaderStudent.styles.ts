@@ -10,25 +10,27 @@ export const styles = StyleSheet.create({
     paddingBottom: 40,
     paddingTop: normalize(5),
     top: normalize(-70),
+    paddingLeft: normalize(20),
     paddingRight: normalize(30)
   },
   content: {
     width: '100%',
-    justifyContent: 'space-between',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   statusBar: {
     top: -70,
     height: 70,
     backgroundColor: colors.weakBlueSecondary
   },
-  text: {
+  class: {
     color: colors.blueSecondary,
     fontSize: fontSizes.xl,
     fontWeight: fontWeights.large,
-    fontFamily: 'Rawline-Black'
+    fontFamily: 'Rawline-Black',
+    opacity: 0.7
   },
-  profile: {
+  nameStudent: {
     color: colors.blueThird,
     fontSize: fontSizes.xl,
     fontWeight: fontWeights.large,
@@ -36,34 +38,44 @@ export const styles = StyleSheet.create({
   },
   containerText: {
     flexDirection: 'column',
-    marginLeft: normalize(18)
+    marginLeft: normalize(16)
   },
-  containerChildren: {
-    marginTop: normalize(15)
-  },
-  button: {
-    marginTop: normalize(24)
-  },
-  column: {
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  circleName: {
-    height: normalize(35),
-    width: normalize(35),
+  containerShortName: {
+    height: normalize(40),
+    width: normalize(40),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.blueSecondary,
+    backgroundColor: colors.green,
     borderRadius: 50
   },
-  initialLetter: {
+  shortName: {
     color: colors.white,
-    fontSize: fontSizes.lg,
-    fontFamily: 'Rawline-Black'
+    fontSize: fontSizes.md,
+    fontFamily: 'Rawline-Bold'
   },
-  textButton: {
+  tagSchool: {
+    backgroundColor: '#f9fcff',
+    paddingVertical: normalize(4),
+    paddingHorizontal: normalize(12),
+    marginTop: normalize(12),
+    borderRadius: 4,
+    elevation: 3,
+    shadowColor: '#00000020',
+    shadowOffset: {
+      width: 1,
+      height: 1
+    },
+    shadowOpacity: 0.5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '60%'
+  },
+  school: {
+    fontSize: fontSizes.sm,
+    fontFamily: 'Rawline-Medium',
     color: colors.blueSecondary,
-    fontSize: fontSizes.lg,
-    fontFamily: 'Rawline-Black'
+    marginLeft: 6,
+    marginBottom: 2
   }
 })

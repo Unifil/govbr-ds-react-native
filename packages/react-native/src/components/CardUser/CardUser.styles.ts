@@ -1,6 +1,8 @@
 import { fontWeights, fontSizes, colors, radii } from '@unifil/tokens'
 import { StyleSheet } from 'react-native'
 
+import { normalize } from '../../utils/normalize'
+
 export const styles = StyleSheet.create({
   containerContent: {
     flexDirection: 'row',
@@ -12,47 +14,18 @@ export const styles = StyleSheet.create({
   name: {
     color: colors.gray600,
     fontSize: fontSizes.md,
-    fontWeight: fontWeights.large,
-    marginBottom: 3,
-    fontFamily: 'Rawline-Black',
+    fontFamily: 'Rawline-Bold',
     textTransform: 'capitalize'
   },
   description: {
     color: colors.gray600,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    maxWidth: 300,
     fontFamily: 'Rawline-Regular'
   },
-  text: {
-    color: colors.blue,
-    fontSize: fontSizes.xs,
-    fontWeight: fontWeights.regular,
-    opacity: 0.5,
-    maxWidth: 300
-  },
-  textTag: {
-    color: colors.darkBlue,
-    fontSize: fontSizes.sm,
-    fontWeight: fontWeights.medium,
-    fontFamily: 'Rawline-Medium'
-  },
-  containerText: {
-    flexDirection: 'row'
-  },
-  containerTag: {
-    backgroundColor: colors.weakBlue,
-    height: 24,
-    paddingHorizontal: 6,
-    borderRadius: 4,
-    marginBottom: 15,
-    alignItems: 'center',
-    justifyContent: 'center',
-    display: 'flex',
-    flex: 1
-  },
-  icon: {
-    bottom: 20
+  containerRow: {
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   overlay: {
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -64,15 +37,8 @@ export const styles = StyleSheet.create({
   },
   containerCard: {
     width: '100%',
-    marginTop: 6,
-    marginBottom: 6,
-    minHeight: 105
-  },
-  container: {
-    height: 100,
-    paddingLeft: 30,
-    paddingRight: 17,
-    paddingVertical: 20,
+    paddingHorizontal: normalize(15),
+    paddingVertical: normalize(10),
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 10,
@@ -87,9 +53,17 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#CCCCCC',
     backgroundColor: colors.white
-
   },
-  containerTextDescription: {
-    justifyContent: 'center'
+  shortName: {
+    fontSize: fontSizes.sm,
+    fontFamily: 'Rawline-Bold',
+    color: 'white'
+  },
+  containerShortName: {
+    marginRight: normalize(12),
+    backgroundColor: '#168821',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

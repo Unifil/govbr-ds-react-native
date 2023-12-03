@@ -1,18 +1,19 @@
 import React from "react";
-import { View, Text } from "react-native";
-import { Header } from "@unifil/react-native";
+import { View } from "react-native";
+import { HeaderProfile } from "@unifil/react-native";
 
 const HeaderProfileMeta = {
   title: "HeaderProfile",
-  component: Header,
+  component: HeaderProfile,
   argTypes: {
     onPress: { action: "pressed the button" },
   },
   args: {
-    title: 'Title header',
-    subtitle: 'Subtitle header',
-    divider: true,
-    icon: <Text>Voltar</Text>
+    nameProfile: 'Title header profile',
+    text: 'Subtitle header profile',
+    children: <></>,
+    textButton: 'Logout',
+    initialLetterProfile: 'AA'
   },
   decorators: [
     (Story: any) => (

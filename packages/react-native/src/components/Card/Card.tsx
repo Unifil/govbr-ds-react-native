@@ -5,6 +5,7 @@ import { Text, TouchableOpacity, View } from 'react-native'
 
 import { CardProps } from './Card.props'
 import { styles } from './Card.styles'
+import { normalize } from '../../utils/normalize'
 
 export const Card = (props: CardProps): ReactElement => {
   const [isPressed] = useState(false)
@@ -31,7 +32,14 @@ export const Card = (props: CardProps): ReactElement => {
           style={styles.container}
         >
           <View style={[styles.containerContent]}>
-            <View style={[styles.boxTag]}>
+            <View
+              style={[
+                styles.boxTag,
+                {
+                  marginBottom: props?.tag ? normalize(15) : 0
+                }
+              ]}
+            >
               {props?.colorStatusGroup &&
                 <View
                   style={[
