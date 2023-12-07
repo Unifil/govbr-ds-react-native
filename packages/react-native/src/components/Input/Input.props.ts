@@ -17,4 +17,5 @@ export interface TextProps {
   onFocus?: any
   onBlur?: any
   testID?: string
+  multiline?: boolean
 }

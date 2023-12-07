@@ -36,10 +36,13 @@ export const CardComments = (props: CardCommentsProps): ReactElement => {
           {props?.buttons?.map((item) =>
             <TouchableOpacity
               key={item?.id}
+              onPress={item?.onPress}
+              disabled={item?.disabled}
               style={[
                 styles.button,
                 {
-                  backgroundColor: item?.colorButton
+                  backgroundColor: item?.colorButton,
+                  opacity: item?.disabled ? 0.3 : 1
                 }
               ]}
             >

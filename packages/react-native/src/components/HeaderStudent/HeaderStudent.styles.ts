@@ -69,7 +69,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '60%'
+    width: '80%'
   },
   school: {
     fontSize: fontSizes.sm,

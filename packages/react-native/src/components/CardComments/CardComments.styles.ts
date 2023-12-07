@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center'
   },
   containerDate: {
-    backgroundColor: '#EDF5FF',
+    backgroundColor: colors.weakBlueSecondary,
     paddingHorizontal: normalize(8),
     paddingVertical: normalize(4),
     borderRadius: 4

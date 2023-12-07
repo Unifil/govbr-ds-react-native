@@ -2,7 +2,8 @@ interface DataButtons {
   id: number
   iconButton: React.ReactNode
   colorButton: string
-  onClick: () => void
+  disabled?: boolean
+  onPress: () => void
 }
 
 export interface CardCommentsProps {
@@ -10,5 +11,5 @@ export interface CardCommentsProps {
   date: string
   status: string
   colorStatus: string
-  buttons: DataButtons[]
+  buttons?: DataButtons[]
 }
