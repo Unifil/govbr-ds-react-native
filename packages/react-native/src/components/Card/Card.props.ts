@@ -8,15 +8,15 @@ export interface CardProps {
   colorText?: string
   sizeTitle?: number
   sizeText?: number
-  icon?: any
+  icon?: React.ReactNode
   borderRadius?: number
   height?: number
   width?: number
   marginTop?: number
   marginBottom?: number
   colorIcon?: string
-  onPress?: any
-  iconIsPressed?: any
+  onPress?: () => void
+  iconIsPressed?: boolean
   overlay?: boolean
   numberOfLines?: number
   testID?: string

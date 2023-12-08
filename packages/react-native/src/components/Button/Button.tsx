@@ -33,7 +33,17 @@ export const Button = (props: ButtonProps): ReactElement => {
 
 const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity onPress={props.onPress} style={[styles.primary]} testID={props.testID}>
+    <TouchableOpacity
+      onPress={props.onPress}
+      testID={props.testID}
+      style={[
+        styles.primary,
+        {
+          marginTop: props?.marginTop ?? 0,
+          marginBottom: props?.marginBottom ?? 0
+        }
+      ]}
+    >
       {!props.isLoading ? (
         <>
           <Text style={[styles.textPrimary]}>{props.text}</Text>
@@ -56,7 +66,9 @@ const ButtonSecondary = (props: ButtonProps): ReactElement => {
       style={[
         styles.secondary,
         {
-          width: props?.width
+          width: props?.width,
+          marginTop: props?.marginTop ?? 0,
+          marginBottom: props?.marginBottom ?? 0
         }
       ]}
     >

@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { CardUser } from "@unifil/react-native";
-import { radii, fontSizes, colors } from "@unifil/tokens";
+import { colors } from "@unifil/tokens";
 
 const CardUserMeta = {
   title: "CardUser",
@@ -11,9 +11,8 @@ const CardUserMeta = {
   },
   args: {
     name: "Title card",
-    text: "Description card",
-    local: "Description card",
-    icon: <></>,
+    description: "Description card",
+    rightComponent: <></>
   },
   decorators: [
     (Story: any) => (
@@ -26,22 +25,12 @@ const CardUserMeta = {
 
 export default CardUserMeta;
 
-export const Primary = {
+export const Default = {
   args: {
     name: "Title card",
-    text: "Name Local",
     description: "Description card",
-    tag: "13082175",
     colorTitle: colors.darkBlue,
-    colorLocal: colors.darkBlue,
-    colorText: colors.blue,
-    sizeTitle: fontSizes.md,
-    sizeText: fontSizes.xs,
-    borderRadius: radii.px,
-    height: 105,
-    width: "100%",
     marginTop: 6,
-    marginBottom: 6,
-    colorIcon: colors.darkBlue,
+    marginBottom: 6
   },
 };
