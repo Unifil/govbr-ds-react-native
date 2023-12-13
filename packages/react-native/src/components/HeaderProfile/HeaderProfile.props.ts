@@ -3,6 +3,6 @@ export interface HeaderProfileProps {
   text?: string
   nameProfile?: string
   children?: React.ReactNode
-  textButton?: string
   initialLetterProfile?: string
+  icon?: React.ReactNode
 }

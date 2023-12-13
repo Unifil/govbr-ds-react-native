@@ -44,8 +44,8 @@ export const styles = StyleSheet.create({
   button: {
     marginTop: normalize(24)
   },
-  column: {
-    justifyContent: 'space-between',
+  containerButton: {
+    flexDirection: 'row',
     alignItems: 'center'
   },
   circleName: {
@@ -54,7 +54,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.blueSecondary,
-    borderRadius: 50
+    borderRadius: 50,
+    marginRight: normalize(4)
   },
   initialLetter: {
     color: colors.white,

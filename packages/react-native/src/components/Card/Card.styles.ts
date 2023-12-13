@@ -46,8 +46,9 @@ export const styles = StyleSheet.create({
   },
   containerTag: {
     backgroundColor: colors.weakBlueSecondary,
-    height: normalize(24),
+    minHeight: normalize(24),
     paddingHorizontal: normalize(6),
+    paddingVertical: normalize(3),
     borderRadius: normalize(4),
     alignItems: 'center',
     justifyContent: 'center',

@@ -4,7 +4,6 @@ export interface CardProps {
   text?: string
   tag?: string
   colorTitle?: string
-  colorLocal?: string
   colorText?: string
   sizeTitle?: number
   sizeText?: number
@@ -16,7 +15,7 @@ export interface CardProps {
   marginBottom?: number
   colorIcon?: string
   onPress?: () => void
-  iconIsPressed?: boolean
+  iconIsPressed?: React.ReactNode
   overlay?: boolean
   numberOfLines?: number
   testID?: string
