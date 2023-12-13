@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 
+import { colors } from '@unifil/tokens'
 import { ActivityIndicator, Text, TouchableOpacity, View } from 'react-native'
 
 import { ButtonProps } from './Button.props'
@@ -40,7 +41,8 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
         styles.primary,
         {
           marginTop: props?.marginTop ?? 0,
-          marginBottom: props?.marginBottom ?? 0
+          marginBottom: props?.marginBottom ?? 0,
+          backgroundColor: props?.backgroundColor ? props?.backgroundColor : colors.blueSecondary
         }
       ]}
     >

@@ -5,7 +5,14 @@ import { View, TouchableOpacity, Text } from 'react-native'
 import { HeaderProfileProps } from './HeaderProfile.props'
 import { styles } from './HeaderProfile.styles'
 
-export const HeaderProfile = (props: HeaderProfileProps): ReactElement => {
+export const HeaderProfile = ({
+  onPress,
+  text,
+  nameProfile,
+  children,
+  initialLetterProfile,
+  icon
+}: HeaderProfileProps): ReactElement => {
   return (
     <>
       <View style={styles.statusBar} />
@@ -13,27 +20,27 @@ export const HeaderProfile = (props: HeaderProfileProps): ReactElement => {
         <View style={styles.content}>
           <View style={styles.containerText}>
             <Text style={styles.text}>
-              {props.text}
+              {text}
             </Text>
             <Text style={styles.profile}>
-              {props.nameProfile}
+              {nameProfile}
             </Text>
             <View style={styles.containerChildren}>
-              {props.children}
+              {children}
             </View>
           </View>
-          <View style={styles.column}>
-            <View style={styles.circleName}>
-              <Text style={styles.initialLetter}>
-                {props.initialLetterProfile}
-              </Text>
+          <TouchableOpacity onPress={onPress}>
+            <View style={styles.containerButton}>
+              <View style={styles.circleName}>
+                <Text style={styles.initialLetter}>
+                  {initialLetterProfile}
+                </Text>
+              </View>
+              <View>
+                {icon}
+              </View>
             </View>
-            <TouchableOpacity onPress={props.onPress}>
-              <Text style={styles.textButton}>
-                {props.textButton}
-              </Text>
-            </TouchableOpacity>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </>

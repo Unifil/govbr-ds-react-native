@@ -82,19 +82,31 @@ export const Card = (props: CardProps): ReactElement => {
                     styles.description,
                     {
                       textTransform: props.textCapitalize ? 'capitalize' : 'none',
-                      color: isPressed ? colors.white : props.colorLocal
+                      color: isPressed ? colors.white : props.colorText
                     }
                   ]}
                   numberOfLines={props?.numberOfLines}
                 >
                   {props.description}
                 </Text>
+                {props.text &&
+                  <Text
+                    style={[
+                      styles.description,
+                      {
+                        textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                        color: isPressed ? colors.white : props.colorText
+                      }
+                    ]}
+                    numberOfLines={props?.numberOfLines}
+                  >
+                    {props.text}
+                  </Text>
+                }
               </View>
-              {
-                <View style={[styles.icon]}>
-                  {isPressed ? props.icon : props.iconIsPressed}
-                </View>
-              }
+              <View style={[styles.icon]}>
+                {isPressed ? props.icon : props.iconIsPressed}
+              </View>
             </View>
           </View>
         </View>
