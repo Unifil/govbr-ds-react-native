@@ -6,4 +6,6 @@ export interface SelectProps {
   expandIcon?: any
   leftRotate?: boolean
   onChange: (value: string) => void
+  zIndex?: number
+  listEmpty?: string
 }

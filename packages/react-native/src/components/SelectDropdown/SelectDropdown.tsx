@@ -1,5 +1,11 @@
 /* eslint-disable no-sequences */
-import React, { ReactElement, useEffect, useMemo, useRef, useState } from 'react'
+import React, {
+  ReactElement,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 
 import { Text, Animated, TouchableOpacity, FlatList, View } from 'react-native'
 
@@ -15,11 +21,13 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
 
   const startAnimation = React.useCallback(() => {
     if (typeof animation !== 'boolean') {
-      (Animated as any)[animation.type || 'timing'](transition.current, {
+      (Animated as any)
+      [animation.type || 'timing'](transition.current, {
         toValue: Number(isExpanded),
         useNativeDriver: true,
         duration: animation.duration || 350
-      }).start()
+      })
+        .start()
     }
   }, [isExpanded, animation])
 
@@ -44,52 +52,75 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
   )
 
   return (
-    < >
+    <>
       <TouchableOpacity
         onPress={() => setIsExpanded(!isExpanded ?? false)}
-        style={styles.select}
+        style={[
+          styles.select,
+          {
+            zIndex: props.zIndex
+          }
+        ]}
       >
-        <Text style={selected ? styles.textDropdown : styles.placeholder}>
-          {selected || props?.placeholder}
-        </Text>
-        {props?.icon && (
-          <Animated.View
-            style={[iconAnimation, { marginLeft: 'auto' }]}
-          >
-            {renderNode(props?.icon, isExpanded ? props?.expandIcon ?? props?.icon : props?.icon)}
-          </Animated.View>
+        <View style={styles.containerText}>
+          <Text style={selected ? styles.textDropdown : styles.placeholder}>
+            {selected || props?.placeholder}
+          </Text>
+          {props?.icon && (
+            <Animated.View
+              style={[
+                iconAnimation,
+                {
+                  marginLeft: 'auto',
+                  zIndex: 99
+                }
+              ]}
+            >
+              {renderNode(
+                props?.icon,
+                isExpanded ? props?.expandIcon ?? props?.icon : props?.icon
+              )}
+            </Animated.View>
+          )}
+        </View>
+        {isExpanded && (
+          <View style={styles.content}>
+            <Animated.View
+              style={[
+                styles.dropdown,
+                {
+                  opacity: transition.current
+                }
+              ]}
+            >
+              <FlatList
+                nestedScrollEnabled={true}
+                ListEmptyComponent={() => (
+                  <View style={styles.empty}>
+                    {props?.listEmpty && (
+                      <Text style={styles.textEmpty}>{props.listEmpty}</Text>
+                    )}
+                  </View>
+                )}
+                data={props?.options}
+                keyExtractor={(item: any) => item.id.toString()}
+                renderItem={({ item }: any) => (
+                  <TouchableOpacity
+                    style={styles.optionDropdown}
+                    onPress={() => {
+                      setSelected(item.code)
+                      props.onChange(item.id)
+                      setIsExpanded(false)
+                    }}
+                  >
+                    <Text style={styles.textDropdown}>{item.code}</Text>
+                  </TouchableOpacity>
+                )}
+              />
+            </Animated.View>
+          </View>
         )}
       </TouchableOpacity>
-      {isExpanded &&
-        <View>
-          <Animated.View
-            style={[
-              styles.dropdown,
-              {
-                opacity: transition.current
-              }
-            ]}
-          >
-            <FlatList
-              nestedScrollEnabled={true}
-              data={props?.options}
-              keyExtractor={(item: any) => item.id.toString()}
-              renderItem={({ item }: any) => (
-                <TouchableOpacity
-                  style={styles.optionDropdown}
-                  onPress={() => {
-                    setSelected(item.code)
-                    props.onChange(item.id)
-                    setIsExpanded(false)
-                  }}
-                >
-                  <Text style={styles.textDropdown}>{item.code}</Text>
-                </TouchableOpacity>
-              )}
-            />
-          </Animated.View>
-        </View>
-      }
-    </ >
+    </>
   )
 }
