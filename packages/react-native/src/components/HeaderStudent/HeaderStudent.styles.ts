@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.weakBlueSecondary,
     paddingBottom: 40,
     paddingTop: normalize(5),
-    top: normalize(-70),
     paddingLeft: normalize(20),
     paddingRight: normalize(30)
   },
@@ -19,8 +18,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center'
   },
   statusBar: {
-    top: -70,
-    height: 70,
+    position: 'absolute',
+    height: normalize(140),
+    width: '100%',
+    top: 0,
     backgroundColor: colors.weakBlueSecondary
   },
   class: {

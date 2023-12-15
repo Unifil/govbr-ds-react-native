@@ -45,7 +45,6 @@ export const Slider = ({
   const flatListRef = React.useRef(null) as any
 
   const goToSlide = (pageNum: any, triggerOnSlideChange = false): any => {
-    console.log('goToSlide', pageNum)
     const prevNum = activeIndex
     setActiveIndex(pageNum)
     flatListRef.current?.scrollToOffset({
@@ -53,7 +52,6 @@ export const Slider = ({
     })
     if (triggerOnSlideChange) {
       onSlideToIndex && onSlideToIndex(pageNum)
-      console.log('sdfsdfsdfsdfsdfsd', pageNum)
       onSlideChange(pageNum, prevNum)
     }
   }
@@ -117,7 +115,6 @@ export const Slider = ({
     setActiveIndex(newIndex)
     onSlideToIndex && onSlideToIndex(newIndex)
     onSlideChange && onSlideChange(newIndex, lastIndex)
-    console.log('onSlideChssange', newIndex)
   }
 
   const _onLayout = (event: any): any => {
