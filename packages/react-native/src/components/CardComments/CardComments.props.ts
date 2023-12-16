@@ -1,15 +1,15 @@
-interface DataButtons {
-  id: number
-  iconButton: React.ReactNode
-  colorButton: string
-  disabled?: boolean
-  onPress: () => void
-}
-
 export interface CardCommentsProps {
   comment: string
   date: string
   status: string
   colorStatus: string
-  buttons?: DataButtons[]
+  onPressDelete?: () => void
+  iconButtonDelete?: React.ReactNode
+  disabledDelete?: boolean
+  onPressUpdate?: () => void
+  iconButtonUpdate?: React.ReactNode
+  disabledUpdate?: boolean
+  onPressCheck?: () => void
+  iconButtonCheck?: React.ReactNode
+  disabledCheck?: boolean
 }
