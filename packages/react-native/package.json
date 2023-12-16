@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
-    "build": "npm run clean && sleep 5 &&  tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
-    "dev": "npm run clean && sleep 5 && tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.jsx,.ts,.tsx' --watch",
+    "build": "npm run clean &&   tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
+    "dev": "tsc --emitDeclarationOnly",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix"
   },
   "exports": {
