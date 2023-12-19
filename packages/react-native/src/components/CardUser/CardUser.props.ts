@@ -5,7 +5,7 @@ export interface CardProps {
   marginTop?: number
   marginBottom?: number
   overlay?: boolean
-  rightComponent?: React.ReactNode
+  statusComponent?: React.ReactNode
   sizeAvatar?: number
   onPress?: () => void
 }

@@ -21,7 +21,8 @@ export const styles = StyleSheet.create({
     color: colors.gray600,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    fontFamily: 'Rawline-Regular'
+    fontFamily: 'Rawline-Regular',
+    marginTop: normalize(6)
   },
   containerRow: {
     flexDirection: 'row',
