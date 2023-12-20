@@ -44,20 +44,20 @@ export const CardUser = (props: CardProps): ReactElement => {
                   style={[
                     styles.name,
                     {
-                      marginBottom: props?.description ? normalize(3) : 0
+                      marginBottom: props?.statusComponent ? normalize(4) : 0
                     }
                   ]}
                 >
                   {props.name}
                 </Text>
+                <View>{props?.statusComponent && props.statusComponent}</View>
                 {props?.description && (
-                  <Text style={styles.description} >
+                  <Text style={styles.description}>
                     {props.description}
                   </Text>
                 )}
               </View>
             </View>
-          <View>{props?.rightComponent && props.rightComponent}</View>
         </View>
       </View>
     </TouchableOpacity>

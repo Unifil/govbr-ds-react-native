@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { ButtonIcon } from "@unifil/react-native";
-import { fontWeights, fontSizes, colors } from "@unifil/tokens";
+import { colors } from "@unifil/tokens";
 
 const ButtonIconMeta = {
   title: "ButtonIcon",
@@ -11,6 +11,8 @@ const ButtonIconMeta = {
   },
   args: {
     icon: <></>,
+    height: 30,
+    width: 30,
   },
   decorators: [
     (Story: any) => (
@@ -25,12 +27,9 @@ export default ButtonIconMeta;
 
 export const Default = {
   args: {
-    height: 30,
-    windth: 30,
-    borderRadius: 50, 
-    backgroundColor: colors.darkBlue,
-    colorText: colors.white,
-    fontWeight: fontWeights.medium,
-    fontSize: fontSizes.xs
+    height: 32,
+    width: 64,
+    backgroundColor: colors.blueSecondary,
+    icon: <></>
   },
 };
