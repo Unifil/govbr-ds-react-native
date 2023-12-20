@@ -1,4 +1,3 @@
-/* eslint-disable no-sequences */
 import React, {
   ReactElement,
   useEffect,
@@ -21,8 +20,7 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
 
   const startAnimation = React.useCallback(() => {
     if (typeof animation !== 'boolean') {
-      (Animated as any)
-      [animation.type || 'timing'](transition.current, {
+      (Animated as any)[animation.type || 'timing'](transition.current, {
         toValue: Number(isExpanded),
         useNativeDriver: true,
         duration: animation.duration || 350
