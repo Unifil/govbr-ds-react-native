@@ -40,7 +40,7 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
     color: colors.gray,
-    fontFamily: 'Rawline-Medium-Italic'
+    fontFamily: 'Rawline-Medium'
   },
   containerTitle: {
     alignItems: 'flex-start',

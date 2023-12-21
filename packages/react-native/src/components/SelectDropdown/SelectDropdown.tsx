@@ -32,6 +32,12 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
   }, [isExpanded, animation])
 
   useEffect(() => {
+    if (props?.defaultValue) {
+      setSelected(props.defaultValue)
+    }
+  }, [props?.defaultValue])
+
+  useEffect(() => {
     startAnimation()
   }, [isExpanded, startAnimation])
 
@@ -63,7 +69,9 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
         ]}
       >
         <View style={styles.containerText}>
-          <Text style={selected ? styles.textDropdown : styles.placeholder}>
+          <Text style={selected ? [styles.textDropdown, {
+            fontFamily: props?.fontFamily ?? 'Roboto-Regular'
+          }] : [styles.placeholder]}>
             {selected || props?.placeholder}
           </Text>
           {props?.icon && (

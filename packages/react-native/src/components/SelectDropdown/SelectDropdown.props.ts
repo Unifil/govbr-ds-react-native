@@ -8,4 +8,6 @@ export interface SelectProps {
   onChange: (value: string) => void
   zIndex?: number
   listEmpty?: string
+  defaultValue?: string
+  fontFamily?: string | null
 }
