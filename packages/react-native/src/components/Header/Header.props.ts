@@ -4,7 +4,7 @@ export interface HeaderProps {
   onPress?: () => void
   icon?: ReactNode
   title?: string
-  subtitle?: string
+  subtitle?: ReactNode
   divider?: boolean
   children?: React.ReactNode
   backgroundColor?: string
