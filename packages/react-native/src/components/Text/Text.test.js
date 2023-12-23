@@ -1,7 +1,7 @@
 import {Text} from './Text'
 import React from 'react';
 import { render } from '@testing-library/react-native';
-
+//validar com a equipe de dev
 describe('Text', () => {
   it('renders primary text correctly', () => {
     const { getByText } = render(

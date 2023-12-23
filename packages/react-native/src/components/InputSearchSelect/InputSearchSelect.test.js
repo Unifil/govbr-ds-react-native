@@ -6,7 +6,7 @@ const mockDataDropdown = [
   { name: 'Option 1', value: '1' },
   { name: 'Option 2', value: '2' }
 ];
-
+//validar com a equipe de dev
 describe('InputSearchSelect Component', () => {
 
   it('renders correctly', () => {

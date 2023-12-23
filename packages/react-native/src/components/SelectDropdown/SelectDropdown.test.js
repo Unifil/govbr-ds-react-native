@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, act } from '@testing-library/react-native';
 import { SelectDropdown } from './SelectDropdown';
-
+//validar com a equipe de dev
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 const mockOptions = [
   { id: 1, code: 'Option 1' },

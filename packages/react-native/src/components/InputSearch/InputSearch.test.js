@@ -2,7 +2,7 @@ import { InputSearch } from "/InputSearch";
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 
-
+//validar com a equipe de dev
 describe('InputSearch Component', () => {
 
   

@@ -7,7 +7,7 @@ jest.mock('react-native/Libraries/Utilities/Dimensions', () => {
     get: jest.fn().mockReturnValue({ width: 375, height: 667 }),
   };
 });
-
+//validar com a equipe de dev
 const mockData = [
   { id: '1', content: 'Slide 1' },
   { id: '2', content: 'Slide 2' },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { ButtonIcon } from '.ButtonIcon';
-
+//validar com a equipe de dev
 describe('ButtonIcon Component', () => {
   const mockOnPress = jest.fn();
   const mockIcon = <Text>Icon</Text>;

@@ -2,6 +2,8 @@ import {Wrapper} from './Wrapper'
 import React from 'react';
 import { render } from '@testing-library/react-native';
 
+//validar com a equipe de dev
+
 describe('Wrapper Component', () => {
   it('renders its children correctly', () => {
     const testText = 'Test child';

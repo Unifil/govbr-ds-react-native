@@ -1,7 +1,7 @@
 import {Checkbox} from './Checkbox';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-
+//validar com a equipe de dev
 describe('Checkbox Component', () => {
   const mockSetCheckboxStates = jest.fn();
   const mockIcon = <Text>Checked</Text>;

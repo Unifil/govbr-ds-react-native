@@ -1,7 +1,7 @@
 import {Header} from './Header';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-
+//validar com a equipe de dev
 describe('Header Component', () => {
   it('renders title and subtitle correctly', () => {
     const { getByText } = render(

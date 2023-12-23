@@ -1,8 +1,9 @@
 import {Toast} from './Toast';
 import React from 'react';
 import { render, act } from '@testing-library/react-native';
-
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+
+//validar com a equipe de dev
 
 describe('Toast Component', () => {
   const mockCloseToast = jest.fn();

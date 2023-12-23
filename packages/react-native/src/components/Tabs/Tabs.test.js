@@ -5,7 +5,7 @@ const mockDataTab = [
   { id: '1', title: 'Tab 1', content: 'Content 1' },
   { id: '2', title: 'Tab 2', content: 'Content 2' },
 ];
-
+//validar com a equipe de dev
 describe('Tabs', () => {
   it('renders all tabs correctly', () => {
     const { getByText } = render(<Tabs dataTab={mockDataTab} />);

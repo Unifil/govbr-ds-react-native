@@ -1,7 +1,7 @@
 import {Title} from './Title';
 import React from 'react';
 import { render } from '@testing-library/react-native';
-
+//validar com a equipe de dev
 describe('Title Component', () => {
   const defaultProps = {
     text: 'Sample Title',

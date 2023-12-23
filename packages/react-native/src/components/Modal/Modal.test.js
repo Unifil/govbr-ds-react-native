@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react-native';
 
 import { Modal} from './Modal';
 
-
+//validar com a equipe de dev
 describe('Modal', () => {
 
   it('renders correctly', () => {

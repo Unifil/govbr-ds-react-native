@@ -1,7 +1,7 @@
 import {Card} from './Card';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-
+//validar com a equipe de dev
 describe('Card Component', () => {
   const mockOnPress = jest.fn();
   const mockIcon = <Text>Icon</Text>;

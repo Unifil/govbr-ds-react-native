@@ -1,7 +1,7 @@
 import {Tooltip} from './Tooltip'
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-
+//validar com a equipe de dev
 describe('Tooltip Component', () => {
   const defaultProps = {
     title: 'Title',

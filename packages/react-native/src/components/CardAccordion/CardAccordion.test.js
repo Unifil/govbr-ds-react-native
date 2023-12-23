@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { CardAccordion } from './CardAccordion'; 
-
+//validar com a equipe de dev
 describe('CardAccordion Component', () => {
   const mockOnChange = jest.fn();
   const mockTextCheckbox = ['Option 1', 'Option 2'];

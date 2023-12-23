@@ -1,6 +1,7 @@
 import {CustomTab} from './CustomTab';
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
+//validar com a equipe de dev
 const mockState = {
   routes: [
     { key: 'tab1', name: 'Tab1' },

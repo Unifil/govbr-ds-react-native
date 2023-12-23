@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Input } from './Input';
-
+//validar com a equipe de dev
 describe('Input Component', () => {
   it('renders correctly', () => {
     const { getByTestId } = render(<Input testID="input-test" />);
