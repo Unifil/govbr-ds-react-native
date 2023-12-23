@@ -1,6 +1,6 @@
 module.exports = {
   stories: ['./stories/**/*.stories.?(ts|tsx|js|jsx)'],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: ["@storybook/addon-links", "@storybook/addon-essentials", '@storybook/addon-knobs','@storybook/addon-interactions',],
   framework: {
     name: "@storybook/react-webpack5",
     options: {}
@@ -9,3 +9,4 @@ module.exports = {
     autodocs: true
   }
 };
+

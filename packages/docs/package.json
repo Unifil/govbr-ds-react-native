@@ -9,13 +9,14 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "dev": "storybook dev -p 7007",
-    "build": "storybook build",
+    "build-storybook": "storybook build",
     "deploy-storybook": "storybook-to-ghpages",
     "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
     "storybook-watch": "sb-rn-watcher --config-path .ondevice",
     "storybook": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start",
     "storybook:ios": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --ios",
-    "storybook:android": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --android"
+    "storybook:android": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --android",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",

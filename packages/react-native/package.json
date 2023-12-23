@@ -7,10 +7,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
-    "build": "npm run clean &&   tsc --emitDeclarationOnly && babel src --out-dir dist --extensions '.js,.ts,.tsx'",
-    "dev": "tsc --emitDeclarationOnly",
-    "lint": "eslint 'src/**/*.{ts,tsx}' --fix"
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "dev": "storybook dev -p 7007",
+    "build-storybook": "storybook build",
+    "deploy-storybook": "storybook-to-ghpages",
+    "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
+    "storybook-watch": "sb-rn-watcher --config-path .ondevice",
+    "storybook": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start",
+    "storybook:ios": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --ios",
+    "storybook:android": "sb-rn-get-stories --config-path .ondevice && STORYBOOK_ENABLED='true' expo start --android",
+    "test-storybook": "test-storybook"
+  
+
+
   },
+
   "exports": {
     ".": "./dist/index.js",
     "./modalize": "./dist/modalize/index.js",
@@ -72,5 +83,11 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "module.exports": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
+  
 }
