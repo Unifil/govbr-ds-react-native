@@ -27,6 +27,7 @@ export const Primary = {
   args: {
     type: "primary",
     text: "Primary",
+    disabled: false,
     height: 45,
     borderRadius: 19, 
     backgroundColor: colors.blueSecondary,
@@ -40,19 +41,7 @@ export const Secondary = {
   args: {
     type: "secondary",
     text: "Secondary",
-    height: 45,
-    borderRadius: 19, 
-    backgroundColor: colors.blueSecondary,
-    colorText: colors.white,
-    fontWeight: fontWeights.bold,
-    fontSize: fontSizes.md
-  },
-};
-
-export const Disabled = {
-  args: {
-    type: "disabled",
-    text: "Disabled",
+    disabled: false,
     height: 45,
     borderRadius: 19, 
     backgroundColor: colors.blueSecondary,
@@ -66,6 +55,7 @@ export const Custom = {
   args: {
     type: "custom",
     text: "Custom",
+    disabled: false,
     height: 45,
     borderRadius: 19, 
     backgroundColor: colors.gray600,
