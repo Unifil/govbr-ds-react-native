@@ -8,4 +8,5 @@ export interface CardProps {
   statusComponent?: React.ReactNode
   sizeAvatar?: number
   onPress?: () => void
+  backgroundColor?: string
 }

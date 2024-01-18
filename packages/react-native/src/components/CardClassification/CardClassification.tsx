@@ -33,7 +33,9 @@ export const CardClassification = ({
         <View style={[styles.containerValue, {
           backgroundColor: color || '#F2F2F2'
         }]}>
-          <Text style={styles.valueCard}>{value}</Text>
+          <Text style={styles.valueCard}>{value.split('.')[0]
+
+          }%</Text>
         </View>
       </View>
     </TouchableOpacity>
