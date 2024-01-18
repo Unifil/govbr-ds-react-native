@@ -46,6 +46,9 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
         }
       ]}
     >
+      {props.iconLeft && (
+        <View style={{ marginRight: 8 }}>{props.iconLeft}</View>
+      )}
       {!props.isLoading ? (
         <>
           <Text style={[styles.textPrimary]}>{props.text}</Text>

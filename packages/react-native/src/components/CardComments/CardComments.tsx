@@ -54,7 +54,7 @@ export const CardComments = ({
               style={[
                 styles.button,
                 {
-                  backgroundColor: colors.red,
+                  backgroundColor: colors.red ? colors.red : colors.white,
                   opacity: disabledDelete ? 0.3 : 1
                 }
               ]}
