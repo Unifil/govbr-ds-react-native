@@ -11,19 +11,9 @@ export const Button = (props: ButtonProps): ReactElement => {
   function renderButton() {
     switch (props.type) {
       case 'primary':
-        return (
-          <>
-            {props?.disabled ? (
-              <ButtonDisabled {...props} />
-            ) : (
-              <ButtonPrimary {...props} />
-            )}
-          </>
-        )
+        return <ButtonPrimary {...props} />
       case 'secondary':
         return <ButtonSecondary {...props} />
-      case 'disabled':
-        return <ButtonDisabled {...props} />
       case 'custom':
         return <ButtonCustom {...props} />
     }
@@ -37,6 +27,7 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
     <TouchableOpacity
       onPress={props.onPress}
       testID={props.testID}
+      disabled={props.disabled}
       style={[
         styles.primary,
         {
@@ -65,12 +56,14 @@ const ButtonSecondary = (props: ButtonProps): ReactElement => {
     <TouchableOpacity
       testID={props.testID}
       onPress={props.onPress}
+      disabled={props.disabled}
       style={[
         styles.secondary,
         {
           width: props?.width,
           marginTop: props?.marginTop ?? 0,
-          marginBottom: props?.marginBottom ?? 0
+          marginBottom: props?.marginBottom ?? 0,
+          opacity: props.disabled ? 0.3 : 1
         }
       ]}
     >
@@ -88,26 +81,12 @@ const ButtonSecondary = (props: ButtonProps): ReactElement => {
   )
 }
 
-const ButtonDisabled = (props: ButtonProps): ReactElement => {
-  return (
-    <View style={[styles.disabled]}>
-      {!props.isLoading ? (
-        <>
-          <Text style={[styles.textPrimary]}>{props.text}</Text>
-          {props.icon && <View style={{ marginLeft: 8 }}>{props.icon}</View>}
-        </>
-      ) : (
-        <ActivityIndicator size="small" color={props.colorText} />
-      )}
-    </View>
-  )
-}
-
 const ButtonCustom = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
       testID={props.testID}
       onPress={props.onPress}
+      disabled={props.disabled}
       style={[
         styles.primary,
         {
@@ -116,7 +95,8 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
           height: props.height,
           borderRadius: props.borderRadius,
           marginTop: props.marginTop,
-          marginBottom: props.marginBottom
+          marginBottom: props.marginBottom,
+          opacity: props.disabled ? 0.3 : 1
         }
       ]}
     >
