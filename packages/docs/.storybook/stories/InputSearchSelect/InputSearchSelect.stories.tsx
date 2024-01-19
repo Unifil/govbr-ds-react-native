@@ -29,4 +29,11 @@ const InputSearchSelectMeta = {
 
 export default InputSearchSelectMeta;
 
-export const Primary = {};
+export const Primary = {
+  args: {
+    ...InputSearchSelectMeta.args,
+    value: 'Option 1'
+  },
+};
+
+

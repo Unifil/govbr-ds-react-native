@@ -1,6 +1,6 @@
 {
   "extends": "@unifil/ts-config/react.json",
-  "include": ["src", "dist/index.d.ts", "modalize","cardSwipeable", "index.tsx" ],
+  "include": ["src", "dist/index.d.ts", "modalize","cardSwipeable", "index.tsx", "components" ],
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "react", 

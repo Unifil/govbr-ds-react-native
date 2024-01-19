@@ -38,3 +38,24 @@ export const Default = {
     marginRight: 0
   },
 };
+
+export const Empty = {
+  args: {
+    ...Default.args,
+    value: '', 
+  },
+};
+
+export const WithPredefinedText = {
+  args: {
+    ...Default.args,
+    value: 'Texto pré-definido',
+  },
+};
+
+export const Disabled = {
+  args: {
+    ...Default.args,
+    editable: false,
+  },
+};

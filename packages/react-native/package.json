@@ -5,7 +5,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "clean": "rimraf dist",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
     "dev": "storybook dev -p 7007",
@@ -83,11 +83,7 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "module.exports": {
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
   }
+
   
 }

@@ -1,9 +1,12 @@
 {
   "presets": [
-    "@babel/preset-env",
-    "@babel/preset-react",
+    "module:metro-react-native-babel-preset",
+    ["@babel/preset-env", { "targets": { "node": "current" } }],
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+    }],
     "@babel/preset-typescript"
   ],
-  "plugins": [  "@babel/plugin-proposal-export-namespace-from", "@babel/plugin-transform-runtime","@babel/plugin-syntax-jsx"],
-  "ignore": ["node_modules"]
+  
+  "plugins": ["@babel/plugin-syntax-jsx"]
 }
