@@ -99,5 +99,10 @@ export const styles = StyleSheet.create({
     width: 8,
     borderRadius: 50,
     marginRight: normalize(7)
+  },
+  containerChildren: {
+    width: normalize(135),
+    flexDirection: 'row',
+    minHeight: normalize(20)
   }
 })

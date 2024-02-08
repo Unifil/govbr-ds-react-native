@@ -103,6 +103,7 @@ export const Card = (props: CardProps): ReactElement => {
                     {props.text}
                   </Text>
                 }
+                {props.children && <View style={[styles.containerChildren]} >{props.children}</View>}
               </View>
               <View style={[styles.icon]}>
                 {isPressed ? props.icon : props.iconIsPressed}
