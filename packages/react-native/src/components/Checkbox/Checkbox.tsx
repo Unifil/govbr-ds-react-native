@@ -20,28 +20,28 @@ export const Checkbox = (props: CheckboxProps): ReactElement => {
       ]}
     >
 
-        <TouchableOpacity
+      <TouchableOpacity
+        style={[
+          styles.containerCheckbox,
+          {
+            marginLeft: props?.flexDirection === ('row' || 'column') ? 24 : 0
+          }
+        ]}
+        onPress={props.onPress}
+      >
+        <View
           style={[
-            styles.containerCheckbox,
+            styles.checkbox,
             {
-              marginLeft: props?.flexDirection === ('row' || 'column') ? 24 : 0
+              backgroundColor: colors.white,
+              borderWidth: 2
             }
           ]}
-          onPress={props.onPress}
         >
-          <View
-            style={[
-              styles.checkbox,
-              {
-                backgroundColor: colors.white,
-                borderWidth: 2
-              }
-            ]}
-            >
-              {props.checkboxStates && props?.icon}
-          </View>
+          {props.checkboxStates && props?.icon}
+        </View>
 
-        </TouchableOpacity>
+      </TouchableOpacity>
 
     </View>
   )
