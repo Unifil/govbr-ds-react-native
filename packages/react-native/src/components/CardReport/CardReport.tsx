@@ -3,15 +3,16 @@ import React, { ReactElement, useState } from 'react'
 import { colors } from '@unifil/tokens'
 import { Text, TouchableOpacity, View } from 'react-native'
 
-import { CardProps } from './Card.props'
-import { styles } from './Card.styles'
+import { CardProps } from './CardReport.props'
+import { styles } from './CardReport.styles'
 import { normalize } from '../../utils/normalize'
+import { Checkbox } from '../Checkbox/Checkbox'
 
-export const Card = (props: CardProps): ReactElement => {
+export const CardReport = (props: CardProps): ReactElement => {
   const [isPressed] = useState(false)
-
   return (
     <TouchableOpacity
+      disabled={props.isCorrectQuestion}
       testID={props.testID}
       style={[
         {
@@ -23,13 +24,19 @@ export const Card = (props: CardProps): ReactElement => {
         }
       ]}
       onPress={props.onPress}
-      activeOpacity={0.6}
-      disabled={props.overlay}
+      activeOpacity={0.8}
     >
       <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
         <View
-          style={styles.container}
+          style={[
+            {
+              backgroundColor: props.isCorrectQuestion
+                ? '#c6c6c6'
+                : colors.white
+            },
+            styles.container
+          ]}
         >
           <View style={[styles.containerContent]}>
             <View
@@ -40,7 +47,7 @@ export const Card = (props: CardProps): ReactElement => {
                 }
               ]}
             >
-              {props?.colorStatusGroup &&
+              {props?.colorStatusGroup && (
                 <View
                   style={[
                     styles.status,
@@ -49,13 +56,16 @@ export const Card = (props: CardProps): ReactElement => {
                     }
                   ]}
                 />
-              }
+              )}
               {props?.tag && (
                 <View style={[styles.containerTag]}>
                   <Text
-                    style={[styles.textTag,
+                    style={[
+                      styles.textTag,
                       {
-                        textTransform: props.textCapitalize ? 'capitalize' : 'none'
+                        textTransform: props.textCapitalize
+                          ? 'capitalize'
+                          : 'none'
                       }
                     ]}
                   >
@@ -70,7 +80,9 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.title,
                     {
-                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                      textTransform: props.textCapitalize
+                        ? 'capitalize'
+                        : 'none',
                       color: isPressed ? colors.white : props.colorTitle
                     }
                   ]}
@@ -81,7 +93,9 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.description,
                     {
-                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                      textTransform: props.textCapitalize
+                        ? 'capitalize'
+                        : 'none',
                       color: isPressed ? colors.white : props.colorText
                     }
                   ]}
@@ -89,12 +103,14 @@ export const Card = (props: CardProps): ReactElement => {
                 >
                   {props.description}
                 </Text>
-                {props.text &&
+                {props.text && (
                   <Text
                     style={[
                       styles.description,
                       {
-                        textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                        textTransform: props.textCapitalize
+                          ? 'capitalize'
+                          : 'none',
                         color: isPressed ? colors.white : props.colorText
                       }
                     ]}
@@ -102,11 +118,23 @@ export const Card = (props: CardProps): ReactElement => {
                   >
                     {props.text}
                   </Text>
-                }
-                {props.children && <View style={[styles.containerChildren]} >{props.children}</View>}
+                )}
+                {props.children && (
+                  <View style={[styles.containerChildren]}>
+                    {props.children}
+                  </View>
+                )}
               </View>
               <View style={[styles.icon]}>
-                {isPressed ? props.icon : props.iconIsPressed}
+                <Checkbox
+                  onPress={props.onPress}
+                  setCheckboxStates={props.setCheckboxStates}
+                  checkboxStates={
+                    props.isCorrectQuestion ? false : props.checkboxStates
+                  }
+                  multipleSelection={true}
+                  icon={props.icon}
+                />
               </View>
             </View>
           </View>

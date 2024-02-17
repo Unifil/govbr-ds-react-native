@@ -68,6 +68,7 @@ export const styles = StyleSheet.create({
   containerCard: {
     width: '100%',
     marginBottom: 5
+
   },
   container: {
     paddingHorizontal: normalize(16),
@@ -85,8 +86,8 @@ export const styles = StyleSheet.create({
     shadowRadius: 0,
     borderWidth: 1,
     borderColor: '#CCCCCC',
-    backgroundColor: colors.white,
     maxWidth: '100%'
+
   },
   boxTag: {
     flexDirection: 'row',

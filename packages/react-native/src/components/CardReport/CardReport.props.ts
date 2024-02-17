@@ -22,4 +22,7 @@ export interface CardProps {
   testID?: string
   textCapitalize?: boolean
   colorStatusGroup?: string
+  setCheckboxStates: (value: boolean) => void
+  checkboxStates: boolean
+  isCorrectQuestion?: boolean
 }
