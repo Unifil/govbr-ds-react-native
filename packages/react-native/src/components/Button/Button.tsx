@@ -33,7 +33,8 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
         {
           marginTop: props?.marginTop ?? 0,
           marginBottom: props?.marginBottom ?? 0,
-          backgroundColor: props?.backgroundColor ? props?.backgroundColor : colors.blueSecondary
+          backgroundColor: props?.backgroundColor ? props?.backgroundColor : colors.blueSecondary,
+          opacity: props.disabled ? 0.3 : 1
         }
       ]}
     >

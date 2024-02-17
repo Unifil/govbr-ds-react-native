@@ -70,7 +70,7 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
           <Text style={selected ? [styles.textDropdown, {
             fontFamily: props?.fontFamily ?? 'Roboto-Regular'
           }] : [styles.placeholder]}>
-            {selected || props?.placeholder}
+            {selected.length > 36 ? `${selected.slice(0, 36) + '...'}` : selected || props?.placeholder}
           </Text>
           {props?.icon && (
             <Animated.View
