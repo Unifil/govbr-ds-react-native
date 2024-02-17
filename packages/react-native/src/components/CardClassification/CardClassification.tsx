@@ -21,7 +21,7 @@ export const CardClassification = ({
       }]
       }
       onPress={onPress}
-      activeOpacity={0.8}
+      activeOpacity={0.6}
       {...props}
     >
       <View style={styles.containerCard}>

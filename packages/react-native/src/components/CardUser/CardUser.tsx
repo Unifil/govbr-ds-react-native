@@ -13,13 +13,11 @@ export const CardUser = (props: CardProps): ReactElement => {
         {
           marginTop: props.marginTop,
           marginBottom: props.marginBottom
-
         }
       }
       onPress={props.onPress}
-      activeOpacity={0.8}
+      activeOpacity={0.6}
       disabled={props.overlay || props.disabled}
-
     >
       {props.overlay ? <View style={styles.overlay} /> : null}
       <View style={[styles.containerCard, {

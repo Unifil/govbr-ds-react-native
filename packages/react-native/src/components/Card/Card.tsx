@@ -23,7 +23,7 @@ export const Card = (props: CardProps): ReactElement => {
         }
       ]}
       onPress={props.onPress}
-      activeOpacity={0.8}
+      activeOpacity={0.6}
       disabled={props.overlay}
     >
       <View style={[styles.containerCard]}>
