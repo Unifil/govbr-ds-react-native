@@ -25,6 +25,19 @@ export const CardUser = (props: CardProps): ReactElement => {
       }]} >
         <View style={styles.containerContent} >
           <View style={styles.containerRow} >
+          {props.iconReport ? (
+            <View
+              style={[
+                styles.containerIconReport,
+                {
+                  height: props.sizeAvatar || normalize(36),
+                  width: props.sizeAvatar || normalize(36)
+                }
+              ]}
+            >
+              <View>{props.iconReport}</View>
+            </View>
+          ) : (
             <View
               style={[
                 styles.containerShortName,
@@ -40,7 +53,7 @@ export const CardUser = (props: CardProps): ReactElement => {
                   props?.name.split(' ')[1][0]) ||
                   ''}
               </Text>
-            </View>
+            </View>)}
             <View>
               <Text
                 style={[

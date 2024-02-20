@@ -62,7 +62,14 @@ export const styles = StyleSheet.create({
   },
   containerShortName: {
     marginRight: normalize(12),
-    backgroundColor: '#168821',
+    backgroundColor: colors.green,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  containerIconReport: {
+    marginRight: normalize(12),
+    backgroundColor: colors.green,
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center'

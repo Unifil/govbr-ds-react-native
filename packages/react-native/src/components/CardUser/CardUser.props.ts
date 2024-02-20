@@ -9,4 +9,5 @@ export interface CardProps {
   sizeAvatar?: number
   onPress?: () => void
   backgroundColor?: string
+  iconReport?: React.ReactNode
 }

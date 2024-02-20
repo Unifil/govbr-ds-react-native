@@ -31,6 +31,13 @@ export const Default = {
     description: "Description card",
     colorTitle: colors.darkBlue,
     marginTop: 6,
-    marginBottom: 6
+    marginBottom: 6,
+    disabled: false,
+    overlay: false,
+    statusComponent: <></>,
+    sizeAvatar: 20,
+    onPress: {},
+    backgroundColor: "#FFF",
+    iconReport: <></>
   },
 };
