@@ -15,7 +15,7 @@ export const Header = (props: HeaderProps): ReactElement => {
           styles.container,
           {
             backgroundColor: props?.backgroundColor,
-            top: props?.backgroundColor ? -90 : 0
+            top: props?.backgroundColor ? -80 : 0
           }
         ]}
       >

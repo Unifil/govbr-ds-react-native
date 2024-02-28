@@ -47,7 +47,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.green,
-    borderRadius: 50
+    borderRadius: 50,
+    marginLeft: normalize(15)
   },
   shortName: {
     color: colors.white,
@@ -76,7 +77,7 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.sm,
     fontFamily: 'Rawline-Medium',
     color: colors.blueSecondary,
-    marginLeft: 6,
-    marginBottom: 2
+    marginLeft: normalize(6),
+    marginBottom: normalize(2)
   }
 })

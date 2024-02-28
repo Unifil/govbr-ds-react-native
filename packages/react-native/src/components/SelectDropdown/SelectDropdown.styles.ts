@@ -8,14 +8,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
-    paddingHorizontal: 10,
-    zIndex: 999999999
-  },
-  content: {
-    position: 'absolute',
-    width: '100%',
-    zIndex: 999999999,
-    top: 40
+    paddingHorizontal: 10
   },
   select: {
     minHeight: normalize(40),
@@ -24,8 +17,7 @@ export const styles = StyleSheet.create({
     borderRadius: normalize(4),
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    zIndex: 999
+    justifyContent: 'space-between'
   },
   placeholder: {
     fontSize: fontSizes.sm,
@@ -39,8 +31,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: normalize(16),
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderColor: colors.grayFourth,
-    zIndex: 2
+    borderColor: colors.grayFourth
   },
   dropdown: {
     opacity: 0,
@@ -59,7 +50,9 @@ export const styles = StyleSheet.create({
     width: '100%',
     maxHeight: normalize(150),
     marginTop: normalize(5),
-    zIndex: 999999
+    zIndex: 100,
+    position: 'absolute',
+    top: normalize(40)
   },
   textDropdown: {
     fontSize: fontSizes.sm,
@@ -67,19 +60,13 @@ export const styles = StyleSheet.create({
     color: colors.dark,
     fontFamily: 'Rawline-Medium'
   },
-  container: {
-    width: '100%',
-    position: 'relative',
-    zIndex: 10
-  },
   empty: {
     width: '100%',
     height: normalize(50),
     paddingHorizontal: normalize(16),
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderColor: colors.grayFourth,
-    zIndex: 2
+    borderColor: colors.grayFourth
   },
   textEmpty: {
     fontSize: fontSizes.sm,
@@ -87,5 +74,4 @@ export const styles = StyleSheet.create({
     color: colors.dark,
     fontFamily: 'Rawline-Medium'
   }
-
 })

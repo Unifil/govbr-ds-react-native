@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   statusBar: {
-    top: -70,
+    top: -65,
     height: 70,
     backgroundColor: colors.weakBlueSecondary
   },

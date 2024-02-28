@@ -4,4 +4,6 @@ export interface HeaderStudentProps {
   shortName: string
   school: string
   iconSchool: React.ReactNode
+  iconBack?: React.ReactNode
+  onPressIconBack?: () => void
 }

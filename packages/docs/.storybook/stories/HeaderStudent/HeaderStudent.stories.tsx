@@ -32,6 +32,8 @@ export const Primary = {
     class: 'Class and serie',
     shortName: 'AA',
     school: 'School',
-    iconSchool: <></>
+    iconSchool: <></>,
+    iconBack: <></>,
+    onPressIconBack: {}
   }
 };
