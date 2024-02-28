@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 import { HeaderStudentProps } from './HeaderStudent.props'
 import { styles } from './HeaderStudent.styles'
@@ -11,6 +11,11 @@ export const HeaderStudent = (props: HeaderStudentProps): ReactElement => {
       <View style={styles.statusBar} />
       <View style={styles.container}>
         <View style={styles.content}>
+          {props.onPressIconBack && (
+            <TouchableOpacity onPress={props.onPressIconBack}>
+              {props.iconBack}
+            </TouchableOpacity>
+          )}
           <View style={styles.containerShortName}>
             <Text style={styles.shortName}>{props.shortName}</Text>
           </View>

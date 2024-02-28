@@ -1,13 +1,11 @@
-import { ReactNode } from 'react'
-
 export interface HeaderProps {
   onPress?: () => void
-  icon?: ReactNode
+  icon?: React.ReactNode
   title?: string
-  subtitle?: ReactNode
+  subtitle?: React.ReactNode
   divider?: boolean
   children?: React.ReactNode
   backgroundColor?: string
-  iconHelp?: ReactNode
+  iconHelp?: React.ReactNode
   onPressHelp?: () => void
 }

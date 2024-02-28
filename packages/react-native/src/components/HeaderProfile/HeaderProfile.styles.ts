@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.weakBlueSecondary,
     paddingBottom: 40,
-    paddingTop: normalize(5),
+    paddingTop: normalize(15),
     top: normalize(-70),
     paddingRight: normalize(30)
   },
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   statusBar: {
-    top: -70,
+    top: -65,
     height: 70,
     backgroundColor: colors.weakBlueSecondary
   },
