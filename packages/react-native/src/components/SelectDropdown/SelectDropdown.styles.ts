@@ -17,7 +17,8 @@ export const styles = StyleSheet.create({
     borderRadius: normalize(4),
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
   },
   placeholder: {
     fontSize: fontSizes.sm,
@@ -31,7 +32,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: normalize(16),
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderColor: colors.grayFourth
+    borderColor: colors.grayFourth,  
   },
   dropdown: {
     opacity: 0,

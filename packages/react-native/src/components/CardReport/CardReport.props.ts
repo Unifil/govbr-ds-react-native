@@ -11,7 +11,7 @@ export interface CardProps {
   icon?: React.ReactNode
   borderRadius?: number
   height?: number
-  width?: number
+  width?: number | string
   marginTop?: number
   marginBottom?: number
   colorIcon?: string
@@ -23,6 +23,6 @@ export interface CardProps {
   textCapitalize?: boolean
   colorStatusGroup?: string
   setCheckboxStates: (value: boolean) => void
-  checkboxStates: boolean
+  checkboxStates: boolean | undefined
   isCorrectQuestion?: boolean
 }
