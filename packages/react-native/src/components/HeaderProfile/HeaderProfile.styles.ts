@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.weakBlueSecondary,
     paddingBottom: 40,
-    paddingTop: normalize(15),
+    paddingTop: normalize(25),
     top: normalize(-70),
     paddingRight: normalize(30)
   },

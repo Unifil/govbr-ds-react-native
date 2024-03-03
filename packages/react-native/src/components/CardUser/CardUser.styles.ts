@@ -42,7 +42,6 @@ export const styles = StyleSheet.create({
     paddingVertical: normalize(10),
     alignItems: 'center',
     justifyContent: 'center',
-    elevation: 10,
     shadowColor: '#00000040',
     shadowOffset: {
       width: 0,
