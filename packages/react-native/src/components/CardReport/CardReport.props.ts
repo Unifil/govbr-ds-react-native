@@ -1,3 +1,5 @@
+import { DimensionValue } from 'react-native'
+
 export interface CardProps {
   title?: string
   description?: string
@@ -11,7 +13,7 @@ export interface CardProps {
   icon?: React.ReactNode
   borderRadius?: number
   height?: number
-  width?: number | string
+  width?: DimensionValue | undefined
   marginTop?: number
   marginBottom?: number
   colorIcon?: string
