@@ -49,7 +49,7 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
           )}
         </>
       ) : (
-        <ActivityIndicator size="small" color={props.colorText} />
+        <ActivityIndicator size="small" color={colors.blueSecondary} />
       )}
     </TouchableOpacity>
   )
@@ -79,7 +79,7 @@ const ButtonSecondary = (props: ButtonProps): ReactElement => {
           )}
         </>
       ) : (
-        <ActivityIndicator size="small" color={props.colorText} />
+        <ActivityIndicator size="small" color={colors.blueSecondary} />
       )}
     </TouchableOpacity>
   )
@@ -121,7 +121,7 @@ const ButtonCustom = (props: ButtonProps): ReactElement => {
           {props.text}
         </Text>
       ) : (
-        <ActivityIndicator size="small" color={props.colorText} />
+        <ActivityIndicator size="small" color={colors.blueSecondary} />
       )}
       {props.icon && <View style={{ marginLeft: 8 }}>{props.icon}</View>}
     </TouchableOpacity>
