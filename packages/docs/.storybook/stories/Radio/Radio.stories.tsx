@@ -8,10 +8,6 @@ const RadioMeta = {
   argTypes: {
     onPress: { action: "pressed the Radio" },
   },
-  args: {
-    options: ['Option 1', 'Option 2'],
-    flexDirection: "row",
-  },
   decorators: [
     (Story: any) => (
       <View>
@@ -23,4 +19,10 @@ const RadioMeta = {
 
 export default RadioMeta;
 
-export const Primary = {};
+export const Default = {
+  args: {
+    label: "Label",
+    isSelected: false,
+    onPress: {}
+  }
+};
