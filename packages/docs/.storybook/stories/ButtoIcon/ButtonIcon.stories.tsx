@@ -30,6 +30,7 @@ export const Default = {
     height: 32,
     width: 64,
     backgroundColor: colors.blueSecondary,
-    icon: <></>
+    icon: <></>,
+    disabled: false
   },
 };
