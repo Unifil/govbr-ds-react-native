@@ -44,6 +44,8 @@ export const Primary = {
     marginBottom: 6,
     colorIcon: colors.darkBlue,
     textCapitalize: false,
-    colorStatusGroup: colors.darkBlue
+    colorStatusGroup: colors.darkBlue,
+    onPress: {},
+    onPressIn: {}
   },
 };
