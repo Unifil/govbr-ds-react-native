@@ -14,7 +14,8 @@ const SelectDropdownMeta = {
     icon: <></>,
     noRotation: false,
     expandIcon: false,
-    leftRotate: false
+    leftRotate: false,
+    disabled: false    
   },
   decorators: [
     (Story: any) => (

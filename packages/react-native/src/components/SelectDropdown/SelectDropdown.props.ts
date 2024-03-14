@@ -10,4 +10,5 @@ export interface SelectProps {
   listEmpty?: string
   defaultValue?: string
   fontFamily?: string | null
+  disabled?: boolean
 }

@@ -56,10 +56,11 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
   )
 
   return (
-    <View>
+    <View style={{ opacity: props.disabled ? 0.5 : 1.0 }}>
       <TouchableOpacity
         onPress={() => setIsExpanded(!isExpanded ?? false)}
         style={[styles.select]}
+        disabled={props.disabled}
       >
         <View style={styles.containerText}>
           <Text style={selected ? [styles.textDropdown, {
