@@ -25,12 +25,11 @@ export const Card = (props: CardProps): ReactElement => {
       onPress={props.onPress}
       activeOpacity={0.6}
       disabled={props.overlay}
+      onPressIn={props.onPressIn}
     >
       <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
-        <View
-          style={styles.container}
-        >
+        <View style={styles.container}>
           <View style={[styles.containerContent]}>
             <View
               style={[
@@ -40,7 +39,7 @@ export const Card = (props: CardProps): ReactElement => {
                 }
               ]}
             >
-              {props?.colorStatusGroup &&
+              {props?.colorStatusGroup && (
                 <View
                   style={[
                     styles.status,
@@ -49,14 +48,17 @@ export const Card = (props: CardProps): ReactElement => {
                     }
                   ]}
                 />
-              }
+              )}
               {props?.tag && (
                 <View style={[styles.containerTag]}>
                   <Text
-                    style={[styles.textTag,
-                    {
-                      textTransform: props.textCapitalize ? 'capitalize' : 'none'
-                    }
+                    style={[
+                      styles.textTag,
+                      {
+                        textTransform: props.textCapitalize
+                          ? 'capitalize'
+                          : 'none'
+                      }
                     ]}
                   >
                     {props.tag}
@@ -70,7 +72,9 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.title,
                     {
-                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                      textTransform: props.textCapitalize
+                        ? 'capitalize'
+                        : 'none',
                       color: isPressed ? colors.white : props.colorTitle
                     }
                   ]}
@@ -81,7 +85,9 @@ export const Card = (props: CardProps): ReactElement => {
                   style={[
                     styles.description,
                     {
-                      textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                      textTransform: props.textCapitalize
+                        ? 'capitalize'
+                        : 'none',
                       color: isPressed ? colors.white : props.colorText
                     }
                   ]}
@@ -89,12 +95,14 @@ export const Card = (props: CardProps): ReactElement => {
                 >
                   {props.description}
                 </Text>
-                {props.text &&
+                {props.text && (
                   <Text
                     style={[
                       styles.description,
                       {
-                        textTransform: props.textCapitalize ? 'capitalize' : 'none',
+                        textTransform: props.textCapitalize
+                          ? 'capitalize'
+                          : 'none',
                         color: isPressed ? colors.white : props.colorText
                       }
                     ]}
@@ -102,8 +110,12 @@ export const Card = (props: CardProps): ReactElement => {
                   >
                     {props.text}
                   </Text>
-                }
-                {props.children && <View style={[styles.containerChildren]} >{props.children}</View>}
+                )}
+                {props.children && (
+                  <View style={[styles.containerChildren]}>
+                    {props.children}
+                  </View>
+                )}
               </View>
               <View style={[styles.icon]}>
                 {isPressed ? props.icon : props.iconIsPressed}

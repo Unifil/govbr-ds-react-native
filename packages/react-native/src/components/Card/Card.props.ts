@@ -22,4 +22,5 @@ export interface CardProps {
   testID?: string
   textCapitalize?: boolean
   colorStatusGroup?: string
+  onPressIn?: () => void
 }
