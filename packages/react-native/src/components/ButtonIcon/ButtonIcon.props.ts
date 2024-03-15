@@ -4,4 +4,5 @@ export interface ButtonProps {
   width?: number
   height?: number
   icon?: React.ReactNode
+  disabled?: boolean
 }

@@ -11,17 +11,19 @@ export const ButtonIcon = ({
   width,
   height,
   backgroundColor,
-  onPress
+  onPress,
+  disabled
 }: ButtonProps): ReactElement => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} disabled={disabled}>
       <View
         style={[
           styles.container,
           {
             height: height || 30,
             width: width || 30,
-            backgroundColor: backgroundColor || colors.blueSecondary
+            backgroundColor: backgroundColor || colors.blueSecondary,
+            opacity: disabled ? 0.3 : 1
           }
         ]}
       >
