@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     borderRadius: normalize(4),
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
 
   },
   placeholder: {
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: normalize(16),
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderColor: colors.grayFourth,  
+    borderColor: colors.grayFourth
   },
   dropdown: {
     opacity: 0,
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.1,
     shadowRadius: 1.0,
-    elevation: 2,
+
     backgroundColor: colors.white,
     borderRadius: normalize(4),
     borderWidth: 1,
@@ -51,8 +51,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     maxHeight: normalize(150),
     marginTop: normalize(5),
-    zIndex: 100,
-    position: 'absolute',
+
     top: normalize(40)
   },
   textDropdown: {
