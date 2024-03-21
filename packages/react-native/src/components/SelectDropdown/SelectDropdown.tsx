@@ -17,7 +17,6 @@ export const SelectDropdown = (props: SelectProps): ReactElement => {
   const [selected, setSelected] = useState('')
   const transition = useRef(new Animated.Value(0))
   const animation = { duration: 350, type: 'timing' }
-  console.log('props', props)
 
   const startAnimation = React.useCallback(() => {
     if (typeof animation !== 'boolean') {
