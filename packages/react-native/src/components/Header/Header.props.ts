@@ -7,5 +7,6 @@ export interface HeaderProps {
   children?: React.ReactNode
   backgroundColor?: string
   iconHelp?: React.ReactNode
+  hideStatusBar?: boolean
   onPressHelp?: () => void
 }
