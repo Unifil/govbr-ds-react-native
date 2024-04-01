@@ -24,17 +24,19 @@ export const CardClassification = ({
       activeOpacity={0.6}
       {...props}
     >
-      <View>
-        <Text style={styles.titleCard}>{title}</Text>
-        {description && <Text style={styles.descriptionCard}>{description}</Text>}
-      </View>
+      <View style={styles.containerCard}>
+        <View style={styles.containerTitle}>
+          <Text style={styles.titleCard}>{title}</Text>
+          {description && <Text style={styles.descriptionCard}>{description}</Text>}
+        </View>
 
-      <View style={[styles.containerValue, {
-        backgroundColor: color || '#F2F2F2'
-      }]}>
-        <Text style={styles.valueCard}>{value.split('.')[0]
+        <View style={[styles.containerValue, {
+          backgroundColor: color || '#F2F2F2'
+        }]}>
+          <Text style={styles.valueCard}>{value.split('.')[0]
 
-        }%</Text>
+          }%</Text>
+        </View>
       </View>
     </TouchableOpacity>
   )

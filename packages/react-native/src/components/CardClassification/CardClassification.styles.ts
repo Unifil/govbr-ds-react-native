@@ -8,11 +8,16 @@ export const styles = StyleSheet.create({
     width: '100%',
     position: 'relative',
     zIndex: 10,
+    padding: normalize(10)
+
+  },
+  containerCard: {
+    width: '100%',
+    minHeight: normalize(60),
     paddingHorizontal: normalize(15),
     paddingVertical: normalize(10),
-    minHeight: normalize(60),
     alignItems: 'center',
-    elevation: 3,
+    elevation: 10,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
