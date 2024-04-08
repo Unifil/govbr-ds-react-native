@@ -22,7 +22,9 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
     fontFamily: 'Rawline-Regular',
-    marginTop: normalize(6)
+    marginTop: normalize(6),
+    maxWidth: 250,
+    minWidth: 250
   },
   containerRow: {
     flexDirection: 'row',

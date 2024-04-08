@@ -51,7 +51,7 @@ export const Header = (props: HeaderProps): ReactElement => {
               ]}
             >
               <Text style={styles.title}>{props.title}</Text>
-              <Text style={styles.subtitle}>{props.subtitle}</Text>
+              <Text style={styles.subtitle} numberOfLines={2}>{props.subtitle}</Text>
             </View>
           </View>
           {props.onPressHelp && (

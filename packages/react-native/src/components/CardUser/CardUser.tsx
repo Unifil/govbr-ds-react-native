@@ -67,7 +67,7 @@ export const CardUser = (props: CardProps): ReactElement => {
               </Text>
               <View>{props?.statusComponent && props.statusComponent}</View>
               {props?.description && (
-                <Text style={styles.description}>
+                <Text style={styles.description} numberOfLines={1}>
                   {props.description}
                 </Text>
               )}
