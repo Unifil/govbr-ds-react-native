@@ -65,12 +65,12 @@ export const CardUser = (props: CardProps): ReactElement => {
               >
                 {props.name}
               </Text>
-              <View>{props?.statusComponent && props.statusComponent}</View>
-              {props?.description && (
-                <Text style={styles.description} numberOfLines={1}>
+            {props?.statusComponent && <Text>{props.statusComponent}</Text>}
+            {props?.description && (
+              <Text style={styles.description} numberOfLines={1}>
                   {props.description}
                 </Text>
-              )}
+            )}
             </View>
           </View>
         </View>
