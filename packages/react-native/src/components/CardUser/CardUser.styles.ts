@@ -74,5 +74,17 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  tagComponent: {
+    backgroundColor: colors.weakBlueSecondary,
+    borderRadius: normalize(4),
+    padding: normalize(4),
+    marginTop: normalize(4),
+    paddingHorizontal: normalize(10)
+  },
+  tagComponentText: {
+    color: colors.blueSecondary,
+    fontSize: fontSizes.xs,
+    fontFamily: 'Rawline-Regular'
   }
 })

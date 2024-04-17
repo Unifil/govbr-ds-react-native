@@ -10,4 +10,5 @@ export interface CardProps {
   onPress?: () => void
   backgroundColor?: string
   iconReport?: React.ReactNode
+  tagComponent?: React.ReactNode
 }
