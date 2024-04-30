@@ -18,4 +18,5 @@ export interface TextProps {
   onBlur?: any
   testID?: string
   multiline?: boolean
+  accessibilityLabel?: string
 }

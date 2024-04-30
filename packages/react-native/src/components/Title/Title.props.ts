@@ -7,4 +7,5 @@ export interface TitleProps {
   align?: any
   type?: string
   fontFamily?: string
+  accessibilityLabel?: string
 }

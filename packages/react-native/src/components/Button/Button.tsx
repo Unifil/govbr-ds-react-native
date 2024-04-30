@@ -25,6 +25,7 @@ export const Button = (props: ButtonProps): ReactElement => {
 const ButtonPrimary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
+      accessibilityLabel={props.accessibilityLabel}
       onPress={props.onPress}
       testID={props.testID}
       disabled={props.disabled}
@@ -58,6 +59,7 @@ const ButtonPrimary = (props: ButtonProps): ReactElement => {
 const ButtonSecondary = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
+      accessibilityLabel={props.accessibilityLabel}
       testID={props.testID}
       onPress={props.onPress}
       disabled={props.disabled}
@@ -88,6 +90,7 @@ const ButtonSecondary = (props: ButtonProps): ReactElement => {
 const ButtonCustom = (props: ButtonProps): ReactElement => {
   return (
     <TouchableOpacity
+      accessibilityLabel={props.accessibilityLabel}
       testID={props.testID}
       onPress={props.onPress}
       disabled={props.disabled}

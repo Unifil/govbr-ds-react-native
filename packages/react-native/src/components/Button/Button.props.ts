@@ -19,4 +19,5 @@ export interface ButtonProps {
   textDecoration?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
   textAlign?: 'center' | 'auto' | 'left' | 'right' | 'justify' | undefined
   testID?: string
+  accessibilityLabel?: string
 }

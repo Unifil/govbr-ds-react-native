@@ -30,6 +30,7 @@ export const Toast = (props: ToastProps): ReactElement => {
 
   return (
     <Animated.View
+      accessibilityLabel={props?.accessibilityLabel}
       style={{
         ...styles.container,
         backgroundColor: props?.backgroundColor ? props?.backgroundColor
