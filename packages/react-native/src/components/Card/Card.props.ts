@@ -23,4 +23,5 @@ export interface CardProps {
   textCapitalize?: boolean
   colorStatusGroup?: string
   onPressIn?: () => void
+  accessibilityLabel?: string
 }

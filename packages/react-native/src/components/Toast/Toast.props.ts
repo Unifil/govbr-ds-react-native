@@ -6,4 +6,5 @@ export interface ToastProps {
   colorText?: string
   backgroundColor?: string
   closeToast?: (status: boolean) => void
+  accessibilityLabel?: string
 }

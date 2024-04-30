@@ -12,6 +12,7 @@ export const Card = (props: CardProps): ReactElement => {
 
   return (
     <TouchableOpacity
+      accessibilityLabel={props.accessibilityLabel}
       testID={props.testID}
       style={[
         {

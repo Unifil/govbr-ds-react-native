@@ -9,4 +9,5 @@ export interface TextProps {
   fontFamily?: string
   testID?: string
   textDecoration?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
+  accessibilityLabel?: string
 }

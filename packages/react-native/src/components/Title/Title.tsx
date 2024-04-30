@@ -30,7 +30,7 @@ export const Title = (props: TitleProps): ReactElement => {
 const TitlePrimary = (props: TitleProps): ReactElement => {
   return (
     <View>
-      <Text style={styles.primary}>
+      <Text style={styles.primary} accessibilityLabel={props.accessibilityLabel}>
         {props.text}
       </Text>
     </View>
@@ -41,7 +41,7 @@ const TitleSecondary = (props: TitleProps): ReactElement => {
   return (
     <View>
       <Text
-        style={[styles.secondary]}
+        style={[styles.secondary]} accessibilityLabel={props.accessibilityLabel}
       >
         {props.text}
       </Text>
@@ -53,6 +53,7 @@ const TitleCustom = (props: TitleProps): ReactElement => {
   return (
     <View>
       <Text
+        accessibilityLabel={props.accessibilityLabel}
         style={[
           styles.custom,
           {

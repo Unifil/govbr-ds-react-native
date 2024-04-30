@@ -65,6 +65,7 @@ export const Input = (props: TextProps): ReactElement => {
     <>
       {props.label && <Text style={[styles.label]}>{props.label}</Text>}
       <View
+        accessibilityLabel={props?.accessibilityLabel}
         style={[
           styles.container,
           {
@@ -75,9 +76,9 @@ export const Input = (props: TextProps): ReactElement => {
           }
         ]}
       >
-        <TextInput {...inputProps} testID={props.testID} />
+        <TextInput {...inputProps} testID={props.testID} accessibilityLabel={props?.accessibilityLabel}/>
       </View>
-      <View style={styles.containerText}>
+      <View style={styles.containerText} accessibilityLabel={props?.accessibilityLabel}>
 
         {props.error && <Text style={styles.errorText}>{props.error}</Text>}
       </View>
