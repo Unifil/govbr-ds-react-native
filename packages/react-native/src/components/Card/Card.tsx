@@ -35,7 +35,7 @@ export const Card = (props: CardProps): ReactElement => {
               style={[
                 styles.boxTag,
                 {
-                  marginBottom: props?.tag ? normalize(15) : 0
+                  marginBottom: props?.tag ? normalize(10) : 0
                 }
               ]}
             >
@@ -68,7 +68,7 @@ export const Card = (props: CardProps): ReactElement => {
             </View>
             <View style={[styles.containerText]}>
               <View>
-                <Text
+                {props.title && <Text
                   style={[
                     styles.title,
                     {
@@ -80,8 +80,8 @@ export const Card = (props: CardProps): ReactElement => {
                   ]}
                 >
                   {props.title}
-                </Text>
-                <Text
+                </Text>}
+                {props.description && <Text
                   style={[
                     styles.description,
                     {
@@ -94,7 +94,7 @@ export const Card = (props: CardProps): ReactElement => {
                   numberOfLines={props?.numberOfLines}
                 >
                   {props.description}
-                </Text>
+                </Text>}
                 {props.text && (
                   <Text
                     style={[
