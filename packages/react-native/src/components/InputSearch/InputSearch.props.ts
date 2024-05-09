@@ -14,4 +14,5 @@ export interface InputSearchProps {
   onFocus?: any
   onBlur?: any
   testID?: string
+  accessibilityLabel?: string
 }

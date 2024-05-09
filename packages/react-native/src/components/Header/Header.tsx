@@ -50,7 +50,7 @@ export const Header = (props: HeaderProps): ReactElement => {
                 { marginLeft: props.onPress ? normalize(18) : 0 }
               ]}
             >
-              <Text style={styles.title}>{props.title}</Text>
+              <Text style={styles.title} accessibilityLabel='header-text'>{props.title}</Text>
               <Text style={styles.subtitle} numberOfLines={2}>{props.subtitle}</Text>
             </View>
           </View>

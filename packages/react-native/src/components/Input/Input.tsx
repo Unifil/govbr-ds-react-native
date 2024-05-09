@@ -80,7 +80,7 @@ export const Input = (props: TextProps): ReactElement => {
       </View>
       <View style={styles.containerText} accessibilityLabel={props?.accessibilityLabel}>
 
-        {props.error && <Text style={styles.errorText}>{props.error}</Text>}
+        {props.error && <Text accessibilityLabel={props.accessibilityLabel + '-erro'} style={styles.errorText}>{props.error}</Text>}
       </View>
     </>
   )

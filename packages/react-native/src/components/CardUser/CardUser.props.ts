@@ -11,4 +11,5 @@ export interface CardProps {
   backgroundColor?: string
   iconReport?: React.ReactNode
   tagComponent?: React.ReactNode
+  accessibilityLabel?: string
 }
