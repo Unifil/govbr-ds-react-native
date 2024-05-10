@@ -36,7 +36,9 @@ export const styles = StyleSheet.create({
   },
   containerText: {
     flexDirection: 'column',
-    marginLeft: normalize(18)
+    marginLeft: normalize(18),
+    paddingRight: normalize(2),
+    flex: 1
   },
   containerChildren: {
     marginTop: normalize(15)
