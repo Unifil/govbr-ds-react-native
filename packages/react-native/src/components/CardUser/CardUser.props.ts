@@ -12,4 +12,7 @@ export interface CardProps {
   iconReport?: React.ReactNode
   tagComponent?: React.ReactNode
   accessibilityLabel?: string
+  onPressButton?: () => void
+  textButton?: string
+  icon?: React.ReactNode
 }

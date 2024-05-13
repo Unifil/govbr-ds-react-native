@@ -38,6 +38,9 @@ export const Default = {
     sizeAvatar: 20,
     onPress: {},
     backgroundColor: "#FFF",
-    iconReport: <></>
+    iconReport: <></>,
+    icon: {},
+    onPressButton: {}, 
+    textButton: ''
   },
 };
