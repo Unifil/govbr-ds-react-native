@@ -60,7 +60,7 @@ export const CardUser = (props: CardProps): ReactElement => {
                 style={[
                   styles.name,
                   {
-                    marginBottom: props?.statusComponent ? normalize(4) : 0
+                    marginBottom: props?.statusComponent ? normalize(8) : 0
                   }
                 ]}
               >
@@ -78,8 +78,18 @@ export const CardUser = (props: CardProps): ReactElement => {
                   {props.description}
                 </Text>
             )}
+            {props?.textButton &&
+              <TouchableOpacity onPress={props?.onPressButton}>
+                <Text style={styles.textButton}>{props?.textButton}</Text>
+              </TouchableOpacity>
+            }
             </View>
           </View>
+          {props?.icon &&
+            <View>
+              {props?.icon}
+            </View>
+          }
         </View>
       </View>
     </TouchableOpacity>

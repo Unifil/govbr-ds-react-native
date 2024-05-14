@@ -86,5 +86,11 @@ export const styles = StyleSheet.create({
     color: colors.blueSecondary,
     fontSize: fontSizes.xs,
     fontFamily: 'Rawline-Regular'
+  },
+  textButton: {
+    color: colors.blueSecondary,
+    fontSize: fontSizes.sm,
+    fontFamily: 'Rawline-Regular',
+    textDecorationLine: 'underline'
   }
 })
