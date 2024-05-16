@@ -27,4 +27,5 @@ export interface CardProps {
   setCheckboxStates: (value: boolean) => void
   checkboxStates: boolean | undefined
   isCorrectQuestion?: boolean
+  accessibilityLabel?: string
 }

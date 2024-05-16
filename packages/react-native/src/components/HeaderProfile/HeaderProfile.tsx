@@ -22,14 +22,14 @@ export const HeaderProfile = ({
             <Text style={styles.text}>
               {text}
             </Text>
-            <Text style={styles.profile}>
+            <Text style={styles.profile} numberOfLines={1}>
               {nameProfile}
             </Text>
             <View style={styles.containerChildren}>
               {children}
             </View>
           </View>
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity onPress={onPress} accessibilityLabel="Initials">
             <View style={styles.containerButton}>
               <View style={styles.circleName}>
                 <Text style={styles.initialLetter}>

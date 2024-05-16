@@ -12,6 +12,7 @@ export const CardReport = (props: CardProps): ReactElement => {
   const [isPressed] = useState(false)
   return (
     <TouchableOpacity
+      accessibilityLabel={props.accessibilityLabel}
       disabled={props.isCorrectQuestion}
       testID={props.testID}
       style={[

@@ -9,4 +9,5 @@ export interface HeaderProps {
   iconHelp?: React.ReactNode
   hideStatusBar?: boolean
   onPressHelp?: () => void
+  accessibilityLabel?: string
 }
