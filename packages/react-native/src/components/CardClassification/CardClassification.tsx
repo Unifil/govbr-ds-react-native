@@ -24,9 +24,9 @@ export const CardClassification = ({
       activeOpacity={0.6}
       {...props}
     >
-      <View>
-        <Text style={styles.titleCard}>{title}</Text>
-        {description && <Text style={styles.descriptionCard}>{description}</Text>}
+      <View style={styles.containerText}>
+        <Text style={styles.titleCard} numberOfLines={1}>{title}</Text>
+        {description && <Text style={styles.descriptionCard} numberOfLines={1}>{description}</Text>}
       </View>
 
       <View style={[styles.containerValue, {
