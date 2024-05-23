@@ -29,13 +29,15 @@ export const styles = StyleSheet.create({
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.medium,
     color: colors.dark,
-    fontFamily: 'Rawline-Medium'
+    fontFamily: 'Rawline-Medium',
+    paddingRight: normalize(8)
   },
   descriptionCard: {
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
     color: colors.gray,
-    fontFamily: 'Rawline-Medium'
+    fontFamily: 'Rawline-Medium',
+    paddingRight: normalize(6)
   },
   containerTitle: {
     alignItems: 'flex-start',
@@ -55,5 +57,8 @@ export const styles = StyleSheet.create({
     fontWeight: fontWeights.medium,
     color: colors.white,
     fontFamily: 'Rawline-Medium'
+  },
+  containerText: {
+    flex: 1
   }
 })
