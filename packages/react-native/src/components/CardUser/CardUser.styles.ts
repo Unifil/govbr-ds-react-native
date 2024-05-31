@@ -14,15 +14,13 @@ export const styles = StyleSheet.create({
   name: {
     color: colors.gray600,
     fontSize: fontSizes.md,
-    fontFamily: 'Rawline-Bold',
-    textTransform: 'capitalize'
+    fontFamily: 'Rawline-Bold', 
   },
   description: {
     color: colors.gray600,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    fontFamily: 'Rawline-Regular',
-    marginTop: normalize(6),
+    fontFamily: 'Rawline-Regular', 
     maxWidth: 250,
     minWidth: 250
   },
@@ -86,6 +84,24 @@ export const styles = StyleSheet.create({
     color: colors.blueSecondary,
     fontSize: fontSizes.xs,
     fontFamily: 'Rawline-Regular'
+  },
+  containerDescription: {
+    marginTop: normalize(8),
+    width: '100%', 
+  },
+  containerSubTitle: {
+    marginTop: normalize(8),
+    width: '100%',
+    backgroundColor: '#F8F8F8',
+    padding: normalize(5),
+  },
+  subTitle: {
+    color: colors.gray600,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.regular,
+    fontFamily: 'Rawline-Regular', 
+    maxWidth: 250,
+    minWidth: 250
   },
   textButton: {
     color: colors.blueSecondary,

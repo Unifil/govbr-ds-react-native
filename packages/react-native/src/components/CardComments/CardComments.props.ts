@@ -1,8 +1,6 @@
 export interface CardCommentsProps {
   comment: string
-  date: string
-  status: string
-  colorStatus: string
+  skill: string
   onPressDelete?: () => void
   iconButtonDelete?: React.ReactNode
   disabledDelete?: boolean
@@ -12,4 +10,5 @@ export interface CardCommentsProps {
   onPressCheck?: () => void
   iconButtonCheck?: React.ReactNode
   disabledCheck?: boolean
+  updateDate?: string
 }
