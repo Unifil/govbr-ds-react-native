@@ -103,4 +103,10 @@ export const styles = StyleSheet.create({
     maxWidth: 250,
     minWidth: 250
   },
+  textButton: {
+    color: colors.blueSecondary,
+    fontSize: fontSizes.sm,
+    fontFamily: 'Rawline-Regular',
+    textDecorationLine: 'underline'
+  }
 })

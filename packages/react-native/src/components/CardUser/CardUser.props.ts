@@ -15,4 +15,7 @@ export interface CardProps {
   subTitle?: string
   descriptionNumber?: number
   upcaseName?: boolean
+  onPressButton?: () => void
+  textButton?: string
+  icon?: React.ReactNode
 }

@@ -71,6 +71,8 @@ export const CardUser = (props: CardProps): ReactElement => {
                       ? "uppercase"
                       : "capitalize",
                   },
+                    marginBottom: props?.statusComponent ? normalize(8) : 0
+                  }
                 ]}
               >
                 {props.name}
@@ -100,8 +102,19 @@ export const CardUser = (props: CardProps): ReactElement => {
                   </Text>
                 </View>
               )}
+
+            {props?.textButton &&
+              <TouchableOpacity onPress={props?.onPressButton}>
+                <Text style={styles.textButton}>{props?.textButton}</Text>
+              </TouchableOpacity>
+            }
             </View>
           </View>
+          {props?.icon &&
+            <View>
+              {props?.icon}
+            </View>
+          }
         </View>
       </View>
     </TouchableOpacity>
