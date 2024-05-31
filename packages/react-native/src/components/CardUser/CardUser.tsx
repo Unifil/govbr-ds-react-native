@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react'
 
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from 'react-native'
 
-import { CardProps } from "./CardUser.props";
-import { styles } from "./CardUser.styles";
-import { normalize } from "../../utils/normalize";
+import { CardProps } from './CardUser.props'
+import { styles } from './CardUser.styles'
+import { normalize } from '../../utils/normalize'
 
 export const CardUser = (props: CardProps): ReactElement => {
   return (
@@ -12,7 +12,7 @@ export const CardUser = (props: CardProps): ReactElement => {
       accessibilityLabel={props.accessibilityLabel}
       style={{
         marginTop: props.marginTop,
-        marginBottom: props.marginBottom,
+        marginBottom: props.marginBottom
       }}
       onPress={props.onPress}
       activeOpacity={0.6}
@@ -25,8 +25,8 @@ export const CardUser = (props: CardProps): ReactElement => {
           {
             backgroundColor: props.backgroundColor
               ? props.backgroundColor
-              : "#fff",
-          },
+              : '#fff'
+          }
         ]}
       >
         <View style={styles.containerContent}>
@@ -37,8 +37,8 @@ export const CardUser = (props: CardProps): ReactElement => {
                   styles.containerIconReport,
                   {
                     height: props.sizeAvatar || normalize(36),
-                    width: props.sizeAvatar || normalize(36),
-                  },
+                    width: props.sizeAvatar || normalize(36)
+                  }
                 ]}
               >
                 <View>{props.iconReport}</View>
@@ -49,15 +49,15 @@ export const CardUser = (props: CardProps): ReactElement => {
                   styles.containerShortName,
                   {
                     height: props.sizeAvatar || normalize(36),
-                    width: props.sizeAvatar || normalize(36),
-                  },
+                    width: props.sizeAvatar || normalize(36)
+                  }
                 ]}
               >
                 <Text style={styles.shortName}>
                   {(props?.name &&
-                    props?.name.split(" ")[0][0] +
-                      props?.name.split(" ")[1][0]) ||
-                    ""}
+                    props?.name.split(' ')[0][0] +
+                      props?.name.split(' ')[1][0]) ||
+                    ''}
                 </Text>
               </View>
             )}
@@ -68,10 +68,8 @@ export const CardUser = (props: CardProps): ReactElement => {
                   {
                     marginBottom: props?.statusComponent ? normalize(4) : 0,
                     textTransform: props.upcaseName
-                      ? "uppercase"
-                      : "capitalize",
-                  },
-                    marginBottom: props?.statusComponent ? normalize(8) : 0
+                      ? 'uppercase'
+                      : 'capitalize'
                   }
                 ]}
               >
@@ -102,21 +100,10 @@ export const CardUser = (props: CardProps): ReactElement => {
                   </Text>
                 </View>
               )}
-
-            {props?.textButton &&
-              <TouchableOpacity onPress={props?.onPressButton}>
-                <Text style={styles.textButton}>{props?.textButton}</Text>
-              </TouchableOpacity>
-            }
             </View>
           </View>
-          {props?.icon &&
-            <View>
-              {props?.icon}
-            </View>
-          }
         </View>
       </View>
     </TouchableOpacity>
-  );
-};
+  )
+}
