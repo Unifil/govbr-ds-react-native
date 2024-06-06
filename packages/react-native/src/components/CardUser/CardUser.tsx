@@ -61,7 +61,7 @@ export const CardUser = (props: CardProps): ReactElement => {
                 </Text>
               </View>
             )}
-            <View>
+            <View style={styles.containerText}>
               <Text
                 style={[
                   styles.name,
@@ -72,6 +72,7 @@ export const CardUser = (props: CardProps): ReactElement => {
                       : 'capitalize'
                   }
                 ]}
+                numberOfLines={2}
               >
                 {props.name}
               </Text>
