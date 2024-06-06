@@ -23,12 +23,13 @@ export const CardComments = ({
   return (
     <View>
       <View style={styles.containerCard}>
-        <View style={styles.row}>
-          <View style={styles.containerDate}>
-            <Text style={styles.textDate}>{skill}</Text>
+        {skill && (
+          <View style={styles.row}>
+            <View style={styles.containerDate}>
+              <Text style={styles.textDate}>{skill}</Text>
+            </View>
           </View>
-        </View>
-
+        )}
         <Text style={styles.textComment}>{comment}</Text>
         {updateDate && (
           <View
