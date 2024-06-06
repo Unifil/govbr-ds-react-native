@@ -14,13 +14,13 @@ export const styles = StyleSheet.create({
   name: {
     color: colors.gray600,
     fontSize: fontSizes.md,
-    fontFamily: 'Rawline-Bold', 
+    fontFamily: 'Rawline-Bold'
   },
   description: {
     color: colors.gray600,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    fontFamily: 'Rawline-Regular', 
+    fontFamily: 'Rawline-Regular',
     maxWidth: 250,
     minWidth: 250
   },
@@ -87,19 +87,19 @@ export const styles = StyleSheet.create({
   },
   containerDescription: {
     marginTop: normalize(8),
-    width: '100%', 
+    width: '100%'
   },
   containerSubTitle: {
     marginTop: normalize(8),
     width: '100%',
     backgroundColor: '#F8F8F8',
-    padding: normalize(5),
+    padding: normalize(5)
   },
   subTitle: {
     color: colors.gray600,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
-    fontFamily: 'Rawline-Regular', 
+    fontFamily: 'Rawline-Regular',
     maxWidth: 250,
     minWidth: 250
   },
