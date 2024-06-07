@@ -67,9 +67,9 @@ export const CardUser = (props: CardProps): ReactElement => {
                   styles.name,
                   {
                     marginBottom: props?.statusComponent ? normalize(4) : 0,
-                    textTransform: props.upcaseName
+                    textTransform: props?.upcaseName
                       ? 'uppercase'
-                      : 'capitalize'
+                      : 'none'
                   }
                 ]}
                 numberOfLines={2}

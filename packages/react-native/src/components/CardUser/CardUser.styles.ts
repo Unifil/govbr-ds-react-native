@@ -92,21 +92,21 @@ export const styles = StyleSheet.create({
   containerSubTitle: {
     marginTop: normalize(8),
     backgroundColor: '#F8F8F8',
- 
     padding: normalize(5),
     alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 4,
     minWidth: normalize(230),
-    maxWidth: normalize(230) 
+    maxWidth: normalize(230)
   },
   subTitle: {
     color: colors.gray600,
     fontSize: fontSizes.sm,
-    fontWeight: fontWeights.regular, 
+    fontWeight: fontWeights.regular,
     fontFamily: 'Rawline-Regular',
-    maxWidth: 250,
-    minWidth: 250
- 
+    minWidth: normalize(230),
+    maxWidth: normalize(230),
+    textAlign: 'center'
   },
   textButton: {
     color: colors.blueSecondary,
