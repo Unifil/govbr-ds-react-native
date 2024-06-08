@@ -9,7 +9,7 @@ import { normalize } from '../../utils/normalize'
 export const CardUser = (props: CardProps): ReactElement => {
   return (
     <TouchableOpacity
-      accessibilityLabel={props.accessibilityLabel}
+      accessibilityLabel={`Card-User-${props.name}`}
       style={
         {
           marginTop: props.marginTop,
