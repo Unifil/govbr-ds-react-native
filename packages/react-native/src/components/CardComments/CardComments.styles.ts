@@ -33,9 +33,20 @@ export const styles = StyleSheet.create({
     paddingVertical: normalize(4),
     borderRadius: 4
   },
+  containerTitle: {
+    backgroundColor: colors.weakBlueSecondary,
+    paddingHorizontal: normalize(8),
+    paddingVertical: normalize(4),
+    borderRadius: 4
+  },
   textDate: {
     fontSize: fontSizes.sm,
-    fontFamily: 'Rawline-Bold',
+    fontFamily: 'Rawline-Regular',
+    color: colors.blue
+  },
+  title: {
+    fontSize: fontSizes.sm,
+    fontFamily: 'Rawline-Regular',
     color: colors.blue
   },
   containerStatus: {
