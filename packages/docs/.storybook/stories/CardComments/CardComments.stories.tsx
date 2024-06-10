@@ -26,10 +26,22 @@ export default CardCommentsMeta;
 
 export const Default = {
   args: {
-    comment: "Comments",
+    comment: "Texte comments",
     date: "01/01/1900",
     status: "Status",
     colorStatus: colors.gray300,
-    buttons: <></>
+    buttons: <></>,
+    title: "Title card",
+    onPressDelete: {},
+    disabledDelete: false,
+    iconButtonDelete: {},
+    onPressUpdate: {},
+    iconButtonUpdate: {},
+    disabledUpdate: false,
+    onPressCheck: {},
+    iconButtonCheck: {},
+    disabledCheck: false,
+    updateDate: "01/01/1900",
+    skill: ""
   },
 };

@@ -18,8 +18,10 @@ export const CardComments = ({
   onPressCheck,
   iconButtonCheck,
   disabledCheck,
-  updateDate,
+  updateDate, 
   marginBottom,
+  title
+ 
 }: CardCommentsProps): ReactElement => {
   return (
     <View
@@ -30,6 +32,20 @@ export const CardComments = ({
       ]}
     >
       <View style={styles.containerCard}>
+      {title && (
+          <View
+            style={[
+              styles.row,
+              {
+                marginTop: 8
+              }
+            ]}
+          >
+            <View style={styles.containerTitle}>
+              <Text style={styles.title} numberOfLines={1}>{title}</Text>
+            </View>
+          </View>
+      )}
         {skill && (
           <View style={styles.row}>
             <View style={styles.containerDate}>
