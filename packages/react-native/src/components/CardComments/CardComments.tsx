@@ -8,9 +8,7 @@ import { styles } from './CardComments.styles'
 
 export const CardComments = ({
   comment,
-  date,
-  status,
-  colorStatus,
+  skill,
   onPressDelete,
   iconButtonDelete,
   disabledDelete,
@@ -19,52 +17,36 @@ export const CardComments = ({
   disabledUpdate,
   onPressCheck,
   iconButtonCheck,
-  disabledCheck
+  disabledCheck,
+  updateDate
 }: CardCommentsProps): ReactElement => {
   return (
     <View>
       <View style={styles.containerCard}>
-        <View style={styles.row}>
-          <View style={styles.containerDate}>
-            <Text style={styles.textDate}>
-              {date}
-            </Text>
+        {skill && (
+          <View style={styles.row}>
+            <View style={styles.containerDate}>
+              <Text style={styles.textDate}>{skill}</Text>
+            </View>
           </View>
+        )}
+        <Text style={styles.textComment}>{comment}</Text>
+        {updateDate && (
           <View
             style={[
-              styles.containerStatus,
+              styles.row,
               {
-                backgroundColor: colorStatus || colors.gray300
+                marginTop: 8
               }
             ]}
           >
-            <Text style={styles.textStatus}>
-              {status}
-            </Text>
+            <View style={styles.containerDate}>
+              <Text style={styles.textDate}>{updateDate}</Text>
+            </View>
           </View>
-        </View>
-        <Text style={styles.textComment}>
-          {comment}
-        </Text>
+        )}
         <View style={styles.containerButtons}>
-          {onPressDelete &&
-            <TouchableOpacity
-              onPress={onPressDelete}
-              disabled={disabledDelete}
-              style={[
-                styles.button,
-                {
-                  backgroundColor: colors.red ? colors.red : colors.white,
-                  opacity: disabledDelete ? 0.3 : 1
-                }
-              ]}
-            >
-              <View>
-                {iconButtonDelete}
-              </View>
-            </TouchableOpacity>
-          }
-          {onPressCheck &&
+          {onPressCheck && (
             <TouchableOpacity
               onPress={onPressCheck}
               disabled={disabledCheck}
@@ -76,12 +58,10 @@ export const CardComments = ({
                 }
               ]}
             >
-              <View>
-                {iconButtonCheck}
-              </View>
+              <View>{iconButtonCheck}</View>
             </TouchableOpacity>
-          }
-          {onPressUpdate &&
+          )}
+          {onPressUpdate && (
             <TouchableOpacity
               onPress={onPressUpdate}
               disabled={disabledUpdate}
@@ -93,11 +73,24 @@ export const CardComments = ({
                 }
               ]}
             >
-              <View>
-                {iconButtonUpdate}
-              </View>
+              <View>{iconButtonUpdate}</View>
             </TouchableOpacity>
-          }
+          )}
+          {onPressDelete && (
+            <TouchableOpacity
+              onPress={onPressDelete}
+              disabled={disabledDelete}
+              style={[
+                styles.button,
+                {
+                  backgroundColor: colors.red ? colors.red : colors.white,
+                  opacity: disabledDelete ? 0.3 : 1
+                }
+              ]}
+            >
+              <View>{iconButtonDelete}</View>
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     </View>

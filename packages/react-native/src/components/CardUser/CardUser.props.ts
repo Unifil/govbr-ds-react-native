@@ -12,6 +12,9 @@ export interface CardProps {
   iconReport?: React.ReactNode
   tagComponent?: React.ReactNode
   accessibilityLabel?: string
+  subTitle?: string
+  descriptionNumber?: number
+  upcaseName?: boolean
   onPressButton?: () => void
   textButton?: string
   icon?: React.ReactNode
