@@ -11,4 +11,5 @@ export interface CardCommentsProps {
   iconButtonCheck?: React.ReactNode
   disabledCheck?: boolean
   updateDate?: string
+  title?: string
 }
