@@ -10,4 +10,5 @@ export interface TextProps {
   testID?: string
   textDecoration?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
   accessibilityLabel?: string
+  numberOfLines?: number
 }
