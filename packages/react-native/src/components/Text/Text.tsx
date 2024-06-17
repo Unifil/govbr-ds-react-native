@@ -26,7 +26,12 @@ export const TextComponent = (props: TextProps): ReactElement => {
 const TextPrimary = (props: TextProps): ReactElement => {
   return (
     <View>
-      <Text style={styles.primary} testID={props.testID} accessibilityLabel={props.accessibilityLabel}>
+      <Text
+        numberOfLines={props.numberOfLines}
+        style={styles.primary}
+        testID={props.testID}
+        accessibilityLabel={props.accessibilityLabel}
+      >
         {props.text}
       </Text>
     </View>
@@ -39,6 +44,7 @@ const TextCustom = (props: TextProps): ReactElement => {
       <Text
         accessibilityLabel={props.accessibilityLabel}
         testID={props.testID}
+        numberOfLines={props.numberOfLines}
         style={[
           styles.custom,
           {

@@ -41,6 +41,7 @@ export const Custom = {
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.regular,
     fontFamily: 'Rawline-Regular',
-    textDecorationLine: 'none'
+    textDecorationLine: 'none',
+    numberOfLines: 2
   },
 };
