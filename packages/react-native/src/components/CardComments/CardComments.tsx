@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react'
 
-import { colors } from "@unifil/tokens";
-import { Text, TouchableOpacity, View } from "react-native";
+import { colors } from '@unifil/tokens'
+import { Text, TouchableOpacity, View } from 'react-native'
 
-import { CardCommentsProps } from "./CardComments.props";
-import { styles } from "./CardComments.styles";
+import { CardCommentsProps } from './CardComments.props'
+import { styles } from './CardComments.styles'
 
 export const CardComments = ({
   comment,
@@ -18,17 +18,16 @@ export const CardComments = ({
   onPressCheck,
   iconButtonCheck,
   disabledCheck,
-  updateDate, 
+  updateDate,
   marginBottom,
   title
- 
 }: CardCommentsProps): ReactElement => {
   return (
     <View
       style={[
         {
-          marginBottom: marginBottom ? marginBottom : 0,
-        },
+          marginBottom: marginBottom || 0
+        }
       ]}
     >
       <View style={styles.containerCard}>
@@ -59,8 +58,8 @@ export const CardComments = ({
             style={[
               styles.row,
               {
-                marginTop: 8,
-              },
+                marginTop: 8
+              }
             ]}
           >
             <View style={styles.containerDate}>
@@ -77,8 +76,8 @@ export const CardComments = ({
                 styles.button,
                 {
                   backgroundColor: colors.green,
-                  opacity: disabledCheck ? 0.3 : 1,
-                },
+                  opacity: disabledCheck ? 0.3 : 1
+                }
               ]}
             >
               <View>{iconButtonCheck}</View>
@@ -92,8 +91,8 @@ export const CardComments = ({
                 styles.button,
                 {
                   backgroundColor: colors.blueSecondary,
-                  opacity: disabledUpdate ? 0.3 : 1,
-                },
+                  opacity: disabledUpdate ? 0.3 : 1
+                }
               ]}
             >
               <View>{iconButtonUpdate}</View>
@@ -107,8 +106,8 @@ export const CardComments = ({
                 styles.button,
                 {
                   backgroundColor: colors.red ? colors.red : colors.white,
-                  opacity: disabledDelete ? 0.3 : 1,
-                },
+                  opacity: disabledDelete ? 0.3 : 1
+                }
               ]}
             >
               <View>{iconButtonDelete}</View>
@@ -117,5 +116,5 @@ export const CardComments = ({
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
