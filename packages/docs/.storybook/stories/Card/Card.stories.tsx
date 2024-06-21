@@ -46,6 +46,8 @@ export const Primary = {
     textCapitalize: false,
     colorStatusGroup: colors.darkBlue,
     onPress: {},
-    onPressIn: {}
+    onPressIn: {},
+    paddingVertical: 16,
+    paddingHorizontal: 16
   },
 };
