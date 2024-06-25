@@ -24,4 +24,6 @@ export interface CardProps {
   colorStatusGroup?: string
   onPressIn?: () => void
   accessibilityLabel?: string
+  paddingVertical?: number
+  paddingHorizontal?: number
 }

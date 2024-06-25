@@ -30,7 +30,15 @@ export const Card = (props: CardProps): ReactElement => {
     >
       <View style={[styles.containerCard]}>
         {props.overlay ? <View style={styles.overlay} /> : null}
-        <View style={styles.container}>
+        <View
+          style={[
+            styles.container,
+            {
+              paddingVertical: props?.paddingVertical ? props?.paddingVertical : normalize(16),
+              paddingHorizontal: props?.paddingHorizontal ? props?.paddingHorizontal : normalize(16)
+            }
+          ]}
+        >
           <View style={[styles.containerContent]}>
             <View
               style={[
