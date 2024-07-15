@@ -114,6 +114,12 @@ export const styles = StyleSheet.create({
     fontFamily: 'Rawline-Regular',
     textDecorationLine: 'underline'
   },
+  containerButton: {
+    marginTop: normalize(6)
+  },
+  containerStatus: {
+    marginTop: normalize(4)
+  },
   containerText: {
     flex: 1
   }
