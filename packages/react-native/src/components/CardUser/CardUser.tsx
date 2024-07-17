@@ -86,7 +86,7 @@ export const CardUser = (props: CardProps): ReactElement => {
                   </Text>
                 </View>
               )}
-              {props?.statusComponent && <Text>{props.statusComponent}</Text>}
+              {props?.statusComponent && <Text style={styles.containerStatus}>{props.statusComponent}</Text>}
               {props?.subTitle && (
                 <View style={styles.containerSubTitle}>
                   <Text style={styles.subTitle} numberOfLines={1}>
@@ -103,6 +103,16 @@ export const CardUser = (props: CardProps): ReactElement => {
                     {props.description}
                   </Text>
                 </View>
+              )}
+              {props.textButton && (
+                <TouchableOpacity
+                  onPress={props.onPressButton}
+                  style={styles.containerButton}
+                >
+                  <Text style={styles.textButton}>
+                    {props.textButton}
+                  </Text>
+                </TouchableOpacity>
               )}
             </View>
           </View>
