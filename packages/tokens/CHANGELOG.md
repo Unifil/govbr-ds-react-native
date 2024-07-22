@@ -1,5 +1,11 @@
 # @unifil/tokens
 
+## 2.0.0
+
+### Major Changes
+
+- update
+
 ## 1.1.3
 
 ### Patch Changes
